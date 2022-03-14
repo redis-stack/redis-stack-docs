@@ -4,10 +4,12 @@ linkTitle: Download
 ---
 <div class="inner-content">
 <div id="download-redis">
+
 ## Redis
 
 You can download the last Redis source files here. For additional options, see the Redis download section below.
-Stable (6.2)
+
+### Stable (6.2)
 
 Redis 6.2 includes many new commands and improvements. Redis 6.2 improves on the completeness of Redis and addresses issues that have been requested by many users frequently or for a long time. 
 
