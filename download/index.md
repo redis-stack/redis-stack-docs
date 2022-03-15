@@ -1,9 +1,6 @@
 ---
 title: Download
 linkTitle: Download
-menu:
-  main:
-    weight: 30
 ---
 
 <div id="download-redis">
