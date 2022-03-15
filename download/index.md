@@ -2,13 +2,14 @@
 title: Download
 linkTitle: Download
 ---
-
+<div class="inner-content">
 <div id="download-redis">
 
 ## Redis
 
 You can download the last Redis source files here. For additional options, see the Redis download section below.
-Stable (6.2)
+
+### Stable (6.2)
 
 Redis 6.2 includes many new commands and improvements. Redis 6.2 improves on the completeness of Redis and addresses issues that have been requested by many users frequently or for a long time. 
 
@@ -78,8 +79,9 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 
 [Go to Redis DockerHub](https://hub.docker.com/_/redis).
 </div>
-
+</div>
 <div id="download-redis-stack-options">
+<div class="inner-content">
 
 ## Redis Stack downloads
 
@@ -88,4 +90,5 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 You can download and run Docker images of Redis Stack from DockerHub. Multiple versions are available, usually updated in a short time after a new release is available.
 
 [Go to Redis Stack DockerHub](https://hub.docker.com/_/redis)
+</div>
 </div>
