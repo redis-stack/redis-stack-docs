@@ -1,8 +1,8 @@
 ---
 title: Run Redis Stack on Docker
-linkTitle: Cloud
+linkTitle: Docker
 description: "How to install Redis Stack using Docker"
-weight: 2
+weight: 1
 ---
 
 To get started with Redis Stack using Docker, you first need to select a Docker image:
