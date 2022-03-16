@@ -40,7 +40,7 @@ We're not going to code this completely from scratch. I have some starter code f
 
     get clone git@github.com:redis-developer/express-redis-om-workshop.git
 
-Now that you have the starter code, let's explore it a bit. Opening up `server.js` in the root we see that we have a simple Express app that uses [dotenv](https://www.npmjs.com/package/dotenv) for configuration and [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-express):
+Now that you have the starter code, let's explore it a bit. Opening up `server.js` in the root we see that we have a simple Express app that uses [*Dotenv*](https://www.npmjs.com/package/dotenv) for configuration and [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-express):
 
 ```javascript
 import 'dotenv/config'
@@ -80,13 +80,13 @@ Then, setup a `.env` in the root that dotenv can make use of. There's a `sample.
 
 The contents of `.env` looks like this:
 
-```
+```bash
 # Put your local Redis Stack URL here. Want to run in the
 # cloud instead? Sign up at https://redis.com/try-free/.
 REDIS_URL=redis://localhost:6379
 ```
 
-Change the REDIS_URL to your Redis URL, if necessary, and you're good to go. Now you should be able to run the app:
+Change the `REDIS_URL` to your Redis URL, if necessary, and you're good to go. Now you should be able to run the app:
 
     npm start
 
@@ -97,30 +97,272 @@ So, the starter code runs. Let's add some Redis OM to it so it actually *does* s
 
 ## Setting up a Client
 
-- create a client.js in the om folder
+First things first, let's set up a **client**. The `Client` class is the thing that knows how to talk to Redis on the behalf of Redis OM. Internally, it uses [Node Redis](https://github.com/redis/node-redis). I like to put my instantiated `Client` in its own file and export it. This ensures that my application has one and only one instance of the `Client` and thus only one connection to Redis. Since Redis and JavaScript are both (more or less) single-threaded, this works really well.
 
-## Entity and Schema
+So, let's create our first file. In the `om` folder add a file called `client.js` and add the following code:
 
-- Entity: the thing we read
-- Schema: how to map entities to and from Redis JSON documents and Hashes
-- talk about the field types
+```javascript
+import { Client } from 'redis-om'
 
-## Create a Repository
+/* pulls the Redis URL from .env */
+const url = process.env.REDIS_URL
 
-- client.fetchRepo
-- createIndex
+/* create and open the Redis OM Client */
+const client = await new Client().open(url)
+
+export default client
+```
+
+Note that we are getting our Redis URL from an environment variable. It was put there by Dotenv and read from our `.env` file. If we didn't have the `.env` file, or have a `REDIS_URL` property in our `.env` file, this code would gladly read this value from the *actual* environment variables.
+
+Also note that the `.open()` method conveniently returns `this`. This `this` (can I say *this* again? I just did!) lets us chain the instantiation of the client with the opening of the client. If this isn't to your liking, you could always write it like this:
+
+```javascript
+/* create and open the Redis OM Client */
+const client = new Client()
+await client.open(url)
+```
+
+> Remember that _top-level await_ stuff I mentioned earlier? There it is!
+
+## Entity, Schema, and Repository
+
+Now that we have a `Client` that's connected to Redis, we need to start mapping some persons. To do that, we need to define an `Entity` and a `Schema`. Let's start by creating a file named `person.js` in the `om` folder and importing our `client` from `client.js` and the `Entity` and `Schema` classes from Redis OM:
+
+```javascript
+import { Entity, Schema } from 'redis-om'
+import client from './client.js'
+```
+
+Next, we need to define an **entity**. An `Entity` is the class that you work with—the thing being mapped to. It is what you create, read, update, and delete. Any class that extends `Entity` is an entity. We'll define our Person entity with a single line:
+
+```javascript
+/* our entity */
+class Person extends Entity {}
+```
+
+A **schema** defines the fields on your entity, their types, and how they are mapped internally to Redis. By default, entities map to JSON documents. When a `Schema` is created, it will add properties to the provided `Entity` based on the definitions provided. Let's create our `Schema` in `person.js`:
+
+```javascript
+/* create a Schema for Person */
+const personSchema = new Schema(Person, {
+  firstName: { type: 'string' },
+  lastName: { type: 'string' },
+  age: { type: 'number' },
+  verified: { type: 'boolean' },
+  location: { type: 'point' },
+  locationUpdated: { type: 'date' },
+  skills: { type: 'string[]' },
+  personalStatement: { type: 'text' }
+})
+```
+  - talk about the field types
+
+Now we have all the pieces that we need to create a *repository*. The *Repository* is the main interface into Redis OM. It gives us the methods to read, write, and remove a specific `Entity`. Create a `Repository` in `person.js` and make sure it's exported as you'll need it when we get into the Express stuff:
+
+```javascript
+/* use the client to create a Repository just for Persons */
+export const personRepository = client.fetchRepository(personSchema)
+```
+
+We're almost done with setting up our `Repository`. But we still need to create an index or we won't be able to search on anything. We do that by calling `.createIndex`. If an index already exists and it's the same, this function won't do anything. If it's different, it'll drop it and create a new one. Add a call to `.createIndex` to `person.js`:
+
+```javascript
+/* create the index for Person */
+await personRepository.createIndex()
+```
+
+That's all we need for `person.js` and all we need to starting talking to Redis using Redis OM. Here's the code in its entirity:
+
+```javascript
+import { Entity, Schema } from 'redis-om'
+import client from './client.js'
+
+/* our entity */
+class Person extends Entity {}
+
+/* create a Schema for Person */
+const personSchema = new Schema(Person, {
+  firstName: { type: 'string' },
+  lastName: { type: 'string' },
+  age: { type: 'number' },
+  verified: { type: 'boolean' },
+  location: { type: 'point' },
+  locationUpdated: { type: 'date' },
+  skills: { type: 'string[]' },
+  personalStatement: { type: 'text' }
+})
+
+/* use the client to create a Repository just for Persons */
+export const personRepository = client.fetchRepository(personSchema)
+
+/* create the index for Person */
+await personRepository.createIndex()
+```
+
+Now, let's add some routes in Express.
+
 
 ## Setup Routes
 
-- Create
-  - Generated keyname + ULIDs
-  - Look in Redis
-  - you can run that script now
-- Read
+Our routes need a place to live. That place is a `Router`. So, create a file in the `routers` folder called `person-router.js` and import `Router` from Express and the `personRepository` that we defined in `person.js`:
+
+Let's create a truly RESTful API with the CRUD operations mapping to PUT, GET, POST, and DELETE respectively. We're going to do this using [Express Routers](https://expressjs.com/en/4x/api.html#router) as this makes our code nice and tidy. So, create a file called `person-router.js` in the `routers` folder. Then import `Router` from Express and import the `personRepository` that we defined in `person.js`. Oh, and create and export a `Router`:
+
+```javascript
+import { Router } from 'express'
+import { personRepository } from '../om/person.js'
+
+export const router = Router()
+```
+
+Imports and exports done, let's bind the router to our Express app. Open up `server.js` and import the `Router` we just created:
+
+```javascript
+/* import routers */
+import { router as personRouter } from './routers/person-router.js'
+```
+
+Then add the `personRouter` to the Express app:
+
+```javascript
+/* bring in some routers */
+app.use('/person', personRouter)
+```
+
+Your `server.js` should now look like this:
+
+```javascript
+import 'dotenv/config'
+
+import express from 'express'
+import swaggerUi from 'swagger-ui-express'
+import YAML from 'yamljs'
+
+/* import routers */
+import { router as personRouter } from './routers/person-router.js'
+
+/* create an express app and use JSON */
+const app = new express()
+app.use(express.json())
+
+/* bring in some routers */
+app.use('/person', personRouter)
+
+/* set up swagger in the root */
+const swaggerDocument = YAML.load('api.yaml')
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+
+/* start the server */
+app.listen(8080)
+```
+
+Now, finally, we can add our routes to create, read, update, and delete persons. Head back to the `person-router.js` file so we can do just that.
+
+### Creating a Person
+
+We'll create a `Person` first as you need to have persons in Redis before you can do any of the reading, updating, or deleting of them. Add the PUT route below. This route will call `.createAndSave` to create an `Entity` from the request body and immediately save it to the Redis:
+
+```javascript
+router.put('/', async (req, res) => {
+  const person = await personRepository.createAndSave(req.body)
+  res.send(person)
+})
+```
+
+Note that we are also returning the newly created `Person`. Let's see what that looks like by actually calling our API using the Swagger UI. Go to http://localhost:8080 in your browser and try it out. The default request body in Swagger will be fine for testing. You should see a response that looks like this:
+
+```json
+{
+  "entityId": "01FY9MWDTWW4XQNTPJ9XY9FPMN",
+  "firstName": "Rupert",
+  "lastName": "Holmes",
+  "age": 75,
+  "verified": false,
+  "location": {
+    "longitude": 45.678,
+    "latitude": 45.678
+  },
+  "locationUpdated": "2022-03-01T12:34:56.123Z",
+  "skills": [
+    "singing",
+    "songwriting",
+    "playwriting"
+  ],
+  "personalStatement": "I like piña coladas and walks in the rain"
+}
+```
+
+This is exactly what we handed it with one exception: the `entityId`. Every `Entity` in Redis OM has an `entityId` which is—as you've probably guessed—the unique ID of that `Entity`. It's generated when we call any of the `.create` family of methods on a `Repository`. You'll want to make note of the `entityID` as yours will be different from the one above and you'll need it when we test the next route.
+
+
+### Reading a Person
+
+Create down, let's add a GET route to read this newly created `Person`:
+
+```javascript
+router.get('/:id', async (req, res) => {
+  const person = await personRepository.fetch(req.params.id)
+  res.send(person)
+})
+```
+
+This code extracts a parameter from the URL used in the route—the `entityId` that we received previously. It uses the `.fetch` method on the `Repository` to retrieve a `Person` using that `entityId`. Then, it returns that `Person`.
+
+Let's go ahead and test that in Swagger as well. You should get back exactly the same response. In fact, since this is a simple GET, we should be able to just load the URL into our browser. Test that out too by navigating to http://localhost:8080/person/01FY9MWDTWW4XQNTPJ9XY9FPMN—replacing the `entityId` with your own.
+
+
+### Updating a Person
+
 - Update
   - updates whole record
   - could write a patch to update just one field
 - Delete
+
+```javascript
+import { Router } from 'express'
+import { personRepository } from '../om/person.js'
+
+export const router = Router()
+
+// CREATE
+router.put('/', async (req, res) => {
+  const person = await personRepository.createAndSave(req.body)
+  res.send(person)
+})
+
+// READ
+router.get('/:id', async (req, res) => {
+  const person = await personRepository.fetch(req.params.id)
+  res.send(person)
+})
+
+// UPDATE
+router.post('/:id', async (req, res) => {
+
+  const person = await personRepository.fetch(req.params.id)
+
+  person.firstName = req.body.firstName ?? null
+  person.lastName = req.body.lastName ?? null
+  person.age = req.body.age ?? null
+  person.verified = req.body.verified ?? null
+  person.location = req.body.location ?? null
+  person.locationUpdated = req.body.locationUpdated ?? null
+  person.skills = req.body.skills ?? null
+  person.personalStatement = req.body.personalStatement ?? null
+
+  await personRepository.save(person)
+
+  res.send(person)
+})
+
+// DELETE
+router.delete('/:id', async (req, res) => {
+  await personRepository.remove(req.params.id)
+  res.send({ id: req.params.id })
+})
+```
+
 
 ## Searching on so many things
 
