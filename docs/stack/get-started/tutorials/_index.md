@@ -1,6 +1,6 @@
 ---
 title: Redis Stack tutorials
 linkTitle: Tutorials
-description: 
-weight: 1
+description: Learn how to write code against Redis Stack
+weight: 3
 ---
