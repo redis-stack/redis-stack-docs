@@ -309,15 +309,52 @@ router.get('/:id', async (req, res) => {
 
 This code extracts a parameter from the URL used in the route—the `entityId` that we received previously. It uses the `.fetch` method on the `Repository` to retrieve a `Person` using that `entityId`. Then, it returns that `Person`.
 
-Let's go ahead and test that in Swagger as well. You should get back exactly the same response. In fact, since this is a simple GET, we should be able to just load the URL into our browser. Test that out too by navigating to http://localhost:8080/person/01FY9MWDTWW4XQNTPJ9XY9FPMN—replacing the `entityId` with your own.
+Let's go ahead and test that in Swagger as well. You should get back exactly the same response. In fact, since this is a simple GET, we should be able to just load the URL into our browser. Test that out too by navigating to http://localhost:8080/person/01FY9MWDTWW4XQNTPJ9XY9FPMN, replacing the `entityId` with your own.
 
+Now that we can read and write, let's implement the *REST* of the HTTP verbs. REST... get it?
 
 ### Updating a Person
 
-- Update
-  - updates whole record
-  - could write a patch to update just one field
-- Delete
+Let's add the code to update using a POST route:
+
+```javascript
+router.post('/:id', async (req, res) => {
+
+  const person = await personRepository.fetch(req.params.id)
+
+  person.firstName = req.body.firstName ?? null
+  person.lastName = req.body.lastName ?? null
+  person.age = req.body.age ?? null
+  person.verified = req.body.verified ?? null
+  person.location = req.body.location ?? null
+  person.locationUpdated = req.body.locationUpdated ?? null
+  person.skills = req.body.skills ?? null
+  person.personalStatement = req.body.personalStatement ?? null
+
+  await personRepository.save(person)
+
+  res.send(person)
+})
+```
+
+This code fetches the `Person` from the `Repository` using the `entityId` just like our previous route did. However, now we change all the properties based on the properties in the request body. If any of them are missing, we set them to `null`. Then, we call `.save` and return the changed `Person`.
+
+Let's test this in Swagger too, why not? Make some changes. Remove some of the fields and see what you get back when you read it.
+
+### Deleting a Person
+
+Deletion, my favorite! Remember kids, deletion is 100% compression. The route that deletes is just as straightforward as the one that reads, just more destructive:
+
+```javascript
+router.delete('/:id', async (req, res) => {
+  await personRepository.remove(req.params.id)
+  res.send({ id: req.params.id })
+})
+```
+
+### All the CRUD
+
+Just for completeness, here's what should be totality of your `person-router.js` file:
 
 ```javascript
 import { Router } from 'express'
@@ -325,19 +362,16 @@ import { personRepository } from '../om/person.js'
 
 export const router = Router()
 
-// CREATE
 router.put('/', async (req, res) => {
   const person = await personRepository.createAndSave(req.body)
   res.send(person)
 })
 
-// READ
 router.get('/:id', async (req, res) => {
   const person = await personRepository.fetch(req.params.id)
   res.send(person)
 })
 
-// UPDATE
 router.post('/:id', async (req, res) => {
 
   const person = await personRepository.fetch(req.params.id)
@@ -356,13 +390,13 @@ router.post('/:id', async (req, res) => {
   res.send(person)
 })
 
-// DELETE
 router.delete('/:id', async (req, res) => {
   await personRepository.remove(req.params.id)
   res.send({ id: req.params.id })
 })
 ```
 
+CRUD down, let's do some searching.
 
 ## Searching on so many things
 
