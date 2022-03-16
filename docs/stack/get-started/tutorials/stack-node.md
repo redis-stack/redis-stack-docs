@@ -484,23 +484,113 @@ app.use('/persons', searchRouter)
 ### Search all the things
 - Returning everything
 
+```javascript
+router.get('/all', async (req, res) => {
+  const persons = await personRepository.search().return.all()
+  res.send(persons)
+})
+```
+
 ### Searching by single feilds
 - Searchign by single fields: string, number, boolean
+
+```javascript
+router.get('/by-last-name/:lastName', async (req, res) => {
+  const lastName = req.params.lastName
+  const persons = await personRepository.search()
+    .where('lastName').equals(lastName).return.all()
+  res.send(persons)
+})
+
+router.get('/old-enough-to-drink-in-america', async (req, res) => {
+  const persons = await personRepository.search()
+    .where('age').gte(21).return.all()
+  res.send(persons)
+})
+
+router.get('/non-verified', async (req, res) => {
+  const persons = await personRepository.search()
+    .where('verified').is.not.true().return.all()
+  res.send(persons)
+})
+```
 
 
 ### Using `and` and `or`
 - Using and + or
 
+```javascript
+router.get('/verified-drinkers-with-last-name/:lastName', async (req, res) => {
+  const lastName = req.params.lastName
+  const persons = await personRepository.search()
+    .where('verified').is.true()
+      .and('age').gte(21)
+      .and('lastName').equals(lastName).return.all()
+  res.send(persons)
+})
+```
+
 
 ### Full-text search is fancy
 - Full-text search
 
+```javascript
+router.get('/with-statement-containing/:text', async (req, res) => {
+  const text = req.params.text
+  const persons = await personRepository.search()
+    .where('personalStatement').matches(text)
+      .return.all()
+  res.send(persons)
+})
+```
 
 ### Searching on the globe
 - Searching by location
 
+```javascript
+router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {
+  const longitude = Number(req.params.lng)
+  const latitude = Number(req.params.lat)
+  const radius = Number(req.params.radius)
+
+  const persons = await personRepository.search()
+    .where('location')
+      .inRadius(circle => circle
+          .longitude(longitude)
+          .latitude(latitude)
+          .radius(radius)
+          .miles)
+        .return.all()
+
+  res.send(persons)
+})
+```
 
 ## Updating location
+
+```javascript
+import { Router } from 'express'
+import { personRepository } from '../om/person.js'
+
+export const router = Router()
+
+router.patch('/:id/location/:lng,:lat', async (req, res) => {
+
+  const id = req.params.id
+  const longitude = Number(req.params.lng)
+  const latitude = Number(req.params.lat)
+
+  const locationUpdated = new Date()
+
+  const person = await personRepository.fetch(id)
+  person.location = { longitude, latitude }
+  person.locationUpdated = locationUpdated
+  await personRepository.save(person)
+
+  res.send({ id, locationUpdated, location: { longitude, latitude } })
+})
+```
+
 
 - Adding a route to update location
 - Updating the location with coordin and a date
@@ -514,6 +604,20 @@ app.use('/persons', searchRouter)
   - access to low-level commands
 - .use vs .open
 
+```javascript
+import { Client } from 'redis-om'
+import { createClient } from 'redis'
+
+const url = process.env.REDIS_URL
+
+export const connection = createClient({ url })
+await connection.connect()
+
+const client = await new Client().use(connection)
+
+export default client
+```
+
 ## Storing location history with Streams
 
 - add a call to .xAdd
@@ -523,6 +627,37 @@ app.use('/persons', searchRouter)
 
 - Got some decent starter code
 - To see my version, checkout the solution branch of the repo
+
+```javascript
+import { Router } from 'express'
+
+import { personRepository } from '../om/person.js'
+import { connection } from '../om/client.js'
+
+export const router = Router()
+
+router.patch('/:id/location/:lng,:lat', async (req, res) => {
+
+  const id = req.params.id
+  const longitude = Number(req.params.lng)
+  const latitude = Number(req.params.lat)
+
+  const locationUpdated = new Date()
+
+  const person = await personRepository.fetch(id)
+  person.location = { longitude, latitude }
+  person.locationUpdated = locationUpdated
+  await personRepository.save(person)
+
+  await connection.xAdd(`${person.keyName}:locationHistory`, '*', person.location)
+
+  res.send({ id, locationUpdated, location: { longitude, latitude } })
+})
+```
+
+
+
+
 
 
 
