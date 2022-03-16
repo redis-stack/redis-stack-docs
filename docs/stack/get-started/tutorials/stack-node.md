@@ -134,6 +134,9 @@ import { Entity, Schema } from 'redis-om'
 import client from './client.js'
 ```
 
+
+### Entity
+
 Next, we need to define an **entity**. An `Entity` is the class that you work with—the thing being mapped to. It is what you create, read, update, and delete. Any class that extends `Entity` is an entity. We'll define our Person entity with a single line:
 
 ```javascript
@@ -141,7 +144,10 @@ Next, we need to define an **entity**. An `Entity` is the class that you work wi
 class Person extends Entity {}
 ```
 
-A **schema** defines the fields on your entity, their types, and how they are mapped internally to Redis. By default, entities map to JSON documents. When a `Schema` is created, it will add properties to the provided `Entity` based on the definitions provided. Let's create our `Schema` in `person.js`:
+
+### Schema
+
+A **schema** defines the fields on your entity, their types, and how they are mapped internally to Redis. By default, entities map to JSON documents. Let's create our `Schema` in `person.js`:
 
 ```javascript
 /* create a Schema for Person */
@@ -156,7 +162,23 @@ const personSchema = new Schema(Person, {
   personalStatement: { type: 'text' }
 })
 ```
-  - talk about the field types
+
+When you create a `Schema`, it modifies the `Entity` you handed it (`Person` in our case) adding getters and setters for the properties you define. The type those getters and setters accept and return are defined with the type parameter above. Valid values are: `string`, `number`, `boolean`, `string[]`, `date`, `point`, or `text`.
+
+The first three do exactly what you think—they define a property that is a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), a [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), or a [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean). `string[]` does what you'd think as well, specifically defining an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of Strings.
+
+`date` is a little different, but still more or less what you'd expect. It defines a property that returns a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and can be set using not only a Date but also a String containing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date or a number with the [UNIX epoch time](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps) in *milliseconds*.
+
+A `point` defines a point somewhere on the globe as a longitude and a latitude. It creates a property that returns and accepts a simple object with `longitude` and `latitude` properties. Like this:
+
+```javascript
+let point = { longitude: 12.34, latitude: 56.78 }
+```
+
+A `text` field is a lot like a `string`. If you're just reading and writing objects, they are identical. But if you want to *search* on them, they are very, very different. We'll talk about that when we add search to our API but the tl;dr is that `string` fields can only be matched on their whole value—no partial matches—and are best for keys while `text` fields have full-text search enabled on them and are optimized for human-readable text.
+
+
+### Repository
 
 Now we have all the pieces that we need to create a *repository*. The *Repository* is the main interface into Redis OM. It gives us the methods to read, write, and remove a specific `Entity`. Create a `Repository` in `person.js` and make sure it's exported as you'll need it when we get into the Express stuff:
 
@@ -205,7 +227,7 @@ Now, let's add some routes in Express.
 
 ## Setup Routes
 
-Our routes need a place to live. That place is a `Router`. So, create a file in the `routers` folder called `person-router.js` and import `Router` from Express and the `personRepository` that we defined in `person.js`:
+Our routes need a place to live. That place is a `Router`. Create a file in the `routers` folder called `person-router.js` and import both `Router` from Express and the `personRepository` we defined in `person.js`:
 
 Let's create a truly RESTful API with the CRUD operations mapping to PUT, GET, POST, and DELETE respectively. We're going to do this using [Express Routers](https://expressjs.com/en/4x/api.html#router) as this makes our code nice and tidy. So, create a file called `person-router.js` in the `routers` folder. Then import `Router` from Express and import the `personRepository` that we defined in `person.js`. Oh, and create and export a `Router`:
 
@@ -352,9 +374,20 @@ router.delete('/:id', async (req, res) => {
 })
 ```
 
+I guess we should probably test this one out too. Load up Swagger and exercise the route. You should get back JSON with the `entityID` you just removed:
+
+```json
+{
+  "id": "01FY9MWDTWW4XQNTPJ9XY9FPMN"
+}
+```
+
+And just like that, it's gone!
+
+
 ### All the CRUD
 
-Just for completeness, here's what should be totality of your `person-router.js` file:
+Just for completeness, here's what should be the totality of your `person-router.js` file:
 
 ```javascript
 import { Router } from 'express'
@@ -396,15 +429,76 @@ router.delete('/:id', async (req, res) => {
 })
 ```
 
-CRUD down, let's do some searching.
+If yours looks different, you might want to figure that out. ;)
+
 
 ## Searching on so many things
 
+CRUD down, let's do some searching. In order to search, we need data to search over. Remember the `persons` folder with all the JSON documents and the `load-data.sh` shell script? It's time has arrive. Go into that folder and run that script:
+
+    cd persons
+    ./load-data.sh
+
+You should get a response with the loaded JSON and the file it came from as a result. Like this:
+
+```
+{"entityId":"01FY9Z4RRPKF4K9H78JQ3K3CP3","firstName":"Chris","lastName":"Stapleton","age":43,"verified":true,"location":{"longitude":-84.495,"latitude":38.03},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","football","coal mining"],"personalStatement":"There are days that I can walk around like I'm alright. And I pretend to wear a smile on my face. And I could keep the pain from comin' out of my eyes. But sometimes, sometimes, sometimes I cry."} <- chris-stapleton.json
+{"entityId":"01FY9Z4RS2QQVN4XFYSNPKH6B2","firstName":"David","lastName":"Paich","age":67,"verified":false,"location":{"longitude":-118.25,"latitude":34.05},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","keyboard","blessing"],"personalStatement":"I seek to cure what's deep inside frightened of this thing that I've become"} <- david-paich.json
+{"entityId":"01FY9Z4RSD7SQMSWDFZ6S4M5MJ","firstName":"Ivan","lastName":"Doroschuk","age":64,"verified":true,"location":{"longitude":-88.273,"latitude":40.115},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","dancing","friendship"],"personalStatement":"We can dance if we want to. We can leave your friends behind. 'Cause your friends don't dance and if they don't dance well they're no friends of mine."} <- ivan-doroschuk.json
+{"entityId":"01FY9Z4RSRZFGQ21BMEKYHEVK6","firstName":"Joan","lastName":"Jett","age":63,"verified":false,"location":{"longitude":-75.273,"latitude":40.003},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","guitar","black eyeliner"],"personalStatement":"I love rock n' roll so put another dime in the jukebox, baby."} <- joan-jett.json
+{"entityId":"01FY9Z4RT25ABWYTW6ZG7R79V4","firstName":"Justin","lastName":"Timberlake","age":41,"verified":true,"location":{"longitude":-89.971,"latitude":35.118},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","dancing","half-time shows"],"personalStatement":"What goes around comes all the way back around."} <- justin-timberlake.json
+{"entityId":"01FY9Z4RTD9EKBDS2YN9CRMG1D","firstName":"Kerry","lastName":"Livgren","age":72,"verified":false,"location":{"longitude":-95.689,"latitude":39.056},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["poetry","philosophy","songwriting","guitar"],"personalStatement":"All we are is dust in the wind."} <- kerry-livgren.json
+{"entityId":"01FY9Z4RTR73HZQXK83JP94NWR","firstName":"Marshal","lastName":"Mathers","age":49,"verified":false,"location":{"longitude":-83.046,"latitude":42.331},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["rapping","songwriting","comics"],"personalStatement":"Look, if you had, one shot, or one opportunity to seize everything you ever wanted, in one moment, would you capture it, or just let it slip?"} <- marshal-mathers.json
+{"entityId":"01FY9Z4RV2QHH0Z1GJM5ND15JE","firstName":"Rupert","lastName":"Holmes","age":75,"verified":true,"location":{"longitude":-2.518,"latitude":53.259},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","songwriting","playwriting"],"personalStatement":"I like piña coladas and taking walks in the rain."} <- rupert-holmes.json
+```
+
+A little messy, but if you don't see this, then it didn't work!
+
+Now that we have some data, let's add another `Router` for the search routes we want to add. Create a file named `search-router.js` in the routers folder and set it up with imports and exports just like we did in `person-router.js`:
+
+```javascript
+import { Router } from 'express'
+import { personRepository } from '../om/person.js'
+
+export const router = Router()
+```
+
+Import this `Router` into `server.js` the same way we did for for the `personRouter`:
+
+```javascript
+/* import routers */
+import { router as personRouter } from './routers/person-router.js'
+import { router as searchRouter } from './routers/search-router.js'
+```
+
+Then add the `searchRouter` to the Express app:
+
+```javascript
+/* bring in some routers */
+app.use('/person', personRouter)
+app.use('/persons', searchRouter)
+```
+
+`Router` bound, we can now add some routes.
+
+### Search all the things
 - Returning everything
+
+### Searching by single feilds
 - Searchign by single fields: string, number, boolean
+
+
+### Using `and` and `or`
 - Using and + or
+
+
+### Full-text search is fancy
 - Full-text search
+
+
+### Searching on the globe
 - Searching by location
+
 
 ## Updating location
 
