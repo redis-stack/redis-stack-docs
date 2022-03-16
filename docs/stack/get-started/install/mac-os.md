@@ -5,7 +5,7 @@ description: "How to install Redis Stack on macOS"
 weight: 1
 ---
 
-To install Redis Stack on macOS, use [Homebrew](https://brew.sh/). Make sure that have [Homebrew installed](https://docs.brew.sh/Installation) before starting on the installation instructions below.
+To install Redis Stack on macOS, use [Homebrew](https://brew.sh/). Make sure that you have [Homebrew installed](https://docs.brew.sh/Installation) before starting on the installation instructions below.
 
 ## Install using Homebrew
 
@@ -90,7 +90,7 @@ In this case, you can overwrite the Redis binaries installed by Redis Stack by r
 
 {{< highlight bash >}}
 brew link --overwrite redis
-{{< / highlight bash >}}
+{{< / highlight >}}
 
 However, Redis Stack Server will still be installed. To uninstall Redis Stack Server, see below.
 
