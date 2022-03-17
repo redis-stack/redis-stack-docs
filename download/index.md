@@ -29,8 +29,8 @@ We publish Redis Stack packages for Docker, Homebrew, Debian, and RHEL. Redis St
 
 Redis Stack 1.0 extends Redis with support for JSON, search, time series, graph, and probabilistic data models. Stack also includes RedisInsight for visualizing and optimizing your Redis data.
 
-* [Redis Stack Server 1.0.1]()
-* [Stack 1.0.1 Release Notes]()
+* [Redis Stack Server 6.2.0]()
+* [Redis Stack 6.2.0 Release Notes]()
 * [More installation options ->](#redis-stack-downloads)
 </div>
 
@@ -83,12 +83,19 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 <div id="download-redis-stack-options">
 <div class="inner-content">
 
-## Redis Stack downloads
+## Redis Stack installation options
 
 ### Docker
 
-You can download and run Docker images of Redis Stack from DockerHub. Multiple versions are available, usually updated in a short time after a new release is available.
+You can download and run Docker images of Redis Stack from DockerHub. See [Install Redis Stack on Docker](/docs/stack/get-started/install/docker).
 
-[Go to Redis Stack DockerHub](https://hub.docker.com/_/redis)
+### Linux packages
+
+You can install Redis Stack on Linux using our Debian and RHEL packages. See [Install Redis Stack on Linux](/docs/stack/get-started/install/linux) for the details.
+
+### macOS
+
+You can install Redis Stack binaries for macOS using Homebrew. See [Install Redis Stack on macOS](/docs/stack/get-started/install/mac-os) for instructions.
+
 </div>
 </div>
