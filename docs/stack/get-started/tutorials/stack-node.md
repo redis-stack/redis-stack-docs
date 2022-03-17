@@ -175,7 +175,7 @@ A `point` defines a point somewhere on the globe as a longitude and a latitude. 
 let point = { longitude: 12.34, latitude: 56.78 }
 ```
 
-A `text` field is a lot like a `string`. If you're just reading and writing objects, they are identical. But if you want to *search* on them, they are very, very different. We'll talk about that when we add search to our API but the tl;dr is that `string` fields can only be matched on their whole value—no partial matches—and are best for keys while `text` fields have full-text search enabled on them and are optimized for human-readable text.
+A `text` field is a lot like a `string`. If you're just reading and writing objects, they are identical. But if you want to *search* on them, they are very, very different. We'll talk about search more later, but the tl;dr is that `string` fields can only be matched on their whole value—no partial matches—and are best for keys while `text` fields have full-text search enabled on them and are optimized for human-readable text.
 
 
 ### Repository
@@ -225,7 +225,7 @@ await personRepository.createIndex()
 Now, let's add some routes in Express.
 
 
-## Setup Routes
+## Set up the Person Router
 
 Our routes need a place to live. That place is a `Router`. Create a file in the `routers` folder called `person-router.js` and import both `Router` from Express and the `personRepository` we defined in `person.js`:
 
@@ -281,6 +281,7 @@ app.listen(8080)
 
 Now, finally, we can add our routes to create, read, update, and delete persons. Head back to the `person-router.js` file so we can do just that.
 
+
 ### Creating a Person
 
 We'll create a `Person` first as you need to have persons in Redis before you can do any of the reading, updating, or deleting of them. Add the PUT route below. This route will call `.createAndSave` to create an `Entity` from the request body and immediately save it to the Redis:
@@ -315,7 +316,11 @@ Note that we are also returning the newly created `Person`. Let's see what that 
 }
 ```
 
-This is exactly what we handed it with one exception: the `entityId`. Every `Entity` in Redis OM has an `entityId` which is—as you've probably guessed—the unique ID of that `Entity`. It's generated when we call any of the `.create` family of methods on a `Repository`. You'll want to make note of the `entityID` as yours will be different from the one above and you'll need it when we test the next route.
+This is exactly what we handed it with one exception: the `entityId`. Every `Entity` in Redis OM has an `entityId` which is—as you've probably guessed—the unique ID of that `Entity`. It's randomly generated when we call any of the `.create` family of methods on a `Repository`. Yours will be different, so make note of it.
+
+You can see this newly created JSON document in Redis with Redis Insight. Go ahead and launch Redis Insight and you should see a key with the name of `Person:01FY9MWDTWW4XQNTPJ9XY9FPMN`. The `Person` bit of the key was derived from the class name of our `Entity` and the ID bit is our generated `enttiyID`. Click on it take a look at the JSON document you've created.
+
+You'll also see a String in the key `Person:index:hash`. That's a unique value that Redis OM uses to see if it needs to recreate the index or not when `.createIndex` is called. You can safely ignore it.
 
 
 ### Reading a Person
@@ -334,6 +339,7 @@ This code extracts a parameter from the URL used in the route—the `entityId` t
 Let's go ahead and test that in Swagger as well. You should get back exactly the same response. In fact, since this is a simple GET, we should be able to just load the URL into our browser. Test that out too by navigating to http://localhost:8080/person/01FY9MWDTWW4XQNTPJ9XY9FPMN, replacing the `entityId` with your own.
 
 Now that we can read and write, let's implement the *REST* of the HTTP verbs. REST... get it?
+
 
 ### Updating a Person
 
@@ -370,7 +376,7 @@ Deletion, my favorite! Remember kids, deletion is 100% compression. The route th
 ```javascript
 router.delete('/:id', async (req, res) => {
   await personRepository.remove(req.params.id)
-  res.send({ id: req.params.id })
+  res.send({ entityId: req.params.id })
 })
 ```
 
@@ -378,7 +384,7 @@ I guess we should probably test this one out too. Load up Swagger and exercise t
 
 ```json
 {
-  "id": "01FY9MWDTWW4XQNTPJ9XY9FPMN"
+  "entityId": "01FY9MWDTWW4XQNTPJ9XY9FPMN"
 }
 ```
 
@@ -425,21 +431,19 @@ router.post('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   await personRepository.remove(req.params.id)
-  res.send({ id: req.params.id })
+  res.send({ entityId: req.params.id })
 })
 ```
 
-If yours looks different, you might want to figure that out. ;)
 
+## Preparing to search
 
-## Searching on so many things
-
-CRUD down, let's do some searching. In order to search, we need data to search over. Remember the `persons` folder with all the JSON documents and the `load-data.sh` shell script? It's time has arrive. Go into that folder and run that script:
+CRUD down, let's do some searching. In order to search, we need data to search over. Remember the `persons` folder with all the JSON documents and the `load-data.sh` shell script? It's time has arrived. Go into that folder and run that script:
 
     cd persons
     ./load-data.sh
 
-You should get a response with the loaded JSON and the file it came from as a result. Like this:
+You should get a rather verbose response containing the files you loaded and their JSON content. Like this:
 
 ```
 {"entityId":"01FY9Z4RRPKF4K9H78JQ3K3CP3","firstName":"Chris","lastName":"Stapleton","age":43,"verified":true,"location":{"longitude":-84.495,"latitude":38.03},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","football","coal mining"],"personalStatement":"There are days that I can walk around like I'm alright. And I pretend to wear a smile on my face. And I could keep the pain from comin' out of my eyes. But sometimes, sometimes, sometimes I cry."} <- chris-stapleton.json
@@ -481,8 +485,10 @@ app.use('/persons', searchRouter)
 
 `Router` bound, we can now add some routes.
 
+
 ### Search all the things
-- Returning everything
+
+We're going to add a plethora of searches to our new `Router`. But the first will be the easiest by far. It's just going to return everything. Go ahead and add the following code to `search-router.js`:
 
 ```javascript
 router.get('/all', async (req, res) => {
@@ -491,8 +497,11 @@ router.get('/all', async (req, res) => {
 })
 ```
 
-### Searching by single feilds
-- Searchign by single fields: string, number, boolean
+Here we can see how to start and finish a search. Searches start just like the CRUD operations start—on a `Repository`. But instead of calling `.create`, `.fetch`, `.save`, or `.remove`, we call `.search`. And unlike all those other methods, `.search` doesn't end with the function call. Instead, it allows you to build up a query and then resolved it with a call to `.return.all`.
+
+With this new route in place, go into the Swagger UI and exercise the `/persons/all` route. You should see all of the folks you added with the shell script as a JSON array.
+
+In the example above, the query is not specified—we didn't build anything up. If you do this, you'll just get everything. Which is what you want sometime. But not most of the time. It's not really searching if you just return everything. So let's add a route that lets us find persons by last name. Add the following code:
 
 ```javascript
 router.get('/by-last-name/:lastName', async (req, res) => {
@@ -501,7 +510,27 @@ router.get('/by-last-name/:lastName', async (req, res) => {
     .where('lastName').equals(lastName).return.all()
   res.send(persons)
 })
+```
 
+In this route, we're specifying a field we want to filter on and a value that it needs to equal. The field name in the call to `.where` is the name of the field specified in our `Schema`. This field was defined as a `string`. This matters because the type of the field determines what methods are available to match it.
+
+In the case of a `string`, there's just `.equals`. But, this is aliased as `.eq`, `.equal`, and `.equalTo`. And you can add some syntactic sugar with `.is` and `.does` to make code like:
+
+```javascript
+const persons = await personRepository.search().where('lastName').is.equalTo(lastName).return.all()
+const persons = await personRepository.search().where('lastName').does.equal(lastName).return.all()
+```
+
+You can also invert the match with a call to `.not`:
+
+```javascript
+const persons = await personRepository.search().where('lastName').is.not.equalTo(lastName).return.all()
+const persons = await personRepository.search().where('lastName').does.not.equal(lastName).return.all()
+```
+
+In all these cases, the call to `.return.all` executes the query we build between it and the call to `.search`. We can search on other field types as well. Let's add some routes for searching on a `number` and a `boolean` field:
+
+```javascript
 router.get('/old-enough-to-drink-in-america', async (req, res) => {
   const persons = await personRepository.search()
     .where('age').gte(21).return.all()
@@ -515,9 +544,34 @@ router.get('/non-verified', async (req, res) => {
 })
 ```
 
+The `number` field is filtering persons by age where the age is great than or equal to 21. Again, there are aliases and syntactic sugar:
 
-### Using `and` and `or`
-- Using and + or
+```javascript
+const persons = await personRepository.search().where('age').is.greaterThanOrEqualTo(21).return.all()
+```
+
+But there are also more matching options:
+
+```javascript
+const persons = await personRepository.search().where('age').eq(21).return.all()
+const persons = await personRepository.search().where('age').gt(21).return.all()
+const persons = await personRepository.search().where('age').gte(21).return.all()
+const persons = await personRepository.search().where('age').lt(21).return.all()
+const persons = await personRepository.search().where('age').lte(21).return.all()
+const persons = await personRepository.search().where('age').between(21, 65).return.all()
+```
+
+The `boolean` field is filtering persons by their verification status. It already has some of the syntactic sugar in it. Note that this query will match a missing value or a false value. That's why I specified `.not.true`. You can also call `.false` on boolean fields as well as all the variations of `.equals`.
+
+```javascript
+const persons = await personRepository.search().where('verified').true().return.all()
+const persons = await personRepository.search().where('verified').false().return.all()
+const persons = await personRepository.search().where('verified').equals(true).return.all()
+```
+
+> So, we've created a few routes and I haven't told you to test them. Maybe you have anyhow. If so, good for you, you rebel. For the rest of you, why don't you go and test them now with Swagger? And, going forward, just test them when you want. Heck, create some of your own using the provided syntax and try those out too. Don't let me tell you how to live your life.
+
+Of course, filtering on jsut one field is never enough. No problem, Redis OM can handle `.and`, and `.or`. Add this route:
 
 ```javascript
 router.get('/verified-drinkers-with-last-name/:lastName', async (req, res) => {
@@ -530,9 +584,16 @@ router.get('/verified-drinkers-with-last-name/:lastName', async (req, res) => {
 })
 ```
 
+Here, I'm just showing the syntax for `.and` but you can also use `.or`.
 
-### Full-text search is fancy
-- Full-text search
+
+### Full-text search
+
+If you've defined a field with a type of `text` in your schema, you can store text in it and perform full-text searches against it. The way a `text` field is search is different from how a `string` is searched. A `string` can only be compared with `.equals` and must match the entire string. With a `text` field, you can look for words and partial words.
+
+A `text` field is optimized for human-readable text and it's pretty clever. It understands that certain words (like *a*, *an*, or *the*) are common and ignores them. It understands how words relate to each other and so if you search for *give*, it matches *gives*, *given*, *giving*, and *gave* too. It ignores punctuation.
+
+Let's add a route the does a full-text search against our `personalStatement` field:
 
 ```javascript
 router.get('/with-statement-containing/:text', async (req, res) => {
@@ -544,8 +605,57 @@ router.get('/with-statement-containing/:text', async (req, res) => {
 })
 ```
 
+Note the use of the `.matches` function. This is the only one that works with `text` fields. It takes a string that can be one or more words, space delimited, that you want to search for. Let's try it out. In Swagger, use this this to search for the word "walk". You should get the following results:
+
+```json
+[
+  {
+    "entityId": "01FYC7CTR027F219455PS76247",
+    "firstName": "Rupert",
+    "lastName": "Holmes",
+    "age": 75,
+    "verified": true,
+    "location": {
+      "longitude": -2.518,
+      "latitude": 53.259
+    },
+    "locationUpdated": "2022-01-01T12:00:00.000Z",
+    "skills": [
+      "singing",
+      "songwriting",
+      "playwriting"
+    ],
+    "personalStatement": "I like piña coladas and taking walks in the rain."
+  },
+  {
+    "entityId": "01FYC7CTNBJD9CZKKWPQEZEW14",
+    "firstName": "Chris",
+    "lastName": "Stapleton",
+    "age": 43,
+    "verified": true,
+    "location": {
+      "longitude": -84.495,
+      "latitude": 38.03
+    },
+    "locationUpdated": "2022-01-01T12:00:00.000Z",
+    "skills": [
+      "singing",
+      "football",
+      "coal mining"
+    ],
+    "personalStatement": "There are days that I can walk around like I'm alright. And I pretend to wear a smile on my face. And I could keep the pain from comin' out of my eyes. But sometimes, sometimes, sometimes I cry."
+  }
+]
+```
+
+Notice how the word "walks" is matched for Rupert Holmes' entry "walks" in matched for Chris Stapleton's. Now do a search for "walk raining". You'll see that this returns Rupert only even though the exact text of neither of these words in found in his personal statement. But they are gramatically related. This is called stemming and it's a pretty cool feature of RediSearch that Redis OM exploits.
+
+And if you search for "a rain walk" you'll still match even though the word "a" is not in the text because it's a common word that's not very helpful with searching. The common words are called stop words.
+
+
 ### Searching on the globe
-- Searching by location
+
+RediSearch, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe and a radius and it'll gleefully return all the entities within that radius. Let's add a route to do just that:
 
 ```javascript
 router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {
@@ -566,7 +676,45 @@ router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {
 })
 ```
 
-## Updating location
+This code looks a little different than the others because the way we define the circle who want to search in done with an arrow function that is passed into the `.inRadius` method:
+
+```javascript
+circle => circle.longitude(longitude).latitude(latitude).radius(radius).miles
+```
+
+All this arrow function does is accept a `Circle` that has been initialized with default values. We override those values by calling various builder methods on the `Circle` to define to origin of the `Circle` (i.e. the longitude and latitude), the radius of the `Circle`, and the units that radius is measured in. Valid units are `miles`, `meters`, `feet`, and `kilometers`.
+
+Let's try the route out. I know we can find Joan Jett at around longitude -75.0 and latitude 40.0 so use those coordinates and give it a radius of 20 miles. You should retrieve:
+
+```json
+[
+  {
+    "entityId": "01FYC7CTPKYNXQ98JSTBC37AS1",
+    "firstName": "Joan",
+    "lastName": "Jett",
+    "age": 63,
+    "verified": false,
+    "location": {
+      "longitude": -75.273,
+      "latitude": 40.003
+    },
+    "locationUpdated": "2022-01-01T12:00:00.000Z",
+    "skills": [
+      "singing",
+      "guitar",
+      "black eyeliner"
+    ],
+    "personalStatement": "I love rock n' roll so put another dime in the jukebox, baby."
+  }
+]
+```
+
+Try widening the radius and see who else you can find.
+
+
+## Adding location tracking
+
+We're getting toward the end of the tutorial here, but before we go, I'd like to add that loaction tracking piece that I mentioned way back in the begining. These next bit of code should be easily understood. Add a new file called `location-router.js` in the `routers` folder:
 
 ```javascript
 import { Router } from 'express'
@@ -591,71 +739,118 @@ router.patch('/:id/location/:lng,:lat', async (req, res) => {
 })
 ```
 
+This route is doing stuff we've seen before. We're calling `.fetch`, we're udpating some values—the `location` field with our longitude and latitude and the `locationUpdate` field with the current date and time. Easy peasy.
 
-- Adding a route to update location
-- Updating the location with coordin and a date
-- Keeping a log of events
+To use this `Router`, import it in `server.js`:
+
+```javascript
+/* import routers */
+import { router as personRouter } from './routers/person-router.js'
+import { router as searchRouter } from './routers/search-router.js'
+import { router as locationRouter } from './routers/location-router.js'
+```
+
+And bind the router to a path:
+
+```javascript
+/* bring in some routers */
+app.use('/person', personRouter, locationRouter)
+app.use('/persons', searchRouter)
+```
+
+But this just isn't enough. It doesn't show you anything I haven't shown you already. And, it's not really location *tracking*. It just shows where these people last were, no location history. So let's add some *history*. To do that, we're going to use a [Redis Stream](https://redis.io/topics/streams-intro). Streams are a big topic but don't worry if you’re not familiar with them, you can think of them as being sort of like a log file where each entry represents an event stored in a Redis key. In our case, the event would be the person moving about or checking in or whatever and the key would be for that particular `Person`.
+
+But there's a problem. Redis OM doesn’t support Streams. So, how do we take advantage of them in our application? Easy, by using [Node Redis](https://github.com/redis/node-redis). Node Redis is a low-level Redis client for Node.js that give you access to all Redis commands and data types. Internally, Redis OM is creating and using a Node Redis connection it and you can use that same connection too. Or rather, Redis OM can use the connection *you* are using too. Let me show you how.
+
 
 ## Using Node Redis
 
-- Why use node Redis?
-  - more config options
-  - why have two connections when one will do
-  - access to low-level commands
-- .use vs .open
+Open up `cleint.js` in the `om` folder. Remember how we created a Redis OM `Client` and then called `.open` on it?
+
+```javascript
+const client = await new Client().open(url)
+```
+
+Well, the `Client` also has a `.use` method that takes a Node Redis connection. Modify `client.js` to open a connection to Redis using Node Redis and then `.use` it:
 
 ```javascript
 import { Client } from 'redis-om'
 import { createClient } from 'redis'
 
+/* pulls the Redis URL from .env */
 const url = process.env.REDIS_URL
 
+/* create a connection to Redis with Node Redis */
 export const connection = createClient({ url })
 await connection.connect()
 
+/* create a Client and bind it to the Node Redis connection */
 const client = await new Client().use(connection)
 
 export default client
 ```
 
+And that's it. Note that we are exporting both the `client` *and* the `connection`. Got to export the `connection` if we want to use it in our newest route.
+
+
 ## Storing location history with Streams
 
-- add a call to .xAdd
-- check it in RedisInsight with XRANGE
-
-# Wrap-up
-
-- Got some decent starter code
-- To see my version, checkout the solution branch of the repo
+To add an event to a Stream we need to use the XADD command. Node Redis exposes that as `.xAdd`. So, we need to add a call to `.xAdd` in our route. Modify `location-router.js` to import our `connection`:
 
 ```javascript
-import { Router } from 'express'
-
-import { personRepository } from '../om/person.js'
 import { connection } from '../om/client.js'
+```
 
-export const router = Router()
+And then in the route itself add a call to `.xAdd`:
 
-router.patch('/:id/location/:lng,:lat', async (req, res) => {
-
-  const id = req.params.id
-  const longitude = Number(req.params.lng)
-  const latitude = Number(req.params.lat)
-
-  const locationUpdated = new Date()
-
+```javascript
+  ...snip...
   const person = await personRepository.fetch(id)
   person.location = { longitude, latitude }
   person.locationUpdated = locationUpdated
   await personRepository.save(person)
 
-  await connection.xAdd(`${person.keyName}:locationHistory`, '*', person.location)
-
-  res.send({ id, locationUpdated, location: { longitude, latitude } })
-})
+  let keyName = `${person.keyName}:locationHistory`
+  await connection.xAdd(keyName, '*', person.location)
+  ...snip...
 ```
 
+`.xAdd` takes a key name, an event ID, and a JavaScript object containing the keys and values that make up the event, i.e. the event data. For the key name, we're building a string using the `.keyName` property that `Person` inherited from `Entity`—which will return something like `Peson:01FYC7CTPKYNXQ98JSTBC37AS1`—combined with a hard-coded value. We're passing in '*' for our event ID, which tells Redis to just generate it based on the current time and last event ID. And we're passing in the location—with properties of longitude and latitude—as our event data.
 
+Now, whenever this route is exercised, the location will be logged and the event ID will encode the time. Go ahead and use Swagger to move Joan Jett around a few times.
+
+Now, go into Redis Insight and take a look at the Stream. You'll see it there in the list of keys but if you click on it, you'll get a message saying that "This data type is coming soon!" No problem, we'll just issue the raw command in Redis Insight:
+
+    XRANGE Person:01FYC7CTPKYNXQ98JSTBC37AS1:locationHistory - +
+
+This tells Redis to get a range of values from a Stream in the key name, `Person:01FYC7CTPKYNXQ98JSTBC37AS1:locationHistory` in our example. The next values are the starting event ID and the ending event ID. `-` is the begining of the Stream. `+` is the end. So this returns the entirity of the Stream:
+
+```
+1) 1) "1647536562911-0"
+   2) 1) "longitude"
+      2) "45.678"
+      3) "latitude"
+      4) "45.678"
+2) 1) "1647536564189-0"
+   2) 1) "longitude"
+      2) "45.679"
+      3) "latitude"
+      4) "45.679"
+3) 1) "1647536565278-0"
+   2) 1) "longitude"
+      2) "45.680"
+      3) "latitude"
+      4) "45.680"
+```
+
+And just like that, we're tracking Joan Jett.
+
+
+## Wrap-up
+
+So, now you know how to use Express + Redis OM to build an API backed by Redis Stack. And, you've gotten yourself some pretty decent started code in the process. Good deal! If you want to learn more, you can check out the [documentation](https://github.com/redis/redis-om-node) for Redis OM. It covers the full breadth of Redis OM's capabilities.
+
+Thanks for taking the time to work through this. If you have any questions, the [Redis Discord server](https://discord.gg/redis) is by far the best place to get them answered. Join the server and ask away!
 
 
 
