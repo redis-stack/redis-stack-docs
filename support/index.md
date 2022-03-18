@@ -1,9 +1,6 @@
 ---
 title: Support
 linkTitle: Support
-menu:
-  main:
-    weight: 50
 ---
 
 [Redis Ltd.](https://redis.com) is the official sponsor of open source Redis and provides several options for supporting Redis.

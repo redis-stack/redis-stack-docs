@@ -19,8 +19,8 @@ In addition to all of the features of OSS Redis, Redis stack supports:
 To get started started with Redis Stack, see the [Getting Started] guide. You may also want to:
 
 * Install Redis Stack
-* View the Redis Stack tutorials
 * See the list of clients supporting Redis Stack
+* View the Redis Stack tutorials
 
 If you want to learn more about the vision for Redis Stack, read on.
 
