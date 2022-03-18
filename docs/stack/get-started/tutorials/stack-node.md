@@ -7,9 +7,9 @@ weight: 1
 
 This tutorial will show you how to build an API using Node.js and Redis Stack.
 
-We'll be using [Express](https://expressjs.com/) and [Redis OM](https://github.com/redis/redis-om-node) to do this. I’m assuming that you know a bit of Express as it's a pretty established framework. However, I’m not using Express in a particularly sophisticated way so a basic understanding is plenty. In fact, you’ll probably be fine even if you haven’t used it before. The part you're likely not familiar with is Redis OM, which is exactly what we’re here to cover!
+We'll be using [Express](https://expressjs.com/) and [Redis OM](https://github.com/redis/redis-om-node) to do this. I’m assuming that you know a bit of Express as it's a pretty established framework. However, I’m not using Express in a particularly sophisticated way so a basic understanding will be plenty. In fact, you’ll probably be fine even if you never used it. The part you're likely not familiar with is Redis OM. Fear not! This is exactly what we’re here to cover!
 
-The API we'll be building is a simple and relatively RESTful API that reads, writes, and finds data on persons—first name, last name, age, that sort of thing. And it'll do simple location tracking feature just for a little bit of extra interest.
+The API we'll be building is a simple and relatively RESTful API that reads, writes, and finds data on persons—first name, last name, age, that sort of thing. And we'll add a simple location tracking feature just for a bit of extra interest.
 
 But before we start with the coding, let's start with a description of what Redis OM *is*.
 
@@ -18,29 +18,29 @@ But before we start with the coding, let's start with a description of what Redi
 
 Redis OM (pronounced *REDiss OHM*) is a library that provides object mapping for Redis—that's what the OM stands for... *object mapping*. It maps Redis data types—specifically Hashes and JSON documents—to JavaScript objects. And it allows you to search over these Hashes and JSON documents. It uses RedisJSON and RediSearch to do this.
 
-RedisJSON and RediSearch are two of the several modules included in Redis Stack. Modules are extensions to Redis that add new data types and new commands. RedisJSON adds a JSON document data type and the commands to manipulate it. RediSearch adds various search commands to index the contents of JSON documents and Hashes.
+RedisJSON and RediSearch are two of the modules included in Redis Stack. Modules are extensions to Redis that add new data types and new commands. RedisJSON adds a JSON document data type and the commands to manipulate it. RediSearch adds various search commands to index the contents of JSON documents and Hashes.
 
 Redis OM comes in *four* different versions. We'll be working with Redis OM for Node.js in this tutorial, but there are also flavors and tutorials for [Python](stack-python), [.NET](stack-dot-net), and [Spring](stack-spring).
 
-This tutorial will get you started with Redis OM for Node.js, but if you want to dive deep into *all* of its capabilities, check out [the README](https://github.com/redis/redis-om-node) over on GitHub.
+This tutorial will get you started with Redis OM for Node.js—covering the basics. But if you want to dive deep into *all* of Redis OM's capabilities, check out [the README](https://github.com/redis/redis-om-node) over on GitHub.
 
 
 ## Prerequisites
 
-Like anything software-related, you need to have some stuff installed before you can get started. Here's our particular set of prerequisites:
+Like anything software-related, you need to have some stuff installed before you can get started. Here's our particular stuff:
 
-- [Node.js](https://nodejs.org/en/): In this tutorial, I’m using JavaScript's top-level await feature which was introduced in Node 14.8. So, make sure you are using that version or later.
+- [Node.js 14.8+](https://nodejs.org/en/): In this tutorial, I’m using JavaScript's top-level await feature which was introduced in Node 14.8. So, make sure you are using that version or later. I'm using Node.js 16.3.
 - [Redis Stack](/download): You need a version of Redis Stack somewhere be it on your machine or someone else's.
-- [RedisInsight](https://redis.com/redis-enterprise/redis-insight/): We'll use this to look inside Redis and make sure our code is writing what we expect.
+- [RedisInsight](https://redis.com/redis-enterprise/redis-insight/): We'll use this to look inside Redis and make sure our code is doing what we think it's doing.
 
 
 ## Starter code
 
-We're not going to code this completely from scratch. I have some starter code for you to, well, start with. So, go ahead and clone that to a folder of your convenience:
+We're not going to code this completely from scratch. That's madness! I have some starter code for you to, well, start with. Go ahead and clone it to a folder of your convenience:
 
     get clone git@github.com:redis-developer/express-redis-om-workshop.git
 
-Now that you have the starter code, let's explore it a bit. Opening up `server.js` in the root we see that we have a simple Express app that uses [*Dotenv*](https://www.npmjs.com/package/dotenv) for configuration and [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-express):
+Now that you have the starter code, let's explore it a bit. Opening up `server.js` in the root we see that we have a simple Express app that uses [*Dotenv*](https://www.npmjs.com/package/dotenv) for configuration and [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-express) for testing our API:
 
 ```javascript
 import 'dotenv/config'
@@ -70,11 +70,11 @@ There are two empty folders, `om` and `routers`. The `om` folder is where all th
 
 ## Configure and run
 
-The starter code is perfectly runnable if a bit thin. Let's configure it and run it to make sure we're ready to move on to some actual coding. First, get all the dependencies:
+The starter code is perfectly runnable if a bit thin. Let's configure and run it to make sure it works before we move on to writing actual code. First, get all the dependencies:
 
     npm install
 
-Then, set up a `.env` in the root that Dotenv can make use of. There's a `sample.env` file in the root that you can copy and modify:
+Then, set up a `.env` file in the root that Dotenv can make use of. There's a `sample.env` file in the root that you can copy and modify:
 
     cp sample.env .env
 
@@ -86,20 +86,20 @@ The contents of `.env` looks like this:
 REDIS_URL=redis://localhost:6379
 ```
 
-Change the `REDIS_URL` to your Redis URL, if necessary, and you're good to go. Now you should be able to run the app:
+There's a good chance this is already correct. However, if you need to change the `REDIS_URL` for your particular environment, say your running Redis Stack in the cloud, this is the time to do it. Once done, you should be able to run the app:
 
     npm start
 
 Navigate to http://localhost:8080 and check out the client that Swagger UI Express has created. None of it *works* yet because we haven't implemented any of the routes. But, you can try them out and watch them fail!
 
-So, the starter code runs. Let's add some Redis OM to it so it actually *does* something!
+The starter code runs. Let's add some Redis OM to it so it actually *does* something!
 
 
 ## Setting up a Client
 
-First things first, let's set up a **client**. The `Client` class is the thing that knows how to talk to Redis on the behalf of Redis OM. Internally, it uses [Node Redis](https://github.com/redis/node-redis). I like to put my instantiated `Client` in its own file and export it. This ensures that my application has one and only one instance of the `Client` and thus only one connection to Redis. Since Redis and JavaScript are both (more or less) single-threaded, this works handily.
+First things first, let's set up a **client**. The `Client` class is the thing that knows how to talk to Redis on behalf of Redis OM. I like to put my client in its own file and export it. This ensures that my application has one and only one instance of `Client` and thus only one connection to Redis Stack. Since Redis and JavaScript are both (more or less) single-threaded, this works neatly.
 
-So, let's create our first file. In the `om` folder add a file called `client.js` and add the following code:
+Let's create our first file. In the `om` folder add a file called `client.js` and add the following code:
 
 ```javascript
 import { Client } from 'redis-om'
@@ -113,6 +113,8 @@ const client = await new Client().open(url)
 export default client
 ```
 
+> Remember that _top-level await_ stuff I mentioned earlier? There it is!
+
 Note that we are getting our Redis URL from an environment variable. It was put there by Dotenv and read from our `.env` file. If we didn't have the `.env` file or have a `REDIS_URL` property in our `.env` file, this code would gladly read this value from the *actual* environment variables.
 
 Also note that the `.open()` method conveniently returns `this`. This `this` (can I say *this* again? I just did!) lets us chain the instantiation of the client with the opening of the client. If this isn't to your liking, you could always write it like this:
@@ -123,11 +125,10 @@ const client = new Client()
 await client.open(url)
 ```
 
-> Remember that _top-level await_ stuff I mentioned earlier? There it is!
 
 ## Entity, Schema, and Repository
 
-Now that we have a `Client` that's connected to Redis, we need to start mapping some persons. To do that, we need to define an `Entity` and a `Schema`. Let's start by creating a file named `person.js` in the `om` folder and importing our `client` from `client.js` and the `Entity` and `Schema` classes from Redis OM:
+Now that we have a client that's connected to Redis, we need to start mapping some persons. To do that, we need to define an `Entity` and a `Schema`. Let's start by creating a file named `person.js` in the `om` folder and importing `client` from `client.js` and the `Entity` and `Schema` classes from Redis OM:
 
 ```javascript
 import { Entity, Schema } from 'redis-om'
@@ -137,7 +138,7 @@ import client from './client.js'
 
 ### Entity
 
-Next, we need to define an **entity**. An `Entity` is the class that you work with—the thing being mapped to. It is what you create, read, update, and delete. Any class that extends `Entity` is an entity. We'll define our Person entity with a single line:
+Next, we need to define an **entity**. An `Entity` is the class that holds you data when you work with it—the thing being mapped to. It is what you create, read, update, and delete. Any class that extends `Entity` is an entity. We'll define our `Person` entity with a single line:
 
 ```javascript
 /* our entity */
@@ -163,13 +164,13 @@ const personSchema = new Schema(Person, {
 })
 ```
 
-When you create a `Schema`, it modifies the `Entity` you handed it (`Person` in our case) adding getters and setters for the properties you define. The type those getters and setters accept and return are defined with the type parameter above. Valid values are: `string`, `number`, `boolean`, `string[]`, `date`, `point`, or `text`.
+When you create a `Schema`, it modifies the `Entity` class you handed it (`Person` in our case) adding getters and setters for the properties you define. The type those getters and setters accept and return are defined with the type parameter as shown above. Valid values are: `string`, `number`, `boolean`, `string[]`, `date`, `point`, and `text`.
 
-The first three do exactly what you think—they define a property that is a [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), a [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), or a [Boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean). `string[]` does what you'd think as well, specifically defining an [Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of Strings.
+The first three do exactly what you think—they define a property that is a [`String`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), a [`Number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), or a [`Boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean). `string[]` does what you'd think as well, specifically defining an [`Array`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of strings.
 
-`date` is a little different, but still more or less what you'd expect. It defines a property that returns a [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and can be set using not only a Date but also a String containing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date or a number with the [UNIX epoch time](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps) in *milliseconds*.
+`date` is a little different, but still more or less what you'd expect. It defines a property that returns a [`Date`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) and can be set using not only a `Date` but also a `String` containing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date or a `Number` with the [UNIX epoch time](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps) in *milliseconds*.
 
-A `point` defines a point somewhere on the globe as a longitude and a latitude. It creates a property that returns and accepts a simple object with `longitude` and `latitude` properties. Like this:
+A `point` defines a point somewhere on the globe as a longitude and a latitude. It creates a property that returns and accepts a simple object with the properties of `longitude` and `latitude`. Like this:
 
 ```javascript
 let point = { longitude: 12.34, latitude: 56.78 }
@@ -180,14 +181,14 @@ A `text` field is a lot like a `string`. If you're just reading and writing obje
 
 ### Repository
 
-Now we have all the pieces that we need to create a *repository*. The *Repository* is the main interface into Redis OM. It gives us the methods to read, write, and remove a specific `Entity`. Create a `Repository` in `person.js` and make sure it's exported as you'll need it when we get into the Express stuff:
+Now we have all the pieces that we need to create a **repository**. A `Repository` is the main interface into Redis OM. It gives us the methods to read, write, and remove a specific `Entity`. Create a `Repository` in `person.js` and make sure it's exported as you'll need it when we start implementing out API:
 
 ```javascript
 /* use the client to create a Repository just for Persons */
 export const personRepository = client.fetchRepository(personSchema)
 ```
 
-We're almost done with setting up our `Repository`. But we still need to create an index or we won't be able to search on anything. We do that by calling `.createIndex`. If an index already exists and it's the same, this function won't do anything. If it's different, it'll drop it and create a new one. Add a call to `.createIndex` to `person.js`:
+We're almost done with setting up our repository. But we still need to create an index or we won't be able to search. We do that by calling `.createIndex()`. If an index already exists and it's identical, this function won't do anything. If it's different, it'll drop it and create a new one. Add a call to `.createIndex()` to `person.js`:
 
 ```javascript
 /* create the index for Person */
@@ -227,9 +228,7 @@ Now, let's add some routes in Express.
 
 ## Set up the Person Router
 
-Our routes need a place to live. That place is a `Router`. Create a file in the `routers` folder called `person-router.js` and import both `Router` from Express and the `personRepository` we defined in `person.js`:
-
-Let's create a truly RESTful API with the CRUD operations mapping to PUT, GET, POST, and DELETE respectively. We're going to do this using [Express Routers](https://expressjs.com/en/4x/api.html#router) as this makes our code nice and tidy. So, create a file called `person-router.js` in the `routers` folder. Then import `Router` from Express and import the `personRepository` that we defined in `person.js`. Oh, and create and export a `Router`:
+Let's create a truly RESTful API with the CRUD operations mapping to PUT, GET, POST, and DELETE respectively. We're going to do this using [Express Routers](https://expressjs.com/en/4x/api.html#router) as this makes our code nice and tidy. Create a file called `person-router.js` in the `routers` folder and in it import `Router` from Express and `personRepository` from `person.js`. Then create and export a `Router`:
 
 ```javascript
 import { Router } from 'express'
@@ -279,12 +278,12 @@ app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
 app.listen(8080)
 ```
 
-Now, finally, we can add our routes to create, read, update, and delete persons. Head back to the `person-router.js` file so we can do just that.
+Now we can add our routes to create, read, update, and delete persons. Head back to the `person-router.js` file so we can do just that.
 
 
 ### Creating a Person
 
-We'll create a `Person` first as you need to have persons in Redis before you can do any of the reading, updating, or deleting of them. Add the PUT route below. This route will call `.createAndSave` to create an `Entity` from the request body and immediately save it to the Redis:
+We'll create a person first as you need to have persons in Redis before you can do any of the reading, writing, or removing of them. Add the PUT route below. This route will call `.createAndSave()` to create a `Person` from the request body and immediately save it to the Redis:
 
 ```javascript
 router.put('/', async (req, res) => {
@@ -316,11 +315,11 @@ Note that we are also returning the newly created `Person`. Let's see what that 
 }
 ```
 
-This is exactly what we handed it with one exception: the `entityId`. Every `Entity` in Redis OM has an `entityId` which is—as you've probably guessed—the unique ID of that `Entity`. It's randomly generated when we call any of the `.create` family of methods on a `Repository`. Yours will be different, so make note of it.
+This is exactly what we handed it with one exception: the `entityId`. Every entity in Redis OM has an entity ID which is—as you've probably guessed—the unique ID of that entity. It was randomly generated when we called `.createAndSave()`. Yours will be different, so make note of it.
 
-You can see this newly created JSON document in Redis with Redis Insight. Go ahead and launch Redis Insight and you should see a key with the name of `Person:01FY9MWDTWW4XQNTPJ9XY9FPMN`. The `Person` bit of the key was derived from the class name of our `Entity` and the ID bit is our generated `enttiyID`. Click on it take a look at the JSON document you've created.
+You can see this newly created JSON document in Redis with RedisInsight. Go ahead and launch RedisInsight and you should see a key with a name like `Person:01FY9MWDTWW4XQNTPJ9XY9FPMN`. The `Person` bit of the key was derived from the class name of our entity and the sequence of letters and numbers is our generated entity ID. Click on it to take a look at the JSON document you've created.
 
-You'll also see a String in the key `Person:index:hash`. That's a unique value that Redis OM uses to see if it needs to recreate the index or not when `.createIndex` is called. You can safely ignore it.
+You'll also see a key named `Person:index:hash`. That's a unique value that Redis OM uses to see if it needs to recreate the index or not when `.createIndex()` is called. You can safely ignore it.
 
 
 ### Reading a Person
@@ -334,16 +333,16 @@ router.get('/:id', async (req, res) => {
 })
 ```
 
-This code extracts a parameter from the URL used in the route—the `entityId` that we received previously. It uses the `.fetch` method on the `Repository` to retrieve a `Person` using that `entityId`. Then, it returns that `Person`.
+This code extracts a parameter from the URL used in the route—the `entityId` that we received previously. It uses the `.fetch()` method on the `personRepository` to retrieve a `Person` using that `entityId`. Then, it returns that `Person`.
 
-Let's go ahead and test that in Swagger as well. You should get back exactly the same response. In fact, since this is a simple GET, we should be able to just load the URL into our browser. Test that out too by navigating to http://localhost:8080/person/01FY9MWDTWW4XQNTPJ9XY9FPMN, replacing the `entityId` with your own.
+Let's go ahead and test that in Swagger as well. You should get back exactly the same response. In fact, since this is a simple GET, we should be able to just load the URL into our browser. Test that out too by navigating to http://localhost:8080/person/01FY9MWDTWW4XQNTPJ9XY9FPMN, replacing the entity ID with your own.
 
 Now that we can read and write, let's implement the *REST* of the HTTP verbs. REST... get it?
 
 
 ### Updating a Person
 
-Let's add the code to update using a POST route:
+Let's add the code to update a person using a POST route:
 
 ```javascript
 router.post('/:id', async (req, res) => {
@@ -365,13 +364,13 @@ router.post('/:id', async (req, res) => {
 })
 ```
 
-This code fetches the `Person` from the `Repository` using the `entityId` just like our previous route did. However, now we change all the properties based on the properties in the request body. If any of them are missing, we set them to `null`. Then, we call `.save` and return the changed `Person`.
+This code fetches the `Person` from the `personRepository` using the `entityId` just like our previous route did. However, now we change all the properties based on the properties in the request body. If any of them are missing, we set them to `null`. Then, we call `.save()` and return the changed `Person`.
 
-Let's test this in Swagger too, why not? Make some changes. Remove some of the fields and see what you get back when you read it.
+Let's test this in Swagger too, why not? Make some changes. Try removing some of the fields. What do you get back when you read it after you've changed it?
 
 ### Deleting a Person
 
-Deletion—my favorite! Remember kids, deletion is 100% compression. The route that deletes is just as straightforward as the one that reads, just more destructive:
+Deletion—my favorite! Remember kids, deletion is 100% compression. The route that deletes is just as straightforward as the one that reads, but much more destructive:
 
 ```javascript
 router.delete('/:id', async (req, res) => {
@@ -380,7 +379,7 @@ router.delete('/:id', async (req, res) => {
 })
 ```
 
-I guess we should probably test this one out too. Load up Swagger and exercise the route. You should get back JSON with the `entityID` you just removed:
+I guess we should probably test this one out too. Load up Swagger and exercise the route. You should get back JSON with the entity ID you just removed:
 
 ```json
 {
@@ -393,7 +392,7 @@ And just like that, it's gone!
 
 ### All the CRUD
 
-Just for completeness, here's what should be the totality of your `person-router.js` file:
+Do a quick check with what you've written so far. Here's what should be the totality of your `person-router.js` file:
 
 ```javascript
 import { Router } from 'express'
@@ -438,12 +437,12 @@ router.delete('/:id', async (req, res) => {
 
 ## Preparing to search
 
-CRUD down, let's do some searching. In order to search, we need data to search over. Remember that `persons` folder with all the JSON documents and the `load-data.sh` shell script? Its time has arrived. Go into that folder and run the script:
+CRUD completed, let's do some searching. In order to search, we need data to search over. Remember that `persons` folder with all the JSON documents and the `load-data.sh` shell script? Its time has arrived. Go into that folder and run the script:
 
     cd persons
     ./load-data.sh
 
-You should get a rather verbose response containing the files you loaded and their JSON content. Like this:
+You should get a rather verbose response containing the JSON response from the API and the names of the files you loaded. Like this:
 
 ```
 {"entityId":"01FY9Z4RRPKF4K9H78JQ3K3CP3","firstName":"Chris","lastName":"Stapleton","age":43,"verified":true,"location":{"longitude":-84.495,"latitude":38.03},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","football","coal mining"],"personalStatement":"There are days that I can walk around like I'm alright. And I pretend to wear a smile on my face. And I could keep the pain from comin' out of my eyes. But sometimes, sometimes, sometimes I cry."} <- chris-stapleton.json
@@ -458,7 +457,7 @@ You should get a rather verbose response containing the files you loaded and the
 
 A little messy, but if you don't see this, then it didn't work!
 
-Now that we have some data, let's add another `Router` for the search routes we want to add. Create a file named `search-router.js` in the routers folder and set it up with imports and exports just like we did in `person-router.js`:
+Now that we have some data, let's add another router to hold the search routes we want to add. Create a file named `search-router.js` in the routers folder and set it up with imports and exports just like we did in `person-router.js`:
 
 ```javascript
 import { Router } from 'express'
@@ -467,7 +466,7 @@ import { personRepository } from '../om/person.js'
 export const router = Router()
 ```
 
-Import this `Router` into `server.js` the same way we did for the `personRouter`:
+Import the `Router` into `server.js` the same way we did for the `personRouter`:
 
 ```javascript
 /* import routers */
@@ -483,12 +482,12 @@ app.use('/person', personRouter)
 app.use('/persons', searchRouter)
 ```
 
-`Router` bound, we can now add some routes.
+Router bound, we can now add some routes.
 
 
 ### Search all the things
 
-We're going to add a plethora of searches to our new `Router`. But the first will be the easiest by far. It's just going to return everything. Go ahead and add the following code to `search-router.js`:
+We're going to add a plethora of searches to our new `Router`. But the first will be the easiest as it's just going to return everything. Go ahead and add the following code to `search-router.js`:
 
 ```javascript
 router.get('/all', async (req, res) => {
@@ -497,11 +496,11 @@ router.get('/all', async (req, res) => {
 })
 ```
 
-Here we can see how to start and finish a search. Searches start just like the CRUD operations start—on a `Repository`. But instead of calling `.create`, `.fetch`, `.save`, or `.remove`, we call `.search`. And unlike all those other methods, `.search` doesn't end with the function call. Instead, it allows you to build up a query and then resolved it with a call to `.return.all`.
+Here we see how to start and finish a search. Searches start just like CRUD operations start—on a `Repository`. But instead of calling `.createAndSave()`, `.fetch()`, `.save()`, or `.remove()`, we call `.search()`. And unlike all those other methods, `.search()` doesn't end there. Instead, it allows you to build up a query (which you'll see in the next example) and then resolve it with a call to `.return.all()`.
 
 With this new route in place, go into the Swagger UI and exercise the `/persons/all` route. You should see all of the folks you added with the shell script as a JSON array.
 
-In the example above, the query is not specified—we didn't build anything up. If you do this, you'll just get everything. Which is what you want sometimes. But not most of the time. It's not really searching if you just return everything. So let's add a route that lets us find persons by last name. Add the following code:
+In the example above, the query is not specified—we didn't build anything up. If you do this, you'll just get everything. Which is what you want sometimes. But not most of the time. It's not really searching if you just return everything. So let's add a route that lets us find persons by their last name. Add the following code:
 
 ```javascript
 router.get('/by-last-name/:lastName', async (req, res) => {
@@ -512,23 +511,23 @@ router.get('/by-last-name/:lastName', async (req, res) => {
 })
 ```
 
-In this route, we're specifying a field we want to filter on and a value that it needs to equal. The field name in the call to `.where` is the name of the field specified in our `Schema`. This field was defined as a `string`. This matters because the type of the field determines what methods are available to match it.
+In this route, we're specifying a field we want to filter on and a value that it needs to equal. The field name in the call to `.where()` is the name of the field specified in our schema. This field was defined as a `string`, which matters because the type of the field determines the methods that are available query it.
 
-In the case of a `string`, there's just `.equals`. But, this is aliased as `.eq`, `.equal`, and `.equalTo`. And you can add some syntactic sugar with `.is` and `.does` to make code like:
+In the case of a `string`, there's just `.equals()`, which will query against the value of the entire string. This is aliased as `.eq()`, `.equal()`, and `.equalTo()` for your convenience. You can even add a little more syntactic sugar with calls to `.is` and `.does` that really don't do anything but make your code pretty. Like this:
 
 ```javascript
 const persons = await personRepository.search().where('lastName').is.equalTo(lastName).return.all()
 const persons = await personRepository.search().where('lastName').does.equal(lastName).return.all()
 ```
 
-You can also invert the match with a call to `.not`:
+You can also invert the query with a call to `.not`:
 
 ```javascript
 const persons = await personRepository.search().where('lastName').is.not.equalTo(lastName).return.all()
 const persons = await personRepository.search().where('lastName').does.not.equal(lastName).return.all()
 ```
 
-In all these cases, the call to `.return.all` executes the query we build between it and the call to `.search`. We can search on other field types as well. Let's add some routes for searching on a `number` and a `boolean` field:
+In all these cases, the call to `.return.all()` executes the query we build between it and the call to `.search()`. We can search on other field types as well. Let's add some routes to search on a `number` and a `boolean` field:
 
 ```javascript
 router.get('/old-enough-to-drink-in-america', async (req, res) => {
@@ -550,7 +549,7 @@ The `number` field is filtering persons by age where the age is great than or eq
 const persons = await personRepository.search().where('age').is.greaterThanOrEqualTo(21).return.all()
 ```
 
-But there are also more matching options:
+But there are also more ways to query:
 
 ```javascript
 const persons = await personRepository.search().where('age').eq(21).return.all()
@@ -561,7 +560,7 @@ const persons = await personRepository.search().where('age').lte(21).return.all(
 const persons = await personRepository.search().where('age').between(21, 65).return.all()
 ```
 
-The `boolean` field is filtering persons by their verification status. It already has some of the syntactic sugar in it. Note that this query will match a missing value or a false value. That's why I specified `.not.true`. You can also call `.false` on boolean fields as well as all the variations of `.equals`.
+The `boolean` field is searching for persons by their verification status. It already has some of our syntactic sugar in it. Note that this query will match a missing value or a false value. That's why I specified `.not.true()`. You can also call `.false()` on boolean fields as well as all the variations of `.equals`.
 
 ```javascript
 const persons = await personRepository.search().where('verified').true().return.all()
@@ -569,9 +568,9 @@ const persons = await personRepository.search().where('verified').false().return
 const persons = await personRepository.search().where('verified').equals(true).return.all()
 ```
 
-> So, we've created a few routes and I haven't told you to test them. Maybe you have anyhow. If so, good for you, you rebel. For the rest of you, why don't you go and test them now with Swagger? And, going forward, just test them when you want. Heck, create some of your own using the provided syntax and try those out too. Don't let me tell you how to live your life.
+> So, we've created a few routes and I haven't told you to test them. Maybe you have anyhow. If so, good for you, you rebel. For the rest of you, why don't you go ahead and test them now with Swagger? And, going forward, just test them when you want. Heck, create some routes of your own using the provided syntax and try those out too. Don't let me tell you how to live your life.
 
-Of course, filtering on just one field is never enough. No problem, Redis OM can handle `.and`, and `.or`. Add this route:
+Of course, querying on just one field is never enough. Not a problem, Redis OM can handle `.and()` and `.or()` like in this route:
 
 ```javascript
 router.get('/verified-drinkers-with-last-name/:lastName', async (req, res) => {
@@ -584,14 +583,14 @@ router.get('/verified-drinkers-with-last-name/:lastName', async (req, res) => {
 })
 ```
 
-Here, I'm just showing the syntax for `.and` but you can also use `.or`.
+Here, I'm just showing the syntax for `.and()` but, of course, you can also use `.or()`.
 
 
 ### Full-text search
 
-If you've defined a field with a type of `text` in your schema, you can store text in it and perform full-text searches against it. The way a `text` field is searched is different from how a `string` is searched. A `string` can only be compared with `.equals` and must match the entire string. With a `text` field, you can look for words and partial words.
+If you've defined a field with a type of `text` in your schema, you can perform full-text searches against it. The way a `text` field is searched is different from how a `string` is searched. A `string` can only be compared with `.equals()` and must match the entire string. With a `text` field, you can look for words within the string.
 
-A `text` field is optimized for human-readable text and it's pretty clever. It understands that certain words (like *a*, *an*, or *the*) are common and ignores them. It understands how words relate to each other and so if you search for *give*, it matches *gives*, *given*, *giving*, and *gave* too. It ignores punctuation.
+A `text` field is optimized for human-readable text, like an essay or song lyrices. It's pretty clever. It understands that certain words (like *a*, *an*, or *the*) are common and ignores them. It understands how words are grammatically similar and so if you search for *give*, it matches *gives*, *given*, *giving*, and *gave* too. And it ignores punctuation.
 
 Let's add a route that does full-text search against our `personalStatement` field:
 
@@ -605,7 +604,7 @@ router.get('/with-statement-containing/:text', async (req, res) => {
 })
 ```
 
-Note the use of the `.matches` function. This is the only one that works with `text` fields. It takes a string that can be one or more words, space-delimited, that you want to search for. Let's try it out. In Swagger, use this to search for the word "walk". You should get the following results:
+Note the use of the `.matches()` function. This is the only one that works with `text` fields. It takes a string that can be one or more words—space-delimited—that you want to quyery for. Let's try it out. In Swagger, use this route to search for the word "walk". You should get the following results:
 
 ```json
 [
@@ -648,14 +647,14 @@ Note the use of the `.matches` function. This is the only one that works with `t
 ]
 ```
 
-Notice how the word "walk" is matched for Rupert Holmes' entry that contains "walks" and matched for Chris Stapleton's entry that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are grammatically related. This is called stemming and it's a pretty cool feature of RediSearch that Redis OM exploits.
+Notice how the word "walk" is matched for Rupert Holmes' personal statement that contains "walks" *and* matched for Chris Stapleton's that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are *grammatically* related so it matched them. This is called stemming and it's a pretty cool feature of RediSearch that Redis OM exploits.
 
-And if you search for "a rain walk" you'll still match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of RediSearch that Redis OM just gets for free.
+And if you search for "a rain walk" you'll *still* match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of RediSearch that Redis OM just gets for free.
 
 
-### Searching on the globe
+### Searching the globe
 
-RediSearch, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe and a radius and it'll gleefully return all the entities within that radius. Let's add a route to do just that:
+RediSearch, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe, a radius, and the units for that radius and it'll gleefully return all the entities therein. Let's add a route to do just that:
 
 ```javascript
 router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {
@@ -676,15 +675,15 @@ router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {
 })
 ```
 
-This code looks a little different than the others because the way we define the circle we want to search is done with an arrow function that is passed into the `.inRadius` method:
+This code looks a little different than the others because the way we define the circle we want to search is done with a function that is passed into the `.inRadius` method:
 
 ```javascript
 circle => circle.longitude(longitude).latitude(latitude).radius(radius).miles
 ```
 
-All this arrow function does is accept a `Circle` that has been initialized with default values. We override those values by calling various builder methods on the `Circle` to define the origin of the `Circle` (i.e. the longitude and latitude), the radius of the `Circle`, and the units that radius is measured in. Valid units are `miles`, `meters`, `feet`, and `kilometers`.
+All this function does is accept an instance of a [`Circle`](https://github.com/redis/redis-om-node/blob/main/docs/classes/Circle.md) that has been initialized with default values. We override those values by calling various builder methods to define the origin of our search (i.e. the longitude and latitude), the radius, and the units that radius is measured in. Valid units are `miles`, `meters`, `feet`, and `kilometers`.
 
-Let's try the route out. I know we can find Joan Jett at around longitude -75.0 and latitude 40.0 so use those coordinates and give it a radius of 20 miles. You should retrieve:
+Let's try the route out. I know we can find Joan Jett at around longitude -75.0 and latitude 40.0, which is in eastern Pennsylvania. So use those coordinates with a radius of 20 miles. You should receive in response:
 
 ```json
 [
@@ -714,7 +713,9 @@ Try widening the radius and see who else you can find.
 
 ## Adding location tracking
 
-We're getting toward the end of the tutorial here, but before we go, I'd like to add that location tracking piece that I mentioned way back in the beginning. These next bit of code should be easily understood. Add a new file called `location-router.js` in the `routers` folder:
+We're getting toward the end of the tutorial here, but before we go, I'd like to add that location tracking piece that I mentioned way back in the beginning. This next bit of code should be easily understood if you've gotten this far as it's not really doing anything I haven't talked about already.
+
+Add a new file called `location-router.js` in the `routers` folder:
 
 ```javascript
 import { Router } from 'express'
@@ -739,7 +740,7 @@ router.patch('/:id/location/:lng,:lat', async (req, res) => {
 })
 ```
 
-This route is doing stuff we've seen before. We're calling `.fetch`, we're updating some values—the `location` field with our longitude and latitude and the `locationUpdate` field with the current date and time. Easy peasy.
+Here we're calling `.fetch()` to fetch a person, we're updating some values for that person—the `.location` property with our longitude and latitude and the `.locationUpdated` property with the current date and time. Easy stuff.
 
 To use this `Router`, import it in `server.js`:
 
@@ -758,20 +759,22 @@ app.use('/person', personRouter, locationRouter)
 app.use('/persons', searchRouter)
 ```
 
-But this just isn't enough. It doesn't show you anything I haven't shown you already. And, it's not really location *tracking*. It just shows where these people last were, no location history. So let's add some *history*. To do that, we're going to use a [Redis Stream](https://redis.io/topics/streams-intro). Streams are a big topic but don't worry if you’re not familiar with them, you can think of them as being sort of like a log file where each entry represents an event stored in a Redis key. In our case, the event would be the person moving about or checking in or whatever and the key would be for that particular `Person`.
+And that's that. But this just isn't enough to satisfy. It doesn't show you anything new, except maybe the usage of a `date` field. And, it's not really location *tracking*. It just shows where these people last were, no history. So let's add some!.
 
-But there's a problem. Redis OM doesn’t support Streams. So, how do we take advantage of them in our application? Easy, by using [Node Redis](https://github.com/redis/node-redis). Node Redis is a low-level Redis client for Node.js that gives you access to all Redis commands and data types. Internally, Redis OM is creating and using a Node Redis connection and you can use that same connection too. Or rather, Redis OM can use the connection *you* are using too. Let me show you how.
+To add some history, we're going to use a [Redis Stream](https://redis.io/topics/streams-intro). Streams are a big topic but don't worry if you’re not familiar with them, you can think of them as being sort of like a log file stored in a Redis key where each entry represents an event. In our case, the event would be the person moving about or checking in or whatever.
+
+But there's a problem. Redis OM doesn’t support Streams even though Redis Stack does. So how do we take advantage of them in our application? By using [Node Redis](https://github.com/redis/node-redis). Node Redis is a low-level Redis client for Node.js that gives you access to all the Redis commands and data types. Internally, Redis OM is creating and using a Node Redis connection. You can use that connection too. Or rather, Redis OM can be *told* to use the connection you are using. Let me show you how.
 
 
 ## Using Node Redis
 
-Open up `cleint.js` in the `om` folder. Remember how we created a Redis OM `Client` and then called `.open` on it?
+Open up `client.js` in the `om` folder. Remember how we created a Redis OM `Client` and then called `.open()` on it?
 
 ```javascript
 const client = await new Client().open(url)
 ```
 
-Well, the `Client` also has a `.use` method that takes a Node Redis connection. Modify `client.js` to open a connection to Redis using Node Redis and then `.use` it:
+Well, the `Client` class also has a `.use()` method that takes a Node Redis connection. Modify `client.js` to open a connection to Redis using Node Redis and then `.use()` it:
 
 ```javascript
 import { Client } from 'redis-om'
@@ -790,18 +793,18 @@ const client = await new Client().use(connection)
 export default client
 ```
 
-And that's it. Note that we are exporting both the `client` *and* the `connection`. Got to export the `connection` if we want to use it in our newest route.
+And that's it. Redis OM is now using the `connection` you created. Note that we are exporting both the `client` *and* the `connection`. Got to export the `connection` if we want to use it in our newest route.
 
 
 ## Storing location history with Streams
 
-To add an event to a Stream we need to use the XADD command. Node Redis exposes that as `.xAdd`. So, we need to add a call to `.xAdd` in our route. Modify `location-router.js` to import our `connection`:
+To add an event to a Stream we need to use the [XADD](https://redis.io/commands/xadd) command. Node Redis exposes that as `.xAdd()`. So, we need to add a call to `.xAdd()` in our route. Modify `location-router.js` to import our `connection`:
 
 ```javascript
 import { connection } from '../om/client.js'
 ```
 
-And then in the route itself add a call to `.xAdd`:
+And then in the route itself add a call to `.xAdd()`:
 
 ```javascript
   ...snip...
@@ -815,15 +818,15 @@ And then in the route itself add a call to `.xAdd`:
   ...snip...
 ```
 
-`.xAdd` takes a key name, an event ID, and a JavaScript object containing the keys and values that make up the event, i.e. the event data. For the key name, we're building a string using the `.keyName` property that `Person` inherited from `Entity`—which will return something like `Peson:01FYC7CTPKYNXQ98JSTBC37AS1`—combined with a hard-coded value. We're passing in '*' for our event ID, which tells Redis to just generate it based on the current time and last event ID. And we're passing in the location—with properties of longitude and latitude—as our event data.
+`.xAdd()` takes a key name, an event ID, and a JavaScript object containing the keys and values that make up the event, i.e. the event data. For the key name, we're building a string using the `.keyName` property that `Person` inherited from `Entity` (which will return something like `Peson:01FYC7CTPKYNXQ98JSTBC37AS1`) combined with a hard-coded value. We're passing in `*` for our event ID, which tells Redis to just generate it based on the current time and previous event ID. And we're passing in the location—with properties of longitude and latitude—as our event data.
 
-Now, whenever this route is exercised, the location will be logged and the event ID will encode the time. Go ahead and use Swagger to move Joan Jett around a few times.
+Now, whenever this route is exercised, the longitude and latitude will be logged and the event ID will encode the time. Go ahead and use Swagger to move Joan Jett around a few times.
 
-Now, go into Redis Insight and take a look at the Stream. You'll see it there in the list of keys but if you click on it, you'll get a message saying that "This data type is coming soon!" No problem, we'll just issue the raw command in Redis Insight:
+Now, go into RedisInsight and take a look at the Stream. You'll see it there in the list of keys but if you click on it, you'll get a message saying that "This data type is coming soon!". If you don't get this message, congratualtions, you live in the future! For us here in the past, we'll just issue the raw command instead:
 
     XRANGE Person:01FYC7CTPKYNXQ98JSTBC37AS1:locationHistory - +
 
-This tells Redis to get a range of values from a Stream in the key name, `Person:01FYC7CTPKYNXQ98JSTBC37AS1:locationHistory` in our example. The next values are the starting event ID and the ending event ID. `-` is the beginning of the Stream. `+` is the end. So this returns the entirety of the Stream:
+This tells Redis to get a range of values from a Stream stored in the given the key name—`Person:01FYC7CTPKYNXQ98JSTBC37AS1:locationHistory` in our example. The next values are the starting event ID and the ending event ID. `-` is the beginning of the Stream. `+` is the end. So this returns everything in the Stream:
 
 ```
 1) 1) "1647536562911-0"
@@ -850,7 +853,7 @@ And just like that, we're tracking Joan Jett.
 
 So, now you know how to use Express + Redis OM to build an API backed by Redis Stack. And, you've got yourself some pretty decent started code in the process. Good deal! If you want to learn more, you can check out the [documentation](https://github.com/redis/redis-om-node) for Redis OM. It covers the full breadth of Redis OM's capabilities.
 
-Thanks for taking the time to work through this. If you have any questions, the [Redis Discord server](https://discord.gg/redis) is by far the best place to get them answered. Join the server and ask away!
+And thanks for taking the time to work through this. I sincerly hope you found it useful. If you have any questions, the [Redis Discord server](https://discord.gg/redis) is by far the best place to get them answered. Join the server and ask away!
 
 
 
