@@ -828,23 +828,21 @@ Now, go into RedisInsight and take a look at the Stream. You'll see it there in 
 
 This tells Redis to get a range of values from a Stream stored in the given the key name—`Person:01FYC7CTPKYNXQ98JSTBC37AS1:locationHistory` in our example. The next values are the starting event ID and the ending event ID. `-` is the beginning of the Stream. `+` is the end. So this returns everything in the Stream:
 
-{{< highlight >}}
-1) 1) "1647536562911-0"
-   2) 1) "longitude"
-      2) "45.678"
-      3) "latitude"
-      4) "45.678"
-2) 1) "1647536564189-0"
-   2) 1) "longitude"
-      2) "45.679"
-      3) "latitude"
-      4) "45.679"
-3) 1) "1647536565278-0"
-   2) 1) "longitude"
-      2) "45.680"
-      3) "latitude"
-      4) "45.680"
-{{< / highlight >}}
+    1) 1) "1647536562911-0"
+      2) 1) "longitude"
+          2) "45.678"
+          3) "latitude"
+          4) "45.678"
+    2) 1) "1647536564189-0"
+      2) 1) "longitude"
+          2) "45.679"
+          3) "latitude"
+          4) "45.679"
+    3) 1) "1647536565278-0"
+      2) 1) "longitude"
+          2) "45.680"
+          3) "latitude"
+          4) "45.680"
 
 And just like that, we're tracking Joan Jett.
 
