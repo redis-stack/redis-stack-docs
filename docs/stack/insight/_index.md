@@ -43,11 +43,11 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 ### Workbench
 * Advanced command line interface with intelligent command auto-complete and complex data visualizations
-* Command auto-complete support for [RediSearch](https://oss.redis.com/redisearch/), [RedisJSON](https://oss.redis.com/redisjson/), [RedisGraph](https://oss.redis.com/redisgraph/), [RedisTimeSeries](https://oss.redis.com/redistimeseries/), [RedisAI](https://oss.redis.com/redisai/), [RedisGears](https://oss.redis.com/redisgears/), [RedisBloom](https://oss.redis.com/redisbloom/).
+* Command auto-complete support for all capabilities in Redis and Redis Stack.
 * Visualizations of your [RediSearch](https://oss.redis.com/redisearch/) index, queries, and aggregations
 * Visualizations of your [RedisGraph](https://oss.redis.com/redisgraph/) and [RedisTimeSeries](https://oss.redis.com/redistimeseries/) data.
-* Ability to build your own data visualization plugins
-* Built-in Guides: Developers can conveniently discover Redis features and capabilities via built-in guides. The first guide produced covers document capabilities within Redis.
+* Ability to build your own [data visualization plugins](#redisinsight-plugins)
+* Built-in Guides: Developers can conveniently discover Redis and Redis Stack capabilities via built-in guides.
 
 <img src="../../../../images/Workbench_Graph.png">
 
