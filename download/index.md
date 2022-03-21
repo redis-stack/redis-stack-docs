@@ -23,7 +23,7 @@ Redis 6.2 includes many new commands and improvements. Redis 6.2 improves on the
 
 ## Redis Stack
 
-You can download the latest Redis Stack Server binaries here. Alternatively follow the installation instrutions for [Docker](/docs/stack/get-started/install/docker), [Homebrew](/docs/stack/get-started/install/mac-os), [Debian/Ubuntu](/docs/stack/get-started/install/ubuntu), and [RHEL](/docs/stack/get-started/install/rhel).
+You can download the latest Redis Stack Server binaries here. Alternatively you can use [Docker](/docs/stack/get-started/install/docker) or your package manager for [Mac](/docs/stack/get-started/install/mac-os) or [Linux](/docs/stack/get-started/install/linux).
 
 ### Stable (6.2.0)
 
