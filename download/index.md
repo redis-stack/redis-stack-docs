@@ -36,7 +36,14 @@ Redis Stack Server extends Redis with modern data models, such as Document, Grap
 
 <div id="download-redisinsight">
 ## RedisInsight
+
+RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack, making real-time application development easier and more fun than ever before.
+
+* [RedisInsight 2.0.5]()
+* [RedisInsight 2.0.5 Release Notes]()
+
 TODO  should be page wide across both Redis and Redis Stack
+
 </div>
   
 <div id="download-redis-options">
