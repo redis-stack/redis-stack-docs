@@ -22,7 +22,7 @@ RedisJSON and RediSearch are two of the modules included in Redis Stack. Modules
 
 Redis OM comes in *four* different versions. We'll be working with Redis OM for Node.js in this tutorial, but there are also flavors and tutorials for [Python](stack-python), [.NET](stack-dot-net), and [Spring](stack-spring).
 
-This tutorial will get you started with Redis OM for Node.js—covering the basics. But if you want to dive deep into *all* of Redis OM's capabilities, check out [the README](https://github.com/redis/redis-om-node) over on GitHub.
+This tutorial will get you started with Redis OM for Node.js, covering the basics. But if you want to dive deep into *all* of Redis OM's capabilities, check out [the README](https://github.com/redis/redis-om-node) over on GitHub.
 
 
 ## Prerequisites
