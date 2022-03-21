@@ -11,11 +11,9 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 ## Overview
 
-RedisInsight is an intuitive and efficient GUI for Redis, allowing you to interact with your databases and manage your data—with built-in support for Redis modules.
+### Connection management
 
-## Support for Redis Stack database
 
-* RedisInsight highlights your Redis Stack database to quickly find it in the list of databases
 
 <img src="../../../../images/Databases.png">
 
