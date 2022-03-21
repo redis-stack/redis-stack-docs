@@ -83,7 +83,7 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 <div id="download-redis-stack-options">
 <div class="inner-content">
 
-## Other Redis Stack downloads
+## Redis Stack downloads
 
 ### RedisInsight
 
