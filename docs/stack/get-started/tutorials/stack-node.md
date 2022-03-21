@@ -113,7 +113,7 @@ const client = await new Client().open(url)
 export default client
 {{< / highlight >}}
 
-> Remember that _top-level await_ stuff I mentioned earlier? There it is!
+> Remember that _top-level await_ stuff we mentioned earlier? There it is!
 
 Note that we are getting our Redis URL from an environment variable. It was put there by Dotenv and read from our `.env` file. If we didn't have the `.env` file or have a `REDIS_URL` property in our `.env` file, this code would gladly read this value from the *actual* environment variables.
 
