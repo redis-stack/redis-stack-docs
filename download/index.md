@@ -29,27 +29,14 @@ You can download the latest Redis Stack Server binaries here. Alternatively you 
 
 Redis Stack Server extends Redis with modern data models, such as Document, Graph, Time Series, and data processing engines, such as search, AI, and server side functions.
 
-* [Redis Stack Server 6.2.0]()
-* [Redis Stack 6.2.0 Release Notes]()
+* Download Redis Stack Server 6.2.0-v0 [macOS x86_64]() [macOS aarch64]() [Linux x86_64]() [Linux aarch64]() 
+* [Redis Stack 6.2.0-v0 Release Notes]()
 * [More installation options ->](#redis-stack-downloads)
 </div>
-
-<div id="download-redisinsight">
-
-## RedisInsight
-
-RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack, making real-time application development easier and more fun than ever before.
-
-* [RedisInsight 2.0.5]()
-* [RedisInsight 2.0.5 Release Notes]()
-
-TODO  should be page wide across both Redis and Redis Stack
-
-</div>
-  
+ 
 <div id="download-redis-options">
   
-## Other Redis downloads
+## Redis downloads
 
 ### Release-candidate (7.0)
 
@@ -98,13 +85,21 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 
 ## Other Redis Stack downloads
 
+### RedisInsight
+
+RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack, making real-time application development easier and more fun than ever before.
+
+* Download RedisInsight 2.0.5 [macOS x86_64]() [macOS aarch64]() [Linux]() [Windows]() 
+* [RedisInsight 2.0.5 Release Notes]()
+
+TODO  should be page wide across both Redis and Redis Stack
+  
 ### Release-candidate (7.0.0)
 
 Redis Stack 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements part of Redis 7.0. It also includes changes that potentially break backwards compatibility with older versions. 
 
-* TODO download
+* Download Redis Stack Server 7.0.0-rc1 [macOS x86_64]() [macOS aarch64]() [Linux x86_64]() [Linux aarch64]() 
 * [7.0.0-rc1 Release Notes]()
-
 
 </div>
 </div>
