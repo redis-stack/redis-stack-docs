@@ -5,7 +5,7 @@ description: Visualize and optimize Redis data
 weight: 3
 ---
 
-# <img src="images/ico-redisinsight.svg" alt="logo" width="25"/>  RedisInsight - Developer GUI for Redis, by Redis. 
+# <img src="../../images/ico-redisinsight.svg" alt="logo" width="25"/>  RedisInsight - Developer GUI for Redis, by Redis. 
 
 RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack, making real-time application development easier and more fun than ever before. RedisInsight lets you do both GUI- and CLI-based interactions in a fully-featured Desktop GUI client that provides capabilities to help you design, develop and optimize your Redis application. 
 
@@ -17,7 +17,7 @@ RedisInsight is an intuitive and efficient GUI for Redis, allowing you to intera
 
 * RedisInsight highlights your Redis Stack database to quickly find it in the list of databases
 
-<img src="images/Databases.png">
+<img src="../../images/Databases.png">
 
 ### Browser
 
@@ -26,7 +26,7 @@ RedisInsight is an intuitive and efficient GUI for Redis, allowing you to intera
 * CRUD support for [RedisJSON](https://oss.redis.com/redisjson/)
 * View keys according to their namespaces
 
-<img src="images/Browser.png">
+<img src="../../images/Browser.png">
 
 
 ### Profiler
@@ -40,7 +40,7 @@ RedisInsight is an intuitive and efficient GUI for Redis, allowing you to intera
 * Accessible at any time within the applicaiton with command hints
 * Use together with a convenient command helper that lets you search and read on Redis commands.
 
-<img src="https://github.com/ViktarStarastsenka/redis-stack-docs/blob/main/docs/stack/insight/CLI.png">
+<img src="../../images/CLI.png">
 
 
 ### Workbench
@@ -51,9 +51,9 @@ RedisInsight is an intuitive and efficient GUI for Redis, allowing you to intera
 * Ability to build your own data visualization plugins
 * Built-in Guides: Developers can conveniently discover Redis features and capabilities via built-in guides. The first guide produced covers document capabilities within Redis.
 
-<img src="images/Workbench_Graph.png">
+<img src="../../images/Workbench_Graph.png">
 
-<img src="images/Workbench_TimeSeries.png">
+<img src="../../images/Workbench_TimeSeries.png">
 
 
 ## RedisInsight Plugins
