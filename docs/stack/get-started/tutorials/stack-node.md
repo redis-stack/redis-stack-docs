@@ -27,7 +27,7 @@ This tutorial will get you started with Redis OM for Node.js, covering the basic
 
 ## Prerequisites
 
-Like anything software-related, you need to have some stuff installed before you can get started. Here's our particular stuff:
+Like anything software-related, you need to have some dependencies installed before you can get started:
 
 - [Node.js 14.8+](https://nodejs.org/en/): In this tutorial, I’m using JavaScript's top-level await feature which was introduced in Node 14.8. So, make sure you are using that version or later. I'm using Node.js 16.3.
 - [Redis Stack](/download): You need a version of Redis Stack somewhere be it on your machine or someone else's.
