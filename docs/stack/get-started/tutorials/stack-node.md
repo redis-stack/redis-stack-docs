@@ -38,7 +38,7 @@ Like anything software-related, you need to have some dependencies installed bef
 
 We're not going to code this completely from scratch. Instead, we're provided some starter code for you. Go ahead and clone it to a folder of your convenience:
 
-    get clone git@github.com:redis-developer/express-redis-om-workshop.git
+    git clone git@github.com:redis-developer/express-redis-om-workshop.git
 
 Now that you have the starter code, let's explore it a bit. Opening up `server.js` in the root we see that we have a simple Express app that uses [*Dotenv*](https://www.npmjs.com/package/dotenv) for configuration and [Swagger UI Express](https://www.npmjs.com/package/swagger-ui-express) for testing our API:
 
