@@ -7,7 +7,7 @@ weight: 1
 
 This tutorial will show you how to build an API using Node.js and Redis Stack.
 
-We'll be using [Express](https://expressjs.com/) and [Redis OM](https://github.com/redis/redis-om-node) to do this. I’m assuming that you know a bit of Express as it's a pretty established framework. However, I’m not using Express in a particularly sophisticated way so a basic understanding will be plenty. In fact, you’ll probably be fine even if you never used it. The part you're likely not familiar with is Redis OM. Fear not! This is exactly what we’re here to cover!
+We'll be using [Express](https://expressjs.com/) and [Redis OM](https://github.com/redis/redis-om-node) to do this, and we assume that you have a basic understanding of Express.
 
 The API we'll be building is a simple and relatively RESTful API that reads, writes, and finds data on persons—first name, last name, age, that sort of thing. And we'll add a simple location tracking feature just for a bit of extra interest.
 
