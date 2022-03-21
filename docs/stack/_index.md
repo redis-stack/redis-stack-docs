@@ -42,6 +42,6 @@ Redis Stack also includes RedisInsight, a visualization tool for understanding a
 
 Redis Stack is made up of several components, licensed as follows:
 
-* Redis itself is licensed under the [3-clause BSD license](https://github.com/redis/redis/blob/unstable/COPYING).
-* The Redis modules are licensed under the [Redis Source Available License](https://github.com/RediSearch/RediSearch/blob/master/LICENSE) (RSAL).
+* Redis Stack Server combines open source Redis with RediSearch, RedisJSON RedisGraph, RedisTimeSeries and RedisBloom is licensed under the [Redis Source Available License](https://github.com/RediSearch/RediSearch/blob/master/LICENSE) (RSAL).
+
 * RedisInsight is licensed under the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL).
