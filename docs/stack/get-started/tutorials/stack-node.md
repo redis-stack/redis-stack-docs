@@ -90,7 +90,7 @@ There's a good chance this is already correct. However, if you need to change th
 
     npm start
 
-Navigate to http://localhost:8080 and check out the client that Swagger UI Express has created. None of it *works* yet because we haven't implemented any of the routes. But, you can try them out and watch them fail!
+Navigate to `http://localhost:8080` and check out the client that Swagger UI Express has created. None of it *works* yet because we haven't implemented any of the routes. But, you can try them out and watch them fail!
 
 The starter code runs. Let's add some Redis OM to it so it actually *does* something!
 
