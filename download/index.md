@@ -7,7 +7,7 @@ linkTitle: Download
 
 ## Redis
 
-You can download the last Redis source files here. For additional options, see the [Redis download section](#redis-stack-downloads) below.
+You can download the last Redis source files here. For additional options, see the [Redis downloads](#redis-downloads) section below.
 
 ### Stable (6.2)
 
@@ -89,8 +89,8 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 
 RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack, making real-time application development easier and more fun than ever before.
 
-* Download RedisInsight 2.0.5 [macOS x86_64]() [macOS aarch64]() [Linux]() [Windows]() 
-* [RedisInsight 2.0.5 Release Notes]()
+* Download the latest RedisInsight for [macOS x86_64]() [macOS aarch64]() [Linux]() [Windows]() 
+* [RedisInsight Release Notes]()
 
 TODO  should be page wide across both Redis and Redis Stack
   
@@ -101,5 +101,9 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 * Download Redis Stack Server 7.0.0-rc1 [macOS x86_64]() [macOS aarch64]() [Linux x86_64]() [Linux aarch64]() 
 * [7.0.0-rc1 Release Notes]()
 
+### Checksuns
+
+The checksums for the binaries or Redis Stack Server are available here.
+ 
 </div>
 </div>
