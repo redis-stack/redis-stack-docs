@@ -7,7 +7,7 @@ linkTitle: Download
 
 ## Redis
 
-You can download the last Redis source files here. For additional options, see the Redis download section below.
+You can download the last Redis source files here. For additional options, see the [Redis download section](#redis-stack-downloads) below.
 
 ### Stable (6.2)
 
