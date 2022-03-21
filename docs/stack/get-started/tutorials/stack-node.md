@@ -86,7 +86,7 @@ The contents of `.env` looks like this:
 REDIS_URL=redis://localhost:6379
 {{< / highlight >}}
 
-There's a good chance this is already correct. However, if you need to change the `REDIS_URL` for your particular environment, say your running Redis Stack in the cloud, this is the time to do it. Once done, you should be able to run the app:
+There's a good chance this is already correct. However, if you need to change the `REDIS_URL` for your particular environment (e.g., you're running Redis Stack in the cloud), this is the time to do it. Once done, you should be able to run the app:
 
     npm start
 
