@@ -97,7 +97,7 @@ The starter code runs. Let's add some Redis OM to it so it actually *does* somet
 
 ## Setting up a Client
 
-First things first, let's set up a **client**. The `Client` class is the thing that knows how to talk to Redis on behalf of Redis OM. I like to put my client in its own file and export it. This ensures that my application has one and only one instance of `Client` and thus only one connection to Redis Stack. Since Redis and JavaScript are both (more or less) single-threaded, this works neatly.
+First things first, let's set up a **client**. The `Client` class is the thing that knows how to talk to Redis on behalf of Redis OM. One option is to put our client in its own file and export it. This ensures that the application has one and only one instance of `Client` and thus only one connection to Redis Stack. Since Redis and JavaScript are both (more or less) single-threaded, this works neatly.
 
 Let's create our first file. In the `om` folder add a file called `client.js` and add the following code:
 
