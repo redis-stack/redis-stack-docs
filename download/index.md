@@ -21,13 +21,13 @@ Redis 6.2 includes many new commands and improvements. Redis 6.2 improves on the
 
 <div id="download-redis-stack">
 
-## Redis Stack
+## Redis Stack Server
 
 We publish Redis Stack packages for Docker, Homebrew, Debian, and RHEL. Redis Stack is also available in [Redis Cloud](https://redis.com/try-free/).
 
-### Stable (1.0)
+### Stable (6.2.0)
 
-Redis Stack 1.0 extends Redis with support for JSON, search, time series, graph, and probabilistic data models. Stack also includes RedisInsight for visualizing and optimizing your Redis data.
+Redis Stack Server extends Redis with modern data models, such as Document, Graph, Time Series, and data processing engines, such as search, AI, and server side functions. Stack also includes RedisInsight for visualizing and optimizing your Redis data.
 
 * [Redis Stack Server 6.2.0]()
 * [Redis Stack 6.2.0 Release Notes]()
