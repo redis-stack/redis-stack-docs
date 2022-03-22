@@ -9,6 +9,9 @@ weight: 3
 
 RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack, making real-time application development easier and more fun than ever before. RedisInsight lets you do both GUI- and CLI-based interactions in a fully-featured Desktop GUI client that provides capabilities to help you design, develop and optimize your Redis application. 
 
+* Download the latest RedisInsight for [macOS x86_64](https://download.redisinsight.redis.com/latest/RedisInsight-v2-mac-x64.dmg) [macOS aarch64](https://download.redisinsight.redis.com/latest/RedisInsight-v2-mac-arm64.dmg) [Linux](https://download.redisinsight.redis.com/latest/RedisInsight-v2-linux-x86_64.AppImage) [Windows](https://download.redisinsight.redis.com/latest/RedisInsight-v2-win-installer.exe)
+* [RedisInsight Release Notes](https://docs.redis.com/staging/release-ri-v2.0/ri/release-notes/)
+
 ## Overview
 
 ### Connection management
