@@ -7,6 +7,12 @@ weight: 1
 
 To install Redis Stack on macOS, use [Homebrew](https://brew.sh/). Make sure that you have [Homebrew installed](https://docs.brew.sh/Installation) before starting on the installation instructions below.
 
+There are three brew casks available.
+
+* `redis-stack` contains both `redis-stack-server` and `redis-stack-redisinsight` casks. 
+* `redis-stack-server` provides Redis Stack server only.
+* `redis-stack-redisinsight` contains RedisInsight.
+
 ## Install using Homebrew
 
 First, tap the Redis Stack Homebrew tap:
@@ -21,7 +27,7 @@ Next, run `brew install`:
 brew install redis-stack
 {{< / highlight >}}
 
-This will install all Redis and Redis Stack binaries. How you run these binaries depends on whether you already have Redis installed on your system.
+The `redis-stack-server` cask will install all Redis and Redis Stack binaries. How you run these binaries depends on whether you already have Redis installed on your system.
 
 ### First-time Redis installation
 
@@ -35,17 +41,9 @@ echo $PATH
 
 Then, confirm that the output contains `/opt/homebrew/bin` (M1 Mac) or `/usr/local/bin` (Intel Mac). If these directories are not in the output, see the "Existing Redis installation" instructions below.
 
-#### Start Redis Stack Server
-
-You can now start Redis Stack Server as follows:
-
-{{< highlight bash >}}
-redis-stack-server
-{{< / highlight >}}
-
 ### Existing Redis installation
 
-If you have an existing Redis installation on your system, then you'll need to modify your `$PATH` to ensure that you're using the latest Redis Stack binaries.
+If you have an existing Redis installation on your system, then might want to modify your `$PATH` to ensure that you're using the latest Redis Stack binaries.
 
 Open the file `~/.bashrc` or '~/zshrc` (depending on your shell), and add the following lines.
 
@@ -65,6 +63,14 @@ In both cases, replace `<VERSION>` with your version of Redis Stack. For example
 
 {{< highlight bash >}}
 export PATH=/opt/homebrew/Caskroom/redis-stack-server/6.2.0/bin:$PATH
+{{< / highlight >}}
+
+### Start Redis Stack Server
+
+You can now start Redis Stack Server as follows:
+
+{{< highlight bash >}}
+redis-stack-server
 {{< / highlight >}}
 
 ## Installing Redis after installing Redis Stack

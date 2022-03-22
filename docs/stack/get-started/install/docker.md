@@ -9,18 +9,9 @@ To get started with Redis Stack using Docker, you first need to select a Docker 
 
 * `redis/redis-stack` contains both Redis Stack server and RedisInsight. This container is best for local development because you can use the embedded RedisInsight to visualize your data.
 
-* `redis/redis-stack-server` provides Redis Stack but excludes RedisInsight. This container is best for production deployment.
+* `redis/redis-stack-server` provides Redis Stack server only. This container is best for production deployment.
 
 ## Getting started
-
-### redis/redis-stack
-To start Redis Stack developer container using the `redis-stack` image, run the following command in your terminal:
-
-{{< highlight bash >}}
-docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
-{{< / highlight >}}
-
-The `docker run` command above also exposes RedisInsight on port 8001. You can use RedisInsight by pointing your browser to [http://localhost:8001](http://localhost:8001).
 
 ### redis/redis-stack-server
 
@@ -31,6 +22,15 @@ docker run -d --name redis-stack -p 6379:6379 redis/redis-stack:latest
 {{< / highlight >}}
 
 You can that the Redis Stack server database to your [RedisInsight]() desktop applicaiton.
+
+### redis/redis-stack
+To start Redis Stack developer container using the `redis-stack` image, run the following command in your terminal:
+
+{{< highlight bash >}}
+docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
+{{< / highlight >}}
+
+The `docker run` command above also exposes RedisInsight on port 8001. You can use RedisInsight by pointing your browser to [http://localhost:8001](http://localhost:8001).
 
 ## Connect with redis-cli
 You can then connect to the server using `redis-cli`, just as you connect to any Redis instance.

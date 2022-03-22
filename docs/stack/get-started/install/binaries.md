@@ -1,0 +1,41 @@
+---
+title: Install Redis Stack with binaries
+linkTitle: binaries
+description: "How to install Redis Stack using tarballs"
+weight: 1
+---
+
+Redis Stack Server binaries rely upon
+- OpenSSL
+- LibOMP
+to be installed on your operating system.
+
+## Start Redis Stack Server
+
+After untarring or unzipping your redis-stack-server download, you can start Redis Stack Server as follows:
+
+{{< highlight bash >}}
+/path/to/redis-stack-server/bin/redis-stack-server
+{{< / highlight >}}
+
+### Add the binaries to your PATH
+
+You can add the redis-stack-server binaries to your `$PATH` as follows:
+
+Open the file `~/.bashrc` or '~/zshrc` (depending on your shell), and add the following lines.
+
+{{< highlight bash >}}
+export PATH=/path/to/redis-stack-server/bin:$PATH
+{{< / highlight >}}
+
+If you have an existing Redis installation on your system, then you can choose override those override those PATH variables as before, or you can choose to only add redis-stack-server binary as follows:
+
+{{< highlight bash >}}
+export PATH=/path/to/redis-stack-server/bin/redis-stack-server:$PATH
+{{< / highlight >}}
+
+Now you can start Redis Stack Server as follows:
+
+{{< highlight bash >}}
+redis-stack-server
+{{< / highlight >}}
