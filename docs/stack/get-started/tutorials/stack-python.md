@@ -11,7 +11,7 @@ We'd love to see what you build with Redis Stack and Redis OM.  [Join the Redis 
 
 ## Overview
 
-This application demonstrates common data manipulation patterns using Redis OM. To demonstrate, we're going to build an API built with Flask and a simple domain model.
+This application, an API built with Flask and a simple domain model, demonstrates common data manipulation patterns using Redis OM. 
 
 Our entity is a Person, with the following JSON representation:
 
