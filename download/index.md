@@ -29,7 +29,7 @@ You can download the latest Redis Stack Server binaries here. Alternatively you 
 
 Redis Stack Server extends Redis with modern data models, such as Document, Graph, Time Series, and data processing engines, such as search, AI, and server side functions.
 
-* Download Redis Stack Server 6.2.0-v0 [macOS x86_64]() [macOS aarch64]() [Linux x86_64]() [Linux aarch64]() 
+* Download Redis Stack Server 6.2.0-v0 [macOS x86_64]() [macOS aarch64]() [Linux x86_64]() 
 * [Redis Stack 6.2.0-v0 Release Notes]()
 * [More installation options ->](#redis-stack-downloads)
 </div>
@@ -80,6 +80,7 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 [Go to Redis DockerHub](https://hub.docker.com/_/redis).
 </div>
 </div>
+
 <div id="download-redis-stack-options">
 <div class="inner-content">
 
@@ -98,7 +99,7 @@ TODO  should be page wide across both Redis and Redis Stack
 
 Redis Stack 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements part of Redis 7.0. It also includes changes that potentially break backwards compatibility with older versions. 
 
-* Download Redis Stack Server 7.0.0-rc1 [macOS x86_64]() [macOS aarch64]() [Linux x86_64]() [Linux aarch64]() 
+* Download Redis Stack Server 7.0.0-rc1 [macOS x86_64]() [macOS aarch64]() [Linux x86_64]() 
 * [7.0.0-rc1 Release Notes]()
 
 ### Checksuns
