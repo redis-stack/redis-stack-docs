@@ -5,7 +5,7 @@ description: Visualize and optimize Redis data
 weight: 3
 ---
 
-# <img src="../../../../images/ico-redisinsight.svg" alt="logo" width="25"/>  RedisInsight - Developer GUI for Redis, by Redis. 
+# <img src="images/ico-redisinsight.svg" alt="logo" width="25"/>  RedisInsight - Developer GUI for Redis, by Redis. 
 
 RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack, making real-time application development easier and more fun than ever before. RedisInsight lets you do both GUI- and CLI-based interactions in a fully-featured Desktop GUI client that provides capabilities to help you design, develop and optimize your Redis application. 
 
@@ -13,45 +13,47 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 ### Connection management
 
+Connect to any Redis, anywhere.
+* Automatically discover and add your local Redis or Redis Stack databases (that use standalone connection type and do not require authentication).
+* Discover your databases in Redis Enterprise Cluster and databases with Flexible plans in Redis Cloud
+* Use a form to enter your connection details and add any Redis database running anywhere (including OSS Cluster, Sentinel)
 
-
-<img src="../../../../images/Databases.png">
+<img src="images/Databases.png">
 
 ### Browser
 
-* Browse, filter and visualise your key-value Redis data structures
-* CRUD support for Lists, Hashes, Strings, Sets, Sorted Sets 
+Browse, filter and visualise your key-value Redis data structures.
+* [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) support for Lists, Hashes, Strings, Sets, Sorted Sets 
 * CRUD support for [RedisJSON](https://oss.redis.com/redisjson/)
-* View keys according to their namespaces
+* Group keys according to their namespaces
 
-<img src="../../../../images/Browser.png">
-
+<img src="images/Browser.png">
 
 ### Profiler
-* Work with your database and analyze every command sent to Redis in real-time
 
-<img src="../../../../images/Profiler.png">
+Analyze every command sent to Redis in real-time
 
+<img src="images/Profiler.png">
 
 ### CLI
+
+Accessible at any time within the applicaiton with command hints.
 * Employs integrated help to deliver intuitive assistance
-* Accessible at any time within the applicaiton with command hints
 * Use together with a convenient command helper that lets you search and read on Redis commands.
 
-<img src="../../../../images/CLI.png">
-
+<img src="images/CLI.png">
 
 ### Workbench
-* Advanced command line interface with intelligent command auto-complete and complex data visualizations
+
+Advanced command line interface with intelligent command auto-complete and complex data visualizations.
+* Built-in Guides: Developers can conveniently discover Redis and Redis Stack capabilities via built-in guides.
 * Command auto-complete support for all capabilities in Redis and Redis Stack.
 * Visualizations of your [RediSearch](https://oss.redis.com/redisearch/) index, queries, and aggregations
 * Visualizations of your [RedisGraph](https://oss.redis.com/redisgraph/) and [RedisTimeSeries](https://oss.redis.com/redistimeseries/) data.
-* Ability to build your own [data visualization plugins](#redisinsight-plugins)
-* Built-in Guides: Developers can conveniently discover Redis and Redis Stack capabilities via built-in guides.
 
-<img src="../../../../images/Workbench_Graph.png">
+<img src="images/Workbench_Graph.png">
 
-<img src="../../../../images/Workbench_TimeSeries.png">
+<img src="images/Workbench_TimeSeries.png">
 
 
 ## RedisInsight Plugins
