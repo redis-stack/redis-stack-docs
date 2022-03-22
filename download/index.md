@@ -92,9 +92,7 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 * Download the latest RedisInsight for: [macOS x86_64](https://download.redisinsight.redis.com/latest/RedisInsight-v2-mac-x64.dmg) | [macOS aarch64](https://download.redisinsight.redis.com/latest/RedisInsight-v2-mac-arm64.dmg) | [Linux](https://download.redisinsight.redis.com/latest/RedisInsight-v2-linux-x86_64.AppImage) | [Windows](https://download.redisinsight.redis.com/latest/RedisInsight-v2-win-installer.exe)
 * [RedisInsight Release Notes](https://docs.redis.com/staging/release-ri-v2.0/ri/release-notes/)
-
-TODO  should be page wide across both Redis and Redis Stack
-  
+ 
 ### Release-candidate (7.0.0)
 
 Redis Stack 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements part of Redis 7.0. It also includes changes that potentially break backwards compatibility with older versions. 
@@ -102,9 +100,5 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 * Download Redis Stack Server 7.0.0-rc1 for: [macOS x86_64]() | [macOS aarch64]() | [Linux x86_64]() 
 * [7.0.0-rc1 Release Notes]()
 
-### Checksuns
-
-The checksums for the binaries or Redis Stack Server are available here.
- 
 </div>
 </div>
