@@ -29,8 +29,8 @@ You can download the latest Redis Stack Server binaries here. Alternatively you 
 
 Redis Stack Server extends Redis with modern data models, such as Document, Graph, Time Series, and data processing engines, such as search, AI, and server side functions.
 
-* Download Redis Stack Server 6.2.0-v0 for: [macOS x86_64]() | [macOS aarch64]() | [Linux x86_64]() 
-* [Redis Stack 6.2.0-v0 Release Notes]()
+* Download Redis Stack Server 6.2.0-v0 for: [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.catalina.x86_64.zip) | [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.monterey.arm64.zip) | [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.xenial.x86_64.tar.gz) | [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.bionic.x86_64.tar.gz) | [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.focal.x86_64.tar.gz) | [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.rhel7.x86_64.tar.gz) | [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.rhel8.x86_64.tar.gz) 
+* [Redis Stack 6.2.0-v0 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/6.2.0-v1)
 * [More installation options ->](#redis-stack-downloads)
 </div>
  
@@ -97,8 +97,8 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 Redis Stack 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements part of Redis 7.0. It also includes changes that potentially break backwards compatibility with older versions. 
 
-* Download Redis Stack Server 7.0.0-rc1 for: [macOS x86_64]() | [macOS aarch64]() | [Linux x86_64]() 
-* [7.0.0-rc1 Release Notes]()
+* Download Redis Stack Server 7.0.0-rc1 for: [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.catalina.x86_64.zip) | [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.monterey.arm64.zip) | [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.xenial.x86_64.tar.gz) | [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.bionic.x86_64.tar.gz) | [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.focal.x86_64.tar.gz) | [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.rhel7.x86_64.tar.gz) | [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.rhel8.x86_64.tar.gz) 
+* [7.0.0-rc1 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/7.0.0-rc1)
 
 </div>
 </div>
