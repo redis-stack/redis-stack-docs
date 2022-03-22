@@ -444,7 +444,7 @@ CRUD completed, let's do some searching. In order to search, we need data to sea
 
 You should get a rather verbose response containing the JSON response from the API and the names of the files you loaded. Like this:
 
-{{< / highlight >}}
+{{< highlight json >}}
 {"entityId":"01FY9Z4RRPKF4K9H78JQ3K3CP3","firstName":"Chris","lastName":"Stapleton","age":43,"verified":true,"location":{"longitude":-84.495,"latitude":38.03},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","football","coal mining"],"personalStatement":"There are days that I can walk around like I'm alright. And I pretend to wear a smile on my face. And I could keep the pain from comin' out of my eyes. But sometimes, sometimes, sometimes I cry."} <- chris-stapleton.json
 {"entityId":"01FY9Z4RS2QQVN4XFYSNPKH6B2","firstName":"David","lastName":"Paich","age":67,"verified":false,"location":{"longitude":-118.25,"latitude":34.05},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","keyboard","blessing"],"personalStatement":"I seek to cure what's deep inside frightened of this thing that I've become"} <- david-paich.json
 {"entityId":"01FY9Z4RSD7SQMSWDFZ6S4M5MJ","firstName":"Ivan","lastName":"Doroschuk","age":64,"verified":true,"location":{"longitude":-88.273,"latitude":40.115},"locationUpdated":"2022-01-01T12:00:00.000Z","skills":["singing","dancing","friendship"],"personalStatement":"We can dance if we want to. We can leave your friends behind. 'Cause your friends don't dance and if they don't dance well they're no friends of mine."} <- ivan-doroschuk.json
