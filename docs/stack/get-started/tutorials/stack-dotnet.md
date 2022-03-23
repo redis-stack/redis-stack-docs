@@ -316,15 +316,15 @@ You can view the data by following these steps:
 
 1. Accept the EULA
 
-![Accept EULA](Accept_EULA.png)
+![Accept EULA](../images/Accept_EULA.png)
 
 2. Click the Add Redis Database button
 
-![Add Redis Database Button](Add_Redis_Database_button.png)
+![Add Redis Database Button](../images/Add_Redis_Database_button.png)
 
 3. Enter your hostname and port name for your redis server. If you are using the docker image, this is `localhost` and `6379` and give your database an alias
 
-![Configure Redis Insight Database](Configure_Redis_Insight_Database.png)
+![Configure Redis Insight Database](../images/Configure_Redis_Insight_Database.png)
 
 4. Click `Add Redis Database.`
 
