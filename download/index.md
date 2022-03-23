@@ -93,6 +93,7 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 * [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.xenial.x86_64.tar.gz)
 * [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.bionic.x86_64.tar.gz)
 * [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.focal.x86_64.tar.gz)
+* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.x86_64.snap)
 * [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.rhel8.x86_64.tar.gz)
 
@@ -113,13 +114,14 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 
 #### Download Redis Stack Server 7.0.0-rc1:
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.catalina.x86_64.zip)
-* [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.bionic.x86_64.tar.gz)
-* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.focal.x86_64.tar.gz)
-* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-rc1.rhel8.x86_64.tar.gz)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.catalina.x86_64.zip)
+* [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.xenial.x86_64.tar.gz)
+* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.bionic.x86_64.tar.gz)
+* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.focal.x86_64.tar.gz)
+* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.x86_64.snap)
+* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.rhel7.x86_64.tar.gz)
+* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.rhel8.x86_64.tar.gz)
 * [7.0.0-rc1 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/7.0.0-rc1)
 </div>
 </div>
