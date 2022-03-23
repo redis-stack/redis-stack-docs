@@ -150,7 +150,7 @@ If you've set the `REDIS_OM_URL` environment variable, and the code errors with 
 {{< highlight python >}}
 raise ConnectionError(self._error_message(e))
 redis.exceptions.ConnectionError: Error 8 connecting to enterprise.redis.com:9139. nodename nor servname provided, or not known.
-{{< / hightlight >}}
+{{< / highlight >}}
 
 then you'll need to check that you used the correct hostname, port, password and format when setting `REDIS_OM_URL`.
 
@@ -508,7 +508,7 @@ Essentially we want to say "Find me all the people whose city is `city` AND whos
       (Person.skills << desired_skill) &
       (Person.address.city == city)
   ).all()
-{{< / highlght >}}
+{{< / highlight >}}
 
 The `<<` operator here is used to indicate "in" or "contains".
 
