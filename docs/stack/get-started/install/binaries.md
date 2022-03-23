@@ -5,11 +5,6 @@ description: "How to install Redis Stack using tarballs"
 weight: 1
 ---
 
-Redis Stack Server binaries rely upon
-- OpenSSL
-- LibOMP
-to be installed on your operating system.
-
 ## Start Redis Stack Server
 
 After untarring or unzipping your redis-stack-server download, you can start Redis Stack Server as follows:
