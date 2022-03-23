@@ -5,9 +5,9 @@ description: Learn how to build with Redis Stack and Python
 weight: 1
 ---
 
-Redis OM Python ([GitHub](https://github.com/redis/redis-om-python) is a Redis client that provides a high leval abstraction for managing document data in Redis. This tutorial shows you how to get up and running with Redis OM Python, Redis Stack and the [Flask](https://flask.palletsprojects.com/) microframework.
+[Redis OM Python](https://github.com/redis/redis-om-python) is a Redis client that provides high-level abstractions for managing document data in Redis. This tutorial shows you how to get up and running with Redis OM Python, Redis Stack, and the [Flask](https://flask.palletsprojects.com/) micro-framework.
 
-We'd love to see what you build with Redis Stack and Redis OM.  [Join the Redis community on Discord](https://discord.gg/redis) to chat with us about all things Redis OM and Redis Stack.  Read more about Redis OM Python in this [blog post](https://redis.com/blog/introducing-redis-om-for-python/).
+We'd love to see what you build with Redis Stack and Redis OM.  [Join the Redis community on Discord](https://discord.gg/redis) to chat with us about all things Redis OM and Redis Stack.  Read more about Redis OM Python [our announcement blog post](https://redis.com/blog/introducing-redis-om-for-python/).
 
 ## Overview
 

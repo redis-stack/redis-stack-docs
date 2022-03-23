@@ -36,7 +36,7 @@ Like anything software-related, you need to have some dependencies installed bef
 
 ## Starter code
 
-We're not going to code this completely from scratch. Instead, we're provided some starter code for you. Go ahead and clone it to a folder of your convenience:
+We're not going to code this completely from scratch. Instead, we've provided some starter code for you. Go ahead and clone it to a folder of your convenience:
 
     git clone git@github.com:redis-developer/express-redis-om-workshop.git
 
