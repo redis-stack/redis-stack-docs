@@ -117,7 +117,7 @@ $ flask run
 
 You're now up and running, and ready to perform CRUD operations on data with Redis, RediSearch, RedisJSON and Redis OM for Python!  To make sure the server's running, point your browser at `http://127.0.0.1:5000/`, where you can expect to see the application's basic home page:
 
-![screenshot](./stack_python/images/server_running.png)
+![screenshot](./python_server_running.png)
 
 ### Load the Sample Data
 
@@ -264,7 +264,7 @@ $ redis-cli
 
 If you're using RedisInsight, the browser will render the key value for you when you click on the key name:
 
-![Data in RedisInsight](./stack_python/images/insight_explore_person.png)
+![Data in RedisInsight](./python_insight_explore_person.png)
 
 When storing data as JSON in Redis, we can update and retrieve the whole document, or just parts of it.  For example, to retrieve only the person's address and first skill, use the following command (RedisInsight users should use the built in redis-cli for this):
 
