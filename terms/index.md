@@ -20,6 +20,6 @@ The Site does not collect personal data from visitors except in the Site's use o
 
 ### Other Sites
 
-By using and or visiting other websites linked within the Site, such as Redis.com (our “Enterprise Site”) or GitHub, you are agreeing to those external websites' terms of use, as well as applicable privacy policies. For reference, please see our [Enterprise Site Terms of Use](https://redis.com/terms) and our [Enterprise Site Privacy Policy](https://redis.com/legal/privacy-policy/).
+By using and or visiting other websites linked within the Site, such as Redis.com (our “Enterprise Site”) or GitHub, you are agreeing to those external websites' terms of use, as well as applicable privacy policies. For reference, please see our [Enterprise Site Terms of Use](https://redis.com/terms/) and our [Enterprise Site Privacy Policy](https://redis.com/legal/privacy-policy/).
 
 _Last Update: April 1, 2022_

@@ -36,9 +36,9 @@ Modification​:​ ​a modification of the Software made by You under the Lice
 
 **Your Application**​: an application developed by or for You, where such application is not a Database Product.
 
-1. LICENSE GRANT AND CONDITIONS
+**1. LICENSE GRANT AND CONDITIONS**
 
-1.1 Subject to the terms and conditions of this Section 1, Licensor hereby grants to You a non-exclusive, royalty-free, worldwide, non-transferable license during the term of this Agreement to:
+1.1. Subject to the terms and conditions of this Section 1, Licensor hereby grants to You a non-exclusive, royalty-free, worldwide, non-transferable license during the term of this Agreement to:
 (a) distribute ​or make available the Software or your Modifications under the terms of this Agreement, only as part of Your Application, so long as you include the following notice on any copy you distribute: “This software is subject to the terms of the Redis Source Available License Agreement”.
 (b) use​ the Software, or your Modifications, only as part of Your Application, but not in connection with any Database Product that is distributed or otherwise made available by any third party.
 (c) modify ​the Software, provided that Modifications remain subject to the terms of this License. (d) reproduce​ the Software as necessary for the above.
@@ -47,13 +47,14 @@ Modification​:​ ​a modification of the Software made by You under the Lice
 
 1.3. Notices​. On all copies of the Software that you make, you must retain all copyright or other proprietary notices.
 
-2. TERM AND TERMINATION​. This Agreement will continue unless and until earlier terminated as set forth herein. If You breach any of its conditions or obligations under this Agreement, this Agreement will terminate automatically and the licenses granted herein will terminate automatically.
+**2. TERM AND TERMINATION​**. This Agreement will continue unless and until earlier terminated as set forth herein. If You breach any of its conditions or obligations under this Agreement, this Agreement will terminate automatically and the licenses granted herein will terminate automatically.
 
-3. INTELLECTUAL PROPERTY​. As between the parties, Licensor retains all right, title, and interest in the Software, and to Redis or other Licensor trademarks or service marks, and all intellectual property rights therein. Licensor hereby reserves all rights not expressly granted to You in this Agreement.
+**3. INTELLECTUAL PROPERTY​**. As between the parties, Licensor retains all right, title, and interest in the Software, and to Redis or other Licensor trademarks or service marks, and all intellectual property rights therein. Licensor hereby reserves all rights not expressly granted to You in this Agreement.
 
-4. DISCLAIMER​. TO THE EXTENT ALLOWABLE UNDER LAW, LICENSOR HEREBY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, AND SPECIFICALLY DISCLAIMS ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO THE SOFTWARE. Licensor has no obligation to support the Software.
-5. LIMITATION OF LIABILITY​. TO THE EXTENT ALLOWABLE UNDER LAW, LICENSOR WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO, LOST PROFITS OR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL, INDIRECT, OR DIRECT DAMAGES, ARISING OUT OF OR RELATING TO THIS AGREEMENT.
+**4. DISCLAIMER​**. TO THE EXTENT ALLOWABLE UNDER LAW, LICENSOR HEREBY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, AND SPECIFICALLY DISCLAIMS ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO THE SOFTWARE. Licensor has no obligation to support the Software.
 
-6. GENERAL​. You are not authorized to assign Your rights under this Agreement to any third party. Licensor may freely assign its rights under this Agreement to any third party. This Agreement is the entire agreement between the parties on the subject matter hereof. No amendment or modification hereof will be valid or binding upon the parties unless made in writing and signed by the duly authorized representatives of both parties. In the event that any provision, including without limitation any condition, of this Agreement is held to be unenforceable, this Agreement and all licenses and rights granted hereunder will immediately terminate. Failure by Licensor to exercise any right hereunder will not be construed as a waiver of any subsequent breach of that right or as a waiver of any other right.
+**5. LIMITATION OF LIABILITY​**. TO THE EXTENT ALLOWABLE UNDER LAW, LICENSOR WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO, LOST PROFITS OR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL, INDIRECT, OR DIRECT DAMAGES, ARISING OUT OF OR RELATING TO THIS AGREEMENT.
+
+**6. GENERAL**​. You are not authorized to assign Your rights under this Agreement to any third party. Licensor may freely assign its rights under this Agreement to any third party. This Agreement is the entire agreement between the parties on the subject matter hereof. No amendment or modification hereof will be valid or binding upon the parties unless made in writing and signed by the duly authorized representatives of both parties. In the event that any provision, including without limitation any condition, of this Agreement is held to be unenforceable, this Agreement and all licenses and rights granted hereunder will immediately terminate. Failure by Licensor to exercise any right hereunder will not be construed as a waiver of any subsequent breach of that right or as a waiver of any other right.
 
 This Agreement will be governed by and interpreted in accordance with the laws of the state of California, without reference to its conflict of laws principles. If You are located within the United States, all disputes arising out of this Agreement are subject to the exclusive jurisdiction of courts located in Santa Clara County, California. USA. If You are located outside of the United States, any dispute, controversy or claim arising out of or relating to this Agreement will be referred to and finally determined by arbitration in accordance with the JAMS before a single arbitrator in Santa Clara County, California. Judgment upon the award rendered by the arbitrator may be entered in any court having jurisdiction thereof.
