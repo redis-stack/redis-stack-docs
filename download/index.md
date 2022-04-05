@@ -42,8 +42,8 @@ Redis Stack Server extends Redis with modern data models such as document, graph
 
 Redis 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements. It also includes changes that potentially break backwards compatibility with older versions. 
 
-* [Download 7.0-rc2](https://github.com/redis/redis/archive/7.0-rc2.tar.gz)
-* [7.0-rc2 Release Notes](https://raw.githubusercontent.com/redis/redis/7.0/00-RELEASENOTES)
+* [Download 7.0-rc3](https://github.com/redis/redis/archive/7.0-rc3.tar.gz)
+* [7.0 Release Notes](https://raw.githubusercontent.com/redis/redis/7.0/00-RELEASENOTES)
 
 ### Unstable
 
