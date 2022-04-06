@@ -25,12 +25,12 @@ Redis 6.2 includes many new commands and improvements. Redis 6.2 improves on the
 
 Download the latest Redis Stack Server binaries here, or install with [Docker](/docs/stack/get-started/install/docker), [Homebrew](/docs/stack/get-started/install/mac-os), or [on Linux](/docs/stack/get-started/install/linux).
 
-### Stable (6.2.0)
+### Stable (6.2.2)
 
-Redis Stack Server extends Redis with modern data models such as document, graph, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/RedisLabs/redis-stack/releases/tag/v6.2.0-v1), or download the latest 6.2.0 binaries:
+Redis Stack Server extends Redis with modern data models such as document, graph, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.2-v1), or download the latest 6.2.2 binaries:
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.catalina.x86_64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.xenial.x86_64.tar.gz)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.catalina.x86_64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.xenial.x86_64.tar.gz)
 * [All installation options ->](#redis-stack-downloads)
 </div>
  
@@ -86,16 +86,16 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 
 ## Redis Stack downloads
 
-### Redis Stack 6.2.0-v1
+### Redis Stack 6.2.2-v1
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.catalina.x86_64.zip)
-* [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.bionic.x86_64.tar.gz)
-* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.focal.x86_64.tar.gz)
-* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.x86_64.snap)
-* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.0-v1.rhel8.x86_64.tar.gz)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.catalina.x86_64.zip)
+* [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.xenial.x86_64.tar.gz)
+* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.bionic.x86_64.tar.gz)
+* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.focal.x86_64.tar.gz)
+* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.x86_64.snap)
+* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.rhel7.x86_64.tar.gz)
+* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.rhel8.x86_64.tar.gz)
 
 ### RedisInsight
 
