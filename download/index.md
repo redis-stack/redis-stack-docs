@@ -101,13 +101,8 @@ You can download and run Docker images of Redis from DockerHub. Multiple version
 
 RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack. Read the latest [RedisInsight release notes](https://docs.redis.com/staging/release-ri-v2.0/ri/release-notes/).
 
-#### Download the latest RedisInsight
+Download the latest RedisInsight [here](https://redis.com/redis-enterprise/redis-insight/)
 
-* [macOS x86_64](https://download.redisinsight.redis.com/latest/RedisInsight-v2-mac-x64.dmg)
-* [macOS aarch64](https://download.redisinsight.redis.com/latest/RedisInsight-v2-mac-arm64.dmg)
-* [Linux](https://download.redisinsight.redis.com/latest/RedisInsight-v2-linux-x86_64.AppImage)
-* [Windows](https://download.redisinsight.redis.com/latest/RedisInsight-v2-win-installer.exe)
- 
 ### Release-candidate (7.0.0)
 
 Redis Stack 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements part of Redis 7.0. It also includes changes that potentially break backwards compatibility with older versions. 
