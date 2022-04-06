@@ -16,11 +16,11 @@ In addition to all of the features of OSS Redis, Redis stack supports:
 
 ## Getting started
 
-To get started started with Redis Stack, see the [Getting Started](/docs/stack/getting-started) guide. You may also want to:
+To get started started with Redis Stack, see the [Getting Started](/docs/stack/get-started/) guide. You may also want to:
 
-* [Install Redis Stack](/docs/stack/get-started/install)
-* [See the list of clients supporting Redis Stack](/docs/stack/get-started/clients)
-* [View the Redis Stack tutorials](/docs/stack/get-started/tutorials)
+* [Install Redis Stack](/docs/stack/get-started/install/)
+* [See the list of clients supporting Redis Stack](/docs/stack/get-started/clients/)
+* [View the Redis Stack tutorials](/docs/stack/get-started/tutorials/)
 
 If you want to learn more about the vision for Redis Stack, read on.
 
