@@ -40,7 +40,7 @@ Redis Stack Server extends Redis with modern data models such as document, graph
 
 ### Docker
 
-You can download and run Docker images of Redis from DockerHub. Multiple versions are available, usually updated in a short time after a new release is available.
+You can download and run Redis Docker images from DockerHub. Multiple versions are available, usually updated shortly after each new release.
 
 [Go to Redis DockerHub](https://hub.docker.com/_/redis).
 
