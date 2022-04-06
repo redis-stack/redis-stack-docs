@@ -91,7 +91,6 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 * [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.catalina.x86_64.zip)
 * [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.xenial.x86_64.tar.gz)
 * [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.bionic.x86_64.tar.gz)
 * [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.focal.x86_64.tar.gz)
 * [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.x86_64.snap)
@@ -112,7 +111,6 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 
 * [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.catalina.x86_64.zip)
 * [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.xenial.x86_64.tar.gz)
 * [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.bionic.x86_64.tar.gz)
 * [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.focal.x86_64.tar.gz)
 * [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.x86_64.snap)
