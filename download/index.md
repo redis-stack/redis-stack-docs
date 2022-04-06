@@ -38,6 +38,12 @@ Redis Stack Server extends Redis with modern data models such as document, graph
   
 ## Redis downloads
 
+### Docker
+
+You can download and run Docker images of Redis from DockerHub. Multiple versions are available, usually updated in a short time after a new release is available.
+
+[Go to Redis DockerHub](https://hub.docker.com/_/redis).
+
 ### Release-candidate (7.0)
 
 Redis 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements. It also includes changes that potentially break backwards compatibility with older versions. 
@@ -73,11 +79,6 @@ See the [release notes](https://raw.githubusercontent.com/redis/redis/5.0/00-REL
 
 You can find a [listing of all previous Redis releases](https://download.redis.io/releases/) on the [releases page](https://download.redis.io/releases/). SHA-256 digests for these downloads are available in the [redis-hashes git repository](https://github.com/redis/redis-hashes/).
 
-### Docker
-
-You can download and run Docker images of Redis from DockerHub. Multiple versions are available, usually updated in a short time after a new release is available.
-
-[Go to Redis DockerHub](https://hub.docker.com/_/redis).
 </div>
 </div>
 
