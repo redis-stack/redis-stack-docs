@@ -18,7 +18,7 @@ To get started with Redis Stack using Docker, you first need to select a Docker 
 To start Redis Stack server using the `redis-stack-server` image, run the following command in your terminal:
 
 {{< highlight bash >}}
-docker run -d --name redis-stack -p 6379:6379 redis/redis-stack:latest
+docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:latest
 {{< / highlight >}}
 
 You can that the Redis Stack server database to your [RedisInsight]() desktop applicaiton.
