@@ -101,7 +101,7 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack. Read the latest [RedisInsight release notes](https://docs.redis.com/staging/release-ri-v2.0/ri/release-notes/).
 
-Download the latest RedisInsight [here](https://redis.com/redis-enterprise/redis-insight/)
+Download the latest RedisInsight the [RedisInsight download page](https://redis.com/redis-enterprise/redis-insight/).
 
 ### Release-candidate (7.0.0)
 
