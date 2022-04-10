@@ -91,6 +91,7 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 * [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.catalina.x86_64.zip)
 * [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.xenial.x86_64.tar.gz)
 * [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.bionic.x86_64.tar.gz)
 * [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.focal.x86_64.tar.gz)
 * [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.x86_64.snap)
@@ -111,9 +112,10 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 
 * [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.catalina.x86_64.zip)
 * [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC@.xenial.x86_64.tar.gz)
 * [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.bionic.x86_64.tar.gz)
 * [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.focal.x86_64.tar.gz)
-* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC1.x86_64.snap)
+* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.x86_64.snap)
 * [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.rhel8.x86_64.tar.gz)
 * [7.0.0-rc2 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/7.0.0-rc2)
