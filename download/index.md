@@ -108,16 +108,16 @@ Download the latest RedisInsight the [RedisInsight download page](https://redis.
 
 Redis Stack 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements part of Redis 7.0. It also includes changes that potentially break backwards compatibility with older versions. 
 
-#### Download Redis Stack Server 7.0.0-rc2:
+#### Download Redis Stack Server 7.0.0-rc3:
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.catalina.x86_64.zip)
-* [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.bionic.x86_64.tar.gz)
-* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.focal.x86_64.tar.gz)
-* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.x86_64.snap)
-* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC2.rhel8.x86_64.tar.gz)
-* [7.0.0-rc2 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/7.0.0-rc2)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.catalina.x86_64.zip)
+* [macOS aarch64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.xenial.x86_64.tar.gz)
+* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.bionic.x86_64.tar.gz)
+* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.focal.x86_64.tar.gz)
+* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.x86_64.snap)
+* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.rhel7.x86_64.tar.gz)
+* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC3.rhel8.x86_64.tar.gz)
+* [7.0.0-rc3 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/7.0.0-rc3)
 </div>
 </div>
