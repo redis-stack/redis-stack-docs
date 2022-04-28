@@ -86,16 +86,16 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 ## Redis Stack downloads
 
-### Redis Stack 6.2.2-v1
+### Redis Stack 6.2.2-v2
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.catalina.x86_64.zip)
-* [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.bionic.x86_64.tar.gz)
-* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.focal.x86_64.tar.gz)
-* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.x86_64.snap)
-* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v1.rhel8.x86_64.tar.gz)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.catalina.x86_64.zip)
+* [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.xenial.x86_64.tar.gz)
+* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.bionic.x86_64.tar.gz)
+* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.focal.x86_64.tar.gz)
+* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.x86_64.snap)
+* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.rhel7.x86_64.tar.gz)
+* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v2.rhel8.x86_64.tar.gz)
 
 ### RedisInsight
 
