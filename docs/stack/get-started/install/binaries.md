@@ -29,6 +29,8 @@ If you have an existing Redis installation on your system, then you can choose o
 export PATH=/path/to/redis-stack-server/bin/redis-stack-server:$PATH
 {{< / highlight >}}
 
+If you're running redis-stack-server on a mac, please ensure you have openssl installed, via [homebrew](https://brew.sh/).
+
 Now you can start Redis Stack Server as follows:
 
 {{< highlight bash >}}
