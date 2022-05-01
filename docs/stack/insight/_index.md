@@ -10,7 +10,7 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 ### Download the latest RedisInsight
 
 * Download the latest RedisInsight [here](https://redis.com/redis-enterprise/redis-insight/)
-* [RedisInsight Release Notes](https://docs.redis.com/staging/release-ri-v2.0/ri/release-notes/)
+* [RedisInsight Release Notes](https://github.com/RedisInsight/RedisInsight/releases)
 
 ## Overview
 
