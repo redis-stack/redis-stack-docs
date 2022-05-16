@@ -117,6 +117,6 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 * [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.x86_64.snap)
 * [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.rhel8.x86_64.tar.gz)
-* [7.0.0-rc4 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/7.0.0-rc4)
+* [7.0.0-rc4 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.0-rc4)
 </div>
 </div>
