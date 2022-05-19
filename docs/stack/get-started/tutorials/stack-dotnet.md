@@ -330,5 +330,5 @@ You can view the data by following these steps:
 
 ## Resources
 
-* The source code for this tutorial can be found in [GitHub](https://github.com/redis-developer/redis-om-dotnet-skeleton-app).
-* To learn more about Redis OM you can check out the the guide on [Redis Developer](https://developer.redis.com/develop/dotnet/redis-om-dotnet/connecting-to-redis)
+The source code for this tutorial can be found in [GitHub](https://github.com/redis-developer/redis-om-dotnet-skeleton-app).
+
