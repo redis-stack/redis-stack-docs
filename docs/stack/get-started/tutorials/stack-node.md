@@ -135,7 +135,6 @@ import { Entity, Schema } from 'redis-om'
 import client from './client.js'
 {{< / highlight >}}
 
-
 ### Entity
 
 Next, we need to define an **entity**. An `Entity` is the class that holds you data when you work with it—the thing being mapped to. It is what you create, read, update, and delete. Any class that extends `Entity` is an entity. We'll define our `Person` entity with a single line:
@@ -144,7 +143,6 @@ Next, we need to define an **entity**. An `Entity` is the class that holds you d
 /* our entity */
 class Person extends Entity {}
 {{< / highlight >}}
-
 
 ### Schema
 
@@ -177,7 +175,6 @@ let point = { longitude: 12.34, latitude: 56.78 }
 {{< / highlight >}}
 
 A `text` field is a lot like a `string`. If you're just reading and writing objects, they are identical. But if you want to *search* on them, they are very, very different. We'll talk about search more later, but the tl;dr is that `string` fields can only be matched on their whole value—no partial matches—and are best for keys while `text` fields have full-text search enabled on them and are optimized for human-readable text.
-
 
 ### Repository
 

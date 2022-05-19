@@ -17,7 +17,7 @@ After untarring or unzipping your redis-stack-server download, you can start Red
 
 You can add the redis-stack-server binaries to your `$PATH` as follows:
 
-Open the file `~/.bashrc` or '~/zshrc` (depending on your shell), and add the following lines.
+Open the file `~/.bashrc` or `~/zshrc` (depending on your shell), and add the following lines.
 
 {{< highlight bash >}}
 export PATH=/path/to/redis-stack-server/bin:$PATH
