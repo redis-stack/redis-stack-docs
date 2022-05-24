@@ -14,3 +14,4 @@ semver = "==2.13.0"
 
 [requires]
 python_version = "3.8"
+
