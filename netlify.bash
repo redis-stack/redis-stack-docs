@@ -5,4 +5,4 @@ git clone --recurse-submodules https://$PRIVATE_ACCESS_TOKEN@github.com/redis-st
 cd redis-stack-website
 pip3 install -r requirements.txt
 npm install autoprefixer
-REDIS_STACK_DOCS_DIR=$repo_dir make netlify
+REPO_DIR=$repo_dir REPOSITORY_URL=$REPOSITORY_URL PREVIEW_MODE=1 make netlify
