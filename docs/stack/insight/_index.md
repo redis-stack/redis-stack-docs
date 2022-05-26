@@ -42,7 +42,7 @@ Analyze every command sent to Redis in real time
 
 ### CLI
 
-The CLI is accessible at any time within the applicaiton. 
+The CLI is accessible at any time within the application. 
 * Employs integrated help to deliver intuitive assistance
 * Use together with a convenient command helper that lets you search and read on Redis commands.
 
