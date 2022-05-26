@@ -587,7 +587,7 @@ Here, I'm just showing the syntax for `.and()` but, of course, you can also use 
 
 If you've defined a field with a type of `text` in your schema, you can perform full-text searches against it. The way a `text` field is searched is different from how a `string` is searched. A `string` can only be compared with `.equals()` and must match the entire string. With a `text` field, you can look for words within the string.
 
-A `text` field is optimized for human-readable text, like an essay or song lyrices. It's pretty clever. It understands that certain words (like *a*, *an*, or *the*) are common and ignores them. It understands how words are grammatically similar and so if you search for *give*, it matches *gives*, *given*, *giving*, and *gave* too. And it ignores punctuation.
+A `text` field is optimized for human-readable text, like an essay or song lyrics. It's pretty clever. It understands that certain words (like *a*, *an*, or *the*) are common and ignores them. It understands how words are grammatically similar and so if you search for *give*, it matches *gives*, *given*, *giving*, and *gave* too. And it ignores punctuation.
 
 Let's add a route that does full-text search against our `personalStatement` field:
 
@@ -601,7 +601,7 @@ router.get('/with-statement-containing/:text', async (req, res) => {
 })
 {{< / highlight >}}
 
-Note the use of the `.matches()` function. This is the only one that works with `text` fields. It takes a string that can be one or more words—space-delimited—that you want to quyery for. Let's try it out. In Swagger, use this route to search for the word "walk". You should get the following results:
+Note the use of the `.matches()` function. This is the only one that works with `text` fields. It takes a string that can be one or more words—space-delimited—that you want to query for. Let's try it out. In Swagger, use this route to search for the word "walk". You should get the following results:
 
 {{< highlight json >}}
 [
@@ -848,4 +848,4 @@ And just like that, we're tracking Joan Jett.
 
 So, now you know how to use Express + Redis OM to build an API backed by Redis Stack. And, you've got yourself some pretty decent started code in the process. Good deal! If you want to learn more, you can check out the [documentation](https://github.com/redis/redis-om-node) for Redis OM. It covers the full breadth of Redis OM's capabilities.
 
-And thanks for taking the time to work through this. I sincerly hope you found it useful. If you have any questions, the [Redis Discord server](https://discord.gg/redis) is by far the best place to get them answered. Join the server and ask away!
+And thanks for taking the time to work through this. I sincerely hope you found it useful. If you have any questions, the [Redis Discord server](https://discord.gg/redis) is by far the best place to get them answered. Join the server and ask away!

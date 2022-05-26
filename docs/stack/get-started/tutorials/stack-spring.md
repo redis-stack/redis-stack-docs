@@ -17,9 +17,9 @@ Redis OM Spring provides a robust repository and custom object-mapping abstracti
 * Your favorite browser
 * Java 11 or greater
 
-## Spring Boot scaffold with Spring Initializr
+## Spring Boot scaffold with Spring Initializer
 
-We’ll start by creating a skeleton app using the [Spring Initializr](https://start.spring.io), open your browser to https://start.spring.io and let's configure our skeleton application as follows:
+We’ll start by creating a skeleton app using the [Spring Initializer](https://start.spring.io), open your browser to https://start.spring.io and let's configure our skeleton application as follows:
 
 * We’ll use a Maven-based build (check Maven checkbox)
 * And version **`2.6.4`** of Spring Boot which is the current version supported by Redis OM Spring
@@ -34,7 +34,7 @@ We’ll start by creating a skeleton app using the [Spring Initializr](https://s
 
 The `web` (Spring Web) gives us the ability to build RESTful applications using Spring MVC. With `devtools` we get fast application restarts and reloads. And `lombok` reduces boilerplate code like getters and setters.
 
-![Spring Initializr](../images/001_stack_spring.png "Spring Initializr")
+![Spring Initializer](../images/001_stack_spring.png "Spring Initializer")
 
 Click `Generate` and download the ZIP file, unzip it and load the Maven project into your IDE of choice.
 
@@ -638,7 +638,7 @@ Let’s test the byCity endpoint:
 
 ![SwaggerUI](../images/023_stack_spring.png "SwaggerUI")
 
-As expected, we should get two hits; Scarlett Johansen and Elizabeth Olsen, both with addresses in Nee York:
+As expected, we should get two hits; Scarlett Johansson and Elizabeth Olsen, both with addresses in Nee York:
 
 ![SwaggerUI](../images/024_stack_spring.png "SwaggerUI")
 
@@ -662,7 +662,7 @@ Let's test the endpoint with the value "deception":
 
 ![SwaggerUI](../images/025_stack_spring.png "SwaggerUI")
 
-The search returns the records for Scallet Johanson and Samuel L. Jackson:
+The search returns the records for Scarlett Johansson and Samuel L. Jackson:
 
 ![SwaggerUI](../images/026_stack_spring.png "SwaggerUI")
 
