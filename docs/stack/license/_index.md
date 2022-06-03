@@ -7,7 +7,7 @@ weight: 100
 
 ## Licenses
 
-* Redis is licensed under the [three clause BSD license](/docs/about/license/).
+* Redis is linsed under the [three clause BSD license](/docs/about/license/).
 
 * RedisInsight is licensed under the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL).
 
