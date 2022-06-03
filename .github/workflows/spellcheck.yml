@@ -14,3 +14,4 @@ jobs:
         env:
           DICTIONARY: dictionary.txt
           DOCS_DIRECTORY: docs
+          CONFIGURATION_FILE: .spellcheck.yml

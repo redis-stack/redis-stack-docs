@@ -1,0 +1,7 @@
+files:
+  - "**/*.md"
+dictionaries:
+  - dictionary.txt
+quite:
+  true
+language: en-US
