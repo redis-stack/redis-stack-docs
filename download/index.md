@@ -86,16 +86,20 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 ## Redis Stack downloads
 
-### Redis Stack 6.2.2-v3
+### Redis Stack 6.2.2-v4
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.catalina.x86_64.zip)
-* [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.bionic.x86_64.tar.gz)
-* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.focal.x86_64.tar.gz)
-* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.x86_64.snap)
-* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.rhel8.x86_64.tar.gz)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.catalina.x86_64.zip)
+* [macOS arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.xenial.x86_64.tar.gz)
+* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.bionic.x86_64.tar.gz)
+* [Ubuntu bionic arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.bionic.arm64.tar.gz)
+* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.focal.x86_64.tar.gz)
+* [Ubuntu Snap x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.x86_64.snap)
+* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.rhel7.x86_64.tar.gz)
+* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.rhel8.x86_64.tar.gz)
+* [Debian bullseye x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.bullseye.x86_64.tar.gz)
+* [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis)
+* [7.0.0-rc5 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.2-v4)
 
 ### RedisInsight
 
@@ -107,16 +111,19 @@ Download the latest RedisInsight the [RedisInsight download page](https://redis.
 
 Redis Stack 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements part of Redis 7.0. It also includes changes that potentially break backwards compatibility with older versions.
 
-#### Download Redis Stack Server 7.0.0-rc4:
+#### Download Redis Stack Server 7.0.0-rc5:
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.catalina.x86_64.zip)
-* [macOS amd64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.bionic.x86_64.tar.gz)
-* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.focal.x86_64.tar.gz)
-* [Ubuntu Snap](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.x86_64.snap)
-* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC4.rhel8.x86_64.tar.gz)
-* [7.0.0-rc4 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.0-rc4)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.catalina.x86_64.zip)
+* [macOS amd64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.monterey.arm64.zip)
+* [Ubuntu xenial x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.xenial.x86_64.tar.gz)
+* [Ubuntu bionic x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.bionic.x86_64.tar.gz)
+* [Ubuntu bionic arm64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.bionic.arm64.tar.gz)
+* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.focal.x86_64.tar.gz)
+* [Ubuntu Snap x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.x86_64.snap)
+* [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.rhel7.x86_64.tar.gz)
+* [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.rhel8.x86_64.tar.gz)
+* [Debian bullseye x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-7.0.0-RC5.bullseye.x86_64.tar.gz)
+* [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis).
+* [7.0.0-rc5 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.0-rc5)
 </div>
 </div>
