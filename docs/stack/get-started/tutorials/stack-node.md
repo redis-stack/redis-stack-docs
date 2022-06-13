@@ -804,7 +804,6 @@ import { connection } from '../om/client.js'
 And then in the route itself add a call to `.xAdd()`:
 
 {{< highlight javascript >}}
-  ...snip...
   const person = await personRepository.fetch(id)
   person.location = { longitude, latitude }
   person.locationUpdated = locationUpdated
@@ -812,7 +811,6 @@ And then in the route itself add a call to `.xAdd()`:
 
   let keyName = `${person.keyName}:locationHistory`
   await connection.xAdd(keyName, '*', person.location)
-  ...snip...
 {{< / highlight >}}
 
 `.xAdd()` takes a key name, an event ID, and a JavaScript object containing the keys and values that make up the event, i.e. the event data. For the key name, we're building a string using the `.keyName` property that `Person` inherited from `Entity` (which will return something like `Person:01FYC7CTPKYNXQ98JSTBC37AS1`) combined with a hard-coded value. We're passing in `*` for our event ID, which tells Redis to just generate it based on the current time and previous event ID. And we're passing in the location—with properties of longitude and latitude—as our event data.
