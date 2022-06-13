@@ -7,9 +7,11 @@ weight: 1
 
 To get started with Redis Stack using Docker, you first need to select a Docker image:
 
-* `redis/redis-stack` contains both Redis Stack server and RedisInsight. This container is best for local development because you can use the embedded RedisInsight to visualize your data.
+* [redis/redis-stack](https://hub.docker.com/r/redis/redis-stack) contains both Redis Stack server and RedisInsight. This container is best for local development because you can use the embedded RedisInsight to visualize your data.
 
-* `redis/redis-stack-server` provides Redis Stack server only. This container is best for production deployment.
+* [redis/redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) provides Redis Stack server only. This container is best for production deployment.
+
+Both docker containers are available for x86_64 and arm64.
 
 ## Getting started
 

@@ -27,10 +27,10 @@ Download the latest Redis Stack Server binaries here, or install with [Docker](/
 
 ### Stable (6.2.2)
 
-Redis Stack Server extends Redis with modern data models such as document, graph, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.2-v3), or download the latest 6.2.2 binaries:
+Redis Stack Server extends Redis with modern data models such as document, graph, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.2-v5), or download the latest 6.2.2 binaries:
 
-* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.catalina.x86_64.zip)
-* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v3.focal.x86_64.tar.gz)
+* [macOS x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v5.catalina.x86_64.zip)
+* [Ubuntu focal x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v5.focal.x86_64.tar.gz)
 * [All installation options ->](#redis-stack-downloads)
 </div>
 
@@ -98,7 +98,6 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 * [Redhat/CentOS 7 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.rhel8.x86_64.tar.gz)
 * [Debian bullseye x86_64](https://redismodules.s3.amazonaws.com/redis-stack/redis-stack-server-6.2.2-v4.bullseye.x86_64.tar.gz)
-* [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis)
 * [7.0.0-rc5 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.2-v4)
 
 ### RedisInsight
