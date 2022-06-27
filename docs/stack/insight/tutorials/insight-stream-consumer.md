@@ -13,9 +13,9 @@ For more conceptual information about streams, see [Redis Streams](/docs/manual/
 
 In this topic, you will learn how to add and work with streams as well as consumer groups in RedisInsight.
 
-Here’s a stream that models temperature and humidity sensors. 
+Here's a stream that models temperature and humidity sensors. 
 In this stream, sensors are considered _producers_, which broadcast data. 
-The point of a stream is that it’s not going to end, so you cannot capture whole datasets and do some processing on them. 
+The point of a stream is that it's not going to end, so you cannot capture whole datasets and do some processing on them. 
 In order to process the data, a stream is separated into different roles. 
 A _consumer_ reads from the stream and does some work on it. 
 For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
@@ -32,7 +32,7 @@ An ID can be any number.
 
 ## Adding new entries 
 
-Use `XADD` with `*` for ID and that automatically generates timestamps plus fields and values. There are a couple of ways of retrieving things. You could give it a time range or you could ask for everything that’s happened since a timestamp or ID that you specify. On one command you can ask for anything from 10:30 until 11:15 am on each day over a specified period of time.
+Use `XADD` with `*` for ID and that automatically generates timestamps plus fields and values. There are a couple of ways of retrieving things. You could give it a time range or you could ask for everything that's happened since a timestamp or ID that you specify. On one command you can ask for anything from 10:30 until 11:15 am on each day over a specified period of time.
 
 ## Consumer groups
 
@@ -45,7 +45,7 @@ On the right side we have two consumers that read the stream. One of them is ale
 
 They run independently of each other. 
 Up in the right, we have another sort of task. 
-Let’s assume that alerting and data warehouse are really fast. 
+Let's assume that alerting and data warehouse are really fast. 
 You get a message whether the temperature is larger than a specific value, which might take a millisecond. 
 And alerting can keep up with the data flow. 
 One way you can scale consumers is _consumer groups_, which allows multiple instances of the same consumer or same code to work as a team to process the stream.
@@ -185,7 +185,7 @@ Note that in this model, each consumer instance does not receive all of the entr
 
 You can now toggle between **Stream** and **Consumer Groups** views to see your data. 
 As mentioned earlier in this topic, a stream is an append-only log so you can delete messages. 
-A case when that’s useful is in the event of a so-called “poison-pill message” that can cause consumers to crash. You can physically remove such messages in the **Streams** view or use the XDEL command at the command-line interface (CLI).
+A case when that's useful is in the event of a so-called “poison-pill message” that can cause consumers to crash. You can physically remove such messages in the **Streams** view or use the XDEL command at the command-line interface (CLI).
 
 You can continue interacting with your stream at the CLI. For example, to get the number of entries per minute, enter XLEN command:
 
