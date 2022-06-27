@@ -10,6 +10,7 @@ CentOS7
 Centos8
 CommandLineRunner
 Config
+consumer:lastid
 CrudRepository
 Cypher
 Dotenv
@@ -31,9 +32,11 @@ LINQ
 Licensor
 Licensor.
 Lombok
+LTS
 M1
 MERCHANTABILITY
 MVC
+mystream
 ORM
 OSS
 PeopleController
@@ -197,5 +200,7 @@ url
 usr
 v1
 x86
+XDEL
+XLEN
 xml
 zshrc
