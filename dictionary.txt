@@ -18,6 +18,7 @@ consumer:lastid
 consumergroup
 CrudRepository
 Cypher
+dataset
 Dotenv
 Downey
 EntityStream

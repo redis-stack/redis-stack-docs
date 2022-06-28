@@ -13,12 +13,10 @@ For more conceptual information about streams, see [Redis Streams](/docs/manual/
 
 In this topic, you will learn how to add and work with streams as well as consumer groups in RedisInsight.
 
-Here's a stream that models temperature and humidity sensors. 
-In this stream, sensors are considered _producers_, which broadcast data. 
+Here's a stream that models temperature and humidity sensors. Processes interacting with the stream perform one of two roles: _consumer_ and _producer_. 
 The point of a stream is that it's not going to end, so you cannot capture whole datasets and do some processing on them. 
-Processes interacting with the stream perform one of two roles:```
-
-The two roles are "consumer" and "producer".  I think there needs to be a sentence here about the producer role before we go into the consumer role?
+ 
+In this stream, sensors are considered _producers_, which broadcast data. 
 A _consumer_ reads from the stream and does some work on it. 
 For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
 
@@ -58,8 +56,9 @@ You can add a stream in RedisInsight in two ways: create a new stream or run an 
 To create a stream, start by selecting the key type (stream). 
 You cannot set time to live (TTL) because it cannot be put on a message in a stream; it can only be done on a Redis key. Name the stream _mystream_. 
 Then, set the *Entry ID* to `*` to default to timestamp. 
-If this were a supermarket queue, for example, you would set it to a different number. 
-In this example, we want to track the entries by time. Then, enter fields and values using + to add more than one (for example, name: Simon; location: England). 
+If you have your own ID generation strategy, enter the next ID from your sequence. Remember that the ID must be higher than the ID of any other entry in the stream.
+ 
+Then, enter fields and values using + to add more than one (for example, name and location). 
 Now you have a stream that appears in the **Streams** view and you can continue adding fields and values to it.
 
 RedisInsight runs read commands for you so you can see the stream entries in the **Streams** view. 
