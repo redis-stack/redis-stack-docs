@@ -71,7 +71,7 @@ RedisInsight includes an opt-in telemetry system. This help us improve the devel
 
 ## Tutorials
 
-[Manage streams and consumer groups in RedisInsight](/stack/insight/tutorials/insight-stream-consumer)
+[Manage streams and consumer groups in RedisInsight](/docs/stack/insight/tutorials/insight-stream-consumer)
 
 ## Feedback
 
