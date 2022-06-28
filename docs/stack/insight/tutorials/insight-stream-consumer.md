@@ -16,7 +16,9 @@ In this topic, you will learn how to add and work with streams as well as consum
 Here's a stream that models temperature and humidity sensors. 
 In this stream, sensors are considered _producers_, which broadcast data. 
 The point of a stream is that it's not going to end, so you cannot capture whole datasets and do some processing on them. 
-In order to process the data, a stream is separated into different roles. 
+Processes interacting with the stream perform one of two roles:```
+
+The two roles are "consumer" and "producer".  I think there needs to be a sentence here about the producer role before we go into the consumer role?
 A _consumer_ reads from the stream and does some work on it. 
 For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
 
