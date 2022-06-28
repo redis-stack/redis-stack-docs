@@ -185,7 +185,7 @@ Note that in this model, each consumer instance does not receive all of the entr
 
 You can now toggle between **Stream** and **Consumer Groups** views to see your data. 
 As mentioned earlier in this topic, a stream is an append-only log so you can delete messages. 
-A case when that's useful is in the event of a so-called “poison-pill message” that can cause consumers to crash. You can physically remove such messages in the **Streams** view or use the XDEL command at the command-line interface (CLI).
+A case when that's useful is in the event of a so-called _poison-pill message_ that can cause consumers to crash. You can physically remove such messages in the **Streams** view or use the XDEL command at the command-line interface (CLI).
 
 You can continue interacting with your stream at the CLI. For example, to get the number of entries per minute, enter XLEN command:
 
