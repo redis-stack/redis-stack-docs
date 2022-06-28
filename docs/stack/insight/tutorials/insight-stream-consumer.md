@@ -20,7 +20,7 @@ In order to process the data, a stream is separated into different roles.
 A _consumer_ reads from the stream and does some work on it. 
 For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
 
-<img src="/images/stream.png">
+<img src="../images/stream.png">
 
 
 It is possible to have multiple consumers doing different jobs, one measuring humidity, and another taking temperature measurements over periods of time. 
@@ -38,8 +38,7 @@ Use `XADD` with `*` for ID and that automatically generates timestamps plus fiel
 
 A more realistic use case would be a system with many temperature sensors whose data Redis puts in a stream, records the time they arrive, and orders them. 
 
-<img src="/insight/images/consumer.png">
-
+<img src="../images/consumer.png">
 
 On the right side we have two consumers that read the stream. One of them is alerting if the temperature is over a certain number and texting the maintenance crew that they need to do something, and the other is a data warehouse that is taking the data and putting it into a database. 
 
@@ -77,15 +76,15 @@ This example shows how to bring an existing stream into RedisInsight and work wi
 See the [README](https://github.com/redis-developer/introducing-redis-talk/tree/main/streams) for more information about this example and installation tips.
 5. On your command-line, navigate to the folder containing the code repository and install the Node.js package manager (npm). 
 
-	```
+	{{< highlight bash >}}
 	npm install
-	```
+	{{< / highlight >}}
 
 ### Run the producer
 
 To start the producer, which will add a new entry to the stream every few seconds, enter:
 
-```
+{{< highlight bash >}}
 npm run producer
 
 > streams@1.0.0 producer
@@ -97,8 +96,7 @@ Added as 1632771056648-0
 Adding reading for location: 96, temperature: 15.4, humidity: 70
 Added as 1632771059039-0
 ...
-
-```
+{{< / highlight >}}
 
 The producer runs indefinitely. 
 Select `Ctrl+C` to stop it. 
@@ -108,7 +106,7 @@ You can start multiple instances of the producer if you want to add entries to t
 
 To start the consumer, which reads from the stream every few seconds, enter:
 
-```
+{{< highlight bash >}}
 npm run consumer
 
 > streams@1.0.0 consumer
@@ -123,19 +121,19 @@ Finished working with entry 1632771056648-0
 Reading stream...
 Received entry 1632771059039-0:
 [ 'location', '96', 'temp', '15.4', 'humidity', '70' ]
-```
+{{< / highlight >}}
 
 The consumer stores the last entry ID that it read in a Redis string at the key consumer:lastid. It uses this string to pick up from where it left off after it is restarted. Try this out by stopping it with `Ctrl+C` and restarting it.
 
 Once the consumer has processed every entry in the stream, it will wait indefinitely for instances of the producer to add more:
 
-```
+{{< highlight bash >}}
 Reading stream...
 No new entries since entry 1632771060229-0.
 Reading stream...
 No new entries since entry 1632771060229-0.
 Reading stream...
-```
+{{< / highlight >}}
 
 Stop it using `Ctrl+C`.
 
@@ -145,7 +143,7 @@ A consumer group consists of multiple consumer instances working together. Redis
 
 Using multiple terminal windows, start three instances of the consumer group consumer, giving each a unique name:
 
-```
+{{< highlight bash >}}
 npm run consumergroup consumer1
 
 > streams@1.0.0 consumergroup
@@ -158,19 +156,19 @@ Received entry 1632771059039-0:
 [ 'location', '96', 'temp', '15.4', 'humidity', '70' ]
 Acknowledged processing of entry 1632771059039-0.
 Reading stream...
-```
+{{< / highlight >}}
 
 In a second terminal:
 
-```
+{{< highlight bash >}}
 npm run consumergroup consumer2
-```
+{{< / highlight >}}
 
 And in a third:
 
-```
+`{{< highlight bash >}}
 npm run consumergroup consumer3
-```
+``{{< / highlight >}}
 
 The consumers will run indefinitely, waiting for new messages to be added to the stream by a producer instance when they have collectively consumed the entire stream. 
 Note that in this model, each consumer instance does not receive all of the entries from the stream, but the three members of the group each receive a subset.
@@ -181,7 +179,7 @@ Note that in this model, each consumer instance does not receive all of the entr
 2. Select `localhost:6379`
 3. Select **STREAM**. Optionally, select full screen from the upper right corner to expand the view.
 
-<img src="/images/insight/insight-streams.png">
+<img src="../images/insight-streams.png">
 
 
 You can now toggle between **Stream** and **Consumer Groups** views to see your data. 
@@ -190,9 +188,9 @@ A case when that's useful is in the event of a so-called _poison-pill message_ t
 
 You can continue interacting with your stream at the CLI. For example, to get the number of entries per minute, enter XLEN command:
 
-```
+`{{< highlight bash >}}
 XLEN ingest:temphumidity
-```
+``{{< / highlight >}}
 
 Use streams for auditing and processing events in banking, gaming, supply chain, IoT, social media, and so on.
 
