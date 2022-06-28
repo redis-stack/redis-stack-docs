@@ -62,7 +62,7 @@ If this were a supermarket queue, for example, you would set it to a different n
 In this example, we want to track the entries by time. Then, enter fields and values using + to add more than one (for example, name: Simon; location: England). 
 Now you have a stream that appears in the **Streams** view and you can continue adding fields and values to it.
 
-RedisInsight runs read commands for you so you can see them run in the **Streams** view. 
+RedisInsight runs read commands for you so you can see the stream entries in the **Streams** view. 
 And the **Consumer Groups** view shows each consumers in a given consumer group and the last time Redis allocated a message, what the ID of it was and how many times that process has happened, and whether a consumer has you have told Redis that you are finished working with that task using the `XACK` command.
 
 ## Monitor temperature and humidity from sensors in RedisInsight
