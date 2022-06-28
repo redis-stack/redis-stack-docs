@@ -26,7 +26,7 @@ For example, if the temperature is above a certain threshold, it puts a message 
 
 
 It is possible to have multiple consumers doing different jobs, one measuring humidity, and another taking temperature measurements over periods of time. 
-Redis runs everything in memory that is finite. 
+Redis stores a copy of the entire dataset in memory, which is a finite resource.
 To avoid runaway data, streams can be trimmed when you add something to them. 
 You can specify to remove everything but a number of last entries or remove stream that has an ID lower than specified, for example a timestamp. 
 You can also expire streams using keys by writing to a different key each day and expiring those keys after a period of time, say a week. 
