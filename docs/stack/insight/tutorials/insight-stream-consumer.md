@@ -20,7 +20,7 @@ In order to process the data, a stream is separated into different roles.
 A _consumer_ reads from the stream and does some work on it. 
 For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
 
-<img src="/redis-stack-docs/images/stream.png">
+<img src="/images/insight/stream.png">
 
 
 It is possible to have multiple consumers doing different jobs, one measuring humidity, and another taking temperature measurements over periods of time. 
@@ -38,7 +38,7 @@ Use `XADD` with `*` for ID and that automatically generates timestamps plus fiel
 
 A more realistic use case would be a system with many temperature sensors whose data Redis puts in a stream, records the time they arrive, and orders them. 
 
-<img src="/redis-stack-docs/images/consumer.png">
+<img src="//images/insight/consumer.png">
 
 
 On the right side we have two consumers that read the stream. One of them is alerting if the temperature is over a certain number and texting the maintenance crew that they need to do something, and the other is a data warehouse that is taking the data and putting it into a database. 
@@ -79,6 +79,7 @@ See the [README](https://github.com/redis-developer/introducing-redis-talk/tree/
 
 	```
 	npm install
+
 	```
 
 ### Run the producer
@@ -97,6 +98,7 @@ Added as 1632771056648-0
 Adding reading for location: 96, temperature: 15.4, humidity: 70
 Added as 1632771059039-0
 ...
+
 ```
 
 The producer runs indefinitely. 
@@ -180,7 +182,7 @@ Note that in this model, each consumer instance does not receive all of the entr
 2. Select `localhost:6379`
 3. Select **STREAM**. Optionally, select full screen from the upper right corner to expand the view.
 
-<img src="/redis-stack-docs/images/insight-streams.png">
+<img src="/images/insight/insight-streams.png">
 
 
 You can now toggle between **Stream** and **Consumer Groups** views to see your data. 
