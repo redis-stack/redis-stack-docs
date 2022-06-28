@@ -11,7 +11,11 @@ CentOS7
 Centos8
 CommandLineRunner
 Config
+consumer1
+consumer2
+consumer3
 consumer:lastid
+consumergroup
 CrudRepository
 Cypher
 Dotenv
@@ -38,6 +42,7 @@ M1
 MERCHANTABILITY
 MVC
 mystream
+npm
 ORM
 OSS
 PeopleController
@@ -127,6 +132,7 @@ homebrew
 hostname
 houseNumber
 http
+ingest:temphumidity
 instantiation
 javascript
 joan-jett.json
@@ -193,6 +199,7 @@ swaggerUi
 symlink
 symlinked
 tl
+temphumidity_consumers
 tmp
 typesafe
 untap

@@ -69,16 +69,16 @@ This example shows how to bring an existing stream into RedisInsight and work wi
 
 ### Setup
 
-1. Install [RedisInsight](https://redis.com/redis-enterprise/redis-insight/?_ga=2.48624486.1318387955.1655817244-1963545967.1655260674#insight-form)
+1. Install [RedisInsight](https://redis.com/redis-enterprise/redis-insight/?_ga=2.48624486.1318387955.1655817244-1963545967.1655260674#insight-form).
 2. Download and install [Node.js](https://nodejs.org/en/download/) (LTS version).
 3. Install [Redis](https://redis.io/download/). In Docker, check that Redis is running locally on the default port 6379 (with no password set). 
 4. Clone the [code repository](https://github.com/redis-developer/introducing-redis-talk) for this example. 
 See the [README](https://github.com/redis-developer/introducing-redis-talk/tree/main/streams) for more information about this example and installation tips.
 5. On your command-line, navigate to the folder containing the code repository and install the Node.js package manager (npm). 
 
-	{{< highlight bash >}}
-	npm install
-	{{< / highlight >}}
+ {{< highlight bash >}}
+ npm install
+ {{< / highlight >}}
 
 ### Run the producer
 
@@ -123,7 +123,7 @@ Received entry 1632771059039-0:
 [ 'location', '96', 'temp', '15.4', 'humidity', '70' ]
 {{< / highlight >}}
 
-The consumer stores the last entry ID that it read in a Redis string at the key consumer:lastid. It uses this string to pick up from where it left off after it is restarted. Try this out by stopping it with `Ctrl+C` and restarting it.
+The consumer stores the last entry ID that it read in a Redis string at the key `consumer:lastid`. It uses this string to pick up from where it left off after it is restarted. Try this out by stopping it with `Ctrl+C` and restarting it.
 
 Once the consumer has processed every entry in the stream, it will wait indefinitely for instances of the producer to add more:
 
@@ -180,6 +180,7 @@ Note that in this model, each consumer instance does not receive all of the entr
 3. Select **STREAM**. Optionally, select full screen from the upper right corner to expand the view.
 
 <img src="../images/insight_streams.png">
+
 
 You can now toggle between **Stream** and **Consumer Groups** views to see your data. 
 As mentioned earlier in this topic, a stream is an append-only log so you can delete messages. 
