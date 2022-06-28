@@ -8,7 +8,7 @@ weight: 1
 A _stream_ is an append-only log file. 
 When you add data to it, you cannot change it. 
 That may seem like a disadvantage; however, a stream serves as a log or single source of truth. 
-It is used as a buffer between processes that work at different speeds and do not need to know about each other. 
+It can also be used as a buffer between processes that work at different speeds and do not need to know about each other. 
 For more conceptual information about streams, see [Redis Streams](/docs/manual/data-types/streams). 
 
 In this topic, you will learn how to add and work with streams as well as consumer groups in RedisInsight.
