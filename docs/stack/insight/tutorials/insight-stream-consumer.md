@@ -188,7 +188,7 @@ You can now toggle between **Stream** and **Consumer Groups** views to see your 
 As mentioned earlier in this topic, a stream is an append-only log so you can't modify the contents of an entry, but you can delete an entire entry. 
 A case when that's useful is in the event of a so-called _poison-pill message_ that can cause consumers to crash. You can physically remove such messages in the **Streams** view or use the `XDEL` command at the command-line interface (CLI).
 
-You can continue interacting with your stream at the CLI. For example, to get the number of entries per minute, enter `XLEN` command:
+You can continue interacting with your stream at the CLI. For example, to get the current length of a stream, use the `XLEN` command:
 
 {{< highlight bash >}}
 XLEN ingest:temphumidity
