@@ -20,7 +20,7 @@ In order to process the data, a stream is separated into different roles.
 A _consumer_ reads from the stream and does some work on it. 
 For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
 
-<img src="/stack/insight/images/stream.png">
+<img src="/images/stream.png">
 
 
 It is possible to have multiple consumers doing different jobs, one measuring humidity, and another taking temperature measurements over periods of time. 
@@ -38,7 +38,7 @@ Use `XADD` with `*` for ID and that automatically generates timestamps plus fiel
 
 A more realistic use case would be a system with many temperature sensors whose data Redis puts in a stream, records the time they arrive, and orders them. 
 
-<img src="//images/insight/consumer.png">
+<img src="/insight/images/consumer.png">
 
 
 On the right side we have two consumers that read the stream. One of them is alerting if the temperature is over a certain number and texting the maintenance crew that they need to do something, and the other is a data warehouse that is taking the data and putting it into a database. 
