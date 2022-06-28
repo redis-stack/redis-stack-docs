@@ -20,7 +20,7 @@ In order to process the data, a stream is separated into different roles.
 A _consumer_ reads from the stream and does some work on it. 
 For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
 
-<img src="/images/stream.png">
+<img src="/images/insight/stream.png">
 
 
 It is possible to have multiple consumers doing different jobs, one measuring humidity, and another taking temperature measurements over periods of time. 
