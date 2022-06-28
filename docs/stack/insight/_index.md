@@ -69,10 +69,6 @@ With RedisInsight you can now also extend the core functionality by building you
 
 RedisInsight includes an opt-in telemetry system. This help us improve the developer experience of the app. We value your privacy; all collected data is anonymized.
 
-## Tutorials
-
-[Manage streams and consumer groups in RedisInsight](/docs/stack/insight/tutorials/insight-stream-consumer)
-
 ## Feedback
 
 To provide your feedback, [open a ticket in our RedisInsight repository](https://github.com/RedisInsight/RedisInsight/issues/new).
