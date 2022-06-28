@@ -166,9 +166,9 @@ npm run consumergroup consumer2
 
 And in a third:
 
-`{{< highlight bash >}}
+{{< highlight bash >}}
 npm run consumergroup consumer3
-``{{< / highlight >}}
+{{< / highlight >}}
 
 The consumers will run indefinitely, waiting for new messages to be added to the stream by a producer instance when they have collectively consumed the entire stream. 
 Note that in this model, each consumer instance does not receive all of the entries from the stream, but the three members of the group each receive a subset.
@@ -179,8 +179,7 @@ Note that in this model, each consumer instance does not receive all of the entr
 2. Select `localhost:6379`
 3. Select **STREAM**. Optionally, select full screen from the upper right corner to expand the view.
 
-<img src="../images/insight-streams.png">
-
+<img src="../images/insight_streams.png">
 
 You can now toggle between **Stream** and **Consumer Groups** views to see your data. 
 As mentioned earlier in this topic, a stream is an append-only log so you can delete messages. 
@@ -188,9 +187,9 @@ A case when that's useful is in the event of a so-called _poison-pill message_ t
 
 You can continue interacting with your stream at the CLI. For example, to get the number of entries per minute, enter XLEN command:
 
-`{{< highlight bash >}}
+{{< highlight bash >}}
 XLEN ingest:temphumidity
-``{{< / highlight >}}
+{{< / highlight >}}
 
 Use streams for auditing and processing events in banking, gaming, supply chain, IoT, social media, and so on.
 
