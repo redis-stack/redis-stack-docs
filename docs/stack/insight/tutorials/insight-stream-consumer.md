@@ -28,7 +28,7 @@ For example, if the temperature is above a certain threshold, it puts a message 
 It is possible to have multiple consumers doing different jobs, one measuring humidity, and another taking temperature measurements over periods of time. 
 Redis stores a copy of the entire dataset in memory, which is a finite resource.
 To avoid runaway data, streams can be trimmed when you add something to them. 
-You can specify to remove everything but a number of last entries or remove stream that has an ID lower than specified, for example a timestamp. 
+When adding to a stream with `XADD`, you can optionally specify that the stream should be trimmed to a specific or approximate number of the newest entries, or to only include entries whose ID is higher than the ID specified.
 You can also expire streams using keys by writing to a different key each day and expiring those keys after a period of time, say a week. 
 An ID can be any number.
 
