@@ -29,7 +29,7 @@ It is possible to have multiple consumers doing different jobs, one measuring hu
 Redis stores a copy of the entire dataset in memory, which is a finite resource.
 To avoid runaway data, streams can be trimmed when you add something to them. 
 When adding to a stream with `XADD`, you can optionally specify that the stream should be trimmed to a specific or approximate number of the newest entries, or to only include entries whose ID is higher than the ID specified.
-You can also expire streams using keys by writing to a different key each day and expiring those keys after a period of time, say a week. 
+You can also manage the storage required for streaming data using key expiry.  For example, by writing each day's data to its own stream in Redis and expiring each stream's key after a period of time, say a week.
 An ID can be any number.
 
 ## Adding new entries 
