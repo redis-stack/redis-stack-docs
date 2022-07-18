@@ -13,7 +13,7 @@ You can download the last Redis source files here. For additional options, see t
 
 Redis 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements. It also includes changes that potentially break backwards compatibility with older versions.
 
-* [Download 7.0.3](https://github.com/redis/redis/archive/7.0.3.tar.gz)
+* [Download 7.0.4](https://github.com/redis/redis/archive/7.0.4.tar.gz)
 * [7.0 Release Notes](https://raw.githubusercontent.com/redis/redis/7.0/00-RELEASENOTES)
 * [More installation options ->](#redis-downloads)
 
