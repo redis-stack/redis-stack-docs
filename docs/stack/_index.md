@@ -1,7 +1,7 @@
 ---
 title: Redis Stack
 linkTitle: Redis Stack
-description: Extend Redis with modern data models and processing engines.
+description: Extends Redis with modern data models and processing engines. Includes documentation for the bundled Redis modules and RedisInsight.
 ---
 
 Redis Stack is an extension of Redis that adds modern data models and processing engines to provide a complete developer experience.
