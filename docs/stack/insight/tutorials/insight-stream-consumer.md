@@ -53,7 +53,7 @@ One way you can scale consumers is _consumer groups_, which allows multiple inst
 
 ## Managing streams in RedisInsight
 
-You can add a stream in RedisInsight in two ways: create a new stream or run an existing stream.
+You can add a stream in RedisInsight in two ways: create a new stream or add to an existing stream.
 
 To create a stream, start by selecting the key type (stream). 
 You cannot set time to live (TTL) because it cannot be put on a message in a stream; it can only be done on a Redis key. Name the stream _mystream_. 
