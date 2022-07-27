@@ -32,7 +32,9 @@ An ID can be any number, but each new entry in the stream must have an ID whose 
 
 ## Adding new entries 
 
-Use `XADD` with `*` for ID and that automatically generates timestamps plus fields and values. There are a couple of ways of retrieving things. You could give it a time range or you could ask for everything that's happened since a timestamp or ID that you specify. On one command you can ask for anything from 10:30 until 11:15 am on each day over a specified period of time.
+Use `XADD` with `*` for the ID to have Redis automatically generate a new ID for you consisting of a millisecond precision timestamp, a dash and a sequence number.  For example `1656416957625-0`.  Then supply the field names and values to store in the new stream entry.
+
+There are a couple of ways of retrieving things. You can retrieve entries by time range or you could ask for everything that's happened since a timestamp or ID that you specify. Using a single command you can ask for anything from 10:30 until 11:15 am on a given day.
 
 ## Consumer groups
 
