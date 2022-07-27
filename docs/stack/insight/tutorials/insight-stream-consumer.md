@@ -28,7 +28,7 @@ Redis stores a copy of the entire dataset in memory, which is a finite resource.
 To avoid runaway data, streams can be trimmed when you add something to them. 
 When adding to a stream with `XADD`, you can optionally specify that the stream should be trimmed to a specific or approximate number of the newest entries, or to only include entries whose ID is higher than the ID specified.
 You can also manage the storage required for streaming data using key expiry.  For example, by writing each day's data to its own stream in Redis and expiring each stream's key after a period of time, say a week.
-An ID can be any number.
+An ID can be any number, but each new entry in the stream must have an ID whose value is higher than the last ID added to the stream.
 
 ## Adding new entries 
 
