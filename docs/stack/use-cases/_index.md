@@ -89,7 +89,7 @@ Using RediSearch for this type of application provides these benefits:
 
 Knowledge workers use research portals to search for articles, research, specs, past solutions, and data to answer specic questions and leverage existing corporate knowledge and history. 
 
-Use unifed search and leverages various RediSearch index structures that support tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
+Use unified search and leverages various RediSearch index structures that support tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
 
 Using RediSearch for this type of application provides these benefits: 
 
@@ -132,7 +132,7 @@ You can get nested values without having to pull the whole object out of memory,
 
 ### Atomic partial updates
 
-RedisJSON allows you to atomically run operations like incrementing a value, adding, or removing elements from an array, append strings and so on. To do the same with a serialised object you would have to pull the value out and then write the new value back, which is not atomic.
+RedisJSON allows you to atomically run operations like incrementing a value, adding, or removing elements from an array, append strings and so on. To do the same with a serialized object you would have to pull the value out and then write the new value back, which is not atomic.
 
 On the other hand, you should consider the space complexity/memory overhead of using a more complex data structure such as RedisJSON that splits the document up into a binary tree. In some measurements, RedisJSON can use around 4 to 6 times more memory to represent the same object, compared to a string.
 
@@ -154,7 +154,7 @@ authorization, on the other hand, is the process of deciding if a user has permi
 
 Graph databases are a great fit for handling the authorization part of IAM.
 
-Traditionally, IAM has been modelled hierarchically. An admin/owner in an organization that is able to access every resource. That admin owns different departments of the organization, the departments are split into different teams, and every team has its employees, where an employee can only be a part of one team. With this kind of hierarchical view, you can't' model an employee who has functions on different teams, or even different departments, which is not unusual in a modern enterprise, and even less in the startup domain.
+Traditionally, IAM has been modeled hierarchically. An admin/owner in an organization that is able to access every resource. That admin owns different departments of the organization, the departments are split into different teams, and every team has its employees, where an employee can only be a part of one team. With this kind of hierarchical view, you can't' model an employee who has functions on different teams, or even different departments, which is not unusual in a modern enterprise, and even less in the startup domain.
 
 Consider a scenario where one department is allowed access to a group of documents, but one employee, in particular, has been assigned to work with a different team and needs to have access to a specific document belonging to that team. Or you have an external partner to whom you need to give temporary access. Or maybe you just don't want to allow a single admin access to everything in the company.
 
@@ -220,7 +220,7 @@ A graph database can help recommend to user A products that their friends have b
 
 - Fraud in health care: Are there any doctors/clinics that are prescribing an unusually high number of a certain drug?
 
-- Fraud in telecom: Does this call/SMS follow a regular calling pattern? It is a new account that just dialled an unusually high number of people, with a short average call-time and was rejected many times, so the receiver of the call should be warned by a real-time notification.
+- Fraud in telecom: Does this call/SMS follow a regular calling pattern? It is a new account that just dialed an unusually high number of people, with a short average call-time and was rejected many times, so the receiver of the call should be warned by a real-time notification.
 
 - Fraud in finance: Is this transaction between sender A and recipient B valid? Has the card used by the sender been reported as stolen? Has the device that the recipient is using ever been connected to a fraudulent account?
 
@@ -281,13 +281,13 @@ It's very common to keep track of ship voyages via (digital) logbooks. Use TimeS
 
 Modern cars are exposing several metrics via a standard interface. Use TimeSeries to correlate average fuel consumption with the tire pressure, figure out how long to keep a car in the fleet, determine optimal maintenance intervals, and calculate tax savings by type of the road (taxable vs. nontaxable roads). Example metrics include:
 
-- Accellaration
+- Acceleration
 - Location (long, lat)
 - Fuel level (liter)
 - Distances (km)
 - Speed (km/h)
 - Tire pressure
-- Distance until next maintanance check
+- Distance until next maintenance check
 
 **Smart metering (sensor data and IoT)**
 
@@ -412,7 +412,7 @@ Data flow is the incoming game scores. Flow id is the user id, and the value is 
 Every time a user scores points, they're added to the Top K list. 
 
 - If the result is nil, the user is already in the Top K. Update the sorted set with the user's new score. 
-- if the result is an id of another player, the player you just added (id1) took over the player who got returned (id2). Remove player id2 from the sorted set and add player id1. 
+- if the result is an id of another player, the player you just added (`id1`) took over the player who got returned (`id2`). Remove player `id2` from the sorted set and add player `id1`. 
 
 **Trending hashtags (social media platforms, news distribution networks)** 
 
