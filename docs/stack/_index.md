@@ -30,6 +30,10 @@ Redis Stack was created to allow developers to build real-time applications with
 
 Redis Stack unifies and simplifies the developer experience of the leading Redis modules and the capabilities they provide. Redis Stack bundles five Redis modules: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), [RedisTimeSeries](/docs/stack/timeseries), and [RedisBloom](/docs/stack/bloom).
 
+### Use cases
+
+Explore [examples](/docs/stack/use-cases/) of applied modern data models and processing engines provided by Redis Stack in specific industries and applications.
+
 ### Clients
 
 Several Redis client libraries support Redis Stack. These include redis-py, node_redis, and Jedis. In addition, four higher-level object mapping libraries also support Redis Stack: Redis OM .NET, Redis OM Node, Redis OM Python, Redis OM Spring.
