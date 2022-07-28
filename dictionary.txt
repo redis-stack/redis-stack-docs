@@ -2,6 +2,7 @@
 .inRadius
 01FY9MWDTWW4XQNTPJ9XY9FPMN
 30Mb
+Analytics
 analytics
 APIs
 CLI
@@ -12,11 +13,13 @@ Centos8
 CO2
 CommandLineRunner
 Config
+CMS
 CRM
 CrudRepository
 Cypher
 datacenters
 datastore
+deserialize
 deserialized
 DNS
 Dotenv
@@ -31,10 +34,11 @@ Github
 Hemsworth
 Homebrew
 HyperLogLog
+HyperLogLogs
 IAM
 Initializer
 IoT
-IP
+IPs
 Iterable
 JSON
 Jedis
@@ -75,6 +79,7 @@ RedisJSON
 RedisTimeSeries
 SaaS
 SDK
+SKU
 SMS
 SRANDMEMBER
 SSPL
@@ -86,10 +91,12 @@ Stapleton's
 Sublicensing
 SwaggerUI
 TTL
+TShark
 UI
 ULID
 ULIDs
 Unlink
+Wireshark
 XADD
 Xenial
 YAML
@@ -133,6 +140,7 @@ firstName
 fsSL
 geo
 geofilter
+geo-location
 getters
 gpg
 gpgcheck=1
@@ -176,6 +184,7 @@ personSchema
 personalStatement
 piña
 postalCode
+predictively
 profiler
 redis
 redis-benchmark
@@ -211,12 +220,14 @@ swaggerUi
 symlink
 symlinked
 telecom
+Telecom
 TimeSeries
 tl
 tmp
 typesafe
 untap
 untarring
+uptime
 url
 usr
 v1

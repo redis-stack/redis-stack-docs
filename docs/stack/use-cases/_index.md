@@ -87,7 +87,7 @@ Using RediSearch for this type of application provides these benefits:
 
 **Research portal (academia)**
 
-Knowledge workers use research portals to search for articles, research, specs, past solutions, and data to answer specic questions and leverage existing corporate knowledge and history. 
+Knowledge workers use research portals to search for articles, research, specs, past solutions, and data to answer specific questions and leverage existing corporate knowledge and history. 
 
 Use unified search and leverages various RediSearch index structures that support tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
 
@@ -109,7 +109,7 @@ Using RediSearch for this type of application provides these benefits:
 
 Customer insights builds on the customer service portal use case. Collate and view all relevant information as it pertains to customer behavior, purchases, and other interactions pulling from a variety of sources systems: CRM, support tickets, database records, documents, social media, and transaction logs. 
 
-Leverage unifed search and application search for this type of application.
+Leverage unified search and application search for this type of application.
 
 Using RediSearch for this type of application provides these benefits: 
 
