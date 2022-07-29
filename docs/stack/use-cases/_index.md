@@ -104,7 +104,6 @@ Using RediSearch for this type of application provides these benefits:
 
 - One comprehensive view on your customer 
 - Allows to incorporate details in order to prioritize or customize the customer experience 
-- Less churn and increased customer satisfaction 
 
 ### Learn more
 
