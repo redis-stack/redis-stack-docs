@@ -93,7 +93,7 @@ To build such a system, you can use RediSearch indexes supporting tag queries, n
 
 Using RediSearch for this type of application provides these benefits: 
 
-- Provide knowledge workers with only the most relevant, personalized results all while enforcing internal and regulatory data governance policies 
+- Create relevant, personalized search experiences all while enforcing internal and regulatory data governance policies 
 - Increased productivity, security, and compliance  
 
 **Customer service portal (commerce)**
