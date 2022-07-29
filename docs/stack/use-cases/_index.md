@@ -145,7 +145,7 @@ When you store JSON objects as Redis strings, there's no good way to query those
 
 ## RedisGraph
 
-### Industry-specific examples
+### Patterns and use cases
 
 **Resource management (identity and access management)** 
 
