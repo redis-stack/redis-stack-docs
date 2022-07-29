@@ -86,7 +86,6 @@ Using RediSearch for this type of application provides these benefits:
 - Create relevant, personalized search experiences all while enforcing internal and regulatory data governance policies 
 - Increased productivity, security, and compliance  
 
-
 Leverage unified search and application search for this type of application.
 
 Using RediSearch for this type of application provides these benefits: 
