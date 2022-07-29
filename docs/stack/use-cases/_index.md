@@ -207,7 +207,7 @@ A graph database can help recommend to user A products that their friends have b
 
 **Monitoring (data center)**
 
-Modern data centers have a lot of moving pieces, such infrastructure (servers and networks) and software systems (applications and services) that need to be monitored around the clock.
+Modern data centers have a lot of moving pieces, such as infrastructure (servers and networks) and software systems (applications and services) that need to be monitored around the clock.
 
 RedisTimeSeries allows you to plan for new resources upfront, optimize the utilization of existing resources, reconstruct the circumstances that led to outages, and identify application performance issues by analyzing and reporting on the following metrics:
 
