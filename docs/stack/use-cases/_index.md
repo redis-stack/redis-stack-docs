@@ -87,7 +87,7 @@ Using RediSearch for this type of application provides these benefits:
 
 **Research portal (academia)**
 
-Knowledge workers use research portals to search for articles, research, specs, past solutions, and data to answer specific questions and leverage existing corporate knowledge and history. 
+Research portals let users search for articles, research, specs, past solutions, and data to answer specific questions and take advantage of existing knowledge and history. 
 
 Use unified search and leverages various RediSearch index structures that support tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
 
