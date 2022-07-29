@@ -128,7 +128,7 @@ These are the two main benefits of RedisJSON over the approaches described above
 
 ### Access and retrieval of subvalues
 
-You can get nested values without having to pull the whole object out of memory, take it to the application layer, deserialize it, and serve the value you need. The overhead of this process is especially prominent for large JSON objects.
+With RedisJSON, you can get nested values without having to transmit the entire object over the network. Being able to access sub-objects can lead to greater efficiencies when you're storing large JSON objects in Redis.
 
 ### Atomic partial updates
 
