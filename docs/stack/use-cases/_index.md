@@ -63,7 +63,6 @@ Using RediSearch for this type of application provides these benefits:
 - Less remediation (refund, cancellation) 
 
 
-When your goal is to provide content recommendations and related products, you want to present a viewer with related information. The result return must be fast. You need to be able to distinguish co-occurrences of curated topics or keywords (for example, two products are tagged with the keywords "outdoor furniture"). You want to return curated or promoted product combinations. The results must derive from analytics or recommendation models but be cached in a database. And you want to return model-driven associations produced by executing the model on a variety of inputs gathered on demand. You need faceted search algorithms to find top related products. 
 
 To solve this problem, deep-learning models are used in front of RediSearch for named entity recognition to identify and categorize key information or entities in text. Relevant details are captured as RediSearch hashes/RedisJSON documents. Categories are stored as tags (facets). 
 
