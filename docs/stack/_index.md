@@ -32,7 +32,7 @@ Redis Stack unifies and simplifies the developer experience of the leading Redis
 
 ### Use cases
 
-Explore [examples](/docs/stack/use-cases/) of applied modern data models and processing engines provided by Redis Stack in specific industries and applications.
+Explore [use cases](/docs/stack/use-cases/) of the applied modern data models and processing engines provided by Redis Stack across industries and applications.
 
 ### Clients
 
