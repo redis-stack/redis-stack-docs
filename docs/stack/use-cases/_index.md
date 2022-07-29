@@ -27,7 +27,7 @@ You can use RediSearch to search across several source systems, like file server
 
 ### Analytics
 
-Data often originates from several source systems. RediSearch provides a materialized view of dimensions and facts. You can slice-and-dice data based on dimensions. Group by dimension and apply aggregation functions to facts.
+Data often originates from several source systems. RediSearch can provide a materialized view of dimensions and facts. You can slice-and-dice data based on dimensions, group by dimension, and apply aggregations to facts.
 
 ### RediSearch for faceted search
 
