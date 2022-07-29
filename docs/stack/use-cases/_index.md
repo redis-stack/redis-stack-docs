@@ -50,7 +50,7 @@ Using RediSearch for this type of application provides these benefits:
 
 **Real-time inventory (retail)**
 
-In real-time inventory retail, the key question is product availability, "What is available where?" The challenges with such projects are performance and accuracy. RediSearch allows for real-time searching and aggregations over millions of store/SKU combinations.
+In real-time inventory retail, the key question is product availability: "What is available where?" The challenges with such projects are performance and accuracy. RediSearch allows for real-time searching and aggregations over millions of store/SKU combinations.
 
 Establish real-time event capture from legacy inventory system to RediSearch. Have several inventory services query RediSearch. Use combined queries, for example, item counts, price ranges, categories, and locations. Use geo-distributed search (Active-Active). 
 
