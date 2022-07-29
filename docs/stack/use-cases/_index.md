@@ -33,7 +33,7 @@ Data often originates from several source systems. RediSearch can provide a mate
 
 Facets are multiple explicit dimensions implemented as tags in RediSearch. You can slice-and-dice data based on facets, achievable via RediSearch aggregations (`COUNT`, `TOLIST`, `FIRST_VALUE`, `RANDOM_SAMPLE`).
 
-### Industry-specific examples 
+### Common patterns and use cases
 
 **Ephemeral search (retail)**
 
