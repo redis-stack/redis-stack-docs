@@ -91,7 +91,6 @@ Using RediSearch for this type of application provides these benefits:
 - Increased productivity, security, and compliance  
 
 **Customer service portal (commerce)**
-
 - Resolve customer issues quickly with immediate access to highly relevant results, thus detecting the creation of new support cases 
 - Increased productivity and customer satisfaction 
 
