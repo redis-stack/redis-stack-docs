@@ -65,7 +65,6 @@ Using RediSearch for this type of application provides these benefits:
 
 
 
-
 - Critical fast subsequent query for the output of a recommendation model 
 - Better user experience and potential sales increase
 
