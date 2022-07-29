@@ -5,6 +5,7 @@
 Analytics
 analytics
 APIs
+atomicity
 CLI
 CLI-based
 Caskroom
@@ -200,6 +201,7 @@ repo
 repo's
 req
 requirepass
+reserialize
 runnable
 rupert-holmes.json
 schemaless
