@@ -23,7 +23,7 @@ In geo-distributed search, hashes/JSON documents are handled in the usual [Activ
 
 ### Unified search
 
-You can use RediSearch to search across several source systems, like file servers, content management systems (CMS), or customer relationship management (CRM) systems. Process source data in batches (for example, using ETL tools) or as live streams (for example, using Kafka or Redis streams). RediSearch is only used for the FTS index by referencing data items from the different systems.
+You can use RediSearch to search across several source systems, like file servers, content management systems (CMS), or customer relationship management (CRM) systems. Process source data in batches (for example, using ETL tools) or as live streams (for example, using Kafka or Redis streams). 
 
 ### Analytics
 
