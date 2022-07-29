@@ -9,7 +9,7 @@ weight: 2
 
 ### Application search and external secondary index 
 
-RediSearch supports application search when the application or service uses another primary database. You can use RediSearch as an external secondary index (for example, for indexing numeric or full-text data) by referencing data items within the primary database. Because such secondary indexes are updated asynchronously, you end up with a stale index. However, you can use database synchronization strategies provided by RedisGears.
+RediSearch supports application search whether the source of record is another database or Redis itself. You can use RediSearch as an external secondary index (for example, for indexing numeric or full-text data) and as a full-text search engine.
 
 ### Primary database and internal secondary index
 
