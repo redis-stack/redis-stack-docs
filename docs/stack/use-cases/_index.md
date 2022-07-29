@@ -138,7 +138,6 @@ RedisJSON allows you to atomically run operations like incrementing a value, add
 
 When you store JSON objects as Redis strings, there's no good way to query those objects. On the other hand, storing these objects as JSON using RedisJSON lets you index and query them. This is provided by RediSearch.
 
-On the other hand, you should consider the space complexity/memory overhead of using a more complex data structure such as RedisJSON that splits the document up into a binary tree. In some measurements, RedisJSON can use around 4 to 6 times more memory to represent the same object, compared to a string.
 
 ### Learn more
 
