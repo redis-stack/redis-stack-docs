@@ -64,7 +64,6 @@ Using RediSearch for this type of application provides these benefits:
 
 
 
-To solve this problem, deep-learning models are used in front of RediSearch for named entity recognition to identify and categorize key information or entities in text. Relevant details are captured as RediSearch hashes/RedisJSON documents. Categories are stored as tags (facets). 
 
 Using RediSearch for this type of application provides these benefits: 
 
