@@ -92,7 +92,6 @@ Using RediSearch for this type of application provides these benefits:
 
 **Customer service portal (commerce)**
 
-Customer support and client service teams use customer service portals to search customer history during support interactions or look for customers matching specific roles or behaviors. Customers also use such portals to search for articles, discussions, and other resources for help and self-serve resolution. 
 - Resolve customer issues quickly with immediate access to highly relevant results, thus detecting the creation of new support cases 
 - Increased productivity and customer satisfaction 
 
