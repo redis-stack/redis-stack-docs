@@ -62,7 +62,6 @@ Using RediSearch for this type of application provides these benefits:
 - Less shopping cart abandonment 
 - Less remediation (refund, cancellation) 
 
-**Content recommendations and related products (retail, news, and media)**
 
 When your goal is to provide content recommendations and related products, you want to present a viewer with related information. The result return must be fast. You need to be able to distinguish co-occurrences of curated topics or keywords (for example, two products are tagged with the keywords "outdoor furniture"). You want to return curated or promoted product combinations. The results must derive from analytics or recommendation models but be cached in a database. And you want to return model-driven associations produced by executing the model on a variety of inputs gathered on demand. You need faceted search algorithms to find top related products. 
 
