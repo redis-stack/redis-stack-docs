@@ -109,7 +109,6 @@ RedisJSON allows you to atomically run operations like incrementing a value, add
 
 When you store JSON objects as Redis strings, there's no good way to query those objects. On the other hand, storing these objects as JSON using RedisJSON lets you index and query them. This is provided by RediSearch.
 
-
 ### Learn more
 
 [RedisJSON](/docs/stack/json)
