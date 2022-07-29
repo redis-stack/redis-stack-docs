@@ -132,7 +132,11 @@ With RedisJSON, you can get nested values without having to transmit the entire 
 
 ### Atomic partial updates
 
-RedisJSON allows you to atomically run operations like incrementing a value, adding, or removing elements from an array, append strings and so on. To do the same with a serialized object you would have to pull the value out and then write the new value back, which is not atomic.
+RedisJSON allows you to atomically run operations like incrementing a value, adding, or removing elements from an array, append strings, and so on. To do the same with a serialized object, you have to retrieve and then reserialize the entire object, which can be expensive and also lack atomicity.
+
+### Indexing and querying
+
+When you store JSON objects as Redis strings, there's no good way to query those objects. On the other hand, storing these objects as JSON using RedisJSON lets you index and query them. This is provided by RediSearch.
 
 On the other hand, you should consider the space complexity/memory overhead of using a more complex data structure such as RedisJSON that splits the document up into a binary tree. In some measurements, RedisJSON can use around 4 to 6 times more memory to represent the same object, compared to a string.
 
