@@ -13,7 +13,7 @@ RediSearch supports application search whether the source of record is another d
 
 ### Primary database and internal secondary index
 
-RediSearch supports indexing data within Redis. Hashes and RedisJSON documents in Redis represent actual data items. You can declare secondary indexes to support various queries on the data in Redis. RediSearch 2.0 updates indexes automatically whenever a hash/JSON document (that matches the indexes) is updated. 
+You can represent your data model using Redis hashes and RedisJSON documents. You can then declare secondary indexes to support various queries on your data set. RediSearch 2.0 updates indexes automatically whenever a hash/JSON document (that matches the indexes) is updated. 
 
 ### Geo-distributed search
 
