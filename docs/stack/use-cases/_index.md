@@ -86,7 +86,6 @@ Using RediSearch for this type of application provides these benefits:
 - Create relevant, personalized search experiences all while enforcing internal and regulatory data governance policies 
 - Increased productivity, security, and compliance  
 
-**Customer insights (commerce)**
 
 Customer insights builds on the customer service portal use case. Collate and view all relevant information as it pertains to customer behavior, purchases, and other interactions pulling from a variety of sources systems: CRM, support tickets, database records, documents, social media, and transaction logs. 
 
