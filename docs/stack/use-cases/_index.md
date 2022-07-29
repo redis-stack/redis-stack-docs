@@ -124,7 +124,8 @@ Using RediSearch for this type of application provides these benefits:
 ## RedisJSON
 
 You can of course use Redis native data structures to store JSON objects, and that's a common practice. For example, you can serialize JSON and save it in a Redis String.
-These are the two main benefits of RedisJSON over the approaches described above.
+
+However, RedisJSON provides several benefits over this approach.
 
 ### Access and retrieval of subvalues
 
