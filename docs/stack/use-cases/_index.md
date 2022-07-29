@@ -233,7 +233,7 @@ A graph database can help recommend to user A products that their friends have b
 
 ## RedisTimeSeries
 
-### Industry-specific examples 
+### Patterns and use cases
 
 **Monitoring (data center)**
 
