@@ -19,7 +19,6 @@ You can represent your data model using Redis hashes and RedisJSON documents. Yo
 
 In geo-distributed search, hashes/JSON documents are handled in the usual [Active-Active manner](https://docs.redis.com/latest/rs/databases/active-active/). The index follows whatever is written in the documents in the database. Create an index on each database. Then, add synonyms (if used) to each database. 
 
-<note><b>Note</b> Dictionaries are not supported in Active-Active.</note>
 
 ### Unified search
 
