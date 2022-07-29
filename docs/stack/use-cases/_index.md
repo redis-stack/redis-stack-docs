@@ -63,7 +63,6 @@ Using RediSearch for this type of application provides these benefits:
 - Less remediation (refund, cancellation) 
 
 
-- Better user experience and potential sales increase
 
 **Real-time conversation analysis (telecom)**
 
