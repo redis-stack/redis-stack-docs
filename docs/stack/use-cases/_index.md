@@ -37,7 +37,7 @@ Facets are multiple explicit dimensions implemented as tags in RediSearch. You c
 
 **Ephemeral search (retail)**
 
-When the user logs on to the site, the purchase-search history is populated from another datastore. It requires lightweight index creation, index expiry, and quick document indexing.
+When the user logs on to the site, the purchase-search history is populated into a RediSearch index from another datastore. This requires lightweight index creation, index expiry, and quick document indexing.
 
 The application/service creates a temporary and user-specific full-text index in RediSearch when a user logs in. The application/service has direct access to the user-specific index and the primary datastore. When the user logs out of the service, the index is explicitly removed. Otherwise, the index expires after a while (for example, after the user's session expires). 
 
