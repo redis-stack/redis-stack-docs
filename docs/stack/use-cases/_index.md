@@ -89,7 +89,7 @@ Using RediSearch for this type of application provides these benefits:
 
 Research portals let users search for articles, research, specs, past solutions, and data to answer specific questions and take advantage of existing knowledge and history. 
 
-Use unified search and leverages various RediSearch index structures that support tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
+To build such a system, you can use RediSearch indexes supporting tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
 
 Using RediSearch for this type of application provides these benefits: 
 
