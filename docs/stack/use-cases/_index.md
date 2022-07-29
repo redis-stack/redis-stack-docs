@@ -11,7 +11,7 @@ weight: 2
 
 RediSearch supports application search whether the source of record is another database or Redis itself. You can use RediSearch as an external secondary index (for example, for indexing numeric or full-text data) and as a full-text search engine.
 
-### Primary database and internal secondary index
+### Secondary index for Redis data
 
 You can represent your data model using Redis hashes and RedisJSON documents. You can then declare secondary indexes to support various queries on your data set. RediSearch 2.0 updates indexes automatically whenever a hash/JSON document (that matches the indexes) is updated. 
 
