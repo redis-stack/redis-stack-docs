@@ -95,11 +95,13 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 * [Ubuntu bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.bionic.arm64.tar.gz)
 * [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.focal.x86_64.tar.gz)
 * [Ubuntu Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.x86_64.snap)
+* [Ubuntu Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.arm64.snap)
 * [AppImage x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1-x86_64.AppImage)
 * [Redhat/CentOS 7 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.rhel8.x86_64.tar.gz)
 * [Debian bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.bullseye.x86_64.tar.gz)
 * [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis)
+* [debs and rpms](https://redis.io/docs/stack/get-started/install/linux/) are also available for the above platforms.
 * [6.2.4-rc1 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.4-v1)
 
 ### RedisInsight
@@ -121,11 +123,13 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 * [Ubuntu bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.bionic.arm64.tar.gz)
 * [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.focal.x86_64.tar.gz)
 * [Ubuntu Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.x86_64.snap)
+* [Ubuntu Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.arm64.snap)
 * [AppImage x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1-x86_64.AppImage)
 * [Redhat/CentOS 7 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.rhel8.x86_64.tar.gz)
 * [Debian bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.bullseye.x86_64.tar.gz)
 * [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis).
+* [debs and rpms](https://redis.io/docs/stack/get-started/install/linux/) are also available for the above platforms.
 * [7.0.2-rc1 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.2-rc1)
 </div>
 </div>
