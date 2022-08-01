@@ -199,5 +199,5 @@ Use streams for auditing and processing events in banking, gaming, supply chain,
 
 ## Related topics
 
-[Redis Streams](/docs/manual/data-types/streams)
-[Introducing Redis Streams with RedisInsight, node.js, and Python](https://www.youtube.com/watch?v=q2UOkQmIo9Q)
+- [Redis Streams](/docs/manual/data-types/streams)
+- [Introducing Redis Streams with RedisInsight, node.js, and Python](https://www.youtube.com/watch?v=q2UOkQmIo9Q) (video)
