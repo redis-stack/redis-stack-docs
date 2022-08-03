@@ -2,6 +2,7 @@
 .inRadius
 01FY9MWDTWW4XQNTPJ9XY9FPMN
 30Mb
+anonymized
 APIs
 CLI
 CLI-based
@@ -10,8 +11,14 @@ CentOS7
 Centos8
 CommandLineRunner
 Config
+consumer1
+consumer2
+consumer3
+consumer:lastid
+consumergroup
 CrudRepository
 Cypher
+dataset
 Dotenv
 Downey
 EntityStream
@@ -31,9 +38,12 @@ LINQ
 Licensor
 Licensor.
 Lombok
+LTS
 M1
 MERCHANTABILITY
 MVC
+mystream
+npm
 ORM
 OSS
 PeopleController
@@ -124,6 +134,7 @@ homebrew
 hostname
 houseNumber
 http
+ingest:temphumidity
 instantiation
 javascript
 joan-jett.json
@@ -190,6 +201,7 @@ swaggerUi
 symlink
 symlinked
 tl
+temphumidity_consumers
 tmp
 typesafe
 untap
@@ -198,5 +210,7 @@ url
 usr
 v1
 x86
+XDEL
+XLEN
 xml
 zshrc
