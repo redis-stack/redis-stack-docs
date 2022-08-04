@@ -8,7 +8,7 @@ weight: 1
 
 
 ### From the official Debian/Ubuntu APT Repository
-You can install recent stable versions of Redis Stack from the official packages.redis.io APT repository. The repository currently supports Ubuntu Xenial (16.04), Ubuntu Bionic (18.04), Ubuntu Focal (20.04), and Debian Bullseye (11) on x86 processors. s well as Ubuntu Bionic (18.04) on arm64. Add the repository to the apt index, update it and install:
+You can install recent stable versions of Redis Stack from the official packages.redis.io APT repository. The repository currently supports Ubuntu Xenial (16.04), Ubuntu Bionic (18.04), Ubuntu Focal (20.04), and Debian Bullseye (11) on x86 processors, as well as Ubuntu Bionic (18.04) on arm64. Add the repository to the apt index, then update and install it:
 
 {{< highlight bash >}}
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
