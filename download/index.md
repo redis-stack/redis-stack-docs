@@ -2,7 +2,7 @@
 title: Download
 linkTitle: Download
 ---
-<div class="inner-content">
+<div class="download-cards">
 <div id="download-redis">
 
 ## Redis
@@ -33,8 +33,9 @@ Redis Stack Server extends Redis with modern data models such as document, graph
 * [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v1.focal.x86_64.tar.gz)
 * [All installation options ->](#redis-stack-downloads)
 </div>
+</div>
 
-<div id="download-redis-options">
+<div id="download-details">
 
 ## Redis downloads
 
@@ -77,12 +78,6 @@ See the [release notes](https://raw.githubusercontent.com/redis/redis/5.0/00-REL
 ### List of all releases and hash digests
 
 You can find a [listing of all previous Redis releases](https://download.redis.io/releases/) on the [releases page](https://download.redis.io/releases/). SHA-256 digests for these downloads are available in the [redis-hashes git repository](https://github.com/redis/redis-hashes/).
-
-</div>
-</div>
-
-<div id="download-redis-stack-options">
-<div class="inner-content">
 
 ## Redis Stack downloads
 
@@ -127,5 +122,4 @@ Redis Stack 7.0 includes several new user-facing features, significant performan
 * [Debian bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.2-RC1.bullseye.x86_64.tar.gz)
 * [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis).
 * [7.0.2-rc1 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.2-rc1)
-</div>
 </div>
