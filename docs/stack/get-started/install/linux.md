@@ -17,6 +17,16 @@ sudo apt-get update
 sudo apt-get install redis-stack-server
 {{< / highlight >}}
 
+ From the official Debian 11
+{{< highlight bash >}}
+curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
+sudo apt-get update
+sudo apt-get install redis-server
+{{< / highlight >}}
+
+
+
 ### From the official RPM Feed
 
 You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, and RHEL8/Centos8. Add the repository to the repository index, and install the package.
