@@ -102,8 +102,8 @@ Here are the key differences between open-source Redis and Redis Enterprise.
   </tbody>
 </table>
 
-For more information on the advantages of enterprise-level Redis, see _Redis Open Source vs. Redis Enterprise_
- [https://redis.com/wp-content/uploads/2022/06/comparison-redis-open-source-vs-redis-enterprise.pdf] (PDF).
+For more information on the advantages of enterprise-level Redis, see [_Redis Open Source vs. Redis Enterprise_]
+ (https://redis.com/wp-content/uploads/2022/06/comparison-redis-open-source-vs-redis-enterprise.pdf) (PDF).
 
 ## Redis Enterprise offerings
 
@@ -150,7 +150,7 @@ You can purchase and deploy Redis Enterprise Cloud directly through the cloud pr
 * [Redis Enterprise Cloud](https://console.cloud.google.com/marketplace/product/endpoints/gcp.redisenterprise.com?project=redislabs-university) (GCP)
 * [Azure Cache for Redis pricing](https://azure.microsoft.com/en-us/pricing/details/cache/#pricing) (Azure)
 
-**NOTES:**
+**Notes:**
 
 * Azure Cache is not managed by Redis but by Microsoft with a revenue-sharing arrangement.
 * Redis provides second-level support to Microsoft customers.
