@@ -25,6 +25,7 @@ DevOps
 Dotenv
 Downey
 EntityStream
+GCP
 geo-distributed
 GeoLocation
 geo-replicated
@@ -42,6 +43,7 @@ Jett
 Johansson
 K8s
 Kubernetes
+Kubernetes-based
 LICENSOR
 LINQ
 Licensor
