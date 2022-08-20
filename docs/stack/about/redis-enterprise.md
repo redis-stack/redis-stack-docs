@@ -102,8 +102,7 @@ Here are the key differences between open-source Redis and Redis Enterprise.
   </tbody>
 </table>
 
-For more information on the advantages of enterprise-level Redis, see [_Redis Open Source vs. Redis Enterprise_]
- (https://redis.com/wp-content/uploads/2022/06/comparison-redis-open-source-vs-redis-enterprise.pdf) (PDF).
+For more information on the advantages of enterprise-level Redis, see [_Redis Open Source vs. Redis Enterprise_](https://redis.com/wp-content/uploads/2022/06/comparison-redis-open-source-vs-redis-enterprise.pdf) (PDF).
 
 ## Redis Enterprise offerings
 
