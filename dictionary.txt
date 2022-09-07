@@ -27,6 +27,7 @@ Downey
 EntityStream
 GCP
 geo-distributed
+geo-distribution
 GeoLocation
 geo-replicated
 Geospatial
@@ -36,6 +37,7 @@ Homebrew
 IaaS
 inferencing
 Initializer
+integrations
 Iterable
 JSON
 Jedis
