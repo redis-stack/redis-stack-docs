@@ -54,7 +54,7 @@ Here are the key differences between open source Redis and Redis Enterprise.
       <td style="text-align:center">&check;</td>
     </tr>
     <tr>
-      <td rowspan=3>Deploy</td>
+      <td rowspan=2>Deploy</td>
       <td>Fully supported and automated deployment on-premises, hybrid cloud, and multicloud</td>
       <td> </td>
       <td style="text-align:center">&check;</td>
