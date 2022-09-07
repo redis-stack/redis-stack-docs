@@ -38,7 +38,7 @@ Here are the key differences between open source Redis and Redis Enterprise.
   </thead>
   <tbody>
     <tr>
-      <td rowspan=5>Build</td>
+      <td rowspan=3>Build</td>
       <td>Boost app performance with Redis cache</td>
       <td style="text-align:center">&check;</td>
       <td style="text-align:center">&check;</td>
@@ -49,7 +49,7 @@ Here are the key differences between open source Redis and Redis Enterprise.
       <td style="text-align:center">&check;</td>
     </tr>
     <tr>
-      <td>Admins UIs for operations and monitoring</td>
+      <td>Admin UIs for operations and monitoring</td>
       <td style="text-align:center">&check;</td>
       <td style="text-align:center">&check;</td>
     </tr>
@@ -120,9 +120,9 @@ Let [Support](https://redis.com/company/support/) know if you have any questions
 
 You can also purchase and deploy Redis Enterprise Cloud directly through the cloud provider's marketplace:
 
-* AWS: [Redis Enterprise Cloud Flexible - Pay as You Go](https://aws.amazon.com/marketplace/pp/prodview-mwscixe4ujhkq) (AWS)
-* Azure: [Azure Cache for Redis Enterprise pricing](https://azure.microsoft.com/en-us/pricing/details/cache/#pricing) (Azure)
-* GCP: [Redis Enterprise Cloud](https://console.cloud.google.com/marketplace/product/endpoints/gcp.redisenterprise.com?project=redislabs-university) (GCP)
+* [Redis Enterprise Cloud Flexible - Pay as You Go](https://aws.amazon.com/marketplace/pp/prodview-mwscixe4ujhkq) (AWS)
+* [Azure Cache for Redis Enterprise pricing](https://azure.microsoft.com/en-us/pricing/details/cache/#pricing) (Azure)
+* [Redis Enterprise Cloud](https://console.cloud.google.com/marketplace/product/endpoints/gcp.redisenterprise.com?project=redislabs-university) (GCP)
 
 **Notes:**
 
