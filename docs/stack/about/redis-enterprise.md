@@ -13,7 +13,7 @@ Read on to learn about Redis Enterprise and the benefits of its extended offerin
 
 ## About Redis the company
 
-[Redis](https://redis.com/), the company, develops OSS Redis and Redis Stack and also provides Redis Enterprise as a commercial product. Redis Enterprise maintains the simplicity and high performance of Redis, while adding many enterprise-grade capabilities: 
+[Redis](https://redis.com/), the company, develops [OSS Redis](https://redis.io/download/#redis-downloads) and [Redis Stack](https://redis.io/download/#redis-stack-downloads) and also provides [Redis Enterprise](https://redis.com/redis-enterprise/advantages/) as a commercial product. Redis Enterprise maintains the simplicity and high performance of Redis, while adding many enterprise-grade capabilities:  
 
 * Linear scaling to hundreds of millions of operations per second
 * Improved high availability with up to 99.999% uptime
