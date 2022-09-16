@@ -178,7 +178,7 @@ You can contact the [Redis Customer Success Team](https://redis.com/deployment/c
 * [Intuitive Object Mapping and Fluent Queries for Redis](https://redis.com/blog/introducing-redis-om-client-libraries/)
 * [Get started with Redis Cloud, for free](https://redis.com/try-free/)
 
-### Redis Enterprice pricing and download
+### Redis Enterprise pricing and download
 
 * [Redis Pricing](https://redis.com/redis-enterprise-cloud/pricing/)
 * [Download Center](https://redis.com/redis-enterprise-software/download-center/software/)
