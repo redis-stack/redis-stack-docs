@@ -7,7 +7,7 @@ aliases:
 
 ---
 
-[Redis Enterprise](https://redis.com/redis-enterprise-software/overview/) is an enterprise-grade Redis, available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/) (on AWS, GCP, or Azure). Redis Enterprise simplifies operations, scaling, and multi-tenancy, includes many integrations (e.g., K8s), and provides multiples tiers of support.
+[Redis Enterprise](https://redis.com/redis-enterprise-software/overview/) is an enterprise-grade Redis, available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/) (on AWS, GCP, or Azure). Redis Enterprise simplifies operations, scaling, and multi-tenancy, includes many integrations (e.g., K8s), and provides multiple tiers of support.
 
 Read on to learn about Redis Enterprise and the benefits of its extended offerings.
 
@@ -142,7 +142,7 @@ Redis Stack [documentation](/docs/stack) extends Redis with additional data mode
 
 ## Redis tools
 
-* [RedisInsight](https://redis.com/redis-enterprise/redis-insight/) provides a Redis admin UI that can help you optimize Redis and visualize your data. RedisInsight supports Redis OSS, Redis Stack, Redis Enterprise Software, and Redis Enterprise Cloud. It runs cross-platform on Linux, Windows, and MacOS. For open-source resources, see [RedisInsight](/docs/stack/insight/).
+* [RedisInsight](https://redis.com/redis-enterprise/redis-insight/) provides a Redis admin UI that can help you optimize Redis and visualize your data. RedisInsight supports Redis OSS, Redis Stack, Redis Enterprise Software, and Redis Enterprise Cloud. It runs cross-platform on Linux, Windows, and MacOS. For open source resources, see [RedisInsight docs](/docs/stack/insight/).
 * [Clients and connectors](https://redis.com/redis-enterprise/clients-connectors/) &mdash; Redis Enterprise is fully compatible with Redis OSS. Any standard Redis client can be used with Redis Enterprise. Redis clients are available in over 60 programming languages and development environments.
 
 ## Support
@@ -151,26 +151,36 @@ You can contact the [Redis Customer Success Team](https://redis.com/deployment/c
 
 ## Learn more
 
-* [Take control of your data with Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/)
-* [Redis Backup and Restore](https://redis.com/redis-enterprise/technology/backup-disaster-recovery/)
-* [Redis Enterprise Software Deployment Options](https://redis.com/redis-enterprise-software/deployment/)
-* [Redis Enterprise vs. Redis Open Source: Why Make the Switch?](https://redis.com/redis-enterprise/advantages/)
-* [Empowering dreamers to build real-time apps](https://redis.com/redis-enterprise-cloud/overview/)
-* [Redis Enterprise Cloud: seamlessly deploy & manage your multicloud application](https://redis.com/redis-enterprise-cloud/multicloud/)
-* [Take control of your data with Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/)
-* [Running Redis in Kubernetes](https://redis.com/redis-enterprise-software/redis-enterprise-on-kubernetes/)
+### Redis Enterprise advantages
+
 * [Introduction to Running Redis at Scale](https://developer.redis.com/operate/redis-at-scale/)
+* [Redis Enterprise vs. Redis Open Source: Why Make the Switch?](https://redis.com/redis-enterprise/advantages/)
+* [Take control of your data with Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/)
+* [Empowering dreamers to build real-time apps](https://redis.com/redis-enterprise-cloud/overview/)
 * [Operate Your Redis Database](https://developer.redis.com/operate/)
+* [Redis Backup and Restore](https://redis.com/redis-enterprise/technology/backup-disaster-recovery/)
+* [Redis Security and Access Management: Build vs. Buy](https://redis.com/webinars-on-demand/redis-security-and-access-management-build-vs-buy/)
+
+### Redis Enterprise deployments 
+
+* [Redis Enterprise Software Deployment Options](https://redis.com/redis-enterprise-software/deployment/)
+* [Redis Enterprise Cloud: seamlessly deploy & manage your multicloud application](https://redis.com/redis-enterprise-cloud/multicloud/)
+* [Running Redis in Kubernetes](https://redis.com/redis-enterprise-software/redis-enterprise-on-kubernetes/)
+
+### Redis Stack 
+
+* [Build real-time applications with Redis modules](https://redis.com/modules/get-started/)
 * [RedisInsight: The best Redis GUI](https://redis.com/redis-enterprise/redis-insight/)
 * [A high-performance document store for modern applications](https://redis.com/modules/redis-json/)
 * [Time series as a native data structure in Redis](https://redis.com/modules/redis-timeseries/)
 * [Deliver search and analytics at the speed of transactions](https://redis.com/modules/redis-search/)
 * [Fast graph processing powered by linear algebra and matrix multiplication](https://redis.com/modules/redis-graph/)
-* [Build real-time applications with Redis modules](https://redis.com/modules/get-started/)
 * [Intuitive Object Mapping and Fluent Queries for Redis](https://redis.com/blog/introducing-redis-om-client-libraries/)
-* [Redis Security and Access Management: Build vs. Buy](https://redis.com/webinars-on-demand/redis-security-and-access-management-build-vs-buy/)
 * [Get started with Redis Cloud, for free](https://redis.com/try-free/)
-* [Download Center](https://redis.com/redis-enterprise-software/download-center/software/)
+
+### Redis Enterprice pricing and download
+
 * [Redis Pricing](https://redis.com/redis-enterprise-cloud/pricing/)
+* [Download Center](https://redis.com/redis-enterprise-software/download-center/software/)
 * [Get started with Redis Cloud, for free](https://redis.com/try-free/)
 
