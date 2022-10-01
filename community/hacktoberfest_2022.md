@@ -8,7 +8,7 @@ weight: 1
 [Hacktoberfest](https://hacktoberfest.com/) is a month-long online festival which takes place every year in October. It is sponsored by [DigitalOcean](https://www.digitalocean.com/) and aims to encourage people to get involved in open source projects.
 
 ## How to get involved
-Through October, we're creating a number of GitHub issues for folks who want to contribute to our documentation and demo apps. [View our list of current open issues](https://github.com/search?l=&q=%23hacktoberfest+user%3Aredislabs-training+user%3Aredis+user%3Aredis-developer+user%3ANodeRedis+label%3Ahacktoberfest&state=open&type=Issues).
+Through October, we at Redis are creating a number of GitHub issues for folks who want to contribute to our documentation and demo apps. [View our list of current open issues](https://github.com/search?l=&q=%23hacktoberfest+user%3Aredislabs-training+user%3Aredis+user%3Aredis-developer+user%3ANodeRedis+label%3Ahacktoberfest&state=open&type=Issues).
 
 ### Get a GitHub account and Hacktoberfest account
 You'll need a GitHub account to contribute to our repos. Sign up for free at [GitHub.com](https://github.com/).
