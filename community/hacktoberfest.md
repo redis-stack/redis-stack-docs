@@ -8,7 +8,7 @@ weight: 1
 [Hacktoberfest](https://hacktoberfest.com/) is a month-long online festival which takes place every year in October. It is sponsored by [DigitalOcean](https://www.digitalocean.com/) and aims to encourage people to get involved in open source projects.
 
 ## How to get involved
-Through October, we at Redis are creating a number of GitHub issues for folks who want to contribute to our documentation and demo apps. [View our list of current open issues](https://github.com/search?q=user%3Aredislabs-training+user%3Aredis+user%3Aredis-developer+user%3ANodeRedis+label%3Ahacktoberfest&type=Issues).
+Through October, we at Redis are creating a number of GitHub issues for folks who want to contribute to our documentation and demo apps. [View our list of current open issues](https://github.com/search?q=%23hacktoberfest+user%3Aredislabs-training+user%3Aredis+user%3Aredis-developer+user%3ANodeRedis+label%3Ahacktoberfest&state=open&type=Issues).
 
 ### Get a GitHub account and Hacktoberfest account
 You'll need a GitHub account to contribute to our repos. Sign up for free at [GitHub.com](https://github.com/).
@@ -16,7 +16,7 @@ You'll need a GitHub account to contribute to our repos. Sign up for free at [Gi
 You'll also need to register with Hacktoberfest using your GitHub account if you want to be in with a chance of earning swag from DigitalOcean. **Please note that Redis is not involved in allocating or sending swag.**
 
 ### Finding and working on an issue
-1. [Look for a suitable issue on GitHub](https://github.com/search?q=user%3Aredislabs-training+user%3Aredis+user%3Aredis-developer+user%3ANodeRedis+label%3Ahacktoberfest&type=Issues). Where possible, we have tagged them according to the skillset and level of experience required.
+1. [Look for a suitable issue on GitHub](https://github.com/search?q=%23hacktoberfest+user%3Aredislabs-training+user%3Aredis+user%3Aredis-developer+user%3ANodeRedis+label%3Ahacktoberfest&state=open&type=Issues). Where possible, we have tagged them according to the skillset and level of experience required.
 
 2. Read the guidance notes on each issue carefully so you know what's expected of you.
 
