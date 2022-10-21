@@ -67,6 +67,7 @@ PeopleController
 PeopleControllerV1
 PeopleRepository
 PeopleService
+PowerShell
 product-lifecycle
 Profiler
 Pydantic
@@ -99,6 +100,7 @@ Springfox
 Stapleton's
 Sublicensing
 SwaggerUI
+Systemd
 tiering
 TTL
 UI
@@ -106,6 +108,7 @@ ULID
 ULIDs
 Unlink
 uptime
+WSL
 XADD
 Xenial
 YAML
