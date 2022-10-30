@@ -70,7 +70,7 @@ Gather data using connection information gathering (source IPs, DNS) and convers
 Using RediSearch for this type of application provides these benefits: 
 
 - Insights into performance issues, security threats, and network faults 
-- Improved service uptime & security 
+- Improved service uptime and security 
 
 **Research portal (academia)**
 
