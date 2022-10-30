@@ -23,7 +23,7 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 * Discover your databases in Redis Enterprise Cluster and databases with Flexible plans in Redis Cloud
 * Use a form to enter your connection details and add any Redis database running anywhere (including OSS Cluster, Sentinel)
 
-<img src="/images/insight/Databases.png">
+<img src="/docs/stack/insight/images/Databases.png">
 
 ### Browser
 
@@ -32,13 +32,13 @@ Browse, filter and visualize your key-value Redis data structures.
 * CRUD support for [RedisJSON](https://oss.redis.com/redisjson/)
 * Group keys according to their namespaces
 
-<img src="/images/insight/Browser.png">
+<img src="/docs/stack/insight/images/Browser.png">
 
 ### Profiler
 
 Analyze every command sent to Redis in real time
 
-<img src="/images/insight/Profiler.png">
+<img src="/docs/stack/insight/images/Profiler.png">
 
 ### CLI
 
@@ -46,7 +46,7 @@ The CLI is accessible at any time within the application.
 * Employs integrated help to deliver intuitive assistance
 * Use together with a convenient command helper that lets you search and read on Redis commands.
 
-<img src="/images/insight/CLI.png">
+<img src="/docs/stack/insight/images/CLI.png">
 
 ### Workbench
 
@@ -56,9 +56,9 @@ Advanced command line interface with intelligent command auto-complete and compl
 * Visualizations of your [RediSearch](https://oss.redis.com/redisearch/) index, queries, and aggregations
 * Visualizations of your [RedisGraph](https://oss.redis.com/redisgraph/) and [RedisTimeSeries](https://oss.redis.com/redistimeseries/) data.
 
-<img src="/images/insight/Workbench_Graph.png">
+<img src="/docs/stack/insight/images/Workbench_Graph.png">
 
-<img src="/images/insight/Workbench_TimeSeries.png">
+<img src="/docs/stack/insight/images/Workbench_TimeSeries.png">
 
 
 ## Plugins
@@ -67,7 +67,7 @@ With RedisInsight you can now also extend the core functionality by building you
 
 ## Telemetry
 
-RedisInsight includes an opt-in telemetry system. This help us improve the developer experience of the app. We value your privacy; all collected data is anonymised.
+RedisInsight includes an opt-in telemetry system. This help us improve the developer experience of the app. We value your privacy; all collected data is anonymized.
 
 ## Feedback
 
