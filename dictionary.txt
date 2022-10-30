@@ -195,12 +195,14 @@ ingest:temphumidity
 instantiation
 javascript
 joan-jett.json
+jedis
 json
 justin-timberlake.json
 kerry-livgren.json
 keyName
 keyrings
 lastName
+latencies
 linkTitle
 loadTestData
 localhost
