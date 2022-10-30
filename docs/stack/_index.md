@@ -36,7 +36,7 @@ Explore [use cases](/docs/stack/use-cases/) of the applied modern data models an
 
 {{% alert title="Note" color="warning" %}}
  
-Note that the modules as described here are generic and that we list only the representative use cases.
+Modules as described here are generic, and we list only the representative use cases.
 
 {{% /alert %}}
 
