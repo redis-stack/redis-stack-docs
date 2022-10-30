@@ -26,17 +26,23 @@ If you want to learn more about the vision for Redis Stack, read on.
 
 ## Why Redis Stack?
 
-Redis Stack was created to allow developers to build real-time applications with a backend data platform that can reliably process requests in under a millisecond. Redis Stack does this by extending Redis with modern data models and data processing tools (Document, Graph, Search, and Time Series).
+Redis Stack was created to allow developers to build real-time applications with a backend data platform that can reliably process requests in under a millisecond. Redis Stack does this by extending Redis with modern data models and data processing tools (document, graph, search, and time series).
 
 Redis Stack unifies and simplifies the developer experience of the leading Redis modules and the capabilities they provide. Redis Stack bundles five Redis modules: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), [RedisTimeSeries](/docs/stack/timeseries), and [RedisBloom](/docs/stack/bloom).
 
 ### Use cases
 
-Explore [use cases](/docs/stack/use-cases/) of the applied modern data models and processing engines provided by Redis Stack across industries and applications.
+Explore [use cases](/docs/stack/use-cases/) of the applied modern data models and processing engines provided by Redis Stack across industries and applications. 
+
+{{% alert title="Note" color="warning" %}}
+ 
+Note that the modules as described here are generic and that we list only the representative use cases.
+
+{{% /alert %}}
 
 ### Clients
 
-Several Redis client libraries support Redis Stack. These include redis-py, node_redis, and Jedis. In addition, four higher-level object mapping libraries also support Redis Stack: Redis OM .NET, Redis OM Node, Redis OM Python, Redis OM Spring.
+Several Redis client libraries support Redis Stack. These include [redis-py](https://github.com/redis/redis-py), [node_redis](https://github.com/redis/node-redis), and [jedis](https://github.com/redis/jedis). In addition, four higher-level object mapping libraries also support Redis Stack: [Redis OM .NET](https://github.com/redis/redis-om-python), [Redis OM Node](https://github.com/redis/redis-om-python), [Redis OM Python](https://github.com/redis/redis-om-python), and [Redis OM Spring](https://github.com/redis/redis-om-spring).
 
 ### RedisInsight
 

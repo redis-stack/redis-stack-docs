@@ -62,8 +62,6 @@ Using RediSearch for this type of application provides these benefits:
 - Less shopping cart abandonment 
 - Less remediation (refund, cancellation) 
 
-
-
 **Real-time conversation analysis (telecom)**
 
 Collect, access, store, and utilize communication data in real time. Capture network traffic and store it in a full-text index for the purposes of getting insights into the data.
@@ -218,7 +216,11 @@ RedisTimeSeries allows you to plan for new resources upfront, optimize the utili
 
 **Weather analysis (environment)**
 
-A simple use case of using RedisTimeSeries to measure environment is to track how many hours of sunshine and how much rain is observed over the last several years. Seasonally, you can measure average rain, average temperature, maximum of sunny hours, for example. Watch the increase of the maximum temperature over the years. Predict weather in a specific region for a particular week of the year. Example metrics include:
+RedisTimeSeries can be used to track environmental measurements such as the number of daily sunshine hours and hourly rainfall depth, over a period of many years. Seasonally, you can measure average rainfall depth, average daily temperature, and the maximum number of sunny hours per day, for example. Watch the increase of the maximum daily temperature over the years. Predict the expected temperature and rainfall depth in a specific location for a particular week of the year.
+
+Multiple time series can be collected, each for a different location. By utilizing secondary indexes, measurements can be aggregated over given geographical regions (e.g., minimal and maximal daily temperature in Europe) or over locations with specific attributes (e.g., average rainfall depth in mountainous regions).
+
+Example metrics include: 
 
 - Rain (cm)
 - Temperature (C)
@@ -293,7 +295,7 @@ Use RedisTimeSeries to identify correlations between the trading behavior and ot
 
 Probabilistic data structures provide a variety of different properties that can have applications across many different industries. 
 
-### Bloom filters 
+### Bloom filters and ### Cuckoo filters 
 
 **Financial fraud detection (finance)**
 
@@ -346,8 +348,6 @@ Using RedisBloom for this type of application provides these benefits:
 - Very fast and efficient way to do a common operation 
 - No need to invest in expensive infrastructure  
 
-### Cuckoo filters 
- 
 **Targeted ad campaigns (advertising, retail)** 
 
 This application answers this question: Has the user signed up for this campaign yet?
@@ -411,6 +411,43 @@ This application answers these questions:
 <note><b>Note</b> Storing the IP address or any other kind of personal identifier is against the law in some countries, which makes it impossible to get unique visitor statistics on your website.</note> 
 
 One HyperLogLog is created per page (video/song) per period, and every IP/identifier is added to it on every visit.
+
+### t-digest
+
+**Hardware/software monitoring**
+
+You measure your online server response latency, and you like to query:
+
+- What are the 50th, 90th, and 99th percentiles of the measured latencies
+
+- Which fraction of the measured latencies are less than 25 milliseconds?
+
+- What is the mean latency, ignoring outliers? or What is the mean latency between the 10th and the 90th percentile?
+
+**Online gaming**
+
+Millions of people are playing a game on your online gaming platform, and you want to give the following information to each player?
+
+- Your score is better than x percent of the game sessions played
+
+- There were about y game sessions where people scored larger than you
+
+- To have a better score than 90% of the games played, your score should be z
+
+**Network traffic monitoring**
+
+You measure the IP packets transferred over your network each second and try to detect denial-of-service attacks by asking:
+
+- Does the number of packets in the last second exceed 99% of previously observed values?
+
+- How many packets do I expect to see under ‘normal’ network conditions? 
+(Answer: between x and y, where x represents the 1st percentile and y represents the 99th percentile).
+
+**Predictive maintenance**
+
+- Was the measured parameter (noise level, current consumption, etc.) irregular? (not within the [1st percentile … 99th percentile] range)
+
+- To which values should I set my alerts?
  
 ### Learn more
 
