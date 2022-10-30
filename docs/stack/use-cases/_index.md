@@ -382,7 +382,7 @@ Use one Count-Min sketch created per day (period). Every product sale goes into 
 This application answers this question: Who are the K players with the highest score?
 
 Data flow is the incoming game scores. Flow id is the user id, and the value is the score. A separate sorted set is kept, storing the top K users' ids and their scores. 
-Every time a user scores points, they're added to the Top K list. 
+Every time a user scores points, they''re added to the Top K list. 
 
 - If the result is nil, the user is already in the Top K. Update the sorted set with the user's new score. 
 - if the result is an id of another player, the player you just added (`id1`) took over the player who got returned (`id2`). Remove player `id2` from the sorted set and add player `id1`. 
@@ -418,7 +418,7 @@ One HyperLogLog is created per page (video/song) per period, and every IP/identi
 
 You measure your online server response latency, and you like to query:
 
-- What are the 50th, 90th, and 99th percentiles of the measured latencies
+- What are the 50th, 90th, and 99th percentiles of the measured latencies?
 
 - Which fraction of the measured latencies are less than 25 milliseconds?
 
@@ -428,11 +428,11 @@ You measure your online server response latency, and you like to query:
 
 Millions of people are playing a game on your online gaming platform, and you want to give the following information to each player?
 
-- Your score is better than x percent of the game sessions played
+- Your score is better than x percent of the game sessions played.
 
-- There were about y game sessions where people scored larger than you
+- There were about y game sessions where people scored larger than you.
 
-- To have a better score than 90% of the games played, your score should be z
+- To have a better score than 90% of the games played, your score should be z.
 
 **Network traffic monitoring**
 
@@ -440,7 +440,7 @@ You measure the IP packets transferred over your network each second and try to 
 
 - Does the number of packets in the last second exceed 99% of previously observed values?
 
-- How many packets do I expect to see under ‘normal’ network conditions? 
+- How many packets do I expect to see under _normal_ network conditions? 
 (Answer: between x and y, where x represents the 1st percentile and y represents the 99th percentile).
 
 **Predictive maintenance**
