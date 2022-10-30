@@ -1,6 +1,6 @@
 ---
 title: Redis Stack use cases
-linkTitle: Redis Stack use cases
+linkTitle: Use cases
 description: Explore examples of applied modern data models and processing engines in specific industries and applications
 weight: 2
 ---
