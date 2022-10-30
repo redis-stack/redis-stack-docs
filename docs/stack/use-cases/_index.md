@@ -41,10 +41,10 @@ The application/service creates a temporary and user-specific full-text index in
 
 Using RediSearch for this type of application provides these benefits: 
 
-- Search index is only populated when needed 
-- Only a small portion (for example, 2%) of users are actually active 
-- Users are only active for a comparatively short period of time
-- Small number of documents indexed and so very cost effective in comparison to a persistent search index 
+- Search index is only populated when needed. 
+- Only a small portion (for example, 2%) of users are actually active. 
+- Users are only active for a comparatively short period of time.
+- Small number of documents indexed and so very cost effective in comparison to a persistent search index. 
 
 **Real-time inventory (retail)**
 
@@ -370,9 +370,9 @@ Use one Count-Min sketch created per day (period). Every product sale goes into 
 This application answers this question: Who are the K players with the highest score?
 
 Data flow is the incoming game scores. Flow id is the user id, and the value is the score. A separate sorted set is kept, storing the top K users' ids and their scores. 
-Every time a user scores points, they''re added to the Top K list. 
+Every time a user scores points, they're added to the Top K list. 
 
-- If the result is nil, the user is already in the Top K. Update the sorted set with the user's new score. 
+- If the result is `nil`, the user is already in the Top K. Update the sorted set with the user's new score. 
 - if the result is an id of another player, the player you just added (`id1`) took over the player who got returned (`id2`). Remove player `id2` from the sorted set and add player `id1`. 
 
 **Trending hashtags (social media platforms, news distribution networks)** 
@@ -429,7 +429,7 @@ You measure the IP packets transferred over your network each second and try to 
 
 **Predictive maintenance**
 
-- Was the measured parameter (noise level, current consumption, etc.) irregular? (not within the [1st percentile...99th percentile] range)
+- Was the measured parameter (noise level, current consumption, etc.) irregular? (not within the [1st percentile...99th percentile] range)?
 
 - To which values should I set my alerts?
  
