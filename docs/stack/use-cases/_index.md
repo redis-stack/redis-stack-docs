@@ -289,6 +289,8 @@ Use RedisTimeSeries to identify correlations between the trading behavior and ot
 
 Probabilistic data structures provide a variety of different properties that can have applications across many different industries. 
 
+#### Bloom and Cuckoo filters
+
 **Financial fraud detection (finance)**
 
 This application answers the question, "Has the user paid from this location before?", thus checking for suspicious activity in their users' shopping habits.
@@ -359,11 +361,15 @@ Use a Cuckoo filter populated with all discount codes/coupons. On every try, the
 - If no, the coupon is not valid. 
 - If yes, the coupon can be valid. Check the main database. If valid, remove from Cuckoo filter as `used`.
 
+#### Count-Min sketch
+
 **Products (retail, online shops)** 
 
 This application answers this question: What was the sales volume (on a certain day) for a product? 
 
 Use one Count-Min sketch created per day (period). Every product sale goes into the CMS. The CMS give reasonably accurate results for the products that contribute the most toward the sales. Products with low percentage of the total sales are ignored. 
+
+#### Top K
 
 **Leader boards (gaming)** 
 
@@ -388,6 +394,9 @@ The `TOPK.LIST` command has a time complexity of `O(K)` so if `K` is small, ther
  
 **Anonymous unique visits of a web page (SaaS, analytics tools)** 
 
+
+#### HyperLogLogs
+
 This application answers these questions: 
 
 - How many unique visits has this page had on this day? 
@@ -401,6 +410,8 @@ Storing the IP address or any other kind of personal identifier is against the l
 {{% /alert %}}
 
 One HyperLogLog is created per page (video/song) per period, and every IP/identifier is added to it on every visit.
+
+#### t-digest
 
 **Hardware/software monitoring**
 
