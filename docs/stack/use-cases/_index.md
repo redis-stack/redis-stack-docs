@@ -7,32 +7,31 @@ weight: 2
 
 ## RediSearch
 
-### Application search and external secondary index 
+**Application search and external secondary index** 
 
 RediSearch supports application search whether the source of record is another database or Redis itself. You can use RediSearch as an external secondary index (for example, for indexing numeric or full-text data) and as a full-text search engine.
 
-### Secondary index for Redis data
+**Secondary index for Redis data**
 
 You can represent your data model using Redis hashes and RedisJSON documents. You can then declare secondary indexes to support various queries on your data set. RediSearch 2.0 updates indexes automatically whenever a hash/JSON document (that matches the indexes) is updated. 
 
-### Geo-distributed search
+**Geo-distributed search**
 
 In geo-distributed search, hashes/JSON documents are handled in the usual [Active-Active manner](https://docs.redis.com/latest/rs/databases/active-active/). The index follows whatever is written in the documents in the database. Create an index on each database. Then, add synonyms (if used) to each database. 
 
-
-### Unified search
+**Unified search**
 
 You can use RediSearch to search across several source systems, like file servers, content management systems (CMS), or customer relationship management (CRM) systems. Process source data in batches (for example, using ETL tools) or as live streams (for example, using Kafka or Redis streams). 
 
-### Analytics
+**Analytics**
 
 Data often originates from several source systems. RediSearch can provide a materialized view of dimensions and facts. You can slice-and-dice data based on dimensions, group by dimension, and apply aggregations to facts.
 
-### RediSearch for faceted search
-
+{{% alert title="RediSearch for faceted search" color="warning" %}}
+ 
 Facets are multiple explicit dimensions implemented as tags in RediSearch. You can slice-and-dice data based on facets, achievable via RediSearch aggregations (`COUNT`, `TOLIST`, `FIRST_VALUE`, `RANDOM_SAMPLE`).
 
-### Common patterns and use cases
+{{% /alert %}}
 
 **Ephemeral search (retail)**
 
@@ -84,8 +83,7 @@ Using RediSearch for this type of application provides these benefits:
 - Create relevant, personalized search experiences all while enforcing internal and regulatory data governance policies 
 - Increased productivity, security, and compliance  
 
-
-### Learn more
+#### Learn more
 
 [RediSearch](/docs/stack/search)
 
@@ -95,25 +93,23 @@ You can of course use Redis native data structures to store JSON objects, and th
 
 However, RedisJSON provides several benefits over this approach.
 
-### Access and retrieval of subvalues
+**Access and retrieval of subvalues**
 
 With RedisJSON, you can get nested values without having to transmit the entire object over the network. Being able to access sub-objects can lead to greater efficiencies when you're storing large JSON objects in Redis.
 
-### Atomic partial updates
+**Atomic partial updates**
 
 RedisJSON allows you to atomically run operations like incrementing a value, adding, or removing elements from an array, append strings, and so on. To do the same with a serialized object, you have to retrieve and then reserialize the entire object, which can be expensive and also lack atomicity.
 
-### Indexing and querying
+**Indexing and querying**
 
 When you store JSON objects as Redis strings, there's no good way to query those objects. On the other hand, storing these objects as JSON using RedisJSON lets you index and query them. This is provided by RediSearch.
 
-### Learn more
+#### Learn more
 
 [RedisJSON](/docs/stack/json)
 
 ## RedisGraph
-
-### Patterns and use cases
 
 **Resource management (identity and access management)** 
 
@@ -195,13 +191,11 @@ A graph database can help recommend to user A products that their friends have b
 
 - Fraud in finance: Is this transaction between sender A and recipient B valid? Has the card used by the sender been reported as stolen? Has the device that the recipient is using ever been connected to a fraudulent account?
 
-### Learn more
+#### Learn more
 
 [RedisGraph](/docs/stack/graph)
 
 ## RedisTimeSeries
-
-### Patterns and use cases
 
 **Monitoring (data center)**
 
@@ -287,15 +281,13 @@ Use RedisTimeSeries to identify correlations between the trading behavior and ot
 - Type of the event (trade/bid)
 - The stock price
 
-### Learn more
+#### Learn more
 
 [RedisTimeSeries](/docs/stack/timeseries)
 
 ## RedisBloom
 
 Probabilistic data structures provide a variety of different properties that can have applications across many different industries. 
-
-### Bloom filters and ### Cuckoo filters 
 
 **Financial fraud detection (finance)**
 
@@ -367,15 +359,11 @@ Use a Cuckoo filter populated with all discount codes/coupons. On every try, the
 - If no, the coupon is not valid. 
 - If yes, the coupon can be valid. Check the main database. If valid, remove from Cuckoo filter as `used`.
 
-### Count-Min sketch 
-
 **Products (retail, online shops)** 
 
 This application answers this question: What was the sales volume (on a certain day) for a product? 
 
 Use one Count-Min sketch created per day (period). Every product sale goes into the CMS. The CMS give reasonably accurate results for the products that contribute the most toward the sales. Products with low percentage of the total sales are ignored. 
- 
-### Top K 
 
 **Leader boards (gaming)** 
 
@@ -398,8 +386,6 @@ Data flow is the incoming social media posts from which you parse out the differ
 
 The `TOPK.LIST` command has a time complexity of `O(K)` so if `K` is small, there is no need to keep a separate set or sorted set of all the hashtags. You can query directly from the Top K itself. 
  
-### HyperLogLogs 
- 
 **Anonymous unique visits of a web page (SaaS, analytics tools)** 
 
 This application answers these questions: 
@@ -411,8 +397,6 @@ This application answers these questions:
 <note><b>Note</b> Storing the IP address or any other kind of personal identifier is against the law in some countries, which makes it impossible to get unique visitor statistics on your website.</note> 
 
 One HyperLogLog is created per page (video/song) per period, and every IP/identifier is added to it on every visit.
-
-### t-digest
 
 **Hardware/software monitoring**
 
@@ -445,10 +429,10 @@ You measure the IP packets transferred over your network each second and try to 
 
 **Predictive maintenance**
 
-- Was the measured parameter (noise level, current consumption, etc.) irregular? (not within the [1st percentile … 99th percentile] range)
+- Was the measured parameter (noise level, current consumption, etc.) irregular? (not within the [1st percentile...99th percentile] range)
 
 - To which values should I set my alerts?
  
-### Learn more
+#### Learn more
 
 [RedisBloom](/docs/stack/bloom)
