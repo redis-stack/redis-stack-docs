@@ -41,6 +41,14 @@ Add a `"REDIS_CONNECTION_STRING" field to your `appsettings.json` file to config
 
 ## Create the model
 
+Make sure to add the `Redis.OM` package to your project. This package makes it easy to create models and query your Redis domain objects.
+
+```csharp
+
+```bash
+dotnet add package Redis.OM     
+```
+
 Now it's time to create the `Person`/`Address` model that the app will use for storing/retrieving people. Create a new directory called `Model` and add the files `Address.cs` and `Person.cs` to it. In `Address.cs`, add the following:
 
 ```csharp
