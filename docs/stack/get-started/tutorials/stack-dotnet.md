@@ -123,7 +123,8 @@ There are a few things to take note of here:
 
 ## Create the Index
 
-With the model built, the next step is to create the index in Redis. The most correct way to manage this is to spin the index creation out into a Hosted Service, which will run which the app spins up. Create a `HostedServices` directory and add `IndexCreationService.cs` to that. In that file, add the following, which will create the index on startup.
+With the model built, the next step is to create the index in Redis. The most correct way to manage this is to spin the index creation out into a Hosted Service, which will run when the app spins up.
+Create a `HostedServices` directory and add `IndexCreationService.cs` to that. In that file, add the following, which will create the index on startup.
 
 ```csharp
 using Redis.OM.Skeleton.Model;
@@ -148,6 +149,12 @@ public class IndexCreationService : IHostedService
         return Task.CompletedTask;
     }
 }
+```
+
+Next, add the following to `Program.cs` to register the service on startup:
+
+```csharp
+builder.Services.AddHostedService<IndexCreationService>();
 ```
 
 ## Inject the RedisConnectionProvider
