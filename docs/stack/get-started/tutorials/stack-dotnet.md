@@ -100,7 +100,7 @@ public class Person
     
     [Indexed] public string[] Skills { get; set; } = Array.Empty<string>();    
     
-    [Indexed(CascadeDepth = 1)] Address? Address { get; set; }
+    [Indexed(CascadeDepth = 1)] public Address? Address { get; set; }
     
 }
 ```
