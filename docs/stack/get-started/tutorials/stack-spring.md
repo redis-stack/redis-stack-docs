@@ -51,13 +51,13 @@ Open the Maven `pom.xml` and between the `<dependencies>` and `<build>` sections
 </repositories>
 {{< / highlight >}}
 
-And then in the `<dependencies>` section add version `0.3.0` of Redis OM Spring:
+And then in the `<dependencies>` section add version `0.6.1` of Redis OM Spring:
 
 {{< highlight xml >}}
 <dependency>
   <groupId>com.redis.om</groupId>
   <artifactId>redis-om-spring</artifactId>
-  <version>0.3.0-SNAPSHOT</version>
+  <version>0.6.1</version>
 </dependency>
 {{< / highlight >}}
 
