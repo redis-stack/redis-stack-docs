@@ -17,7 +17,7 @@ Read on to learn about Redis Enterprise and the benefits of its extended offerin
 
 [Redis, Inc.](https://redis.com/) develops both open source and source available technologies which are free for developers to use.  These include:
 * [Redis OSS](https://redis.io/download/#redis-downloads): the core engine for our software and services
-* [Redis Stack](https://redis.io/download/#redis-stack-downloads) - the starting point for developers who want all the power of Redis OSS and the 
+* [Redis Stack](https://redis.io/download/#redis-stack-downloads): the starting point for developers who want all the power of Redis OSS and the 
 the latest and greatest innovations Redis, Inc. has to offer all in an easy to use software package.
 * [Redis Enterprise](https://redis.com/redis-enterprise/advantages/) - our commercial product. Redis Enterprise maintains the simplicity and 
 high performance of Redis, while adding many enterprise-grade capabilities including:  
