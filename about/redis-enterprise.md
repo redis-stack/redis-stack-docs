@@ -54,7 +54,7 @@ The [Google Cloud Marketplace](https://console.cloud.google.com/marketplace/prod
 
 [Redis Enterprise Cloud](https://redis.com/redis-enterprise-cloud/overview/) is a Database-as-a-Service provided by Redis. The fully-managed cloud 
 service is based on Redis Enterprise and accessible via a self-service portal, which gives you access to the subscription/database control plane. 
-Redis manages the Redis Enterprise clusters and the complexity of the underlying infrastructure.
+Redis, Inc. manages the Redis Enterprise clusters and the complexity of the underlying infrastructure.
 
 To get started, see the [Redis Enterprise Cloud quick start](https://docs.redis.com/latest/rc/rc-quickstart/).
 
