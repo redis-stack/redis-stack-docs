@@ -28,7 +28,7 @@ five Redis modules: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/sear
 
 The overaching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the capabilities of 
 Redis beyond caching, Redis Stack is the place to start. Redis Stack delivers the core capabilities developers love about Redis and goes beyond 
-those to help you build modern applications where performance is paramount. 
+to help you build modern applications where performance is paramount. 
 
 ## Redis Stack Packaging
 
