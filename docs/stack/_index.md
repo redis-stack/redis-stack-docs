@@ -4,7 +4,7 @@ linkTitle: Redis Stack
 description: Extends Redis with modern data models and processing engines. Includes documentation for the bundled Redis modules and RedisInsight.
 ---
 
-Redis Stack is the new starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy 
+Redis Stack is an improved starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy 
 to use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.
 
 In addition to all of the features of Redis OSS, Redis Stack supports:
