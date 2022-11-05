@@ -19,7 +19,7 @@ Read on to learn about Redis Enterprise and the benefits of its extended offerin
 * [Redis OSS](https://redis.io/download/#redis-downloads): the core engine for our software and services
 * [Redis Stack](https://redis.io/download/#redis-stack-downloads): the starting point for developers who want all the power of Redis OSS and the 
 the latest innovations Redis, Inc. has to offer all in an easy to use software package.
-* [Redis Enterprise](https://redis.com/redis-enterprise/advantages/) - our commercial product. Redis Enterprise maintains the simplicity and 
+* [Redis Enterprise](https://redis.com/redis-enterprise/advantages/): our commercial product. Redis Enterprise maintains the simplicity and 
 high performance of Redis, while adding many enterprise-grade capabilities including:  
 
 * Linear scaling to hundreds of millions of operations per second
