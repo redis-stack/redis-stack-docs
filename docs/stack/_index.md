@@ -35,7 +35,7 @@ to help you build modern applications where performance is paramount.
 There are three distinct Redis Stack packages to choose from:
 
 * **Redis Stack Server**:  This packages contains Redis OSS and module extensions only. It does *not* contain Redis Insight, the developer desktop
-application. This package is best for server style deployments and is intended to be a drop-in replacement, if you've traditionally been using 
+application. This package is best for production deployment and is intended to be a drop-in replacement (for example, if you're already deploying 
 Redis OSS as a cache and/or more.
 
 * **Redis Stack (Desktop)**: This package contains everything a developer needs in a single bundle. This includes Redis OSS and module extension 
