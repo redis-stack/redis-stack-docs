@@ -67,7 +67,7 @@ RedisInsight allows you to:
 * View performance metrics for your Redis instance with the Overview tool
 * View data structures visually with the Browser tool
 * Manage basic properties of your Redis cluster such as cluster node timeout, IP, or port with the Cluster Management tool
-* Run commands with a REPL (read-eval-print-loop) with the the CLI tool
+* Run commands with a REPL (read-eval-print-loop) the the CLI tool
 * Analyze memory usage with the Memory Analysis tool
 * Identify and troubleshoot bottlenecks with the Slowlog tool
 * Edit the configuration of your Redis instance with the Configuration tool
