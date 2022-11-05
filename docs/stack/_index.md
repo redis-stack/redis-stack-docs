@@ -26,7 +26,7 @@ Redis Stack unifies and simplifies the developer experience of the leading Redis
 five Redis modules: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), 
 [RedisTimeSeries](/docs/stack/timeseries), and [RedisBloom](/docs/stack/bloom).
 
-The overaching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the capabilities of 
+The overarching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the capabilities of 
 Redis beyond caching, Redis Stack is the place to start. Redis Stack delivers the core capabilities developers love about Redis and goes beyond 
 to help you build modern applications where performance is paramount. 
 
