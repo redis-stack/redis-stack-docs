@@ -43,7 +43,7 @@ along with the Redis Insight desktop application. If you want to create an appli
 the package for you.
 
 * **Redis Stack Insights**: This package ONLY contains RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
-you want to explore how your application is working with it, use this package and connect it to your Redis Stack Server deployment.
+you also want to use Redis Insight to explore your Redis data, select this package.
 
 ## Getting started
 
