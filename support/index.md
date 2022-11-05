@@ -11,10 +11,12 @@ Visit our [Community page](/community) for ways to get free support from the com
 
 ## Commercial support
 
-Redis Ltd. commercially supports [Redis Enterprise](https://redis.com/redis-enterprise/advantages/), which is available as an [on-premises software deployment](https://redis.com/redis-enterprise-software/overview/) and a [fully-managed cloud service](https://redis.com/redis-enterprise-cloud/overview/). Try Redis Cloud for [free](https://redis.com/try-free/).
+Redis, Inc. commercially supports [Redis Enterprise](https://redis.com/redis-enterprise/advantages/), which is available as an [on-premises software deployment](https://redis.com/redis-enterprise-software/overview/) and a [fully-managed cloud service](https://redis.com/redis-enterprise-cloud/overview/). Try Redis Cloud for [free](https://redis.com/try-free/).
 
 Redis Enterprise simplifies the management of Redis at scale and includes [advanced security](https://docs.redis.com/latest/rs/security/), [active-active geo distribution](https://redis.com/redis-enterprise/technology/active-active-geo-distribution/), and [on-call customer support](https://redis.com/company/support/).
 
 ## Redis Stack support
 
-Redis Ltd. also develops [Redis Stack](/docs/stack), which extends Redis with modern data models and processing engines to provide a complete developer experience. When you deploy Redis Stack on Redis Enterprise, you may choose from a number of commercial support options.
+Redis, Inc. also develops [Redis Stack](/docs/stack), which extends Redis OSS with modern data models and processing engines to provide a complete 
+developer experience. Redis Enterprise supports all of these data models and processing engines. If you need support for applications which have 
+been built using Redis Stack, you'll want to consider purchasing either Redis Enterprise Software or our Redis Enterprise Cloud service offering.
