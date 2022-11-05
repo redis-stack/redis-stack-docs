@@ -11,7 +11,7 @@ In addition to all of the features of Redis OSS, Redis Stack supports:
 
 * Probabilistic data structures
 * Queryable JSON documents
-* Query across hashes and JSON documents 
+* Querying across hashes and JSON documents 
 * Time series data support (ingestion & querying)
 * Graph data models with the Cypher query language
 
