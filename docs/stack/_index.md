@@ -20,7 +20,7 @@ In addition to all of the features of Redis OSS, Redis Stack supports:
 Redis Stack was created to allow developers to build real-time applications with a backend data platform that can reliably process requests in 
 milliseconds or less. Redis Stack does this by taking the original Redis OSS as the core and enhancing it with modern data models, data processing tools,
 and continuing to fight complexity at every turn. Ultimately, the goal of Redis Stack is to build a real-time data platform that continues to fulfill the
-brand promise of Redis OSS; simplicity, performance, and reliability.  We want your experience with Redis Stack to be a joyful one.
+philosophy of Redis OSS: simplicity, performance, and reliability. 
 
 Redis Stack unifies and simplifies the developer experience of the leading Redis modules and the capabilities they provide. Redis Stack bundles 
 five Redis modules: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), 
