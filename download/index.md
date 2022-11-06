@@ -81,7 +81,7 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 ## Redis Stack downloads
 
-### Redis Stack 6.2.3-v3
+### Redis Stack 6.2.4-v3
 
 * [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v3.catalina.x86_64.zip)
 * [macOS arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v3.monterey.arm64.zip)
