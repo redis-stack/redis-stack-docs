@@ -240,3 +240,5 @@ XDEL
 XLEN
 xml
 zshrc
+REPL
+Slowlog
