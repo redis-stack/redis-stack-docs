@@ -5,7 +5,7 @@ description: Explore examples of applied modern data models and processing engin
 weight: 2
 ---
 
-## Querying, Indexing, and Search
+## Querying, indexing, and search
 
 **Application search and external secondary index** 
 
@@ -109,7 +109,7 @@ When you store JSON objects as Redis strings, there's no good way to query those
 
 [JSON with Redis Stack](/docs/stack/json)
 
-## Graph
+## Graph data
 
 **Resource management (identity and access management)** 
 
