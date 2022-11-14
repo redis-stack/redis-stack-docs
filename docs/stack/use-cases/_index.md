@@ -5,7 +5,7 @@ description: Explore examples of applied modern data models and processing engin
 weight: 2
 ---
 
-## RediSearch
+## Querying, Indexing, and Search
 
 **Application search and external secondary index** 
 
@@ -85,9 +85,9 @@ Using RediSearch for this type of application provides these benefits:
 
 #### Learn more
 
-[RediSearch](/docs/stack/search)
+[Querying, indexing, and search](/docs/stack/search)
 
-## RedisJSON
+## JSON
 
 You can of course use Redis native data structures to store JSON objects, and that's a common practice. For example, you can serialize JSON and save it in a Redis String.
 
@@ -107,9 +107,9 @@ When you store JSON objects as Redis strings, there's no good way to query those
 
 #### Learn more
 
-[RedisJSON](/docs/stack/json)
+[JSON with Redis Stack](/docs/stack/json)
 
-## RedisGraph
+## Graph
 
 **Resource management (identity and access management)** 
 
@@ -193,9 +193,9 @@ A graph database can help recommend to user A products that their friends have b
 
 #### Learn more
 
-[RedisGraph](/docs/stack/graph)
+[Graph data on Redis Stack](/docs/stack/graph)
 
-## RedisTimeSeries
+## Time series data
 
 **Monitoring (data center)**
 
@@ -283,9 +283,9 @@ Use RedisTimeSeries to identify correlations between the trading behavior and ot
 
 #### Learn more
 
-[RedisTimeSeries](/docs/stack/timeseries)
+[Redis Stack time series support](/docs/stack/timeseries)
 
-## RedisBloom
+## Probabilistic data structures
 
 Probabilistic data structures provide a variety of different properties that can have applications across many different industries. 
 
@@ -410,7 +410,7 @@ Storing the IP address or any other kind of personal identifier is against the l
 
 One HyperLogLog is created per page (video/song) per period, and every IP/identifier is added to it on every visit.
 
-### t-digest
+### T-Digest
 
 **Hardware/software monitoring**
 
@@ -449,4 +449,4 @@ You measure the IP packets transferred over your network each second and try to 
  
 #### Learn more
 
-[RedisBloom](/docs/stack/bloom)
+[Probabilistic data structures](/docs/stack/bloom)
