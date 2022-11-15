@@ -53,6 +53,15 @@ To get started with Redis Stack, see the [Getting Started](/docs/stack/get-start
 * [See the list of clients supporting Redis Stack](/docs/stack/get-started/clients/)
 * [View the Redis Stack tutorials](/docs/stack/get-started/tutorials/)
 
+### Use cases
+
+Explore [use cases](/docs/stack/use-cases/) of the applied modern data models and processing engines provided by Redis Stack across industries and applications. 
+
+{{% alert title="Note" color="warning" %}}
+ 
+Modules as described here are generic, and we list only the representative use cases.
+
+{{% /alert %}}
 
 ### Clients
 

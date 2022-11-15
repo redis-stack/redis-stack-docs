@@ -99,6 +99,8 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 * [Redhat/CentOS 7 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.rhel8.x86_64.tar.gz)
 * [Debian bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.bullseye.x86_64.tar.gz)
+* [Ubuntu Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.jammy.x86_64.tar.gz)
+* [Ubuntu Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.jammy.arm64.tar.gz)
 * [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis)
 * [6.2.4-v4 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.4-v4)
 
@@ -125,6 +127,8 @@ Download the latest RedisInsight the [RedisInsight download page](https://redis.
 * [Redhat/CentOS 7 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.rhel7.x86_64.tar.gz)
 * [Redhat/CentOS 8 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.rhel8.x86_64.tar.gz)
 * [Debian bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.bullseye.x86_64.tar.gz)
+* [Ubuntu Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.jammy.x86_64.tar.gz)
+* [Ubuntu Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.jammy.arm64.tar.gz)
 * [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis).
 * [7.0.6-RC1 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.6-RC1)
 </div>
