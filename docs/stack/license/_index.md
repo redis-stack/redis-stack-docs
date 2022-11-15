@@ -11,7 +11,7 @@ weight: 100
 
 * RedisInsight is licensed under the Server Side Public License (SSPL).
 
-* Redis Stack Server combines open source Redis with RediSearch, RedisJSON RedisGraph, RedisTimeSeries and RedisBloom is licensed under the Redis Source Available License, as described below. For information about licensing by versions, see [Versions and licenses](/docs/stack/#versions-and-licenses).
+* Redis Stack Server, which combines open source Redis with RediSearch, RedisJSON, RedisGraph, RedisTimeSeries, and RedisBloom, is dual-licensed under the Redis Source Available License (RSALv2), as described below, and the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL). For information about licensing per version, see [Versions and licenses](/docs/stack/#versions-and-licenses).
 
 
 ## REDIS SOURCE AVAILABLE LICENSE (RSAL) 2.0
