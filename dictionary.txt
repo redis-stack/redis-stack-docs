@@ -75,6 +75,7 @@ LINQ
 Licensor
 licensor
 Licensor.
+licensor's
 Lombok
 LTS
 M1
