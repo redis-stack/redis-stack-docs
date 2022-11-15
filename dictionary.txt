@@ -42,6 +42,7 @@ dataset
 DevOps
 Dotenv
 Downey
+dually
 EntityStream
 GCP
 geo-distributed
