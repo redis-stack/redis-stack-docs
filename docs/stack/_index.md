@@ -92,7 +92,7 @@ Redis Stack is made up of several components, licensed as follows:
 
 ### Versions and licenses
 
-Starting November 15, 2022, our default binary distributions of Redis Stack and our Redis modules have been dually licensed under RSALv2 and SSPL. When using the source code, you can apply either RSALv2 or SSPLv1. 
+Starting November 15, 2022, our default binary distributions of Redis Stack and our Redis modules have been dual-licensed under RSALv2 and SSPL. When using the source code, you can apply either RSALv2 or SSPLv1. 
 
 <table>
   <tr>
