@@ -86,13 +86,13 @@ RedisInsight allows you to:
 
 Redis Stack is made up of several components, licensed as follows:
 
-* Redis Stack Server, which combines open source Redis with RediSearch, RedisJSON, RedisGraph, RedisTimeSeries, and RedisBloom, is licensed under the [Redis Source Available License](https://redis.com/legal/rsal-agreement/) (RSAL).
+* Redis Stack Server, which combines open source Redis with RediSearch, RedisJSON, RedisGraph, RedisTimeSeries, and RedisBloom, is dually licensed under the Redis Source Available License ([RSALv2]((/docs/stack/license/)) and [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL). A breakdown of licensing by Stack component versions is shown in the table below. For more information about Redis licensing, see [Licenses](https://redis.com/legal/licenses/).
 
-* RedisInsight is licensed under the Server Side Public License (SSPL).
+* RedisInsight is licensed under the SSPL.
 
 ### Versions and licenses
 
-Starting November 15, 2022, our default binary distributions of Redis Stack and our Redis modules have been licensed under [RSALv2](/docs/stack/license/), and when using the source code, users can apply either RSALv2 or SSPLv1. More details are in the table below:
+Starting November 15, 2022, our default binary distributions of Redis Stack and our Redis modules have been dually licensed under RSALv2 and SSPL. When using the source code, you can apply either RSALv2 or SSPLv1. 
 
 <table>
   <tr>
