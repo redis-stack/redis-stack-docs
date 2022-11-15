@@ -73,7 +73,9 @@ Kubernetes-based
 LICENSOR
 LINQ
 Licensor
+licensor
 Licensor.
+licensor's
 Lombok
 LTS
 M1
@@ -114,6 +116,7 @@ RedisGraph
 RedisInsight
 RedisJSON
 RedisTimeSeries
+RSALv2
 SaaS
 SDK
 SKU
@@ -124,6 +127,7 @@ Scarlett
 SkeletonApplication
 SortOrder.ASC
 Springfox
+SSPLv1
 Stapleton's
 Sublicensing
 SwaggerUI
