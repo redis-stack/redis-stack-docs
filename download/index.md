@@ -84,23 +84,32 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 ### Redis Stack 6.2.4-v4
 
-* [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.catalina.x86_64.zip)
-* [macOS arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.bionic.x86_64.tar.gz)
-* [Ubuntu bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.bionic.arm64.tar.gz)
-* [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.focal.x86_64.tar.gz)
-* [Ubuntu focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.focal.arm64.tar.gz)
-* [Ubuntu Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.x86_64.snap)
-* [Ubuntu Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.arm64.snap)
-* [Ubuntu Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.jammy.x86_64.tar.gz)
-* [Ubuntu Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.jammy.arm64.tar.gz) 
-* [AppImage x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4-x86_64.AppImage)
-* [Redhat/CentOS 7 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.rhel8.x86_64.tar.gz)
-* [Debian bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.bullseye.x86_64.tar.gz)
-* [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis)
-* [6.2.4-v4 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.4-v4)
+* macOS:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.catalina.x86_64.zip)
+  * [arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.monterey.arm64.zip)
+* AppImage:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4-x86_64.AppImage)
+* Ubuntu:
+  * [Xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.xenial.x86_64.tar.gz)
+  * [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.bionic.x86_64.tar.gz)
+  * [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.bionic.arm64.tar.gz)
+  * [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.focal.x86_64.tar.gz)
+  * [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.focal.arm64.tar.gz)
+  * [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.x86_64.snap)
+  * [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.arm64.snap)
+  * [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.jammy.x86_64.tar.gz)
+  * [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.jammy.arm64.tar.gz) 
+* Debian:
+  * [bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.bullseye.x86_64.tar.gz)
+* Redhat/CentOS 7:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.rhel7.x86_64.tar.gz)
+* Redhat/CentOS 8:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.4-v4.rhel8.x86_64.tar.gz)
+* [Dockerhub](https://hub.docker.com/u/redis):
+  * [redis-stack](https://hub.docker.com/r/redis/redis-stack) x86_64 and arm64
+  * [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 
+
+See the [release notes for 6.2.4-v4](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.4-v4).
 
 ### RedisInsight
 
@@ -110,21 +119,31 @@ Download the latest RedisInsight the [RedisInsight download page](https://redis.
 
 #### Download Redis Stack Server 7.0.6-rc1:
 
-* [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.catalina.x86_64.zip)
-* [macOS amd64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.monterey.arm64.zip)
-* [Ubuntu xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.xenial.x86_64.tar.gz)
-* [Ubuntu bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.bionic.x86_64.tar.gz)
-* [Ubuntu bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.bionic.arm64.tar.gz)
-* [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.focal.x86_64.tar.gz)
-* [Ubuntu focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.focal.arm64.tar.gz)
-* [Ubuntu Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.x86_64.snap)
-* [Ubuntu Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.arm64.snap)
-* [Ubuntu Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.jammy.x86_64.zip)
-* [Ubuntu Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.jammy.arm64.zip)
-* [AppImage x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1-x86_64.AppImage)
-* [Redhat/CentOS 7 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.rhel7.x86_64.tar.gz)
-* [Redhat/CentOS 8 x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.rhel8.x86_64.tar.gz)
-* [Debian bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.bullseye.x86_64.tar.gz)
-* [redis-stack](https://hub.docker.com/r/redis/redis-stack) and [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64 dockers are available on [Dockerhub](https://hub.docker.com/u/redis).
-* [7.0.6-RC1 Release Notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.6-RC1)
+* macOS:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.catalina.x86_64.zip)
+  * [amd64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.monterey.arm64.zip)
+* AppImage:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1-x86_64.AppImage)
+* Ubuntu:
+  * [Xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.xenial.x86_64.tar.gz)
+  * [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.bionic.x86_64.tar.gz)
+  * [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.bionic.arm64.tar.gz)
+  * [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.focal.x86_64.tar.gz)
+  * [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.focal.arm64.tar.gz)
+  * [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.x86_64.snap)
+  * [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.arm64.snap)
+  * [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.jammy.x86_64.zip)
+  * [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.jammy.arm64.zip)
+* Debian:
+  * [bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.bullseye.x86_64.tar.gz)
+* Redhat/CentOS 7:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.rhel7.x86_64.tar.gz)
+* Redhat/CentOS 8:
+  * [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC1.rhel8.x86_64.tar.gz)
+* [Dockerhub](https://hub.docker.com/u/redis):
+  * [redis-stack](https://hub.docker.com/r/redis/redis-stack) x86_64 and arm64
+  * [redis-stack-server](https://hub.docker.com/r/redis/redis-stack-server) x86_64 and arm64
+
+See the [release notes for 7.0.6-RC1](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.6-RC1).
+
 </div>
