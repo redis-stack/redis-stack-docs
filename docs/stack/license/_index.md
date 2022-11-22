@@ -9,52 +9,66 @@ weight: 100
 
 * Redis is licensed under the [three clause BSD license](/docs/about/license/).
 
-* RedisInsight is licensed under the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL).
+* RedisInsight is licensed under the Server Side Public License (SSPL).
 
-* Redis Stack Server combines open source Redis with RediSearch, RedisJSON RedisGraph, RedisTimeSeries and RedisBloom is licensed under the Redis Source Available License, as described below:
+* Redis Stack Server, which combines open source Redis with RediSearch, RedisJSON, RedisGraph, RedisTimeSeries, and RedisBloom, is dual-licensed under the Redis Source Available License (RSALv2), as described below, and the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL). For information about licensing per version, see [Versions and licenses](/docs/stack/#versions-and-licenses).
 
-## REDIS SOURCE AVAILABLE LICENSE (RSAL) AGREEMENT
 
-_Last Update: March 20, 2019_
+## REDIS SOURCE AVAILABLE LICENSE (RSAL) 2.0
 
-This Agreement sets forth the terms on which the Licensor makes available the Software. BY INSTALLING, DOWNLOADING, ACCESSING, USING OR DISTRIBUTING ANY OF THE SOFTWARE, YOU AGREE TO THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO SUCH TERMS AND CONDITIONS, YOU MUST NOT USE THE SOFTWARE. If you are receiving the Software on behalf of a legal entity, you represent and warrant that you have the actual authority to agree to the terms and conditions of this agreement on behalf of such entity.
 
-The terms below have the meanings set forth below for purposes of this Agreement: Agreement​: this Redis Source Available License Agreement.
+_Last updated: November 15, 2022_
 
-**Database Product​**: any of the following products or services: (a) database; (b) caching engine; (c) stream processing engine; (d) search engine; (e) indexing engine; (f) machine learning or deep learning or artificial intelligence serving engine; (g) a product or service exposing the Redis API; (h) a product or service exposing the Redis Modules API; or (i) a product or service exposing the Software API.
+### Acceptance
 
-**License**​: the Redis Source Available License described in Section 1.
+By using the software, you agree to all of the terms and conditions below.
+ 
+### Copyright License
 
-**Licensor**​: ​as indicated in the source code license.
-Modification​:​ ​a modification of the Software made by You under the License, Section 1.1(c).
+The licensor grants you a non-exclusive, royalty-free, worldwide, non-sublicensable, non-transferable license to use, copy, distribute, make available, and prepare derivative works of the software, in each case subject to the limitations and conditions below.
 
-**Redis**​: the open source Redis software as described in redis.io.
+### Limitations
 
-**Software**​: certain software components designed to work with Redis and provided to you under this Agreement.
+You may not make the functionality of the software or a modified version available to third parties as a service, or distribute the software or a modified version in a manner that makes the functionality of the software available to third parties. 
+Making the functionality of the software or modified version available to third parties includes, without limitation, enabling third parties to interact with the functionality of the software or modified version in distributed form or remotely through a computer network, offering a product or service the value of which entirely or primarily derives from the value of the software or modified version, or offering a product or service that accomplishes for users the primary purpose of the software or modified version.
 
-**You**​: the recipient of this Software, an individual, or the entity on whose behalf you are receiving the Software.
+You may not alter, remove, or obscure any licensing, copyright, or other notices of the licensor in the software. Any use of the licensor’s trademarks is subject to applicable law.
+ 
+### Patents
 
-**Your Application**​: an application developed by or for You, where such application is not a Database Product.
+The licensor grants you a license, under any patent claims the licensor can license, or becomes able to license, to make, have made, use, sell, offer for sale, import and have imported the software, in each case subject to the limitations and conditions in this license. This license does not cover any patent claims that you cause to be infringed by modifications or additions to the software. If you or your company make any written claim that the software infringes or contributes to infringement of any patent, your patent license for the software granted under these terms ends immediately. If your company makes such a claim, your patent license ends immediately for work on behalf of your company.
 
-**1. LICENSE GRANT AND CONDITIONS**
+### Notices
 
-1.1. Subject to the terms and conditions of this Section 1, Licensor hereby grants to You a non-exclusive, royalty-free, worldwide, non-transferable license during the term of this Agreement to:
-(a) distribute ​or make available the Software or your Modifications under the terms of this Agreement, only as part of Your Application, so long as you include the following notice on any copy you distribute: “This software is subject to the terms of the Redis Source Available License Agreement”.
-(b) use​ the Software, or your Modifications, only as part of Your Application, but not in connection with any Database Product that is distributed or otherwise made available by any third party.
-(c) modify ​the Software, provided that Modifications remain subject to the terms of this License. (d) reproduce​ the Software as necessary for the above.
+You must ensure that anyone who gets a copy of any part of the software from you also gets a copy of these terms.
+If you modify the software, you must include in any modified copies of the software prominent notices stating that you have modified the software.
 
-1.2. Sublicensing​. You may sublicense the right to use the Software fully embedded in Your Application as distributed by you in accordance with Section 1.1(a), pursuant to a written license that disclaims all warranties and liabilities on behalf of Licensor.
+### No Other Rights
 
-1.3. Notices​. On all copies of the Software that you make, you must retain all copyright or other proprietary notices.
+These terms do not imply any licenses other than those expressly granted in these terms.
 
-**2. TERM AND TERMINATION​**. This Agreement will continue unless and until earlier terminated as set forth herein. If You breach any of its conditions or obligations under this Agreement, this Agreement will terminate automatically and the licenses granted herein will terminate automatically.
+### Termination
 
-**3. INTELLECTUAL PROPERTY​**. As between the parties, Licensor retains all right, title, and interest in the Software, and to Redis or other Licensor trademarks or service marks, and all intellectual property rights therein. Licensor hereby reserves all rights not expressly granted to You in this Agreement.
+If you use the software in violation of these terms, such use is not licensed, and your licenses will automatically terminate. If the licensor provides you with a notice of your violation, and you cease all violations of this license no later than 30 days after you receive that notice, your licenses will be reinstated retroactively. However, if you violate these terms after such reinstatement, any additional violation of these terms will cause your licenses to terminate automatically and permanently.
 
-**4. DISCLAIMER​**. TO THE EXTENT ALLOWABLE UNDER LAW, LICENSOR HEREBY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE, AND SPECIFICALLY DISCLAIMS ANY WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE, WITH RESPECT TO THE SOFTWARE. Licensor has no obligation to support the Software.
+### No Liability
 
-**5. LIMITATION OF LIABILITY​**. TO THE EXTENT ALLOWABLE UNDER LAW, LICENSOR WILL NOT BE LIABLE FOR ANY DAMAGES OF ANY KIND, INCLUDING BUT NOT LIMITED TO, LOST PROFITS OR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL, INDIRECT, OR DIRECT DAMAGES, ARISING OUT OF OR RELATING TO THIS AGREEMENT.
+_**As far as the law allows, the **software** comes as is, without any warranty or condition, and the licensor will not be liable to you for any damages arising out of these terms or the use or nature of the software, under any kind of legal claim.**_
 
-**6. GENERAL**​. You are not authorized to assign Your rights under this Agreement to any third party. Licensor may freely assign its rights under this Agreement to any third party. This Agreement is the entire agreement between the parties on the subject matter hereof. No amendment or modification hereof will be valid or binding upon the parties unless made in writing and signed by the duly authorized representatives of both parties. In the event that any provision, including without limitation any condition, of this Agreement is held to be unenforceable, this Agreement and all licenses and rights granted hereunder will immediately terminate. Failure by Licensor to exercise any right hereunder will not be construed as a waiver of any subsequent breach of that right or as a waiver of any other right.
+### Definitions
 
-This Agreement will be governed by and interpreted in accordance with the laws of the state of California, without reference to its conflict of laws principles. If You are located within the United States, all disputes arising out of this Agreement are subject to the exclusive jurisdiction of courts located in Santa Clara County, California. USA. If You are located outside of the United States, any dispute, controversy or claim arising out of or relating to this Agreement will be referred to and finally determined by arbitration in accordance with the JAMS before a single arbitrator in Santa Clara County, California. Judgment upon the award rendered by the arbitrator may be entered in any court having jurisdiction thereof.
+The **licensor** is the entity offering these terms, and the software is the software the licensor makes available under these terms, including any portion of it.
+
+To **modify** a work means to copy from or adapt all or part of the work in a fashion requiring copyright permission other than making an exact copy. The resulting work is called a **modified version** of the earlier work.
+
+**you** refers to the individual or entity agreeing to these terms.
+
+**your company** is any legal entity, sole proprietorship, or other kind of organization that you work for, plus all organizations that have control over, are under the control of, or are under common control with that organization. 
+
+**control** means ownership of substantially all the assets of an entity, or the power to direct its management and policies by vote, contract, or otherwise. Control can be direct or indirect.
+
+**your licenses** are all the licenses granted to you for the software under these terms.
+use means anything you do with the software requiring one of your licenses.
+
+**trademark** means trademarks, service marks, and similar rights.
+
