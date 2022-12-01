@@ -24,7 +24,8 @@ docker run -d --name redis-stack-server -p 6379:6379 redis/redis-stack-server:la
 You can connect the Redis Stack server database to your [RedisInsight](https://redis.com/redis-enterprise/redis-insight/) desktop application.
 
 ### redis/redis-stack
-To start Redis Stack developer container using the `redis-stack` image, run the following command in your terminal:
+
+To start a Redis Stack container using the `redis-stack` image, run the following command in your terminal:
 
 {{< highlight bash >}}
 docker run -d --name redis-stack -p 6379:6379 -p 8001:8001 redis/redis-stack:latest
