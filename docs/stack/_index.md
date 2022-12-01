@@ -33,7 +33,7 @@ to help you build modern applications where performance is paramount.
 
 There are three distinct Redis Stack packages to choose from:
 
-* **Redis Stack Server**:  This packages contains Redis OSS and module extensions only. It does *not* contain RedisInsight, the developer desktop
+* **Redis Stack Server**:  This package contains Redis OSS and module extensions only. It does *not* contain RedisInsight, the developer desktop
 application. This package is best for production deployment and is intended to be a drop-in replacement (for example, if you're already deploying 
 Redis OSS as a cache).
 
