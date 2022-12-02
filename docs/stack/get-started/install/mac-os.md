@@ -73,6 +73,15 @@ You can now start Redis Stack Server as follows:
 redis-stack-server
 {{< / highlight >}}
 
+## Launch RedisInsight
+
+To start up the Redis UI, RedisInsight, type:
+
+{{< highlight bash >}}
+redisinsight
+{{< / highlight >}}
+
+
 ## Installing Redis after installing Redis Stack
 
 If you've already installed Redis Stack with Homebrew and then try to install Redis with `brew install redis`, you may encounter errors like the following:
