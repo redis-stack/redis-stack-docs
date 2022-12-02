@@ -107,6 +107,7 @@ REDISTIMESERIES_ARGS
 REDIS_ARGS
 RedisAI
 RedisGears
+redisinsight
 REDiss
 RHEL7
 RHEL8
