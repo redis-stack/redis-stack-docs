@@ -24,7 +24,7 @@ and continuing to fight complexity at every turn. Ultimately, the goal of Redis 
 philosophy of Redis OSS: simplicity, performance, and reliability. 
 
 Redis Stack unifies and simplifies the developer experience of the leading Redis modules and the capabilities they provide. Redis Stack bundles 
-five Redis modules: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), 
+the following capabilities into Redis: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), 
 [RedisTimeSeries](/docs/stack/timeseries), and [RedisBloom](/docs/stack/bloom).
 
 The overarching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the capabilities of 
