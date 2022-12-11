@@ -23,7 +23,7 @@ Open the file `~/.bashrc` or `~/zshrc` (depending on your shell), and add the fo
 export PATH=/path/to/redis-stack-server/bin:$PATH
 {{< / highlight >}}
 
-If you have an existing Redis installation on your system, then you can choose override those override those PATH variables as before, or you can choose to only add redis-stack-server binary as follows:
+If you have an existing Redis installation on your system, then you can choose override those PATH variables as before, or you can choose to only add redis-stack-server binary as follows:
 
 {{< highlight bash >}}
 export PATH=/path/to/redis-stack-server/bin/redis-stack-server:$PATH
