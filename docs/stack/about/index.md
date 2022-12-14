@@ -41,7 +41,7 @@ Redis OSS as a cache).
 along with the RedisInsight desktop application. If you want to create an application locally and explore how it interacts with Redis, this is 
 the package for you.
 
-* **RedisInsights**: This package contains _only_ RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
+* **RedisInsight**: This package contains _only_ RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
 you also want to use RedisInsight to explore your Redis data, select this package.
 
 ## Use cases
