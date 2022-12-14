@@ -103,6 +103,7 @@ Pydantic
 queryable
 Queryable
 README
+read-eval-print-loop
 REDISTIMESERIES_ARGS
 REDIS_ARGS
 RedisAI
