@@ -5,15 +5,14 @@ description: Learn more about Redis Stack
 weight: 1
 ---
 
-Redis Stack is an improved starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy 
-to use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.
+Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy to use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.
 
 In addition to all of the features of Redis OSS, Redis Stack supports:
 
 * Probabilistic data structures
 * Queryable JSON documents
 * Querying across hashes and JSON documents 
-* Time series data support (ingestion & querying)
+* Time series data support (ingestion & querying), including full-text search
 * Graph data models with the Cypher query language
 
 ## Why Redis Stack?
@@ -23,8 +22,7 @@ milliseconds or less. Redis Stack does this by taking the original Redis OSS as 
 and continuing to fight complexity at every turn. Ultimately, the goal of Redis Stack is to build a real-time data platform that continues to fulfill the
 philosophy of Redis OSS: simplicity, performance, and reliability. 
 
-Redis Stack unifies and simplifies the developer experience of the leading Redis modules and the capabilities they provide. Redis Stack bundles 
-the following capabilities into Redis: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), 
+Redis Stack unifies and simplifies the developer experience of Redis by offering all the cutting-edge capabilities provided by the leading Redis modules. Redis Stack bundles the following capabilities into Redis: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), 
 [RedisTimeSeries](/docs/stack/timeseries), and [RedisBloom](/docs/stack/bloom).
 
 The overarching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the capabilities of 
@@ -35,15 +33,15 @@ to help you build modern applications where performance is paramount.
 
 There are three distinct Redis Stack packages to choose from:
 
-* **Redis Stack Server**:  This packages contains Redis OSS and module extensions only. It does *not* contain Redis Insight, the developer desktop
+* **Redis Stack Server**:  This package contains Redis OSS and module extensions only. It does *not* contain RedisInsight, the developer desktop
 application. This package is best for production deployment and is intended to be a drop-in replacement (for example, if you're already deploying 
 Redis OSS as a cache).
 
 * **Redis Stack (Desktop)**: This package contains everything a developer needs in a single bundle. This includes Redis OSS and module extensions 
-along with the Redis Insight desktop application. If you want to create an application locally and explore how it interacts with Redis, this is 
+along with the RedisInsight desktop application. If you want to create an application locally and explore how it interacts with Redis, this is 
 the package for you.
 
-* **Redis Stack Insights**: This package contains _only_ RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
+* **RedisInsights**: This package contains _only_ RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
 you also want to use RedisInsight to explore your Redis data, select this package.
 
 ## Use cases
@@ -58,7 +56,7 @@ Modules as described here are generic, and we list only the representative use c
 
 ## Clients
 
-Several Redis client libraries support Redis Stack. These include [redis-py](https://redis-py.readthedocs.io/en/stable/), [node_redis](https://github.com/redis/node-redis), and [Jedis](https://github.com/redis/jedis). In addition, four higher-level object 
+Several Redis client libraries support Redis Stack. These include [redis-py](https://redis-py.readthedocs.io/en/stable/), [node_redis](https://github.com/redis/node-redis), [NRedisStack](https://github.com/redis/NRedisStack), and [Jedis](https://github.com/redis/jedis). In addition, four higher-level object 
 mapping libraries also support Redis Stack: [Redis OM .NET](/docs/stack/get-started/tutorials/stack-dotnet/), [Redis OM Node](/docs/stack/get-started/tutorials/stack-node/), [Redis OM Python](/docs/stack/get-started/tutorials/stack-python/), [Redis OM Spring](/docs/stack/get-started/tutorials/stack-spring/).
 
 ## RedisInsight
@@ -69,11 +67,10 @@ RedisInsight allows you to:
 * View performance metrics for your Redis instance with the Overview tool
 * View data structures visually with the Browser tool
 * Manage basic properties of your Redis cluster such as cluster node timeout, IP, or port with the Cluster Management tool
-* Run commands with a REPL (read-eval-print-loop) the CLI tool
+* Run commands with a read-eval-print-loop (REPL) the CLI tool
 * Analyze memory usage with the Memory Analysis tool
 * Identify and troubleshoot bottlenecks with the Slowlog tool
 * Edit the configuration of your Redis instance with the Configuration tool
-
 
 ## Redis Stack license
 
@@ -85,7 +82,7 @@ Redis Stack is made up of several components, licensed as follows:
 
 ### Versions and licenses
 
-Starting November 15, 2022, our default binary distributions of Redis Stack and our Redis modules have been dual-licensed under RSALv2 and SSPL. When using the source code, you can apply either RSALv2 or SSPLv1. 
+Since November 15, 2022, our default binary distributions of Redis Stack and our Redis modules are dual-licensed under RSALv2 and SSPL. When using the source code, you can apply either RSALv2 or SSPLv1. 
 
 <table>
   <tr>
@@ -126,11 +123,4 @@ Starting November 15, 2022, our default binary distributions of Redis Stack and 
   </tr>
 </table>
 
-## Get started
-
-To get going quickly with Redis Stack, see the [Get started](/docs/stack/get-started/) guide. To step into individual guides, decide if you want to:
-
-* Learn more about [Redis](/docs/stack/get-started/intro/).
-* See the [list of clients supporting Redis Stack](/docs/stack/get-started/clients/).
-* View [Redis Stack tutorials](/docs/stack/get-started/tutorials/).
-
+To get going quickly with Redis Stack, see the [Get started](/docs/stack/get-started/) guide. 
