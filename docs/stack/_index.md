@@ -4,14 +4,13 @@ linkTitle: Redis Stack
 description: Extends Redis with modern data models and processing engines. Includes documentation for the bundled Redis modules and RedisInsight.
 ---
 
-Redis Stack is an improved starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy 
-to use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.
+Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy to use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.
 
 In addition to all of the features of Redis OSS, Redis Stack supports:
 
 * Probabilistic data structures
 * Queryable JSON documents
-* Querying across hashes and JSON documents 
+* Querying across hashes and JSON documents, including full-text search
 * Time series data support (ingestion & querying)
 * Graph data models with the Cypher query language
 
@@ -34,16 +33,16 @@ to help you build modern applications where performance is paramount.
 
 There are three distinct Redis Stack packages to choose from:
 
-* **Redis Stack Server**:  This packages contains Redis OSS and module extensions only. It does *not* contain Redis Insight, the developer desktop
+* **Redis Stack Server**:  This package contains Redis OSS and module extensions only. It does *not* contain RedisInsight, the developer desktop
 application. This package is best for production deployment and is intended to be a drop-in replacement (for example, if you're already deploying 
 Redis OSS as a cache).
 
 * **Redis Stack (Desktop)**: This package contains everything a developer needs in a single bundle. This includes Redis OSS and module extensions 
-along with the Redis Insight desktop application. If you want to create an application locally and explore how it interacts with Redis, this is 
+along with the RedisInsight desktop application. If you want to create an application locally and explore how it interacts with Redis, this is 
 the package for you.
 
-* **Redis Stack Insights**: This package ONLY contains RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
-you also want to use Redis Insight to explore your Redis data, select this package.
+* **RedisInsight**: This package ONLY contains RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
+you also want to use RedisInsight to explore your Redis data, select this package.
 
 ## Getting started
 
