@@ -29,20 +29,30 @@ The overarching vision is to provide developers with a powerful platform for all
 Redis beyond caching, Redis Stack is the place to start. Redis Stack delivers the core capabilities developers love about Redis and goes beyond 
 to help you build modern applications where performance is paramount. 
 
+## RedisInsight
+
+The best way to get started with Redis Stack is with [RedisInsight](https://docs.redis.com/latest/ri/), a visualization tool for understanding and optimizing Redis data.
+
+RedisInsight allows you to:
+* View data structures visually with the Browser tool and gropu keys according to their namespaces
+* CRUD support for most Redis Stack data structures.
+* Workbench: an advanced command line interface with intelligent command auto-complete and complex data visualizations.
+* Analyze traffic to Redis in real time with the Profiler tool
+* A CLI tool is accessible at any time within the application 
+* Analyze memory usage with the Memory Analysis tool
+* Identify and troubleshoot bottlenecks with the Slowlog tool
+
 ## Redis Stack packaging
 
-There are three distinct Redis Stack packages to choose from:
+There are two distinct Redis Stack packages to choose from:
 
 * **Redis Stack Server**:  This package contains Redis OSS and module extensions only. It does *not* contain RedisInsight, the developer desktop
 application. This package is best for production deployment and is intended to be a drop-in replacement (for example, if you're already deploying 
-Redis OSS as a cache).
+Redis OSS as a cache).  You can still download RedisInsight separately.
 
-* **Redis Stack (Desktop)**: This package contains everything a developer needs in a single bundle. This includes Redis OSS and module extensions 
-along with the RedisInsight desktop application. If you want to create an application locally and explore how it interacts with Redis, this is 
+* **Redis Stack**: This package contains everything a developer needs in a single bundle. This includes Redis Stack Server (Redis OSS and module extensions)
+along with the RedisInsight desktop application (or part of the docker container). If you want to create an application locally and explore how it interacts with Redis, this is 
 the package for you.
-
-* **RedisInsight**: This package contains _only_ RedisInsight, the developer desktop application. If you've used Redis Stack Server and 
-you also want to use RedisInsight to explore your Redis data, select this package.
 
 ## Use cases
 
@@ -58,19 +68,6 @@ Modules as described here are generic, and we list only the representative use c
 
 Several Redis client libraries support Redis Stack. These include [redis-py](https://redis-py.readthedocs.io/en/stable/), [node_redis](https://github.com/redis/node-redis), [NRedisStack](https://github.com/redis/NRedisStack), and [Jedis](https://github.com/redis/jedis). In addition, four higher-level object 
 mapping libraries also support Redis Stack: [Redis OM .NET](/docs/stack/get-started/tutorials/stack-dotnet/), [Redis OM Node](/docs/stack/get-started/tutorials/stack-node/), [Redis OM Python](/docs/stack/get-started/tutorials/stack-python/), [Redis OM Spring](/docs/stack/get-started/tutorials/stack-spring/).
-
-## RedisInsight
-
-Redis Stack also includes [RedisInsight](https://docs.redis.com/latest/ri/), a visualization tool for understanding and optimizing Redis data.
-
-RedisInsight allows you to:
-* View performance metrics for your Redis instance with the Overview tool
-* View data structures visually with the Browser tool
-* Manage basic properties of your Redis cluster such as cluster node timeout, IP, or port with the Cluster Management tool
-* Run commands with a read-eval-print-loop (REPL) the CLI tool
-* Analyze memory usage with the Memory Analysis tool
-* Identify and troubleshoot bottlenecks with the Slowlog tool
-* Edit the configuration of your Redis instance with the Configuration tool
 
 ## Redis Stack license
 
