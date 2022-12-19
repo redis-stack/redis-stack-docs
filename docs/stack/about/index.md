@@ -40,7 +40,7 @@ RedisInsight allows you to:
 * Analyze traffic to Redis in real time with the Profiler tool
 * Use embedded Redis CLI at any time. 
 * Analyze memory usage with the Memory Analysis tool
-* Identify and troubleshoot bottlenecks with the Slowlog tool
+* Identify and troubleshoot bottlenecks using the Slowlog tool.
 
 ## Redis Stack packaging
 
