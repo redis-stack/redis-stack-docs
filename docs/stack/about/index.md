@@ -34,7 +34,7 @@ to help you build modern applications where performance is paramount.
 The best way to get started with Redis Stack is with [RedisInsight](https://docs.redis.com/latest/ri/), a visualization tool for understanding and optimizing Redis data.
 
 RedisInsight allows you to:
-* View data structures visually with the Browser tool and gropu keys according to their namespaces
+* View data structures visually with the Browser tool and group keys according to their namespaces.
 * CRUD support for most Redis Stack data structures.
 * Workbench: an advanced command line interface with intelligent command auto-complete and complex data visualizations.
 * Analyze traffic to Redis in real time with the Profiler tool
