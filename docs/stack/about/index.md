@@ -38,7 +38,7 @@ RedisInsight allows you to:
 * Use CRUD most Redis Stack data structures.
 * Leverage Workbench, an advanced command-line interface with intelligent command auto-complete and complex data visualizations.
 * Analyze traffic to Redis in real time with the Profiler tool
-* A CLI tool is accessible at any time within the application 
+* Use embedded Redis CLI at any time. 
 * Analyze memory usage with the Memory Analysis tool
 * Identify and troubleshoot bottlenecks with the Slowlog tool
 
