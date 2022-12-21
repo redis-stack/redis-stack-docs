@@ -6,12 +6,14 @@ Analytics
 analytics
 anonymized
 APIs
+AppImage
 atomicity
 CLI
 CLI-based
 Caskroom
 CentOS7
 Centos8
+chmod
 CO2
 CommandLineRunner
 Config
@@ -101,10 +103,12 @@ Pydantic
 queryable
 Queryable
 README
+read-eval-print-loop
 REDISTIMESERIES_ARGS
 REDIS_ARGS
 RedisAI
 RedisGears
+redisinsight
 REDiss
 RHEL7
 RHEL8

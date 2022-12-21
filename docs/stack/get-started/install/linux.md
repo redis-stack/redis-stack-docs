@@ -2,12 +2,12 @@
 title: Install Redis Stack on Linux
 linkTitle: Linux
 description: "How to install Redis Stack on Linux"
-weight: 1
+weight: 2
 ---
 
+Learn how to install Redis Stack on Linux from the official repository, RPM feed, with snap, or AppImage.
 
-
-### From the official Debian/Ubuntu APT Repository
+## From the official Debian/Ubuntu APT Repository
 You can install recent stable versions of Redis Stack from the official packages.redis.io APT repository. The repository currently supports Debian Bullseye (11), Ubuntu Xenial (16.04), Ubuntu Bionic (18.04), and Ubuntu Focal (20.04) on x86 processors. Add the repository to the apt index, update it, and install it:
 
 {{< highlight bash >}}
@@ -17,7 +17,7 @@ sudo apt-get update
 sudo apt-get install redis-stack-server
 {{< / highlight >}}
 
-### From the official RPM Feed
+## From the official RPM Feed
 
 You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, and RHEL8/Centos8. Add the repository to the repository index, and install the package.
 
@@ -36,4 +36,30 @@ curl -fsSL https://packages.redis.io/gpg > /tmp/redis.key
 sudo rpm --import /tmp/redis.key
 sudo yum install epel-release
 sudo yum install redis-stack-server
+{{< / highlight >}}
+
+## With snap
+
+From [Download](/download/), get the latest Stack snap package.
+
+To install, run:
+
+{{< highlight text >}}
+sudo snap install --dangerous --classic <snapname.snap>
+{{< / highlight >}}
+
+## With AppImage
+
+From [Download](/download/), get the latest Stack AppImage package.
+
+Enable the install: 
+
+{{< highlight text >}}
+chmod a+x <AppImagefile>
+{{< / highlight >}}
+
+To install, run
+
+{{< highlight text >}}
+./<appimagefile>
 {{< / highlight >}}
