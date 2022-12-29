@@ -4,6 +4,8 @@
 30Mb
 APIs
 Analytics
+AppImage
+atomicity
 CLI
 CLI-based
 CMS
@@ -12,11 +14,11 @@ CRM
 Caskroom
 CentOS7
 Centos8
+chmod
+CO2
 CommandLineRunner
 Config
 CrudRepository
-CrudRepository
-Cypher
 Cypher
 DNS
 DevOps
@@ -72,8 +74,12 @@ Profiler
 Pydantic
 Queryable
 README
+read-eval-print-loop
 REDISTIMESERIES_ARGS
 REDIS_ARGS
+RedisAI
+RedisGears
+redisinsight
 REDiss
 REPL
 REPL
