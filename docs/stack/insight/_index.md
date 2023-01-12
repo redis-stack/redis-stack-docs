@@ -19,9 +19,9 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 ### Connection management
 
-* Automatically discover and add your local Redis or Redis Stack databases (that use standalone connection type and do not require authentication)
-* Discover your databases in Redis Enterprise Cluster and databases with Flexible plans in Redis Cloud
-* Use a form to enter your connection details and add any Redis database running anywhere (including OSS Cluster, Sentinel)
+* Automatically discover and add your local Redis or Redis Stack databases (that use standalone connection type and do not require authentication).
+* Discover your databases in Redis Enterprise Cluster and databases with Flexible plans in Redis Cloud.
+* Use a form to enter your connection details and add any Redis database running anywhere (including OSS Cluster, Sentinel).
 
 <img src="/docs/stack/insight/images/Databases.png">
 
@@ -32,11 +32,15 @@ Browse, filter and visualize your key-value Redis data structures.
 * CRUD support for [RedisJSON](https://oss.redis.com/redisjson/)
 * Group keys according to their namespaces
 
-<img src="/docs/stack/insight/images/Browser.png">
+  <img src="/docs/stack/insight/images/Browser.png">
+
+* View, validate, and manage your key values using new formatters that prettify and highlight data in different formats (for example, Unicode, JSON, MessagePack, HEX, and ASCII)
+
+  <img src="/docs/stack/insight/images/data_formatting.png">
 
 ### Profiler
 
-Analyze every command sent to Redis in real time
+Analyze every command sent to Redis in real time.
 
 <img src="/docs/stack/insight/images/Profiler.png">
 
@@ -53,13 +57,51 @@ The CLI is accessible at any time within the application.
 Advanced command line interface with intelligent command auto-complete and complex data visualizations.
 * Built-in guides: you can conveniently discover Redis and Redis Stack capabilities using the built-in guides.
 * Command auto-complete support for all capabilities in Redis and Redis Stack.
-* Visualizations of your [RediSearch](https://oss.redis.com/redisearch/) index, queries, and aggregations
-* Visualizations of your [RedisGraph](https://oss.redis.com/redisgraph/) and [RedisTimeSeries](https://oss.redis.com/redistimeseries/) data.
+* Visualizations of your [RediSearch](https://oss.redis.com/redisearch/) index, queries, and aggregations.
+* Visualizations of your [RedisGraph](https://oss.redis.com/redisgraph/).
 
-<img src="/docs/stack/insight/images/Workbench_Graph.png">
+  <img src="/docs/stack/insight/images/Workbench_Graph.png">
 
-<img src="/docs/stack/insight/images/Workbench_TimeSeries.png">
+* Visualizations of your [RedisTimeSeries](https://oss.redis.com/redistimeseries/) data.
 
+  <img src="/docs/stack/insight/images/Workbench_TimeSeries.png">
+
+## Capabilities
+
+### Database analysis
+
+Use the database analysis tool to optimize the performance and memory usage of your Redis database. Check data type distribution and memory allocation and review the summary of key expiration time and memory to be freed over time. Inspect the top keys and namespaces sorted by consumed memory or key length and count of keys, respectively. Capture and track the changes in your database by viewing historical analysis reports. Next figure shows a sample database analysis report.
+
+<img src="/docs/stack/insight/images/database_analysis.png">
+
+### Redis Streams support
+
+Create and manage streams by adding, removing, and filtering entries per timestamp. To see and work with new entries, enable and customize the automatic refresh rate.
+
+View and manage the list of consumer groups. See existing consumers in a given consumer name as well as the last messages delivered to them. Inspect the list of pending messages, explicitly acknowledge the processed items, or claim unprocessed messages via RedisInsight.
+
+<img src="/docs/stack/insight/images/streams.png">
+
+### Search capabilities
+
+If you're using Redis or Redis Stack's indexing, querying, or full-text search capabilities, RedisInsight provides UI controls to quickly and conveniently run search queries against a preselected index. You can also create a secondary index of your data in a dedicated pane.
+
+<img src="/docs/stack/insight/images/search.png">
+
+### Bulk actions
+
+Easily and quickly delete multiple keys of the same type and/or with the same key name pattern in bulk. To do so, in the List or Tree view, set filters per key type or key names and open the Bulk Actions section. The section displays a summary of all the keys with the expected number of keys that will be deleted based on the set filters.
+
+When the bulk deletion is completed, RedisInsight displays the results of this operation with the number of keys processed and the time taken to delete the keys in bulk.
+Use bulk deletion to optimize the usage of your database based on the results from the Redis database analysis.
+
+<img src="/docs/stack/insight/images/bulk_actions.png">
+
+### Slow Log
+
+The Slow Log tool displays the list of logs captured by the SLOWLOG command to analyze all commands that exceed a specified runtime, which helps with troubleshooting performance issues. Specify both the runtime and the maximum length of Slowlog (which are server configurations) to configure the list of commands logged and set the auto-refresh interval to automatically update the list of commands displayed.
+
+<img src="/docs/stack/insight/images/slowlog.png">
 
 ## Plugins
 
