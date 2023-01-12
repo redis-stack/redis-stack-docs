@@ -28,7 +28,7 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 ### Browser
 
 Browse, filter and visualize your key-value Redis data structures.
-* [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) support for Lists, Hashes, Strings, Sets, Sorted Sets 
+* [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) support for lists, hashes, strings, sets, sorted sets, and streams 
 * CRUD support for [RedisJSON](https://oss.redis.com/redisjson/)
 * Group keys according to their namespaces
 
@@ -66,7 +66,7 @@ Advanced command line interface with intelligent command auto-complete and compl
 
   <img src="/docs/stack/insight/images/Workbench_TimeSeries.png">
 
-## Capabilities
+## Tools
 
 ### Database analysis
 
