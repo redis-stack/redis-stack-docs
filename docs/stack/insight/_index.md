@@ -34,7 +34,7 @@ Browse, filter and visualize your key-value Redis data structures.
 
   <img src="/docs/stack/insight/images/Browser.png">
 
-* View, validate, and manage your key values using new formatters that prettify and highlight data in different formats (for example, Unicode, JSON, MessagePack, HEX, and ASCII)
+* View, validate, and manage your key values in a human-readable format using formatters that prettify and highlight data in different formats (for example, Unicode, JSON, MessagePack, HEX, and ASCII) in the Browser tool.
 
   <img src="/docs/stack/insight/images/data_formatting.png">
 
