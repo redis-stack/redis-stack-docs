@@ -84,7 +84,7 @@ View and manage the list of consumer groups. See existing consumers in a given c
 
 ### Search capabilities
 
-If you're using Redis or Redis Stack's indexing, querying, or full-text search capabilities, RedisInsight provides UI controls to quickly and conveniently run search queries against a preselected index. You can also create a secondary index of your data in a dedicated pane.
+If you're using Redis Stack's indexing, querying, or full-text search capabilities, RedisInsight provides UI controls to quickly and conveniently run search queries against a preselected index. You can also create a secondary index of your data in a dedicated pane.
 
 <img src="/docs/stack/insight/images/search.png">
 
