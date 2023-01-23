@@ -8,7 +8,7 @@ weight: 2
 Learn how to install Redis Stack on Linux from the official repository, RPM feed, with snap, or AppImage.
 
 ## From the official Debian/Ubuntu APT Repository
-You can install recent stable versions of Redis Stack from the official packages.redis.io APT repository. The repository currently supports Debian Bullseye (11), Ubuntu Xenial (16.04), Ubuntu Bionic (18.04), and Ubuntu Focal (20.04) on x86 processors. Add the repository to the apt index, update it, and install it:
+You can install recent stable versions of Redis Stack from the official packages.redis.io APT repository. The repository currently supports Debian Bullseye (11), Ubuntu Xenial (16.04), Ubuntu Bionic (18.04), Ubuntu Focal (20.04), Ubuntu Jammy (22.04) on x86 and arm64 processors. Add the repository to the apt index, update it, and install it:
 
 {{< highlight bash >}}
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
@@ -19,7 +19,7 @@ sudo apt-get install redis-stack-server
 
 ## From the official RPM Feed
 
-You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, and RHEL8/Centos8. Add the repository to the repository index, and install the package.
+You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, and RHEL8/Centos8. Add the repository to the repository index, and install the package. Note: amazonlinux2 should use the RHEL7/CentOS7 repository.
 
 Create the file /etc/yum.repos.d/redis.repo with the following contents
 
@@ -52,7 +52,7 @@ sudo snap install --dangerous --classic <snapname.snap>
 
 From [Download](/download/), get the latest Stack AppImage package.
 
-Enable the install: 
+Enable the install:
 
 {{< highlight text >}}
 chmod a+x <AppImagefile>
