@@ -1,6 +1,9 @@
 ---
 title: "Terms & Privacy"
 linkTitle: Terms & Privacy
+aliases:
+    - /topics/trademark 
+    - /docs/about/trademark 
 ---
 
 ## Redis.io Terms of Use & Privacy Policy
