@@ -28,8 +28,8 @@ Downey
 Downey
 ETL
 EntityStream
-EntityStream
 FTS
+formatters
 GCP
 GeoLocation
 Geospatial
@@ -70,6 +70,8 @@ PeopleControllerV1
 PeopleRepository
 PeopleService
 PowerShell
+preselected
+product-lifecycle
 Profiler
 Pydantic
 Queryable
@@ -99,6 +101,7 @@ RedisJSON
 RedisTimeSeries
 SDK
 SKU
+SLOWLOG
 SMS
 SRANDMEMBER
 SSPL
