@@ -137,7 +137,7 @@ import client from './client.js'
 
 ### Entity
 
-Next, we need to define an **entity**. An `Entity` is the class that holds you data when you work with it—the thing being mapped to. It is what you create, read, update, and delete. Any class that extends `Entity` is an entity. We'll define our `Person` entity with a single line:
+Next, we need to define an **entity**. An `Entity` is the class that holds your data when you work with it—the thing being mapped to. It is what you create, read, update, and delete. Any class that extends `Entity` is an entity. We'll define our `Person` entity with a single line:
 
 {{< highlight javascript >}}
 /* our entity */
