@@ -107,7 +107,7 @@ The Slow Log tool displays the list of logs captured by the `SLOWLOG` command to
 
 <img src="../images/slowlog.png">
 
-## Plugins
+## Create your own custom data visualizations
 
 With RedisInsight you can now also extend the core functionality by building your own data visualizations. See our [plugin documentation](https://github.com/RedisInsight/RedisInsight/wiki/Plugin-Documentation) for more information.
 
