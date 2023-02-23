@@ -70,6 +70,14 @@ Use the database analysis tool to optimize the performance and memory usage of y
 
 <img src="../images/database_analysis.png">
 
+Use recommendations based on developer best practices to:
+
+* Reduce memory usage
+* Improve application performance
+* Increase the security of your database
+
+Recommendations are generated specifically for your Redis or Redis Stack database.
+
 ## Redis Streams support
 
 Create and manage streams by adding, removing, and filtering entries per timestamp. To see and work with new entries, enable and customize the automatic refresh rate.
