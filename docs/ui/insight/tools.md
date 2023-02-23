@@ -51,7 +51,7 @@ Try executing Redis commands as shown here:
 ## Workbench
 
 Workbench is a command-line interface with intelligent command auto-complete and complex data visualizations that lets you run commands against your Redis server. 
-Find the workbench on the left sidebar. It displays click-through examples of Redis capabilities. You can also see a number of metrics always on display within the database workspace. These metrics get updated every 5 seconds. The metrics include CPU, number of keys, commands/sec, network input, network output, total memory, and number of connected clients. Workbench provides: 
+Find Workbench on the left sidebar. It provides: 
 
 * Built-in examples that help you discover Redis and Redis Stack capabilities using the built-in guides.
 * Command auto-complete support for all capabilities in Redis and Redis Stack.
