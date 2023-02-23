@@ -6,10 +6,10 @@ weight: 40
 
 ---
 
-RedisInsight is available as a [standalone download](https://redis.com/redis-enterprise/redis-insight/) or [bundled with Redis Stack](/docs/stack/get-started/install). Install it and try the in-app examples available in Workbench.
+RedisInsight is available as a standalone download or [bundled with Redis Stack](/docs/stack/get-started/install). Install it and try the in-app examples available in Workbench.
 
 
-## Install RedisInsight 
+## Install standalone RedisInsight 
 
 You can use RedisInsight on MacOS, Linux, or Windows.
 
@@ -17,7 +17,7 @@ You can use RedisInsight on MacOS, Linux, or Windows.
 
 Redis offers RedisInsight on Intel and M1. 
 
-1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight) or [Redis Stack](/docs/stack/get-started/install/mac-os). 
+1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
 
 1. Add RedisInsight to **Applications**. 
 
@@ -31,9 +31,21 @@ To resume your journey, [start Redis Stack Server](#start-redis-stack-server).
 
 **Install on Linux**
 
-RedisInsight is available for Linux as a Debian or AppImage package.
+RedisInsight is available for Linux as a Debian or AppImage package. You can also install it from [Snapcraft](https://snapcraft.io/redisinsight) or [FlatHub](https://flathub.org/apps/details/com.redis.RedisInsight) using instructions available at those sites.
 
-1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight) or [Redis Stack](/docs/stack/get-started/install/linux). 
+For Debian:
+
+1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
+
+2. Open the Linux command line and install the package.
+
+```
+sudo apt install ./RedisInsight-v2-linux-amd64.deb
+```
+
+For AppImage:
+
+1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
 
 2. Make your downloaded file into an executable.
 
@@ -53,7 +65,7 @@ To resume your journey, [start Redis Stack Server](#start-redis-stack-server).
 
 **Install on Windows**
 
-1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight) or [Redis Stack](/docs/stack/get-started/install/windows). 
+1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
 
 2. Double-click the `RedisInsight-v2-win-installer.exe` file.
 
