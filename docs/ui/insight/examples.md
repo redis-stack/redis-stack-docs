@@ -10,7 +10,7 @@ RedisInsight allows you to browse, filter, and visualize key-value Redis data st
 
 ## Use RedisInsight to manage time series 
 
-Examples you find in Workbench allow you interact with some sample data in a few taps. For this orientation, we will use an example called _Redis for time series_. Navigate to this title, read the introduction, then tap the first button to create five time series for bike shops. 
+Examples you find in Workbench allow you interact with some sample data in a few taps. For this orientation, we will use an example called _Redis for time series_. If you haven't done so, install [Redis Stack](/docs/stack/get-started/install). Then navigate to this example in Workbench, read the introduction, then tap the first button to create five time series for bike shops. 
 
 **Step 1: Create a time series per bike shop**
 
