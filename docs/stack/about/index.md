@@ -31,7 +31,7 @@ to help you build modern applications where performance is paramount.
 
 ## RedisInsight
 
-The best way to get started with Redis Stack is with [RedisInsight](https://docs.redis.com/latest/ri/), a visualization tool for understanding and optimizing Redis data.
+The best way to get started with Redis Stack is with [RedisInsight](/docs/ui/insight), a visualization tool for understanding and optimizing Redis data.
 
 RedisInsight allows you to:
 * View data structures visually with the Browser tool and group keys according to their namespaces.
