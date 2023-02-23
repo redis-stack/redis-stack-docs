@@ -113,5 +113,5 @@ With RedisInsight you can now also extend the core functionality by building you
 
 ## Telemetry
 
-RedisInsight includes an opt-in telemetry system. This helps us improve the developer experience of the app. We value your privacy, so all collected data is anonymized.
+RedisInsight includes an opt-in telemetry system. This helps us improve the developer experience of the app. We value your privacy, so all collected data is anonymized. You can disable this feature at any time.
 
