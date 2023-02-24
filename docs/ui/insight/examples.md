@@ -2,7 +2,7 @@
 title: "RedisInsight examples"
 linkTitle: Examples
 description: 
-weight: 60
+weight: 70
 ---
 
 

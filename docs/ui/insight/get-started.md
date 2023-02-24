@@ -81,7 +81,7 @@ You can now start Redis Stack Server as follows:
 
 ## Add a Redis database
 
-You can add a Redis database either by adding a database manually, creating a new Redis Enterprise Cloud database, or connecting to an existing database. To try Redis Enterprise Cloud, select **Try Redis Cloud with enhanced database capabilities**.
+You can add a Redis database manually, create a new Redis Enterprise Cloud database, or connect to an existing database. To try Redis Enterprise Cloud, select **Try Redis Cloud with enhanced database capabilities**.
 
 If you already have Redis database up and running locally, select **Autodiscover Databases**.
 
@@ -93,7 +93,7 @@ Once added, your database appears with **Database Alias**. **Host:Port**, **Conn
 
 Select **+Key** to add a new key.
 
-Once added, the dashboard UI shows the hash key details
+Once added, the dashboard UI shows the hash key details.
 
 ## Change the color
 

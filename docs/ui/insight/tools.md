@@ -38,13 +38,12 @@ Analyze every command sent to Redis in real time.
 
 ## CLI
 
-The CLI is accessible at any time within the application. It:
+The CLI is accessible at any time within the application. It includes:
 
-* Employs type-ahead help to deliver intuitive assistance.
-* Includes a command helper that lets you filter and search for Redis commands.
+* Type-ahead help.
+* A command helper that lets you filter and search.
 
-Try executing Redis commands as shown here:
-
+Try executing Redis commands as shown here.
 
 <img src="../images/CLI.png">
 
@@ -66,7 +65,9 @@ Find Workbench on the left sidebar. It provides:
 
 ## Database analysis
 
-Use the database analysis tool to optimize the performance and memory usage of your Redis database. Check data type distribution and memory allocation and review the summary of key expiration time and memory to be freed over time. Inspect the top keys and namespaces sorted by consumed memory or key length and count of keys, respectively. Capture and track the changes in your database by viewing historical analysis reports. Next figure shows a sample database analysis report.
+Use the database analysis tool to optimize the performance and memory usage of your Redis database. Check data type distribution and memory allocation and review the summary of key expiration time and memory to be freed over time. Inspect the top keys and namespaces sorted by consumed memory or key length and count of keys, respectively. Capture and track the changes in your database by viewing historical analysis reports. 
+
+Next figure shows a sample database analysis report.
 
 <img src="../images/database_analysis.png">
 
@@ -77,6 +78,8 @@ Use recommendations based on developer best practices to:
 * Increase the security of your database
 
 Recommendations are generated specifically for your Redis or Redis Stack database.
+
+<img src="../images/database_recommendations.png">
 
 ## Redis Streams support
 
