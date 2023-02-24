@@ -331,3 +331,7 @@ NamedTuple
 MD5
 resharding
 8kb
+prev-
+Snapcraft
+Flathub
+Autodiscover
