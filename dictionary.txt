@@ -333,5 +333,5 @@ resharding
 8kb
 prev-
 Snapcraft
-Flathub
+FlatHub
 Autodiscover
