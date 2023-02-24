@@ -17,7 +17,7 @@ You can use RedisInsight on MacOS, Linux, or Windows.
 
 Redis offers RedisInsight on Intel and M1. 
 
-1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
+1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 1. Add RedisInsight to **Applications**. 
 
@@ -35,7 +35,7 @@ RedisInsight is available for Linux as a Debian or AppImage package. You can als
 
 For Debian:
 
-1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
+1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 2. Open the Linux command line and install the package.
 
@@ -45,7 +45,7 @@ sudo apt install ./RedisInsight-v2-linux-amd64.deb
 
 For AppImage:
 
-1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
+1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 2. Make your downloaded file into an executable.
 
@@ -65,7 +65,7 @@ To resume your journey, [start Redis Stack Server](#start-redis-stack-server).
 
 **Install on Windows**
 
-1. Download [RedisInsinght](https://redis.com/redis-enterprise/redis-insight). 
+1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 2. Double-click the `RedisInsight-v2-win-installer.exe` file.
 

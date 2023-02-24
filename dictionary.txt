@@ -176,12 +176,15 @@ createClient
 dataset
 david-paich.json
 dearmor
+deserialization
 devtools
 dotenv
+downsampling
 dr
 entityId
 entityStream
 epel-release
+EVAL
 findAllPeople
 findByAddress_City
 findByAgeBetween
@@ -197,6 +200,7 @@ geo-location
 getters
 gpg
 gpgcheck=1
+hardcode
 hmmm
 homeLoc
 homebrew
@@ -226,6 +230,8 @@ locationRouter
 locationUpdated
 lon
 lsb_release
+LUA
+LZO
 macOS
 maxAge
 minAge
@@ -241,7 +247,9 @@ personalStatement
 piña
 postalCode
 predictively
+prev
 profiler
+programmatically
 redis
 redis-benchmark
 redis-cli
@@ -293,6 +301,7 @@ x86
 XDEL
 XLEN
 xml
+ziplist
 zshrc
 REPL
 Slowlog
