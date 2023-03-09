@@ -45,7 +45,7 @@ Then, confirm that the output contains `/opt/homebrew/bin` (Apple silicon Macs) 
 
 If you have an existing Redis installation on your system, then might want to modify your `$PATH` to ensure that you're using the latest Redis Stack binaries.
 
-Open the file `~/.bashrc` or '~/zshrc` (depending on your shell), and add the following lines.
+Open the file `~/.bashrc` or `~/zshrc` (depending on your shell), and add the following lines.
 
 For Intel-based Macs:
 
