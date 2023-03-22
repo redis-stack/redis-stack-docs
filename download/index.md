@@ -46,6 +46,13 @@ You can download and run Redis Docker images from DockerHub. Multiple versions a
 
 [Go to Redis DockerHub](https://hub.docker.com/_/redis).
 
+### Release-candidate (7.2)
+
+Redis 7.2 includes optimizations, several new commands, some improvements, bug fixes, and several new module APIs. It also includes changes that potentially break backwards compatibility with older versions.
+
+* [Download 7.2-rc1](https://github.com/redis/redis/archive/7.2-rc1.tar.gz)
+* [7.2 Release Notes](https://raw.githubusercontent.com/redis/redis/7.2/00-RELEASENOTES)
+
 ### Unstable
 
 This is where all the development happens. Only for hard-core hackers or for folks who need to test the latest features or performance improvements. As this is an experimental build, it's not guaranteed to be fit for production deployment.
