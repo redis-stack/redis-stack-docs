@@ -119,6 +119,7 @@ Download the latest RedisInsight the [RedisInsight download page](https://redis.
 * Redis Stack on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack)
 * Redis Stack server on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack-server)
 
-See the [release notes for 7.0.6-RC8](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.6-RC8).
+See the [release notes for 7.0.6-RC8](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.6-rc8).
+  
 
 </div>
