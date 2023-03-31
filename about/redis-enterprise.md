@@ -7,8 +7,8 @@ aliases:
 ---
 
 [Redis Enterprise](https://redis.com/redis-enterprise-software/overview/) is an enterprise-grade Redis, 
-available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/) (on AWS, GCP, 
-or Azure). Redis Enterprise simplifies operations, scaling, and multi-tenancy, includes many integrations (e.g., K8s), and provides multiple 
+available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/) (on AWS, Google Cloud, 
+or Azure). Redis Enterprise simplifies operations, scaling, and multi-tenancy, includes many integrations (for example, Kubernetes), and provides multiple 
 tiers of support.
 
 Read on to learn about Redis Enterprise and the benefits of its extended offerings.
@@ -17,7 +17,7 @@ Read on to learn about Redis Enterprise and the benefits of its extended offerin
 
 [Redis, Inc.](https://redis.com/) develops both open source and source available technologies, which are free for developers to use. These include:
 * [Redis OSS](/download/#redis-downloads): the core engine for our software and services
-* [Redis Stack](https://redis.io/download/#redis-stack-downloads): the starting point for developers who want all the power of Redis OSS and the 
+* [Redis Stack](/download/#redis-stack-downloads): the starting point for developers who want all the power of Redis OSS and the 
 the latest innovations Redis, Inc. has to offer all in an easy to use software package.
 * [Redis Enterprise](https://redis.com/redis-enterprise/advantages/): our commercial product. Redis Enterprise maintains the simplicity and 
 high performance of Redis, while adding many enterprise-grade capabilities including:  
@@ -74,7 +74,7 @@ You can also purchase and deploy Redis Enterprise Cloud directly through the clo
 
 ### Hybrid and multi-cloud deployments
 
-Redis Enterprise support both hybrid (on-premises/cloud) and multi-cloud deployments using Active-Active replication:
+Redis Enterprise supports both hybrid (on-premises/cloud) and multi-cloud deployments using Active-Active replication:
 
 * Hybrid cloud with Active-Active &mdash; Combines self-managed on-prem clusters with Redis Cloud clusters
 * [Multicloud with Active-Active](https://redis.com/redis-enterprise-cloud/multicloud/) &mdash; Multiple fully-managed Redis Cloud clusters with a 
