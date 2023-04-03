@@ -2,11 +2,11 @@
 title: Developer best practices
 linkTitle: Best practices
 description: Apply best developer practices
-weight: 60
+weight: 50
 
 ---
 
-RedisInsight can monitor the health of your databases and provide recommendations to increase memory efficiency in Redis.
+Learn how to increase memory efficiency in Redis.
 
 ## Avoid dynamic Lua script
 

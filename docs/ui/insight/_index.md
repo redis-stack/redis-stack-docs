@@ -2,7 +2,7 @@
 title: RedisInsight
 linkTitle: RedisInsight
 description: Visualize and optimize Redis data
-weight: 30
+weight: 10
 aliases:
     - /docs/stack/insight
 ---

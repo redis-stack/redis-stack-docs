@@ -2,20 +2,35 @@
 title: Get started with RedisInsight
 linkTitle: Get started
 description: Get started with RedisInsight
-weight: 40
+weight: 20
 
 ---
 
-RedisInsight is available as a standalone download or [bundled with Redis Stack](/docs/stack/get-started/install). Install it and try the in-app examples available in Workbench.
+RedisInsight is available as a standalone download or [bundled with Redis Stack](/docs/stack/get-started/install). Install it and try the in-app examples available in Workbench. For more information, see [Examples](/docs/ui/insight/examples).
 
+You can use RedisInsight on Windows, MacOS, or Linux.
 
-You can use RedisInsight on MacOS, Linux, or Windows.
+## Install on Windows
+
+### From website
+
+1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
+
+2. Open the `RedisInsight-v2-win-installer.exe` file.
+
+3. Open the RedisInsight icon.
+
+### From stores
+
+Go to [Microsoft Windows Apps](https://apps.microsoft.com/store/detail/redisinsight/XP8K1GHCB0F1R2) and download the RedisInsight app.
+
+To resume your journey, [start Redis Stack Server](#start-redis-stack-server).   
 
 ## Install on MacOS
 
 You can install RedisInsight for MacOS from the Redis website or Homebrew. (Redis plans to release the RedisInsight app in Apple Store.)
 
-### Redis website
+### From website
 
 Redis offers RedisInsight on Intel and M1. 
 
@@ -39,40 +54,34 @@ redisinsight
 
 To resume your journey, [start Redis Stack Server](#start-redis-stack-server).   
 
-## Install on Windows
-
-1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
-
-2. Open the `RedisInsight-v2-win-installer.exe` file.
-
-3. Open the RedisInsight icon.
-
-To resume your journey, [start Redis Stack Server](#start-redis-stack-server).   
-
 ## Install on Linux
 
-RedisInsight is available for Linux as a Debian or AppImage package. You can also install it from [Snapcraft](https://snapcraft.io/redisinsight) or [FlatHub](https://flathub.org/apps/details/com.redis.RedisInsight) using instructions available at those sites.
+### From website
 
-### Debian
+RedisInsight is available for Linux as a Debian or AppImage package.
 
-1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
-
-2. Open the Linux command line and install the package.
-
-```
-sudo apt install ./RedisInsight-v2-linux-amd64.deb
-```
-
-### AppImage
+### From website
 
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
-2. Make your downloaded file into an executable.
+1. Open the Linux command line and install the package. 
 
- ```
- chmod a+x RedisInsight-v2-linux-x86_64.AppImage
+   For Debian, run:
 
- ```
+   ```
+   sudo apt install ./RedisInsight-v2-linux-amd64.deb
+   ```
+
+   For AppImage, make your downloaded file into an executable.
+
+   ```
+   chmod a+x RedisInsight-v2-linux-x86_64.AppImage
+
+   ```
+
+### From stores
+
+You can install RedisInsight from [Snapcraft](https://snapcraft.io/redisinsight) or [FlatHub](https://flathub.org/apps/details/com.redis.RedisInsight) using instructions available at those sites.
 
 ### Run RedisInsight
 

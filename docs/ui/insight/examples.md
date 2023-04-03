@@ -2,31 +2,32 @@
 title: "RedisInsight examples"
 linkTitle: Examples
 description: 
-weight: 70
+weight: 60
+aliases:
+	- /docs/stack/insight/tutorials/insight-stream-consumer
 ---
-
 
 RedisInsight allows you to browse, filter, and visualize key-value Redis data structures. It supports CRUD operation for lists, hashes, strings, sets, sorted sets, and so on. You can take advantage of built-in examples in Workbench to learn about the data structures. We'll guide you through one of those examples here and show you other practical ways to use RedisInsight with your databases.
 
 ## Use RedisInsight to manage time series 
 
-Examples you find in Workbench allow you interact with some sample data in a few taps. For this orientation, we will use an example called _Redis for time series_. If you haven't done so, install [Redis Stack](/docs/stack/get-started/install). Then navigate to this example in Workbench, read the introduction, then tap the first button to create five time series for bike shops. 
+Examples you find in Workbench allow you interact with some sample data in a few taps. For this orientation, we will use an example called _Redis for time series_. 
+
+<img src="../images/workbench_tutorial.png">
+
+If you haven't done so, install [Redis Stack](/docs/stack/get-started/install) and connect to a database. To try the tutorials, you can create a database manually using RedisInsight instructions. Then navigate to this example in Workbench and read the introduction. Next, you will create time series for bike shops.
 
 **Step 1: Create a time series per bike shop**
 
-```bash
- TS.CREATE bike_sales_1 DUPLICATE_POLICY SUM LABELS region east compacted no
- TS.CREATE bike_sales_2 DUPLICATE_POLICY SUM LABELS region east compacted no
- TS.CREATE bike_sales_3 DUPLICATE_POLICY SUM LABELS region west compacted no
- TS.CREATE bike_sales_4 DUPLICATE_POLICY SUM LABELS region west compacted no
- TS.CREATE bike_sales_5 DUPLICATE_POLICY SUM LABELS region west compacted no
-```
+Select the **Create time series per shop** button to create five time series for bike shops. 
+
+<img src="../images/create_time_series.png">
 
 This creates a time series per shop, tracking the total amount of all sales. As you can tell from the labels, each time series is marked `east` or `west` to query bike sales by time periods, shop, region, or across all shops. 
-Each shop has a numbered id. We also add the `DUPLICATE_POLICY SUM` argument to describe what should be done when two events in the same time series share the same timestamp. 
+Each shop has a numbered id. You also add the `DUPLICATE_POLICY SUM` argument to describe what should be done when two events in the same time series share the same timestamp. 
 
 Here, we assume two sales happen at exactly the same time, resulting in a value that is the sum of two sales values. 
-If you're running this example from your command line, you'll see Redis `OK` responses. But, you can also follow along in Workbench by tapping the right arrow. 
+If you're running this example from your command line, you'll see Redis `OK` responses. But, you can also follow along in Workbench by selecting the right arrow. 
 
 Because the metrics are collected with a millisecond timestamp, you can compact the time series into sales per hour.
 
@@ -34,23 +35,25 @@ Because the metrics are collected with a millisecond timestamp, you can compact 
 
 Redis Stack supports downsampling with these aggregations: `avg`, `sum`, `min`, `max`, `range`, `count`, `first`, and `last`. If you want to keep all of your raw data points indefinitely, your data set grows linearly over time. However, if your use case allows you to have less fine-grained data further back in time, you can apply downsampling. This allows you to keep fewer historical data points by aggregating raw data for a given time window using a given aggregation function.
 
-```
- TS.CREATERULE bike_sales_5 bike_sales_5_per_day AGGREGATION sum 86400000
-```
+Select the **Time series compaction** button to create five time series for bike shops. 
 
-Try other data structure examples in Workbench and let us know if you'd like to contribute your own examples.
+<img src="../images/time_series_compaction.png">
+
+Follow the remaining steps in Workbench to load more data points and get sales based on different queries.
+
+Try other data structure examples in Workbench. Share your Redis expertise with your team and the wider community by building custom RedisInsight tutorials. Use our [instructions](https://github.com/RedisInsight/Tutorials) to describe your implementations of Redis for other users to follow and interact with in the context of a connected Redis database.
 
 ## Use RedisInsight to manage streams and consumer groups
 
+In this example, you will learn how to create and work with streams and consumer groups in RedisInsight.
+
 A _stream_ is an append-only log file. 
 When you add data to it, you cannot change it. 
-That may seem like a disadvantage; however, a stream serves as a log or single source of truth. 
+That may seem like a disadvantage. However, a stream serves as a log or single source of truth. 
 It can also be used as a buffer between processes that work at different speeds and do not need to know about each other. 
 For more conceptual information about streams, see [Redis Streams](/docs/manual/data-types/streams). 
 
-In this example, you will learn how to add and work with streams as well as consumer groups in RedisInsight.
-
-Here's a stream that models temperature and humidity sensors. Processes interacting with the stream perform one of two roles: _consumer_ and _producer_. 
+Let's assume you have a stream that models temperature and humidity sensors. Processes interacting with the stream perform one of two roles: _consumer_ and _producer_. 
 The point of a stream is that it's not going to end, so you cannot capture whole datasets and do some processing on them. 
  
 In this stream, sensors are considered _producers_, which broadcast data. 
@@ -59,7 +62,7 @@ For example, if the temperature is above a certain threshold, it puts a message 
 
 <img src="../images/stream.png">
 
-It is possible to have multiple consumers doing different jobs, one measuring humidity, and another taking temperature measurements over periods of time. 
+It is possible to have multiple consumers doing different jobs: one measuring humidity and another taking temperature measurements over periods of time. 
 Redis stores a copy of the entire dataset in memory, which is a finite resource.
 To avoid runaway data, streams can be trimmed when you add something to them. 
 When adding to a stream with `XADD`, you can optionally specify that the stream should be trimmed to a specific or approximate number of the newest entries, or to only include entries whose ID is higher than the ID specified.

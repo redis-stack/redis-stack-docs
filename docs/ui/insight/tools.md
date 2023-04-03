@@ -2,7 +2,7 @@
 title: RedisInsight tools
 linkTitle: Tools
 description: Learn about RedisInsight features
-weight: 50
+weight: 30
 
 ---
 
