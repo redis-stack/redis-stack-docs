@@ -5,10 +5,12 @@
 01FY9MWDTWW4XQNTPJ9XY9FPMN
 30Mb
 Analytics
+amazonlinux2
 analytics
 anonymized
 APIs
 AppImage
+arm64
 atomicity
 CLI
 CLI-based

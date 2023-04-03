@@ -7,17 +7,17 @@ aliases:
 ---
 
 [Redis Enterprise](https://redis.com/redis-enterprise-software/overview/) is an enterprise-grade Redis, 
-available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/) (on AWS, GCP, 
-or Azure). Redis Enterprise simplifies operations, scaling, and multi-tenancy, includes many integrations (e.g., K8s), and provides multiple 
+available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/) (on AWS, Google Cloud, 
+or Azure). Redis Enterprise simplifies operations, scaling, and multi-tenancy, includes many integrations (for example, Kubernetes), and provides multiple 
 tiers of support.
 
 Read on to learn about Redis Enterprise and the benefits of its extended offerings.
 
 ## Overview
 
-[Redis, Inc.](https://redis.com/) develops both open source and source available technologies which are free for developers to use.  These include:
-* [Redis OSS](https://redis.io/download/#redis-downloads): the core engine for our software and services
-* [Redis Stack](https://redis.io/download/#redis-stack-downloads): the starting point for developers who want all the power of Redis OSS and the 
+[Redis, Inc.](https://redis.com/) develops both open source and source available technologies, which are free for developers to use. These include:
+* [Redis OSS](/download/#redis-downloads): the core engine for our software and services
+* [Redis Stack](/download/#redis-stack-downloads): the starting point for developers who want all the power of Redis OSS and the 
 the latest innovations Redis, Inc. has to offer all in an easy to use software package.
 * [Redis Enterprise](https://redis.com/redis-enterprise/advantages/): our commercial product. Redis Enterprise maintains the simplicity and 
 high performance of Redis, while adding many enterprise-grade capabilities including:  
@@ -41,14 +41,14 @@ Redis Enterprise offers three deployment options:
 [Redis Enterprise Software](https://redis.com/redis-enterprise-software/overview/) is the on-premises distribution of Redis Enterprise. 
 You download, install, and manage a Redis Enterprise Software cluster wherever you like:
 
-* IaaS cloud environments &mdash; Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure
+* IaaS cloud environments &mdash; Amazon Web Services (AWS), Google Cloud, and Microsoft Azure
 * Bare-metal servers in a private datacenter
 * Virtual machines (VMs), Kubernetes pods, etc.
 
 Redis provides a [Kubernetes operator](https://redis.com/redis-enterprise-software/redis-enterprise-on-kubernetes/) that deploys and manages a 
 Redis Enterprise cluster. You can use the operator on premises or in a private or public cloud.
 
-The [Google Cloud Marketplace](https://console.cloud.google.com/marketplace/product/endpoints/gcp.redisenterprise.com?pli=1&project=redislabs-university) also offers Redis Enterprise as a Kubernetes app for easy deployment.
+The [Google Cloud Marketplace](https://console.cloud.google.com/marketplace/product/redislabs-public/redis-enterprise) also offers Redis Enterprise as a Kubernetes app for easy deployment.
 
 ### Redis Enterprise Cloud
 
@@ -63,7 +63,7 @@ Let [Support](https://redis.com/company/support/) know if you have any questions
 You can also purchase and deploy Redis Enterprise Cloud directly through the cloud provider's marketplace:
 
 * [Redis Enterprise Cloud Flexible - Pay as You Go](https://aws.amazon.com/marketplace/pp/prodview-mwscixe4ujhkq) (AWS)
-* [Redis Enterprise Cloud](https://console.cloud.google.com/marketplace/product/endpoints/gcp.redisenterprise.com?project=redislabs-university) (GCP)
+* [Redis Enterprise Cloud Flexible - Pay as You Go](https://console.cloud.google.com/marketplace/product/redis-marketplace-isaas/redis-enterprise-cloud-flexible-plan) (Google Cloud)
 * [Azure Cache for Redis Enterprise pricing](https://azure.microsoft.com/en-us/pricing/details/cache/#pricing) (Azure)
 
 
@@ -74,11 +74,11 @@ You can also purchase and deploy Redis Enterprise Cloud directly through the clo
 
 ### Hybrid and multi-cloud deployments
 
-Redis Enterpise support both hybrid (on-premises / cloud) and multi-cloud deployments using Active-Active replication:
+Redis Enterprise supports both hybrid (on-premises/cloud) and multi-cloud deployments using Active-Active replication:
 
 * Hybrid cloud with Active-Active &mdash; Combines self-managed on-prem clusters with Redis Cloud clusters
 * [Multicloud with Active-Active](https://redis.com/redis-enterprise-cloud/multicloud/) &mdash; Multiple fully-managed Redis Cloud clusters with a 
-geo-replicated database across multiple cloud vendors (for example, AWS and GCP)
+geo-replicated database across multiple cloud vendors (for example, AWS and Google Cloud)
 
 ## Build real-time apps using Redis modules
 
