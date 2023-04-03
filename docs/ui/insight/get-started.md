@@ -60,8 +60,6 @@ To resume your journey, [start Redis Stack Server](#start-redis-stack-server).
 
 RedisInsight is available for Linux as a Debian or AppImage package.
 
-### From website
-
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 1. Open the Linux command line and install the package. 
