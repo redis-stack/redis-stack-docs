@@ -8,7 +8,7 @@ weight: 40
 
 RedisInsight provides database recommendations to enable you to use your databases more efficiently, leading to performance increase and memory usage optimization.
 
-## Avoid dynamic Lua script	
+## Avoid dynamic Lua script
 
 ### Conditions
 
@@ -20,7 +20,7 @@ Used_memory_lua > 3,000,000 (3M) bytes
 * Refrain from generating dynamic scripts, which can cause your Lua cache to grow and get out of control. Memory is consumed as scripts are loaded. If you have to use dynamic Lua scripts, then remember to track your Lua memory consumption and flush the cache periodically with a `SCRIPT FLUSH`
 * Do not hardcode and/or programmatically generate key names in your Lua scripts because it makes them useless in a clustered Redis setup.
 
-## Switch to 32-bits	
+## Switch to 32-bits
 
 ### Conditions
 
@@ -38,19 +38,19 @@ Follow one of these steps to reclaim the memory:
 * Set up a cron job that runs the scan command after an interval, which helps to reclaim the memory of the expired keys. 
 * Increase the expiry of keys.
 
-## Reclaim expired keys' memory faster	
+## Reclaim expired keys' memory faster
 
 ### Conditions
 
 1. Run the `INFO` command and find the `total_memory_used` and sum of all the keys for all the databases.
 1. Then take a Redis Dump (RDB) and find out the total memory and the total number of keys.
-1. If the difference is more than 5%, (keys in Redis - keys in the RDB)/keys in Redis >5%), RedisInsight displays the recommendation.
+1. If the difference is more than 5%, (keys in Redis - keys in the RDB)/keys in Redis > 5%), RedisInsight displays the recommendation.
 
 ### Recommendations
 
 Reclaim expired keys' memory faster.
 
-## Change serializer	
+## Change serializer
 
 ### Conditions
 
@@ -92,7 +92,7 @@ Increase `hash-max-ziplist-entries` and/or `hash-max-ziplist-values` (display th
 If any value for a key exceeds `hash-max-ziplist-entries` or `hash-max-ziplist-values`, it is stored automatically as a hashtable instead of a ziplist, which consumes almost double the memory. 
 To save the memory, increase the configurations and convert your hashtables to ziplists. The trade-off can be an increase in latency and possibly an increase in CPU utilization.
 
-## Convert hashtable to ziplist for sorted sets	
+## Convert hashtable to ziplist for sorted sets
 
 ### Conditions
 
@@ -115,7 +115,7 @@ Found set values that contain strings.
 
 Sets that contain only integers are extremely efficient memory-wise. Try to use integers. Map string identifiers to integers, by either using `enum`s in your programming language or using a Redis hash data structure to map values to integers. Once you switch to integers, Redis uses the `IntSet` encoding internally. The `IntSet` encoding is extremely memory efficient. By default, the value of `set-max-intset-entries` is `512` and is configurable in `redis.conf`. However, increasing this value leads to an increase in latency of set operations and CPU utilization. To verify the latency numbers, run `INFO COMMANDSTATS` before and after making this change.
 
-## Increase the set-max-intset-entries	
+## Increase the set-max-intset-entries
 
 ### Conditions
 
@@ -125,7 +125,7 @@ Found sets with length > `set-max-intset-entries`.
 
 Several set values with `IntSet` encoding exceed the `set-max-intset-entries`. To efficiently use the `IntSet` encoding, change the configuration in `redis.conf`. Note that increasing this value leads to an increase in latency of set operations and CPU utilization. To verify the latency numbers, run `INFO COMMANDSTATS` before and after making this change.
 
-## Use smaller keys	
+## Use smaller keys
 
 ### Conditions
 
@@ -135,7 +135,7 @@ The database has 1M+ keys.
 
 Shorten key names to optimize memory usage. Even though descriptive key names are better, large key names consume memory.
 
-## Convert to a list instead of a hash	
+## Convert to a list instead of a hash
 
 ### Conditions
 
@@ -151,17 +151,17 @@ Convert field names into indexes in the list.
 While this may save memory, you should only use this approach if you have thousands of hashes and if each of those hashes has similar fields. 
 However, this approach is not recommended when you have more than 512 fields in your hash, or the size of your hash values is not consistent (for instance, when some hashes contain only a few field-value pairs while others contain many).
 
-## Shard big hashes to small hashes	
+## Shard big hashes to small hashes
 
 ### Conditions
 
-Found hashes with length > 5,000.	
+Found hashes with length > 5,000.
 
 ### Recommendations
 
 If you have a hash with a large number of key/value pairs, and if each key/value pair is small enough, break it into smaller hashes to save memory. To shard a `HASH` table, choose a method of partitioning the data. Hashes themselves have keys that can be used for partitioning the keys into different shards. The number of shards is determined by the total number of keys to be stored and the shard size. Using this and the hash value you can determine the shard ID in which the key resides. Note that converting big hashes to small hashes increases the complexity of your code.
 
-## Compress Hash field names	
+## Compress Hash field names
 
 ### Conditions
 
@@ -171,7 +171,7 @@ Hash length > 5,000.
 
 Hash field name also consumes memory, so use smaller or shortened field names to reduce memory usage.
 
-## Compress values	
+## Compress values
 
 ### Conditions
 
@@ -181,7 +181,7 @@ The difference between the actual and compressed values is more than 5%.
 
 Compress the data before storing it in Redis to optimize the memory (sometimes even between 30-50%), increase the throughput, reduce the payload, and decrease latency. There are several compression algorithms to choose from, each with its trade-offs. Snappy aims for high speed and reasonable compression. LZO compresses fast and decompresses faster. Others, such as Gzip, are more widely available. To avoid CPU increases, do not compress short strings and unstructured data.
 
-## Enable compression for the list	
+## Enable compression for the list
 
 ### Conditions
 
@@ -193,7 +193,7 @@ If you use long lists and mostly access elements from the head and tail only, yo
 To compress every list node except the head and tail of the list, in `redis.conf` set `list-compression-depth=1`. Even though list operations that involve elements in the center of the list become slower, the compression can increase CPU utilization.
 Run `INFO COMMANDSTATS` before and after making this change to verify the latency numbers.
 
-## Do not open a new connection for every request/command	
+## Do not open a new connection for every request/command
 
 ### Conditions
 
