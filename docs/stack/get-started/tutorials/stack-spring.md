@@ -13,7 +13,7 @@ Redis OM Spring provides a robust repository and custom object-mapping abstracti
 ## What you’ll need:
 
 * Redis Stack: See [https://redis.io/docs/stack/get-started/install/](https://redis.io/docs/stack/get-started/install/)
-* RedisInsight: See [https://redis.io/docs/stack/insight](https://redis.io/docs/stack/insight/)
+* RedisInsight: See [https://redis.io/docs/ui/insight](https://redis.io/docs/ui/insight/)
 * Your favorite browser
 * Java 11 or greater
 
