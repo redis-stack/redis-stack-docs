@@ -15,3 +15,9 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 To provide your feedback, [open a ticket in our RedisInsight repository](https://github.com/RedisInsight/RedisInsight/issues/new).
 
 RedisInsight is licensed under [SSPL](https://github.com/RedisInsight/RedisInsight/blob/main/LICENSE) license.
+
+{{% alert title="Note" color="warning" %}}
+ 
+RedisInsight includes an opt-in telemetry system. This helps us improve the developer experience of the app. We value your privacy, so all collected data is anonymized. You can disable this feature at any time.
+{{% /alert %}}
+

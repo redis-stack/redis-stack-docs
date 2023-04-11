@@ -8,11 +8,11 @@ weight: 20
 
 RedisInsight is available as a standalone download or [bundled with Redis Stack](/docs/stack/get-started/install). Install it and try the in-app examples available in Workbench. For more information, see [Examples](/docs/ui/insight/examples).
 
-You can use RedisInsight on Windows, MacOS, or Linux.
+Standalone downloads are available for Windows, MacOS, and Linux from the Redis Enterprise website and stores.
 
 ## Install on Windows
 
-### From website
+From website:
 
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
@@ -20,45 +20,38 @@ You can use RedisInsight on Windows, MacOS, or Linux.
 
 3. Open the RedisInsight icon.
 
-### From stores
+From stores:
 
-Go to [Microsoft Windows Apps](https://apps.microsoft.com/store/detail/redisinsight/XP8K1GHCB0F1R2) and download the RedisInsight app.
-
-To resume your journey, [start Redis Stack Server](#start-redis-stack-server).   
+* Go to [Microsoft Windows Apps](https://apps.microsoft.com/store/detail/redisinsight/XP8K1GHCB0F1R2) and download the RedisInsight app.
 
 ## Install on MacOS
 
-You can install RedisInsight for MacOS from the Redis website or Homebrew. (Redis plans to release the RedisInsight app in Apple Store.)
-
-### From website
-
-Redis offers RedisInsight on Intel and M1. 
+From website:
 
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 1. Add RedisInsight to **Applications**. 
 
-### Homebrew
+Using Homebrew:
 
 ```
 brew install --cask redisinsight
 ```
 
-### Run RedisInsight
+From store:
 
-From your Terminal, run this command.
+* Go to [Apple Store](https://apps.apple.com/us/app/redisinsight/id6446987963) and download the RedisInsight app.
+
+
+To start RedisInsight, from your Terminal, run this command.
 
 ```
 redisinsight
 ``` 
 
-To resume your journey, [start Redis Stack Server](#start-redis-stack-server).   
-
 ## Install on Linux
 
-### From website
-
-RedisInsight is available for Linux as a Debian or AppImage package.
+From website:
 
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
@@ -70,33 +63,25 @@ RedisInsight is available for Linux as a Debian or AppImage package.
    sudo apt install ./RedisInsight-v2-linux-amd64.deb
    ```
 
-   For AppImage, make your downloaded file into an executable.
+   For any common Linux distribution, use AppImage. To make your downloaded file into an executable, run:
 
    ```
    chmod a+x RedisInsight-v2-linux-x86_64.AppImage
 
    ```
 
-### From stores
+From stores:
 
-You can install RedisInsight from [Snapcraft](https://snapcraft.io/redisinsight) or [FlatHub](https://flathub.org/apps/details/com.redis.RedisInsight) using instructions available at those sites.
+* You can install RedisInsight from [Snapcraft](https://snapcraft.io/redisinsight) or [FlatHub](https://flathub.org/apps/details/com.redis.RedisInsight) using instructions available at those sites.
 
-### Run RedisInsight
-
-Open the Linux command line and navigate to the folder containing the downloaded file. Then, run:
+To start RedisInsight, open the Linux command line and navigate to the folder containing the downloaded file. Then, run:
 
 ```
 ./RedisInsight-v2-linux-x86_64.AppImage
 
 ```
 
-## Start Redis Stack Server
-
-You can now start Redis Stack Server.
-
-```bash
- redis-stack-server
-```
+If you'd like to enable extended Redis capabilities of Redis Stack and access tutorials in **Workbench**, before you add a database, [install Redis Stack](/docs/stack/get-started/install). 
 
 ## Add a Redis database
 
@@ -108,11 +93,15 @@ Enter the requested details, then click **Submit** or **Add Redis Database**.
 
 Once added, your database appears with **Database Alias**. **Host:Port**, **Connection Type**, **Modules**, and **Last connection**.
 
+<img src="../images/add_database.png">
+
 ## Add a new key
 
 Select **+Key** to add a new key.
 
 Once added, the dashboard UI shows the hash key details.
+
+<img src="../images/add_key.png">
 
 ## Change the color
 

@@ -43,54 +43,7 @@ Follow the remaining steps in Workbench to load more data points and get sales b
 
 Try other data structure examples in Workbench. Share your Redis expertise with your team and the wider community by building custom RedisInsight tutorials. Use our [instructions](https://github.com/RedisInsight/Tutorials) to describe your implementations of Redis for other users to follow and interact with in the context of a connected Redis database.
 
-## Use RedisInsight to manage streams and consumer groups
-
-In this example, you will learn how to create and work with streams and consumer groups in RedisInsight.
-
-A _stream_ is an append-only log file. 
-When you add data to it, you cannot change it. 
-That may seem like a disadvantage. However, a stream serves as a log or single source of truth. 
-It can also be used as a buffer between processes that work at different speeds and do not need to know about each other. 
-For more conceptual information about streams, see [Redis Streams](/docs/manual/data-types/streams). 
-
-Let's assume you have a stream that models temperature and humidity sensors. Processes interacting with the stream perform one of two roles: _consumer_ and _producer_. 
-The point of a stream is that it's not going to end, so you cannot capture whole datasets and do some processing on them. 
- 
-In this stream, sensors are considered _producers_, which broadcast data. 
-A _consumer_ reads from the stream and does some work on it. 
-For example, if the temperature is above a certain threshold, it puts a message out to turn on the air conditioner in that unit or notify the maintenance.
-
-<img src="../images/stream.png">
-
-It is possible to have multiple consumers doing different jobs: one measuring humidity and another taking temperature measurements over periods of time. 
-Redis stores a copy of the entire dataset in memory, which is a finite resource.
-To avoid runaway data, streams can be trimmed when you add something to them. 
-When adding to a stream with `XADD`, you can optionally specify that the stream should be trimmed to a specific or approximate number of the newest entries, or to only include entries whose ID is higher than the ID specified.
-You can also manage the storage required for streaming data using key expiry.  For example, by writing each day's data to its own stream in Redis and expiring each stream's key after a period of time, say a week.
-An ID can be any number, but each new entry in the stream must have an ID whose value is higher than the last ID added to the stream.
-
-**Adding new entries** 
-
-Use `XADD` with `*` for the ID to have Redis automatically generate a new ID for you consisting of a millisecond precision timestamp, a dash and a sequence number.  For example `1656416957625-0`.  Then supply the field names and values to store in the new stream entry.
-
-There are a couple of ways of retrieving things. You can retrieve entries by time range or you could ask for everything that's happened since a timestamp or ID that you specify. Using a single command you can ask for anything from 10:30 until 11:15 am on a given day.
-
-**Using consumer groups**
-
-A more realistic use case would be a system with many temperature sensors whose data Redis puts in a stream, records the time they arrive, and orders them. 
-
-<img src="../images/consumer.png">
-
-On the right side, we have two consumers that read the stream. One of them is alerting if the temperature is over a certain number and texting the maintenance crew that they need to do something, and the other is a data warehouse that is taking the data and putting it into a database. 
-
-They run independently of each other. 
-Up in the right, we have another sort of task. 
-Let's assume that alerting and data warehouse are really fast. 
-You get a message whether the temperature is larger than a specific value, which might take a millisecond. 
-And alerting can keep up with the data flow. 
-One way you can scale consumers is _consumer groups_, which allows multiple instances of the same consumer or same code to work as a team to process the stream.
-
-**Managing streams in RedisInsight**
+## Use RedisInsight to manage streams and consumer groups 
 
 You can add a stream in RedisInsight in two ways: create a new stream or add to an existing stream.
 
@@ -105,9 +58,9 @@ Now you have a stream that appears in the **Streams** view and you can continue 
 RedisInsight runs read commands for you so you can see the stream entries in the **Streams** view. 
 And the **Consumer Groups** view shows each consumers in a given consumer group and the last time Redis allocated a message, what the ID of it was and how many times that process has happened, and whether a consumer has you have told Redis that you are finished working with that task using the `XACK` command.
 
-### Monitor temperature and humidity from sensors in RedisInsight
+**Monitor temperature and humidity from sensors in RedisInsight**
 
-This example shows how to bring an existing stream into RedisInsight and work with it.
+This example shows how to interact with a stream built in Node.js.
 
 **Step 1: Setup**
 
@@ -116,17 +69,17 @@ This example shows how to bring an existing stream into RedisInsight and work wi
 3. Install [Redis](https://redis.io/download/). In Docker, check that Redis is running locally on the default port 6379 (with no password set). 
 4. Clone the [code repository](https://github.com/redis-developer/introducing-redis-talk) for this example. 
 See the [README](https://github.com/redis-developer/introducing-redis-talk/tree/main/streams) for more information about this example and installation tips.
-5. On your command-line, navigate to the folder containing the code repository and install the Node.js package manager (npm). 
+5. On your command-line, navigate to the folder containing the code repository and install `npm`. 
 
- {{< highlight bash >}}
+```javascript
  npm install
- {{< / highlight >}}
+```
 
 **Step 2: Run the producer**
 
 To start the producer, which will add a new entry to the stream every few seconds, enter:
 
-```
+```javascript
 npm run producer
 
 > streams@1.0.0 producer
@@ -148,7 +101,7 @@ You can start multiple instances of the producer if you want to add entries to t
 
 To start the consumer, which reads from the stream every few seconds, enter:
 
-```
+```javascript
 npm run consumer
 
 > streams@1.0.0 consumer
@@ -169,7 +122,7 @@ The consumer stores the last entry ID that it read in a Redis string at the key 
 
 Once the consumer has processed every entry in the stream, it will wait indefinitely for instances of the producer to add more:
 
-```
+```javascript
 Reading stream...
 No new entries since entry 1632771060229-0.
 Reading stream...
@@ -185,7 +138,7 @@ A consumer group consists of multiple consumer instances working together. Redis
 
 Using multiple terminal windows, start three instances of the consumer group consumer, giving each a unique name:
 
-```
+```javascript
 npm run consumergroup consumer1
 
 > streams@1.0.0 consumergroup
@@ -202,13 +155,13 @@ Reading stream...
 
 In a second terminal:
 
-```
+```javascript
 npm run consumergroup consumer2
 ```
 
 And in a third:
 
-```
+```javascript
 npm run consumergroup consumer3
 ```
 
@@ -224,7 +177,7 @@ Note that in this model, each consumer instance does not receive all of the entr
 <img src="../images/insight_streams.png">
 
 You can now toggle between **Stream** and **Consumer Groups** views to see your data. 
-As mentioned earlier in this example, a stream is an append-only log so you can't modify the contents of an entry, but you can delete an entire entry. 
+A stream is an append-only log so you can't modify the contents of an entry, but you can delete an entire entry. 
 A case when that's useful is in the event of a so-called _poison-pill message_ that can cause consumers to crash. You can physically remove such messages in the **Streams** view or use the `XDEL` command at the command-line interface (CLI).
 
 You can continue interacting with your stream at the CLI. For example, to get the current length of a stream, use the `XLEN` command:
@@ -235,7 +188,4 @@ XLEN ingest:temphumidity
 
 Use streams for auditing and processing events in banking, gaming, supply chain, IoT, social media, and so on.
 
-## Related topics
-
-- [Redis Streams](/docs/manual/data-types/streams)
-- [Introducing Redis Streams with RedisInsight, node.js, and Python](https://www.youtube.com/watch?v=q2UOkQmIo9Q) (video)
+For more information about streams, see [Redis Streams](/docs/manual/data-types/streams). Also check out [Introducing Redis Streams with RedisInsight, node.js, and Python](https://www.youtube.com/watch?v=q2UOkQmIo9Q) (video).
