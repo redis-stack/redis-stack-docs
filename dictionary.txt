@@ -162,6 +162,7 @@ tiering
 TTL
 TShark
 UI
+ui
 ULID
 ULIDs
 Unlink
