@@ -18,17 +18,20 @@ Caskroom
 CentOS7
 Centos8
 chmod
+className
 CO2
 CommandLineRunner
 Config
 CMS
 CRM
 CrudRepository
+css
 Cypher
 datacenters
 datastore
 deserialize
 deserialized
+dir
 DNS
 Dotenv
 Downey
@@ -46,6 +49,7 @@ Cypher
 datacenter
 dataset
 DevOps
+DOM
 Dotenv
 Downey
 dually
@@ -61,6 +65,7 @@ Github
 Gzip
 Hemsworth
 Homebrew
+html
 HyperLogLog
 HyperLogLogs
 IAM
@@ -68,6 +73,8 @@ Initializer
 IoT
 IPs
 IaaS
+IFrame
+iframe
 inferencing
 Initializer
 integrations
@@ -102,6 +109,7 @@ PeopleController
 PeopleControllerV1
 PeopleRepository
 PeopleService
+pluginName
 PowerShell
 preselected
 product-lifecycle
@@ -126,6 +134,7 @@ RedisConnectionProvider
 RedisDocumentRepository
 RedisGraph
 RedisInsight
+redisinsight-plugin-sdk
 RedisJSON
 RedisTimeSeries
 RSALv2
@@ -144,6 +153,8 @@ SortOrder.ASC
 Springfox
 SSPLv1
 Stapleton's
+stylesheet
+subfolder
 Sublicensing
 SwaggerUI
 Systemd
