@@ -14,5 +14,5 @@ You can now easily extend the core functionality of RedisInsight independently b
 Data visualization provided by the plugin is rendered in the **Workbench** results area and is based on the executed command. 
 A Redis command can generate its own custom data visualization.
 
-For your reference, see the [plugin package example](https://github.com/RedisInsight/RedisInsight/tree/main/redisinsight/ui/src/packages/clients-list): running the CLIENT LIST command presents the output in a tabular format for easier reading.
+For your reference, see the [plugin package example](https://github.com/RedisInsight/RedisInsight/tree/main/redisinsight/ui/src/packages/clients-list). Running the `CLIENT LIST` command presents the output in a tabular format for easier reading.
 

@@ -1,14 +1,14 @@
 ---
 title: "Develop RedisInsight plugins"
 linkTitle: Develop plugins
-description: Learn how to develop RedisInsight plugins
+description: Guidance on developing RedisInsight plugins
 weight: 30
 aliases:
 ---
 
-To encapsulate plugin scripts and styles, plugin visualization in **Workbench** is rendered using Iframe, as described in 
+To encapsulate plugin scripts and styles, plugin visualization in **Workbench** is rendered using IFrame, as described in 
 the main plugin script and the stylesheet (if it is specified in the `package.json`).
-Iframe also includes basic styles.
+IFrame also includes basic styles.
 
 ## Plugin structure
 
@@ -24,11 +24,11 @@ Default plugins are located inside the application.
 
 `package.json` should be located in the root folder of your plugins, all other files can be included into a subfolder.
 
-* **pluginName/package.json** *(required)* - Manifest of the plugin
-* **pluginName/{anyName}.js** *(required)* - Core script of the plugin
-* **pluginName/{anyName}.css** *(optional)* - File with styles for the plugin visualizations
-* **pluginName/{anyFileOrFolder}** *(optional)* - Specify any other file or folder inside the plugin folder 
-to use by the core module script. *For example*: pluginName/images/image.png.
+* **pluginName/package.json** *(required)*: Manifest of the plugin
+* **pluginName/{anyName}.js** *(required)*: Core script of the plugin
+* **pluginName/{anyName}.css** *(optional)*: File with styles for the plugin visualizations
+* **pluginName/{anyFileOrFolder}** *(optional)*: Specify any other file or folder inside the plugin folder 
+to use by the core module script. Example: `pluginName/images/image.png`.
 
 ## `package.json` structure
 
@@ -44,7 +44,7 @@ To use the plugin, the `package.json` file should include these required fields:
     <td>Relative path to the core script of the plugin. Example: <code>./dist/index.js</code></td>
   </tr>
   <tr>
-    <td><i>visualizations</i></td>
+    <td><code>visualizations</code></td>
     <td>
       Array of visualizations (objects) to visualize the results in the Workbench.
       <br><br>
@@ -52,11 +52,11 @@ To use the plugin, the `package.json` file should include these required fields:
       <ul>
         <li><code>id</code>: Visualization id</li>
         <li><code>name</code>: Visualization name to display in <b>Workbench</b></li>
-        <li><strong><i>activationMethod</i></strong> - name of the exported function to call when 
+        <li><code>activationMethod</code>: Name of the exported function to call when 
 this visualization is selected in the Workbench</li>
         <li>
-          <strong><i>matchCommands</i></strong> - array of commands to use the visualization for. Supports regex string. 
-          <i>Example: </i> ["CLIENT LIST", "FT.*"]
+          <code>matchCommands</code>: Array of commands to use the visualization for. Supports regex string. 
+          Example: `["CLIENT LIST", "FT.*"]`
         </li>
       </ul>
     </td>
@@ -64,7 +64,7 @@ this visualization is selected in the Workbench</li>
 </table>
 
 You can specify the path to a css file in the `styles` field. If specified, 
-this file will be included inside the iframe plugin.
+this file will be included inside the IFrame plugin.
 
 Simple example of the `package.json` file with required and optional fields:
 
@@ -100,11 +100,11 @@ Simple example of the `package.json` file with required and optional fields:
 
 ## Core script of the plugin
 
-This is the required script with defined visualization methods.
-The core script contains function and its export (functions - for multiple visualizations), 
-which is run after the relevant visualization is selected in the Workbench.
+The core (required) script contains function and its export (functions, for multiple visualizations). 
+The script is run after the relevant visualization is selected in **Workbench**.
 
 The following function receives props of the executed commands:
+
 ```typescript
 interface Props {
   command: string; // executed command
@@ -126,7 +126,7 @@ export default { renderVisualization }
 Each plugin iframe has basic styles of RedisInsight application, including fonts and color schemes.
 
 It is recommended to use the React & [Elastic UI library](https://elastic.github.io/eui/#/) for 
-consistency with plugin visualisations and the entire application.
+consistency with plugin visualizations and the entire application.
 
 Find the example of the plugin here.
 
@@ -148,12 +148,15 @@ const { baseUrl, appVersion } = config
 ```
 
 ### Plugin rendering
+
 To render the plugin visualization, the iframe with basic html is generated which is 
 then populated with relevant scripts and styles. To render the html data, use existing 
 DOM Element `#app` or create your own DOM Elements.
-Rendered iframe also includes `theme_DARK` or `theme_LIGHT` className on `body` to indicate the application theme used.
 
-_Javascript Example:_
+The rendered iframe also includes `theme_DARK` or `theme_LIGHT` className on `body` to indicate the application theme used.
+
+**JavaScript**
+
 ```javascript
 const renderVisualization = (props) => {
     const { command, data = [] } = props;
@@ -172,7 +175,8 @@ const renderVisualization = (props) => {
 export default { renderVisualization }
 ```
 
-_React Example:_
+**React**
+
 ```javascript
 import { render } from 'react-dom'
 import App from './App'
@@ -189,7 +193,6 @@ const renderVisualization = (props) => {
 // This is a required action - export the main function for execution of the visualization
 export default { renderVisualization }
 ```
-
 
 ## Plugin communication
 

@@ -6,42 +6,36 @@ weight: 20
 
 ---
 
-RedisInsight is available as a standalone download or [bundled with Redis Stack](/docs/stack/get-started/install). Install it and try the in-app examples available in Workbench. For more information, see [Examples](/docs/ui/insight/examples).
-
+RedisInsight is available as a standalone download or [bundled with Redis Stack](/docs/stack/get-started/install). 
 Standalone downloads are available for Windows, MacOS, and Linux from the Redis Enterprise website and stores.
 
 ## Install on Windows
 
-From website:
+**From website**
 
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
-2. Open the `RedisInsight-v2-win-installer.exe` file.
+1. Open the `RedisInsight-v2-win-installer.exe` file.
 
-3. Open the RedisInsight icon.
+1. Open the RedisInsight icon.
 
-From stores:
+**From stores**
 
 * Go to [Microsoft Windows Apps](https://apps.microsoft.com/store/detail/redisinsight/XP8K1GHCB0F1R2) and download the RedisInsight app.
 
 ## Install on MacOS
 
-From website:
+**From website**
 
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 1. Add RedisInsight to **Applications**. 
 
-Using Homebrew:
+**Using Homebrew**
 
 ```
 brew install --cask redisinsight
 ```
-
-From store:
-
-* Go to [Apple Store](https://apps.apple.com/us/app/redisinsight/id6446987963) and download the RedisInsight app.
-
 
 To start RedisInsight, from your Terminal, run this command.
 
@@ -49,39 +43,41 @@ To start RedisInsight, from your Terminal, run this command.
 redisinsight
 ``` 
 
+**From stores**
+
+* Go to [Apple Store](https://apps.apple.com/us/app/redisinsight/id6446987963) and download the RedisInsight app.
+
+
 ## Install on Linux
 
-From website:
+**From website**
 
 1. Download [RedisInsight](https://redis.com/redis-enterprise/redis-insight). 
 
 1. Open the Linux command line and install the package. 
 
-   For Debian, run:
+   * For Debian, run:
 
-   ```
-   sudo apt install ./RedisInsight-v2-linux-amd64.deb
-   ```
+     ```
+     sudo apt install ./RedisInsight-v2-linux-amd64.deb
+     ```
 
-   For any common Linux distribution, use AppImage. To make your downloaded file into an executable, run:
+   * For any common Linux distribution, use AppImage. 
+     - To make your downloaded file into an executable, run:
 
-   ```
-   chmod a+x RedisInsight-v2-linux-x86_64.AppImage
+        ```
+        chmod a+x RedisInsight-v2-linux-x86_64.AppImage
+        ```
 
-   ```
+     - To start RedisInsight, open the Linux command line and navigate to the folder containing the downloaded file. Then, run:
 
-From stores:
+       ```
+       ./RedisInsight-v2-linux-x86_64.AppImage
+       ```
+
+**From stores**
 
 * You can install RedisInsight from [Snapcraft](https://snapcraft.io/redisinsight) or [FlatHub](https://flathub.org/apps/details/com.redis.RedisInsight) using instructions available at those sites.
-
-To start RedisInsight, open the Linux command line and navigate to the folder containing the downloaded file. Then, run:
-
-```
-./RedisInsight-v2-linux-x86_64.AppImage
-
-```
-
-If you'd like to enable extended Redis capabilities of Redis Stack and access tutorials in **Workbench**, before you add a database, [install Redis Stack](/docs/stack/get-started/install). 
 
 ## Add a Redis database
 
@@ -91,7 +87,7 @@ If you already have Redis database up and running locally, select **Autodiscover
 
 Enter the requested details, then click **Submit** or **Add Redis Database**.
 
-Once added, your database appears with **Database Alias**. **Host:Port**, **Connection Type**, **Modules**, and **Last connection**.
+Once added, your database appears with **Database Alias**, **Host:Port**, **Connection Type**, **Modules**, and **Last connection**.
 
 <img src="../images/add_database.png">
 
@@ -109,4 +105,4 @@ RedisInsight allows you to specify the color theme of your choice. Select **Sett
 
 ## Explore
 
-To learn how to use RedisInsight with your database, see [Examples](/docs/ui/insight/examples).
+To explore ways you can interact with your database, see [Tools](/docs/ui/insight/tools] and [Tutorials](/docs/ui/insight/tutorials).
