@@ -31,16 +31,17 @@ to help you build modern applications where performance is paramount.
 
 ## RedisInsight
 
-The best way to get started with Redis Stack is with [RedisInsight](/docs/ui/insight), a visualization tool for understanding and optimizing Redis data.
+The best way to get started with Redis and Redis Stack is with [RedisInsight](/docs/ui/insight), a visualization tool for understanding and optimizing Redis data.
 
 RedisInsight allows you to:
-* View data structures visually with the Browser tool and group keys according to their namespaces.
-* Use CRUD on most Redis Stack data structures.
-* Leverage Workbench, an advanced command-line interface with intelligent command auto-complete and complex data visualizations.
-* Analyze traffic to Redis in real time using the Profiler tool.
-* Use embedded Redis CLI at any time. 
-* Analyze memory usage with the Memory Analysis tool.
-* Identify and troubleshoot bottlenecks using the Slowlog tool.
+
+* View data structures visually with the **Browser** tool and group keys according to their namespaces.
+* Use CRUD on Redis and Redis Stack data structures.
+* Leverage **Workbench**, an advanced command-line interface with visualizations for Redis Stack capabilities and data structures, including query and search capability, time series, and probabilistic data structures.
+* Debug your application by analyzing every command sent to the Redis or Redis Stack instance in real time using the **Profiler** tool.
+* Use embedded Redis CLI with command helper and syntax highlights.
+* Optimize the performance and memory usage by generating personalized recommendations with the **Database Analysis** tool.
+* Identify and troubleshoot bottlenecks using the **Slow Log** tool.
 
 ## Redis Stack packaging
 
