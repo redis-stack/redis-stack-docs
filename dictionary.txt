@@ -154,7 +154,6 @@ Springfox
 SSPLv1
 Stapleton's
 stylesheet
-subfolder
 Sublicensing
 SwaggerUI
 Systemd
@@ -298,6 +297,7 @@ springfox-swagger-ui
 src
 staticName
 storages
+subfolder
 sublicense
 subvalues
 sudo
