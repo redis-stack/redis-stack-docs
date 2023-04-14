@@ -37,7 +37,7 @@ Standalone downloads are available for Windows, MacOS, and Linux from the Redis 
 brew install --cask redisinsight
 ```
 
-To start RedisInsight, from your Terminal, run this command.
+To start RedisInsight from your Terminal, run this command.
 
 ```
 redisinsight
