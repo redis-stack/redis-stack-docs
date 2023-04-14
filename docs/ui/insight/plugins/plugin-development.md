@@ -28,7 +28,7 @@ Default plugins are located inside the application.
 * **pluginName/{anyName}.js** *(required)*: Core script of the plugin
 * **pluginName/{anyName}.css** *(optional)*: File with styles for the plugin visualizations
 * **pluginName/{anyFileOrFolder}** *(optional)*: Specify any other file or folder inside the plugin folder 
-to use by the core module script. Example: `pluginName/images/image.png`.
+for the core module script to use. Example: `pluginName/images/image.png`.
 
 ## `package.json` structure
 
