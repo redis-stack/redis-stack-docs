@@ -69,7 +69,7 @@ redisinsight
         chmod a+x RedisInsight-v2-linux-x86_64.AppImage
         ```
 
-     - To start RedisInsight, open the Linux command line and navigate to the folder containing the downloaded file. Then, run:
+     - To start RedisInsight, open the Linux command line and navigate to the directory containing the downloaded file. Then, run:
 
        ```
        ./RedisInsight-v2-linux-x86_64.AppImage
