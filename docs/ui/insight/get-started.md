@@ -63,7 +63,7 @@ redisinsight
      ```
 
    * For any common Linux distribution, use AppImage. 
-     - To make your downloaded file into an executable, run:
+     - To make your downloaded file executable, run:
 
         ```
         chmod a+x RedisInsight-v2-linux-x86_64.AppImage
