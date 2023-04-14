@@ -105,4 +105,4 @@ RedisInsight allows you to specify the color theme of your choice. Select **Sett
 
 ## Explore
 
-To explore ways you can interact with your database, see [Tools](/docs/ui/insight/tools] and [Tutorials](/docs/ui/insight/tutorials).
+To explore ways you can interact with your database, see [Tools](/docs/ui/insight/tools) and [Tutorials](/docs/ui/insight/tutorials).
