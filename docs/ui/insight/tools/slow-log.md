@@ -1,7 +1,7 @@
 ---
 title: Slow Log
 linkTitle: Slow Log
-description: Display logs captured by SLOWLOG command
+description: Display logs captured by the SLOWLOG command
 weight: 10
 
 ---

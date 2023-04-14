@@ -9,7 +9,7 @@ weight: 10
 The CLI is accessible at any time within the application. It includes:
 
 * Type-ahead help.
-* A command helper that lets you filter and search.
+* A command helper that lets you filter and search commands.
 
 Try executing Redis commands as shown here.
 

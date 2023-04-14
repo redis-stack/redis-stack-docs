@@ -50,7 +50,7 @@ To use the plugin, the `package.json` file must include these required fields:
       <br><br>
       Required fields in visualizations:
       <ul>
-        <li><code>id</code>: Visualization id</li>
+        <li><code>id</code>: Visualization ID</li>
         <li><code>name</code>: Visualization name to display in <b>Workbench</b></li>
         <li><code>activationMethod</code>: Name of the exported function to call when 
 this visualization is selected in the Workbench</li>
@@ -63,7 +63,7 @@ this visualization is selected in the Workbench</li>
   </tr>
 </table>
 
-You can specify the path to a css file in the `styles` field. If specified, 
+You can specify the path to a CSS file in the `styles` field. If specified, 
 this file will be included inside the IFrame plugin.
 
 Simple example of the `package.json` file with required and optional fields:
@@ -100,10 +100,10 @@ Simple example of the `package.json` file with required and optional fields:
 
 ## Core script of the plugin
 
-The core (required) script contains function and its export (functions, for multiple visualizations). 
-The script is run after the relevant visualization is selected in **Workbench**.
+The core (required) script contains a function and its export (functions, for multiple visualizations). 
+The script runs after the relevant visualization is selected in **Workbench**.
 
-The following function receives props of the executed commands:
+The following function receives `Props` of the executed commands:
 
 ```typescript
 interface Props {
@@ -123,12 +123,12 @@ const renderVisualization = (props: Props) => {
 export default { renderVisualization }
 ```
 
-Each plugin iframe has basic styles of RedisInsight application, including fonts and color schemes.
+Each plugin iframe has basic styles that match the RedisInsight application, including fonts and color schemes.
 
 It is recommended to use the React & [Elastic UI library](https://elastic.github.io/eui/#/) for 
 consistency with plugin visualizations and the entire application.
 
-Find the example of the plugin here.
+For a plugin example, see:
 
 * [Client List Plugin README](https://github.com/RedisInsight/Packages/blob/main/clients-list-example/README.md)
 * [Client List Plugin dir](https://github.com/RedisInsight/Packages/blob/main/clients-list-example/)
@@ -149,11 +149,11 @@ const { baseUrl, appVersion } = config
 
 ### Plugin rendering
 
-To render the plugin visualization, the iframe with basic html is generated which is 
-then populated with relevant scripts and styles. To render the html data, use existing 
-DOM Element `#app` or create your own DOM Elements.
+To render the plugin visualization, the iframe with basic HTML is generated and 
+then populated with relevant scripts and styles. To render the HTML data, use the existing 
+DOM element `#app` or create your own DOM elements.
 
-The rendered iframe also includes `theme_DARK` or `theme_LIGHT` className on `body` to indicate the application theme used.
+The rendered iframe also includes `theme_DARK` or `theme_LIGHT` `className` on `body` to indicate the application theme used.
 
 **JavaScript**
 
@@ -199,4 +199,4 @@ export default { renderVisualization }
 Use the [redisinsight-plugin-sdk](https://www.npmjs.com/package/redisinsight-plugin-sdk), which is a third party library, 
 to communicate with the main app.
 
-Find the list and description of methods called in the [README.md](https://github.com/RedisInsight/RedisInsight/blob/main/redisinsight/ui/src/packages/clients-list/README.md).
+For a list of methods and their descriptions, see the [README.md](https://github.com/RedisInsight/RedisInsight/blob/main/redisinsight/ui/src/packages/clients-list/README.md).
