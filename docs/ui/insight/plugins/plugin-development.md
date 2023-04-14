@@ -32,7 +32,7 @@ for the core module script to use. Example: `pluginName/images/image.png`.
 
 ## `package.json` structure
 
-To use the plugin, the `package.json` file should include these required fields:
+To use the plugin, the `package.json` file must include these required fields:
 
 <table>
   <tr>
