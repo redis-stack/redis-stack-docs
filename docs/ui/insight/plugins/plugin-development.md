@@ -46,7 +46,7 @@ To use the plugin, the `package.json` file must include these required fields:
   <tr>
     <td><code>visualizations</code></td>
     <td>
-      Array of visualizations (objects) to visualize the results in the Workbench.
+      Array of objects to visualize the results in the Workbench.
       <br><br>
       Required fields in visualizations:
       <ul>
