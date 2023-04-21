@@ -9,7 +9,7 @@ aliases:
 With RedisInsight, you can extend the core functionality by building your own data visualizations.
 
 Redis can hold a range of different data types. Visualizing these data types in a format that's convenient to you for validation and debugging is paramount. 
-You can now easily extend the core functionality of RedisInsight independently by building your own custom visualization plugin.
+You can now easily extend the core functionality of RedisInsight independently by building your own custom visualization plugin. 
 
 Data visualization provided by the plugin is rendered in the **Workbench** results area and is based on the executed command. 
 A Redis command can generate its own custom data visualization.

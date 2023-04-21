@@ -22,7 +22,7 @@ Default plugins are located inside the application.
 
 ### Files
 
-`package.json` should be located in the root folder of your plugins. All other files can be included in a subfolder.
+`package.json` should be located in the root folder of your plugins. All other files can be included in a sub-folder.
 
 * **pluginName/package.json** *(required)*: Manifest of the plugin
 * **pluginName/{anyName}.js** *(required)*: Core script of the plugin

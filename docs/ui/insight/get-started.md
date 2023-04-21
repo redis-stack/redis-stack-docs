@@ -47,7 +47,6 @@ redisinsight
 
 * Go to [Apple Store](https://apps.apple.com/us/app/redisinsight/id6446987963) and download the RedisInsight app.
 
-
 ## Install on Linux
 
 **From website**
@@ -56,13 +55,8 @@ redisinsight
 
 1. Open the Linux command line and install the package. 
 
-   * For Debian, run:
+   * For the `.AppImage` package: 
 
-     ```
-     sudo apt install ./RedisInsight-v2-linux-amd64.deb
-     ```
-
-   * For any common Linux distribution, use AppImage. 
      - To make your downloaded file executable, run:
 
         ```
@@ -75,17 +69,28 @@ redisinsight
        ./RedisInsight-v2-linux-x86_64.AppImage
        ```
 
+   * For Debian, run:
+
+     ```
+     sudo apt install ./RedisInsight-v2-linux-amd64.deb
+     ```
+
+
 **From stores**
 
 * You can install RedisInsight from [Snapcraft](https://snapcraft.io/redisinsight) or [FlatHub](https://flathub.org/apps/details/com.redis.RedisInsight) using instructions available at those sites.
 
 ## Add a Redis database
 
-You can add a Redis database manually, create a new Redis Enterprise Cloud database, or connect to an existing database. To try Redis Enterprise Cloud, select **Try Redis Cloud with enhanced database capabilities**.
+If you already have a Redis database, you can:
 
-If you already have Redis database up and running locally, select **Autodiscover Databases**.
+* Add it manually by specifying connection details.
 
-Enter the requested details, then click **Submit** or **Add Redis Database**.
+* Auto-discover your Redis Enterprise Cluster or Cloud databases, as well as your Redis Sentinel instances.
+
+If you need a free Redis database with modern data models and processing engines, select **Try Redis Cloud with enhanced database capabilities**.
+
+If you already have a Redis database up and running locally, RedisInsight automatically searches for it and adds it if found.
 
 Once added, your database appears with **Database Alias**, **Host:Port**, **Connection Type**, **Modules**, and **Last connection**.
 
