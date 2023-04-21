@@ -6,7 +6,7 @@ weight: 10
 aliases:
 ---
 
-Search for keywords and phrases within your documents stored as Redis hashes or JSON with dedicated UI controls to run search queries against a pre-selected index.
+Search for keywords and phrases within your documents stored as Redis hashes or JSON with dedicated UI controls to run search queries against a preselected index.
 If you use the search capability and would like to use a dedicated UI in RedisInsight:
 
 1. In **Browser**, open **Search by Values of Keys**.

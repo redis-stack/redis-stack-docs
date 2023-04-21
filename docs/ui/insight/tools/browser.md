@@ -16,7 +16,7 @@ With the **Browser** tool, you can:
 
 <img src="../../images/Browser.png">
 
-The Browser tool also helps you observe, validate, and manage your key values in a human-readable format using formatters that prettify and highlight data in different formats (for example, Unicode, JSON, MessagePack, HEX, ASCII, an so on), as well as automatically decompress your data to display it in a human-readable format, supporting GZIP, LZ4, SNAPPY, and other compressions.
+The Browser tool also helps you observe, validate, and manage your key values in a human-readable format using formatters that prettify and highlight data in different formats (for example, Unicode, JSON, MessagePack, HEX, ASCII, and so on), as well as automatically decompress your data to display it in a human-readable format, supporting GZIP, LZ4, SNAPPY, and other compressions.
 
 <img src="../../images/data_formatting.png">
 

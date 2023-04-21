@@ -40,6 +40,7 @@ EntityStream
 ETL
 FTS
 geo-distributed
+compressions
 consumer1
 consumer2
 consumer3
@@ -53,6 +54,7 @@ DevOps
 DOM
 Dotenv
 Downey
+dropdown
 dually
 EntityStream
 formatters
@@ -64,6 +66,7 @@ geo-replicated
 Geospatial
 Github
 Gzip
+GZIP
 Hemsworth
 Homebrew
 html
@@ -106,6 +109,7 @@ npm
 on-prem
 ORM
 OSS
+PEM
 PeopleController
 PeopleControllerV1
 PeopleRepository
@@ -126,6 +130,7 @@ RedisAI
 RedisGears
 redisinsight
 REDiss
+redis-tutorials
 RHEL7
 RHEL8
 RSAL
