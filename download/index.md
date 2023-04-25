@@ -27,11 +27,11 @@ Download the latest Redis Stack Server binaries here, or install with [Docker](/
 
 ### Stable (6.2.6)
 
-Redis Stack Server extends Redis with modern data models such as document, graph, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v6), or download the latest 6.2.6 binaries:
+Redis Stack Server extends Redis with modern data models such as document, graph, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v7), or download the latest 6.2.6 binaries:
 
-* [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.catalina.x86_64.zip)
-* [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.focal.x86_64.tar.gz)
-* [Ubuntu focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.focal.arm64.tar.gz)
+* [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.catalina.x86_64.zip)
+* [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.focal.x86_64.tar.gz)
+* [Ubuntu focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.focal.arm64.tar.gz)
 * [All installation options ->](#redis-stack-downloads)
 </div>
 </div>
@@ -89,18 +89,18 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 ## Redis Stack downloads
 
-### Redis Stack 6.2.6-v6
+### Redis Stack 6.2.6-v7
 
-* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.catalina.x86_64.zip), [arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.monterey.arm64.zip)
-* AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6-x86_64.AppImage)
-* Ubuntu: [Xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.xenial.x86_64.tar.gz), [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.bionic.x86_64.tar.gz), [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.bionic.arm64.tar.gz), [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.focal.x86_64.tar.gz), [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.focal.arm64.tar.gz), [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.x86_64.snap), [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.arm64.snap), [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.jammy.x86_64.tar.gz), [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.jammy.arm64.tar.gz) 
-* Debian: [Bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.bullseye.x86_64.tar.gz)
-* Redhat/CentOS 7: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.rhel7.x86_64.tar.gz)
-* Redhat/CentOS 8: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v6.rhel8.x86_64.tar.gz)
+* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.catalina.x86_64.zip), [arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.monterey.arm64.zip)
+* AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7-x86_64.AppImage)
+* Ubuntu: [Xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.xenial.x86_64.tar.gz), [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.bionic.x86_64.tar.gz), [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.bionic.arm64.tar.gz), [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.focal.x86_64.tar.gz), [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.focal.arm64.tar.gz), [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.x86_64.snap), [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.arm64.snap), [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.jammy.x86_64.tar.gz), [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.jammy.arm64.tar.gz) 
+* Debian: [Bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.bullseye.x86_64.tar.gz)
+* Redhat/CentOS 7: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.rhel7.x86_64.tar.gz)
+* Redhat/CentOS 8: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.rhel8.x86_64.tar.gz)
 * Redis Stack on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack)
 * Redis Stack server on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack-server)
 
-See the [release notes for 6.2.6-v6](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v6).
+See the [release notes for 6.2.6-v7](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v7).
 
 ### RedisInsight
 
