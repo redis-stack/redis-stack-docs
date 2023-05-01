@@ -38,7 +38,7 @@ You can then connect to the server using `redis-cli`, just as you connect to any
 If you don’t have `redis-cli` installed locally, you can run it from the Docker container:
 
 {{< highlight bash >}}
-$ docker exec -it redis-stack redis-cli
+$ docker exec -it redis-stack-server redis-cli
 {{< / highlight >}}
 
 ## Configuration
