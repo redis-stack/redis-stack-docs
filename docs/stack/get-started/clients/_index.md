@@ -16,6 +16,7 @@ The following core client libraries support Redis Stack:
 * [Jedis](https://github.com/redis/jedis) >= 4.0
 * [node-redis](https://github.com/redis/node-redis) >= 4.0
 * [redis-py](https://github.com/redis/redis-py/) >= 4.0
+* [coredis](https://github.com/alisaifee/coredis/) >= 4.12
 
 ## High-level client libraries
 
