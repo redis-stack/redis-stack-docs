@@ -2,7 +2,7 @@
 title: Install Redis Stack on Windows
 linkTitle: Windows
 description: "How to install Redis Stack on Windows"
-weight: 2
+weight: 1
 ---
 
 To install Redis Stack on Windows, you will need to have Docker installed. When Docker is up and running, open Windows PowerShell and follow the instructions described in [Run Redis Stack on Docker](/docs/stack/get-started/install/docker). Then, use Docker to connect with `redis-cli` as explained in that topic.
