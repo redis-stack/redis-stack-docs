@@ -2,7 +2,7 @@
 title: Install Redis Stack with binaries
 linkTitle: binaries
 description: "How to install Redis Stack using tarballs"
-weight: 1
+weight: 4
 ---
 
 ## Start Redis Stack Server
