@@ -108,18 +108,18 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 Download the latest RedisInsight the [RedisInsight download page](https://redis.com/redis-enterprise/redis-insight/).
 
-#### Download Redis Stack Server 7.0.6-rc8:
+#### Download Redis Stack Server 7.2.0-M01:
 
-* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.catalina.x86_64.zip), [amd64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.monterey.arm64.zip)
-* AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8-x86_64.AppImage)
-* Ubuntu: [Xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.xenial.x86_64.tar.gz), [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.bionic.x86_64.tar.gz), [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.bionic.arm64.tar.gz), [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.focal.x86_64.tar.gz), [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.focal.arm64.tar.gz), [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.x86_64.snap), [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.arm64.snap), [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.jammy.x86_64.zip), [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.jammy.arm64.zip)
-* Debian: [Bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.bullseye.x86_64.tar.gz)
-* Redhat/CentOS 7: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.rhel7.x86_64.tar.gz)
-* Redhat/CentOS 8: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.0.6-RC8.rhel8.x86_64.tar.gz)
+* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.catalina.x86_64.zip), [amd64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.monterey.arm64.zip)
+* AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01-x86_64.AppImage)
+* Ubuntu: [Xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.xenial.x86_64.tar.gz), [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.bionic.x86_64.tar.gz), [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.bionic.arm64.tar.gz), [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.focal.x86_64.tar.gz), [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.focal.arm64.tar.gz), [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.x86_64.snap), [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.arm64.snap), [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.jammy.x86_64.zip), [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.jammy.arm64.zip)
+* Debian: [Bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.bullseye.x86_64.tar.gz)
+* Redhat/CentOS 7: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.rhel7.x86_64.tar.gz)
+* Redhat/CentOS 8: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.rhel8.x86_64.tar.gz)
 * Redis Stack on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack)
 * Redis Stack server on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack-server)
 
-See the [release notes for 7.0.6-RC8](https://github.com/redis-stack/redis-stack/releases/tag/v7.0.6-rc8).
+See the [release notes for 7.2.0-M01](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-m01).
   
 
 </div>
