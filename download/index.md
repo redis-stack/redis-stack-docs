@@ -110,7 +110,7 @@ Download the latest RedisInsight the [RedisInsight download page](https://redis.
 
 #### Download Redis Stack Server 7.2.0-M01:
 
-* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.catalina.x86_64.zip), [amd64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.monterey.arm64.zip)
+* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.catalina.x86_64.zip), [arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.monterey.arm64.zip)
 * AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01-x86_64.AppImage)
 * Ubuntu: [Xenial x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.xenial.x86_64.tar.gz), [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.bionic.x86_64.tar.gz), [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.bionic.arm64.tar.gz), [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.focal.x86_64.tar.gz), [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.focal.arm64.tar.gz), [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.x86_64.snap), [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.arm64.snap), [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.jammy.x86_64.zip), [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.jammy.arm64.zip)
 * Debian: [Bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-M01.bullseye.x86_64.tar.gz)
