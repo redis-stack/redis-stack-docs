@@ -8,7 +8,7 @@ weight: 4
 Learn how to install Redis Stack on Linux from the official repository, RPM feed, with snap, or AppImage.
 
 ## From the official Debian/Ubuntu APT Repository
-You can install recent stable versions of Redis Stack from the official packages.redis.io APT repository. The repository currently supports Debian Bullseye (11), Ubuntu Xenial (16.04), Ubuntu Bionic (18.04), Ubuntu Focal (20.04), and Ubuntu Jammy (22.04) on x86 and arm64 processors. Add the repository to the apt index, update it, and install it:
+You can install recent stable versions of Redis Stack from the official packages.redis.io APT repository. The repository currently supports Debian Bullseye (11), Ubuntu Bionic (18.04), Ubuntu Focal (20.04), and Ubuntu Jammy (22.04) on x86 and arm64 processors. Add the repository to the apt index, update it, and install it:
 
 {{< highlight bash >}}
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
