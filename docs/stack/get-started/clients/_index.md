@@ -13,9 +13,10 @@ To meaningfully support Redis Stack support, a client library must provide an AP
 
 The following core client libraries support Redis Stack:
 
-* [Jedis](https://github.com/redis/jedis) >= 4.0
-* [node-redis](https://github.com/redis/node-redis) >= 4.0
-* [redis-py](https://github.com/redis/redis-py/) >= 4.0
+* [Jedis](https://github.com/redis/jedis) >= 4.4
+* [node-redis](https://github.com/redis/node-redis) >= 4.6
+* [redis-py](https://github.com/redis/redis-py/) >= 4.5
+* [nredisstack](https://github.com/redis/nredisstack/) >= 0.6.0
 
 ## High-level client libraries
 
