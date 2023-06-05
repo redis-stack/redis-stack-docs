@@ -90,7 +90,7 @@ docker run -e REDIS_ARGS="--requirepass redis-stack" redis/redis-stack:latest
 
 An example of setting [Redis persistence](https://redis.io/docs/management/persistence/):
 {{< highlight bash >}}
-docker run -e REDIS_ARGS="--save 60 1000" --appendonly yes" redis/redis-stack:latest
+docker run -e REDIS_ARGS="--save 60 1000 --appendonly yes" redis/redis-stack:latest
 {{< / highlight >}}
 
 Here's how to set a retention policy for RedisTimeSeries:
