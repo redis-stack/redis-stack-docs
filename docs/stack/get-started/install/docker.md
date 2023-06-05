@@ -43,9 +43,9 @@ $ docker exec -it redis-stack redis-cli
 
 ## Configuration
 
-### Persistence
+### Persistence in Docker
 
-To persist your Redis data to a local path, specify `-v` to configure a local volume. This command stores all data in the local directory `local-data`:
+To mount local directories and files to your Docker container, specify `-v` to configure a local volume. This command stores all data in the local directory `local-data`:
 {{< highlight bash >}}
 $ docker run -v /local-data/:/data redis/redis-stack:latest
 {{< / highlight >}}
@@ -81,10 +81,16 @@ To pass in arbitrary configuration changes, you can set any of these environment
 
 * `REDISBLOOM_ARGS`: arguments for RedisBloom
 
+
 For example, here's how to use the `REDIS_ARGS` environment variable to pass the `requirepass` directive to Redis:
 
 {{< highlight bash >}}
 docker run -e REDIS_ARGS="--requirepass redis-stack" redis/redis-stack:latest
+{{< / highlight >}}
+
+An example of setting [Redis persistence](https://redis.io/docs/management/persistence/):
+{{< highlight bash >}}
+docker run -e REDIS_ARGS="--save 60 1000" --appendonly yes" redis/redis-stack:latest
 {{< / highlight >}}
 
 Here's how to set a retention policy for RedisTimeSeries:
