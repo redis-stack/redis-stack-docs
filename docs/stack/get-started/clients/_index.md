@@ -14,9 +14,9 @@ To meaningfully support Redis Stack support, a client library must provide an AP
 The following official client libraries support Redis Stack:
 
 * [NRedisStack (.Net)](/docs/clients/dotnet/) >= 0.6
-* [Jedis (Java)](/docs/clients/java/) >= 4.0
-* [node-redis (Node.js)](/docs/clients/nodejs/) >= 4.0
-* [redis-py (Python)](/docs/clients/python/) >= 4.0
+* [Jedis (Java)](/docs/clients/java/) >= 4.4
+* [node-redis (Node.js)](/docs/clients/nodejs/) >= 4.6
+* [redis-py (Python)](/docs/clients/python/) >= 4.5
 
 ## High-level client libraries
 
