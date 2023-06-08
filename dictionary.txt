@@ -7,6 +7,7 @@ amazonlinux2
 analytics
 anonymized
 APIs
+appendonly
 AppImage
 arm64
 atomicity
