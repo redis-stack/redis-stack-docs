@@ -45,7 +45,7 @@ $ docker exec -it redis-stack redis-cli
 
 ### Persistence in Docker
 
-To mount local directories and files to your Docker container, specify `-v` to configure a local volume. This command stores all data in the local directory `local-data`:
+To mount directories or files to your Docker container, specify `-v` to configure a local volume. This command stores all data in the local directory `local-data`:
 {{< highlight bash >}}
 $ docker run -v /local-data/:/data redis/redis-stack:latest
 {{< / highlight >}}
