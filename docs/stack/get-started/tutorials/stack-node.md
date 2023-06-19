@@ -283,7 +283,7 @@ Now we can add our routes to create, read, update, and delete persons. Head back
 We'll create a person first as you need to have persons in Redis before you can do any of the reading, writing, or removing of them. Add the PUT route below. This route will call `.createAndSave()` to create a `Person` from the request body and immediately save it to the Redis:
 
 {{< highlight javascript >}}
-router.put('/', async (req, res) => {
+router.post('/', async (req, res) => {
   const person = await personRepository.createAndSave(req.body)
   res.send(person)
 })
@@ -342,7 +342,7 @@ Now that we can read and write, let's implement the *REST* of the HTTP verbs. RE
 Let's add the code to update a person using a POST route:
 
 {{< highlight javascript >}}
-router.post('/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
 
   const person = await personRepository.fetch(req.params.id)
 
