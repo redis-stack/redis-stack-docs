@@ -846,6 +846,6 @@ And just like that, we're tracking Joan Jett.
 
 ## Wrap-up
 
-So, now you know how to use Express + Redis OM to build an API backed by Redis Stack. And, you've got yourself some pretty decent started code in the process. Good deal! If you want to learn more, you can check out the [documentation](https://github.com/redis/redis-om-node) for Redis OM. It covers the full breadth of Redis OM's capabilities.
+So, now you know how to use Express + Redis OM to build an API backed by Redis Stack. And, you've got yourself some pretty decent starter code in the process. Good deal! If you want to learn more, you can check out the [documentation](https://github.com/redis/redis-om-node) for Redis OM. It covers the full breadth of Redis OM's capabilities.
 
 And thanks for taking the time to work through this. I sincerely hope you found it useful. If you have any questions, the [Redis Discord server](https://discord.gg/redis) is by far the best place to get them answered. Join the server and ask away!
