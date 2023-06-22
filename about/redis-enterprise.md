@@ -80,10 +80,10 @@ Redis Enterprise supports both hybrid (on-premises/cloud) and multi-cloud deploy
 * [Multicloud with Active-Active](https://redis.com/redis-enterprise-cloud/multicloud/) &mdash; Multiple fully-managed Redis Cloud clusters with a 
 geo-replicated database across multiple cloud vendors (for example, AWS and Google Cloud)
 
-## Build real-time apps using Redis modules
+## Build real-time apps using Redis Stack
 
 [Redis Stack](/docs/stack) extends the Redis OSS core with additional data models and capabilities such as indexing, querying, and JSON data support. 
-Redis Enteprise supports all of the module extensions available as part of Redis Stack, 
+Redis Enteprise supports all of the capabilities available as part of Redis Stack, 
 see our [Stack and Enterprise docs](https://docs.redis.com/latest/modules/). 
 
 ## Redis developer tools

@@ -31,7 +31,7 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 Browse, filter and visualize your key-value Redis data structures.
 * [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) support for lists, hashes, strings, sets, sorted sets, and streams 
-* CRUD support for [RedisJSON](/docs/stack/json)
+* CRUD support for [JSON](/docs/stack/json)
 * Group keys according to their namespaces
 
   <img src="images/Browser.png">
