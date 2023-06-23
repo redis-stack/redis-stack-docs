@@ -1,8 +1,11 @@
 ---
-title: "Redis OM for Node.js"
-linkTitle: Node.js
+title: "Redis OM Node.js"
+linkTitle: "OM for Node.js"
 description: Learn how to build with Redis Stack and Node.js
-weight: 1
+weight: 30
+stack: true
+aliases:
+    - /docs/stack/get-started/tutorials/stack-node/
 ---
 
 This tutorial will show you how to build an API using Node.js and Redis Stack.

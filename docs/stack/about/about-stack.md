@@ -1,8 +1,10 @@
 ---
 title: About Redis Stack
-linkTitle: About
+linkTitle: About Redis Stack
 description: Learn more about Redis Stack
-weight: 1
+weight: 7
+aliases:
+    - /docs/stack/about
 ---
 
 Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy-to-use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.

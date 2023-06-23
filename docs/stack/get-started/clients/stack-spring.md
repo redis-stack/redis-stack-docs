@@ -1,8 +1,11 @@
 ---
 title: "Redis OM Spring"
-linkTitle: Spring / Java
+linkTitle: OM for Spring / Java
 description: Learn how to build with Redis Stack and Spring
-weight: 1
+weight: 20
+stack: true
+aliases:
+    - /docs/stack/get-started/tutorials/stack-spring/
 ---
 
 Redis Stack provides a seamless and straightforward way to use different data models and functionality from Redis, including a document store, a graph database, a time series data database, probabilistic data structures, and a full-text search engine.
