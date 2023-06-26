@@ -9,11 +9,11 @@ weight: 2
 
 **Application search and external secondary index** 
 
-RediSearch supports application search whether the source of record is another database or Redis itself. You can use RediSearch as an external secondary index (for example, for indexing numeric or full-text data) and as a full-text search engine.
+Search and Query supports application search whether the source of record is another database or Redis itself. You can use Search and Query as an external secondary index (for example, for indexing numeric or full-text data) and as a full-text search engine.
 
 **Secondary index for Redis data**
 
-You can represent your data model using Redis hashes and RedisJSON documents. You can then declare secondary indexes to support various queries on your data set. RediSearch 2.0 updates indexes automatically whenever a hash/JSON document (that matches the indexes) is updated. 
+You can represent your data model using Redis hashes and JSON documents. You can then declare secondary indexes to support various queries on your data set. Search and Query 2.0 updates indexes automatically whenever a hash/JSON document (that matches the indexes) is updated. 
 
 **Geo-distributed search**
 
@@ -21,25 +21,25 @@ In geo-distributed search, hashes/JSON documents are handled in the usual [Activ
 
 **Unified search**
 
-You can use RediSearch to search across several source systems, like file servers, content management systems (CMS), or customer relationship management (CRM) systems. Process source data in batches (for example, using ETL tools) or as live streams (for example, using Kafka or Redis streams). 
+You can use Search and Query to search across several source systems, like file servers, content management systems (CMS), or customer relationship management (CRM) systems. Process source data in batches (for example, using ETL tools) or as live streams (for example, using Kafka or Redis streams). 
 
 **Analytics**
 
-Data often originates from several source systems. RediSearch can provide a materialized view of dimensions and facts. You can slice-and-dice data based on dimensions, group by dimension, and apply aggregations to facts.
+Data often originates from several source systems. Search and Query can provide a materialized view of dimensions and facts. You can slice-and-dice data based on dimensions, group by dimension, and apply aggregations to facts.
 
-{{% alert title="RediSearch for faceted search" color="warning" %}}
+{{% alert title="Search and Query for faceted search" color="warning" %}}
  
-Facets are multiple explicit dimensions implemented as tags in RediSearch. You can slice-and-dice data based on facets, achievable via RediSearch aggregations (`COUNT`, `TOLIST`, `FIRST_VALUE`, `RANDOM_SAMPLE`).
+Facets are multiple explicit dimensions implemented as tags in Search and Query. You can slice-and-dice data based on facets, achievable via Search and Query aggregations (`COUNT`, `TOLIST`, `FIRST_VALUE`, `RANDOM_SAMPLE`).
 
 {{% /alert %}}
 
 **Ephemeral search (retail)**
 
-When the user logs on to the site, the purchase-search history is populated into a RediSearch index from another datastore. This requires lightweight index creation, index expiry, and quick document indexing.
+When the user logs on to the site, the purchase-search history is populated into a Search and Query index from another datastore. This requires lightweight index creation, index expiry, and quick document indexing.
 
-The application/service creates a temporary and user-specific full-text index in RediSearch when a user logs in. The application/service has direct access to the user-specific index and the primary datastore. When the user logs out of the service, the index is explicitly removed. Otherwise, the index expires after a while (for example, after the user's session expires). 
+The application/service creates a temporary and user-specific full-text index in Search and Query when a user logs in. The application/service has direct access to the user-specific index and the primary datastore. When the user logs out of the service, the index is explicitly removed. Otherwise, the index expires after a while (for example, after the user's session expires). 
 
-Using RediSearch for this type of application provides these benefits: 
+Using Search and Query for this type of application provides these benefits: 
 
 - Search index is only populated when needed. 
 - Only a small portion (for example, 2%) of users are actually active. 
@@ -48,11 +48,11 @@ Using RediSearch for this type of application provides these benefits:
 
 **Real-time inventory (retail)**
 
-In real-time inventory retail, the key question is product availability: "What is available where?" The challenges with such projects are performance and accuracy. RediSearch allows for real-time searching and aggregations over millions of store/SKU combinations.
+In real-time inventory retail, the key question is product availability: "What is available where?" The challenges with such projects are performance and accuracy. Search and Query allows for real-time searching and aggregations over millions of store/SKU combinations.
 
-You can establish real-time event capture from legacy inventory system to RediSearch and then have several inventory services query RediSearch. Then, you can use combined queries, for example, item counts, price ranges, categories, and locations. Take advantage of geo-distributed search (Active-Active) for your remote store locations. 
+You can establish real-time event capture from legacy inventory system to Search and Query and then have several inventory services query Search and Query. Then, you can use combined queries, for example, item counts, price ranges, categories, and locations. Take advantage of geo-distributed search (Active-Active) for your remote store locations. 
 
-Using RediSearch for this type of application provides these benefits: 
+Using Search and Query for this type of application provides these benefits: 
 
 - Low-latency queries for downstream consumers like marketing, stores/e-commerce, and fulfillment 
 - Immediate and higher consistency between stores and datacenters 
@@ -65,9 +65,9 @@ Using RediSearch for this type of application provides these benefits:
 
 Collect, access, store, and utilize communication data in real time. Capture network traffic and store it in a full-text index for the purposes of getting insights into the data.
 
-Gather data using connection information gathering (source IPs, DNS) and conversation data gathering (Wireshark/TShark live capture). Then filter, transform, and store the conversation data in RediSearch to perform search queries and create custom dashboards for your analyses.
+Gather data using connection information gathering (source IPs, DNS) and conversation data gathering (Wireshark/TShark live capture). Then filter, transform, and store the conversation data in Search and Query to perform search queries and create custom dashboards for your analyses.
 
-Using RediSearch for this type of application provides these benefits: 
+Using Search and Query for this type of application provides these benefits: 
 
 - Insights into performance issues, security threats, and network faults 
 - Improved service uptime and security 
@@ -76,9 +76,9 @@ Using RediSearch for this type of application provides these benefits:
 
 Research portals let users search for articles, research, specs, past solutions, and data to answer specific questions and take advantage of existing knowledge and history. 
 
-To build such a system, you can use RediSearch indexes supporting tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
+To build such a system, you can use Search and Query indexes supporting tag queries, numeric range queries, geo-location queries, and full-text search (FTS). 
 
-Using RediSearch for this type of application provides these benefits: 
+Using Search and Query for this type of application provides these benefits: 
 
 - Create relevant, personalized search experiences all while enforcing internal and regulatory data governance policies 
 - Increased productivity, security, and compliance  
@@ -91,19 +91,19 @@ Using RediSearch for this type of application provides these benefits:
 
 You can of course use Redis native data structures to store JSON objects, and that's a common practice. For example, you can serialize JSON and save it in a Redis String.
 
-However, RedisJSON provides several benefits over this approach.
+However, JSON provides several benefits over this approach.
 
 **Access and retrieval of subvalues**
 
-With RedisJSON, you can get nested values without having to transmit the entire object over the network. Being able to access sub-objects can lead to greater efficiencies when you're storing large JSON objects in Redis.
+With JSON, you can get nested values without having to transmit the entire object over the network. Being able to access sub-objects can lead to greater efficiencies when you're storing large JSON objects in Redis.
 
 **Atomic partial updates**
 
-RedisJSON allows you to atomically run operations like incrementing a value, adding, or removing elements from an array, append strings, and so on. To do the same with a serialized object, you have to retrieve and then reserialize the entire object, which can be expensive and also lack atomicity.
+JSON allows you to atomically run operations like incrementing a value, adding, or removing elements from an array, append strings, and so on. To do the same with a serialized object, you have to retrieve and then reserialize the entire object, which can be expensive and also lack atomicity.
 
 **Indexing and querying**
 
-When you store JSON objects as Redis strings, there's no good way to query those objects. On the other hand, storing these objects as JSON using RedisJSON lets you index and query them. This is provided by RediSearch.
+When you store JSON objects as Redis strings, there's no good way to query those objects. On the other hand, storing these objects as JSON using JSON lets you index and query them. This is provided by Search and Query.
 
 #### Learn more
 
@@ -201,7 +201,7 @@ A graph database can help recommend to user A products that their friends have b
 
 Modern data centers have a lot of moving pieces, such as infrastructure (servers and networks) and software systems (applications and services) that need to be monitored around the clock.
 
-RedisTimeSeries allows you to plan for new resources upfront, optimize the utilization of existing resources, reconstruct the circumstances that led to outages, and identify application performance issues by analyzing and reporting on the following metrics:
+Time Series allows you to plan for new resources upfront, optimize the utilization of existing resources, reconstruct the circumstances that led to outages, and identify application performance issues by analyzing and reporting on the following metrics:
 
 - Maximum CPU utilization per server
 - Maximum network latency between two services
@@ -210,7 +210,7 @@ RedisTimeSeries allows you to plan for new resources upfront, optimize the utili
 
 **Weather analysis (environment)**
 
-RedisTimeSeries can be used to track environmental measurements such as the number of daily sunshine hours and hourly rainfall depth, over a period of many years. Seasonally, you can measure average rainfall depth, average daily temperature, and the maximum number of sunny hours per day, for example. Watch the increase of the maximum daily temperature over the years. Predict the expected temperature and rainfall depth in a specific location for a particular week of the year.
+Time Series can be used to track environmental measurements such as the number of daily sunshine hours and hourly rainfall depth, over a period of many years. Seasonally, you can measure average rainfall depth, average daily temperature, and the maximum number of sunny hours per day, for example. Watch the increase of the maximum daily temperature over the years. Predict the expected temperature and rainfall depth in a specific location for a particular week of the year.
 
 Multiple time series can be collected, each for a different location. By utilizing secondary indexes, measurements can be aggregated over given geographical regions (e.g., minimal and maximal daily temperature in Europe) or over locations with specific attributes (e.g., average rainfall depth in mountainous regions).
 
@@ -260,7 +260,7 @@ Modern cars are exposing several metrics via a standard interface. Use TimeSerie
 
 **Smart metering (sensor data and IoT)**
 
-Modern houses and facilities gather details about energy consumption/production. Use RedisTimeSeries to aggregate billing based on monthly consumption. Optimize the network by redirecting the energy delivery relative to the fluctuations in need. Provide recommendations on how to improve the energy consumption behavior. Example metrics include:
+Modern houses and facilities gather details about energy consumption/production. Use Time Series to aggregate billing based on monthly consumption. Optimize the network by redirecting the energy delivery relative to the fluctuations in need. Provide recommendations on how to improve the energy consumption behavior. Example metrics include:
 
 - Consumption per location
 - Produced amount of electrical energy per location
@@ -275,7 +275,7 @@ Telecom providers need to ensure that they are providing the necessary infrastru
 
 Stock trading is highly automated today. Algorithms, and not just human beings, are trading, from the amount of bids and asks for the trading of a stock to the extreme volumes of trades per second (millions of ops per second). Computer-driven trading requires millisecond response times. It's necessary to keep a lot of data points within a very short period of time (for example, price fluctuations per second within a minute). In addition, the long-term history needs to be kept to make statements about trends or for regulatory purposes.  
 
-Use RedisTimeSeries to identify correlations between the trading behavior and other events (for example, social network posts). Discover a developing market. Detect anomalies to discover insider trades. Example metrics include:
+Use Time Series to identify correlations between the trading behavior and other events (for example, social network posts). Discover a developing market. Detect anomalies to discover insider trades. Example metrics include:
 
 - Exact time and order of a trade by itself
 - Type of the event (trade/bid)
@@ -297,7 +297,7 @@ This application answers the question, "Has the user paid from this location bef
  
 Use one Bloom filter per user, checked for every transaction. Provide an extremely fast response (local latency). Replicate in different regions in case the user moves. Prevent decreasing performance with scale.  
 
-Using RedisBloom for this type of application provides these benefits: 
+Using Probabilistic for this type of application provides these benefits: 
 
 - Fast transaction completion 
 - Decreased possibility for transaction to brake in case of network partitions (connection needs to be kept open for a shorter time) 
@@ -321,7 +321,7 @@ Use a Bloom filter for every user, storing all bought products. The recommendati
 - If no, the ad is shown to the user and is added to the Bloom filter. 
 - If yes, the process restarts and repeats until it finds a product that is not present in the filter. 
 
-Using RedisBloom for this type of application provides these benefits: 
+Using Probabilistic for this type of application provides these benefits: 
 
 - Cost efficient way to a customized near real-time experience 
 - No need to invest in expensive infrastructure  
@@ -337,7 +337,7 @@ Use a Bloom filter for every username that has signed up. A new user types in th
 
 The query time stays the same at scale. 
 
-Using RedisBloom for this type of application provides these benefits: 
+Using Probabilistic for this type of application provides these benefits: 
 
 - Very fast and efficient way to do a common operation 
 - No need to invest in expensive infrastructure  

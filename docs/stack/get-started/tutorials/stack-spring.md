@@ -187,7 +187,7 @@ The `Person` class (`com.redis.om.skeleton.models.Person`) is annotated with `@D
 
 The fields `id`, `firstName`, `lastName`, `age`, `homeLoc`, `address`, and `skills` are all annotated
 with `@Indexed` (`com.redis.om.spring.annotations.Indexed`). On entities annotated with `@Document` Redis OM Spring will scan the fields and add an appropriate search index field to the schema for the entity. For example, for the `Person` class
-an index named `com.redis.om.skeleton.models.PersonIdx` will be created on application startup. In the index schema, a search field will be added for each `@Indexed` annotated property. RediSearch, the underlying search engine powering searches, supports Text (full-text searches), Tag (exact-match searches), Numeric (range queries), Geo (geographic range queries), and Vector (vector similarity queries) fields. For `@Indexed` fields, the appropriate search field (Tag, Numeric, or Geo) is selected based on the property's data type.
+an index named `com.redis.om.skeleton.models.PersonIdx` will be created on application startup. In the index schema, a search field will be added for each `@Indexed` annotated property. Search and Query, the underlying search engine powering searches, supports Text (full-text searches), Tag (exact-match searches), Numeric (range queries), Geo (geographic range queries), and Vector (vector similarity queries) fields. For `@Indexed` fields, the appropriate search field (Tag, Numeric, or Geo) is selected based on the property's data type.
 
 Fields marked as `@Searchable` (`com.redis.om.spring.annotations.Searchable`) such as `personalStatement` in `Person` are reflected as Full-Text search fields in the search index schema.
 
@@ -584,7 +584,7 @@ Executing the request, we get the record for Chris Hemsworth:
 
 ![SwaggerUI](../images/018_stack_spring.png "SwaggerUI")
 
-and in Redis Insight we can see the backing RediSearch query:
+and in Redis Insight we can see the backing query:
 
 ![RedisInsight](../images/019_stack_spring.png "RedisInsight Profiler")
 
@@ -666,13 +666,13 @@ The search returns the records for Scarlett Johansson and Samuel L. Jackson:
 
 ![SwaggerUI](../images/026_stack_spring.png "SwaggerUI")
 
-We can see the backing RediSearch query using a tag search:
+We can see the backing query using a tag search:
 
 ![RedisInsight](../images/027_stack_spring.png "RedisInsight Profiler")
 
 ## Fluid Searching with Entity Streams
 
-Redis OM Spring Entity Streams provides a Java 8 Streams interface to Query Redis JSON documents using RediSearch. Entity Streams allow you to process data in a typesafe declarative way similar to SQL statements. Streams can be used to express a query as a chain of operations.
+Redis OM Spring Entity Streams provides a Java 8 Streams interface to Query Redis JSON documents using Search and Query. Entity Streams allow you to process data in a typesafe declarative way similar to SQL statements. Streams can be used to express a query as a chain of operations.
 
 Entity Streams in Redis OM Spring provide the same semantics as Java 8 streams. Streams can be made of Redis Mapped entities (`@Document`) or one or more properties of an Entity. Entity Streams progressively build the query until a terminal operation is invoked (such as `collect`). Whenever a Terminal operation is applied to a Stream, the Stream cannot accept additional operations to its pipeline, which means that the Stream is started.
 

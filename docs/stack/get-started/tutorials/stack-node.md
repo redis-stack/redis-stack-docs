@@ -16,9 +16,9 @@ But before we start with the coding, let's start with a description of what Redi
 
 ## Redis OM for Node.js
 
-Redis OM (pronounced *REDiss OHM*) is a library that provides object mapping for Redis—that's what the OM stands for... *object mapping*. It maps Redis data types — specifically Hashes and JSON documents — to JavaScript objects. And it allows you to search over these Hashes and JSON documents. It uses RedisJSON and RediSearch to do this.
+Redis OM (pronounced *REDiss OHM*) is a library that provides object mapping for Redis—that's what the OM stands for... *object mapping*. It maps Redis data types — specifically Hashes and JSON documents — to JavaScript objects. And it allows you to search over these Hashes and JSON documents. It uses the Redis JSON and Search and Query features to do this.
 
-RedisJSON and RediSearch are two of the modules included in Redis Stack. Modules are extensions to Redis that add new data types and new commands. RedisJSON adds a JSON document data type and the commands to manipulate it. RediSearch adds various search commands to index the contents of JSON documents and Hashes.
+JSON and Search and Query are two of the features included in Redis Stack. Features, formerly called modules, are extensions to Redis that add new data types and new commands. JSON adds a JSON document data type and the commands to manipulate it. Search and Query adds various search commands to index the contents of JSON documents and Hashes.
 
 Redis OM comes in *four* different versions. We'll be working with Redis OM for Node.js in this tutorial, but there are also flavors and tutorials for [Python](/docs/stack/get-started/tutorials/stack-python), [.NET](/docs/stack/get-started/tutorials/stack-dotnet/), and [Spring](docs/stack/get-started/tutorials/stack-spring).
 
@@ -644,14 +644,14 @@ Note the use of the `.matches()` function. This is the only one that works with 
 ]
 {{< / highlight >}}
 
-Notice how the word "walk" is matched for Rupert Holmes' personal statement that contains "walks" *and* matched for Chris Stapleton's that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are *grammatically* related so it matched them. This is called stemming and it's a pretty cool feature of RediSearch that Redis OM exploits.
+Notice how the word "walk" is matched for Rupert Holmes' personal statement that contains "walks" *and* matched for Chris Stapleton's that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are *grammatically* related so it matched them. This is called stemming and it's a pretty cool feature of Search and Query that Redis OM exploits.
 
-And if you search for "a rain walk" you'll *still* match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of RediSearch that Redis OM just gets for free.
+And if you search for "a rain walk" you'll *still* match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of Search and Query that Redis OM just gets for free.
 
 
 ### Searching the globe
 
-RediSearch, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe, a radius, and the units for that radius and it'll gleefully return all the entities therein. Let's add a route to do just that:
+Search and Query, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe, a radius, and the units for that radius and it'll gleefully return all the entities therein. Let's add a route to do just that:
 
 {{< highlight javascript >}}
 router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {
