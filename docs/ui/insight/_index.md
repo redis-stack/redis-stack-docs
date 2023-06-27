@@ -59,12 +59,8 @@ The CLI is accessible at any time within the application.
 Advanced command line interface with intelligent command auto-complete and complex data visualizations.
 * Built-in guides: you can conveniently discover Redis and Redis Stack capabilities using the built-in guides.
 * Command auto-complete support for all capabilities in Redis and Redis Stack.
-* Visualizations of your [RediSearch](https://oss.redis.com/redisearch/) index, queries, and aggregations.
-* Visualizations of your [RedisGraph](https://oss.redis.com/redisgraph/).
-
-  <img src="images/Workbench_Graph.png">
-
-* Visualizations of your [RedisTimeSeries](https://oss.redis.com/redistimeseries/) data.
+* Visualizations of your [Search and Query](https://redis.io/docs/stack/search/) index, queries, and aggregations.
+* Visualizations of your [Time Series](https://redis.io/docs/stack/timeseries/) data.
 
   <img src="images/Workbench_TimeSeries.png">
 
