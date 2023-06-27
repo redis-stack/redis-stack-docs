@@ -71,15 +71,13 @@ To pass in arbitrary configuration changes, you can set any of these environment
 
 * `REDIS_ARGS`: extra arguments for Redis
 
-* `REDISEARCH_ARGS`: arguments for RediSearch
+* `REDISEARCH_ARGS`: arguments for Search and Query
 
-* `REDISJSON_ARGS`: arguments for RedisJSON
+* `REDISJSON_ARGS`: arguments for JSON
 
-* `REDISGRAPH_ARGS`: arguments for RedisGraph
+* `REDISTIMESERIES_ARGS`: arguments for Time Series
 
-* `REDISTIMESERIES_ARGS`: arguments for RedisTimeSeries
-
-* `REDISBLOOM_ARGS`: arguments for RedisBloom
+* `REDISBLOOM_ARGS`: arguments for Probabilistic
 
 
 For example, here's how to use the `REDIS_ARGS` environment variable to pass the `requirepass` directive to Redis:
@@ -93,7 +91,7 @@ An example of setting [Redis persistence](https://redis.io/docs/management/persi
 docker run -e REDIS_ARGS="--save 60 1000 --appendonly yes" redis/redis-stack:latest
 {{< / highlight >}}
 
-Here's how to set a retention policy for RedisTimeSeries:
+Here's how to set a retention policy for Time Series:
 {{< highlight bash >}}
 docker run -e REDISTIMESERIES_ARGS="RETENTION_POLICY=20" redis/redis-stack:latest
 {{< / highlight >}}

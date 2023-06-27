@@ -47,7 +47,7 @@ To run this application you'll need:
 
 * [git](https://git-scm.com/download) - to clone the repo to your machine. 
 * [Python 3.9 or higher](https://www.python.org/downloads/).
-* A [Redis Stack](https://redis.io) database, or Redis with the [RediSearch](https://redisearch.io) and [RedisJSON](https://redisjson.io) modules installed.  We've provided a `docker-compose.yml` for this.  You can also [sign up for a free 30Mb database with Redis Enterprise Cloud](https://redis.com/try-free/) - be sure to check the Redis Stack option when creating your cloud database.
+* A [Redis Stack](https://redis.io) database, or Redis with the [Search and Query](https://redisearch.io) and [JSON](https://redisjson.io) features installed.  We've provided a `docker-compose.yml` for this.  You can also [sign up for a free 30Mb database with Redis Enterprise Cloud](https://redis.com/try-free/) - be sure to check the Redis Stack option when creating your cloud database.
 * [curl](https://curl.se/), or [Postman](https://www.postman.com/) - to send HTTP requests to the application.  We'll provide examples using curl in this document.
 * Optional: [RedisInsight](https://redis.com/redis-enterprise/redis-insight/), a free data visualization and database management tool for Redis.  When downloading RedisInsight, be sure to select version 2.x or use the version that comes with Redis Stack.
 
@@ -115,7 +115,7 @@ $ flask run
  * Debugger PIN: XXX-XXX-XXX
 ```
 
-You're now up and running, and ready to perform CRUD operations on data with Redis, RediSearch, RedisJSON and Redis OM for Python!  To make sure the server's running, point your browser at `http://127.0.0.1:5000/`, where you can expect to see the application's basic home page:
+You're now up and running, and ready to perform CRUD operations on data with Redis, Search and Query, JSON and Redis OM for Python!  To make sure the server's running, point your browser at `http://127.0.0.1:5000/`, where you can expect to see the application's basic home page:
 
 ![screenshot](../images/python_server_running.png)
 
@@ -274,7 +274,7 @@ $ redis-cli
 "{\"$.skills[0]\":[\"synths\"],\"$.address\":[{\"pk\":\"01FX8SSSDNRDSRB3HMVH00NQTT\",\"street_number\":56,\"unit\":\"4A\",\"street_name\":\"The Rushes\",\"city\":\"Birmingham\",\"state\":\"West Midlands\",\"postal_code\":\"B91 6HG\",\"country\":\"United Kingdom\"}]}"
 ```
 
-For more information on the JSON Path syntax used to query JSON documents in Redis, see the [RedisJSON documentation](https://oss.redis.com/redisjson/path/).
+For more information on the JSON Path syntax used to query JSON documents in Redis, see the [JSON documentation](https://oss.redis.com/redisjson/path/).
 
 ### Find a Person by ID
 
