@@ -9,13 +9,14 @@ Redis Stack is built on Redis and uses the same client protocol as Redis. As a r
 
 To meaningfully support Redis Stack support, a client library must provide an API for the commands exposed by Redis Stack. Core client libraries generally provide one method per Redis Stack command. High-level libraries provide abstractions that may make use of multiple commands.
 
-## Core client libraries
+## Official client libraries
 
-The following core client libraries support Redis Stack:
+The following official client libraries support Redis Stack:
 
-* [Jedis](https://github.com/redis/jedis) >= 4.0
-* [node-redis](https://github.com/redis/node-redis) >= 4.0
-* [redis-py](https://github.com/redis/redis-py/) >= 4.0
+* [NRedisStack (.Net)](/docs/clients/dotnet/) >= 0.6
+* [Jedis (Java)](/docs/clients/java/) >= 4.4
+* [node-redis (Node.js)](/docs/clients/nodejs/) >= 4.6
+* [redis-py (Python)](/docs/clients/python/) >= 4.5
 
 ## High-level client libraries
 
