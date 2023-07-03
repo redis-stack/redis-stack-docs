@@ -106,20 +106,20 @@ See the [release notes for 6.2.6-v7](https://github.com/redis-stack/redis-stack/
 
 RedisInsight is a powerful tool for visualizing and optimizing data in Redis or Redis Stack. Read the latest [RedisInsight release notes](https://github.com/RedisInsight/RedisInsight/releases).
 
-Download the latest RedisInsight the [RedisInsight download page](https://redis.com/redis-enterprise/redis-insight/).
+Download the latest RedisInsight from the [RedisInsight download page](https://redis.com/redis-enterprise/redis-insight/).
 
-#### Download Redis Stack Server 7.2.0-RC1:
+#### Download Redis Stack Server 7.2.0-RC2:
 
-* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.catalina.x86_64.zip), [arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.monterey.arm64.zip)
-* AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1-x86_64.AppImage)
-* Ubuntu: [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.bionic.x86_64.tar.gz), [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.bionic.arm64.tar.gz), [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.focal.x86_64.tar.gz), [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.focal.arm64.tar.gz), [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.x86_64.snap), [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.arm64.snap), [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.jammy.x86_64.tar.gz), [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.jammy.arm64.tar.gz)
-* Debian: [Bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.bullseye.x86_64.tar.gz)
-* Redhat/CentOS 7: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.rhel7.x86_64.tar.gz)
-* Redhat/CentOS 8: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC1.rhel8.x86_64.tar.gz)
+* macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.catalina.x86_64.zip), [arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.monterey.arm64.zip)
+* AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2-x86_64.AppImage)
+* Ubuntu: [Bionic x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.bionic.x86_64.tar.gz), [Bionic arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.bionic.arm64.tar.gz), [Focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.focal.x86_64.tar.gz), [Focal arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.focal.arm64.tar.gz), [Snap x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.x86_64.snap), [Snap arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.arm64.snap), [Jammy x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.jammy.x86_64.tar.gz), [Jammy arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.jammy.arm64.tar.gz)
+* Debian: [Bullseye x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.bullseye.x86_64.tar.gz)
+* Redhat/CentOS 7: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.rhel7.x86_64.tar.gz)
+* Redhat/CentOS 8: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-RC2.rhel8.x86_64.tar.gz)
 * Redis Stack on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack)
 * Redis Stack server on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack-server)
 
-See the [release notes for 7.2.0-RC1](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-rc1).
+See the [release notes for 7.2.0-RC2](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-rc2).
   
 
 </div>
