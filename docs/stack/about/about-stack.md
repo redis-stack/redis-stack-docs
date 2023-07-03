@@ -3,6 +3,7 @@ title: About Redis Stack
 linkTitle: About Redis Stack
 description: Learn more about Redis Stack
 weight: 7
+stack: true
 aliases:
     - /docs/stack/about
 ---

@@ -3,6 +3,7 @@ title: Object-Mapper libraries (Beta)
 linkTitle: Object mapping (Beta)
 description: Object-Mapper libraries for Redis Stack
 weight: 6
+stack: true
 ---
 
 

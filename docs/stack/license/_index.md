@@ -2,6 +2,7 @@
 title: Redis Stack License
 linkTitle: License
 description: Redis Stack and RSAL License
+stack: true
 weight: 100
 ---
 
