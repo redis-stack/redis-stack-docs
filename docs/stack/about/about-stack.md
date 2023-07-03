@@ -7,7 +7,7 @@ aliases:
     - /docs/stack/about
 ---
 
-Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy-to-use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.
+Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy-to-use package. Redis Stack extends the core features of Redis OSS and provides a complete developer experience for debugging and more.
 
 In addition to all of the features of Redis OSS, Redis Stack supports:
 
@@ -15,7 +15,6 @@ In addition to all of the features of Redis OSS, Redis Stack supports:
 * Queryable JSON documents
 * Querying across hashes and JSON documents 
 * Time series data support (ingestion & querying), including full-text search
-* Graph data models with the Cypher query language
 
 ## Why Redis Stack?
 
@@ -24,10 +23,10 @@ milliseconds or less. Redis Stack does this by taking the original Redis OSS as 
 and continuing to fight complexity at every turn. Ultimately, the goal of Redis Stack is to build a real-time data platform that continues to fulfill the
 philosophy of Redis OSS: simplicity, performance, and reliability. 
 
-Redis Stack unifies and simplifies the developer experience of Redis by offering all the cutting-edge capabilities provided by the leading Redis features. Redis Stack bundles the following capabilities into Redis: [JSON](/docs/stack/json), [Search and Query](/docs/stack/search), [Time Series](/docs/stack/timeseries), and [Probabilistic](/docs/stack/bloom).
+Redis Stack unifies and simplifies the developer experience of Redis by offering all the cutting-edge features provided by the leading Redis features. Redis Stack bundles the following features into Redis: [JSON](/docs/stack/json), [Search and Query](/docs/stack/search), [Time Series](/docs/stack/timeseries), and [Probabilistic](/docs/stack/bloom).
 
-The overarching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the capabilities of 
-Redis beyond caching, Redis Stack is the place to start. Redis Stack delivers the core capabilities developers love about Redis and goes beyond 
+The overarching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the features of 
+Redis beyond caching, Redis Stack is the place to start. Redis Stack delivers the core features developers love about Redis and goes beyond 
 to help you build modern applications where performance is paramount. 
 
 ## RedisInsight
