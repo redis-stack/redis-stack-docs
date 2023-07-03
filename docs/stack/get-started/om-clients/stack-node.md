@@ -636,14 +636,14 @@ Note the use of the `.matches()` function. This is the only one that works with 
 ]
 {{< / highlight >}}
 
-Notice how the word "walk" is matched for Rupert Holmes' personal statement that contains "walks" *and* matched for Chris Stapleton's that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are *grammatically* related so it matched them. This is called stemming and it's a pretty cool feature of RediSearch that Redis OM exploits.
+Notice how the word "walk" is matched for Rupert Holmes' personal statement that contains "walks" *and* matched for Chris Stapleton's that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are *grammatically* related so it matched them. This is called stemming and it's a pretty cool feature of Redis Stack that Redis OM exploits.
 
-And if you search for "a rain walk" you'll *still* match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of RediSearch that Redis OM just gets for free.
+And if you search for "a rain walk" you'll *still* match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of Redis Stack that Redis OM just gets for free.
 
 
 ### Searching the globe
 
-RediSearch, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe, a radius, and the units for that radius and it'll gleefully return all the entities therein. Let's add a route to do just that:
+Redis Stack, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe, a radius, and the units for that radius and it'll gleefully return all the entities therein. Let's add a route to do just that:
 
 {{< highlight javascript >}}
 router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {

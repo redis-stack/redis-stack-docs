@@ -57,10 +57,10 @@ The CLI is accessible at any time within the application.
 ### Workbench
 
 Advanced command line interface with intelligent command auto-complete and complex data visualizations.
-* Built-in guides: you can conveniently discover Redis and Redis Stack capabilities using the built-in guides.
-* Command auto-complete support for all capabilities in Redis and Redis Stack.
-* Visualizations of your [Search and Query](https://redis.io/docs/stack/search/) index, queries, and aggregations.
-* Visualizations of your [Time Series](https://redis.io/docs/stack/timeseries/) data.
+* Built-in guides: you can conveniently discover Redis and Redis Stack features using the built-in guides.
+* Command auto-complete support for all features in Redis and Redis Stack.
+* Visualizations of your indexes, queries, and aggregations.
+* Visualizations of your [time series](https://redis.io/docs/stack/timeseries/) data.
 
   <img src="images/Workbench_TimeSeries.png">
 
@@ -80,9 +80,9 @@ View and manage the list of consumer groups. See existing consumers in a given c
 
 <img src="images/streams.png">
 
-### Search capabilities
+### Search features
 
-If you're using Redis Stack's indexing, querying, or full-text search capabilities, RedisInsight provides UI controls to quickly and conveniently run search queries against a preselected index. You can also create a secondary index of your data in a dedicated pane.
+If you're using Redis Stack's indexing, querying, or full-text search features, RedisInsight provides UI controls to quickly and conveniently run search queries against a preselected index. You can also create a secondary index of your data in a dedicated pane.
 
 <img src="images/search.png">
 

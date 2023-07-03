@@ -20,7 +20,7 @@ Read on to learn about Redis Enterprise and the benefits of its extended offerin
 * [Redis Stack](/download/#redis-stack-downloads): the starting point for developers who want all the power of Redis OSS and the 
 the latest innovations Redis, Inc. has to offer all in an easy to use software package.
 * [Redis Enterprise](https://redis.com/redis-enterprise/advantages/): our commercial product. Redis Enterprise maintains the simplicity and 
-high performance of Redis, while adding many enterprise-grade capabilities including:  
+high performance of Redis, while adding many enterprise-grade features including:  
 
 * Linear scaling to hundreds of millions of operations per second
 * Improved high availability with up to 99.999% uptime
@@ -82,8 +82,8 @@ geo-replicated database across multiple cloud vendors (for example, AWS and Goog
 
 ## Build real-time apps using Redis Stack
 
-[Redis Stack](/docs/stack) extends the Redis OSS core with additional data models and capabilities such as indexing, querying, and JSON data support. 
-Redis Enteprise supports all of the capabilities available as part of Redis Stack, 
+[Redis Stack](/docs/stack) extends the Redis OSS core with additional data models and features such as indexing, querying, and JSON data support. 
+Redis Enteprise supports all of the features available as part of Redis Stack, 
 see our [Stack and Enterprise docs](https://docs.redis.com/latest/modules/). 
 
 ## Redis developer tools

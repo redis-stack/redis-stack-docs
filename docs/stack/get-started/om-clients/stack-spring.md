@@ -8,7 +8,7 @@ aliases:
     - /docs/stack/get-started/tutorials/stack-spring/
 ---
 
-Redis Stack provides a seamless and straightforward way to use different data models and functionality from Redis, including a document store, a graph database, a time series data database, probabilistic data structures, and a full-text search engine.
+Redis Stack provides a seamless and straightforward way to use different data models and functionality from Redis, including a document store, a time series data database, probabilistic data structures, and a full-text search engine.
 
 Redis Stack is supported by several client libraries, including Node.js, Java, and Python, so that developers can use their preferred language. We'll be using one of the Redis Stack supporting libraries; [Redis OM Spring](https://github.com/redis/redis-om-spring).
 Redis OM Spring provides a robust repository and custom object-mapping abstractions built on the powerful Spring Data Redis (SDR) framework.
@@ -194,7 +194,7 @@ an index named `com.redis.om.skeleton.models.PersonIdx` will be created on appli
 
 Fields marked as `@Searchable` (`com.redis.om.spring.annotations.Searchable`) such as `personalStatement` in `Person` are reflected as Full-Text search fields in the search index schema.
 
-### Nested Field Search Capabilities
+### Nested Field Search Features
 
 The embedded class `Address` (`com.redis.om.skeleton.models.Address`) has several properties annotated with `@Indexed`  and `@Searchable`, which will generate search index fields in Redis. The scanning of these fields is triggered by the `@Indexed` annotation on the `address` property in the `Person` class:
 
@@ -587,7 +587,7 @@ Executing the request, we get the record for Chris Hemsworth:
 
 ![SwaggerUI](../images/018_stack_spring.png "SwaggerUI")
 
-and in Redis Insight we can see the backing RediSearch query:
+and in Redis Insight we can see the backing query:
 
 ![RedisInsight](../images/019_stack_spring.png "RedisInsight Profiler")
 
@@ -669,13 +669,13 @@ The search returns the records for Scarlett Johansson and Samuel L. Jackson:
 
 ![SwaggerUI](../images/026_stack_spring.png "SwaggerUI")
 
-We can see the backing RediSearch query using a tag search:
+We can see the backing query using a tag search:
 
 ![RedisInsight](../images/027_stack_spring.png "RedisInsight Profiler")
 
 ## Fluid Searching with Entity Streams
 
-Redis OM Spring Entity Streams provides a Java 8 Streams interface to Query Redis JSON documents using RediSearch. Entity Streams allow you to process data in a typesafe declarative way similar to SQL statements. Streams can be used to express a query as a chain of operations.
+Redis OM Spring Entity Streams provides a Java 8 Streams interface to Query Redis JSON documents using Redis Stack. Entity Streams allow you to process data in a typesafe declarative way similar to SQL statements. Streams can be used to express a query as a chain of operations.
 
 Entity Streams in Redis OM Spring provide the same semantics as Java 8 streams. Streams can be made of Redis Mapped entities (`@Document`) or one or more properties of an Entity. Entity Streams progressively build the query until a terminal operation is invoked (such as `collect`). Whenever a Terminal operation is applied to a Stream, the Stream cannot accept additional operations to its pipeline, which means that the Stream is started.
 
@@ -744,7 +744,7 @@ public Iterable<Person> findByFirstNameAndLastName(String firstName, String last
 }
 {{< / highlight >}}
 
-In this article, we explored how Redis OM Spring provides a couple of APIs to tap into the power of Redis Stack’s document database and search capabilities from Spring Boot application. We’ll explore other Redis Stack capabilities via Redis OM Spring in future articles
+In this article, we explored how Redis OM Spring provides a couple of APIs to tap into the power of Redis Stack’s document database and search features from Spring Boot application. We’ll explore other Redis Stack features via Redis OM Spring in future articles
 
 
 
