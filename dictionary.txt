@@ -139,6 +139,7 @@ SkeletonApplication
 SortOrder.ASC
 Springfox
 SSPLv1
+stack-dotnet
 Stapleton's
 Sublicensing
 SwaggerUI
