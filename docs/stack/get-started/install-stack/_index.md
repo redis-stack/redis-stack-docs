@@ -6,4 +6,5 @@ weight: 2
 stack: true
 aliases:
   - /docs/stack/get-started/
+  - /docs/stack/get-started/install/
 ---
