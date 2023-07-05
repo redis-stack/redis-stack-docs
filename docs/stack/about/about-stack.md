@@ -6,6 +6,7 @@ weight: 7
 stack: true
 aliases:
     - /docs/stack/about
+    - /docs/stack
 ---
 
 Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy-to-use package. Redis Stack extends the core features of Redis OSS and provides a complete developer experience for debugging and more.
