@@ -1,8 +1,11 @@
 ---
-title: "Redis OM for Node.js"
-linkTitle: Node.js
+title: "Redis OM Node.js"
+linkTitle: "OM for Node.js"
 description: Learn how to build with Redis Stack and Node.js
-weight: 1
+weight: 30
+stack: true
+aliases:
+    - /docs/stack/get-started/tutorials/stack-node/
 ---
 
 This tutorial will show you how to build an API using Node.js and Redis Stack.
@@ -12,17 +15,6 @@ We'll be using [Express](https://expressjs.com/) and [Redis OM](https://github.c
 The API we'll be building is a simple and relatively RESTful API that reads, writes, and finds data on persons: first name, last name, age, etc. We'll also add a simple location tracking feature just for a bit of extra interest.
 
 But before we start with the coding, let's start with a description of what Redis OM *is*.
-
-
-## Redis OM for Node.js
-
-Redis OM (pronounced *REDiss OHM*) is a library that provides object mapping for Redis—that's what the OM stands for... *object mapping*. It maps Redis data types — specifically Hashes and JSON documents — to JavaScript objects. And it allows you to search over these Hashes and JSON documents. It uses RedisJSON and RediSearch to do this.
-
-RedisJSON and RediSearch are two of the modules included in Redis Stack. Modules are extensions to Redis that add new data types and new commands. RedisJSON adds a JSON document data type and the commands to manipulate it. RediSearch adds various search commands to index the contents of JSON documents and Hashes.
-
-Redis OM comes in *four* different versions. We'll be working with Redis OM for Node.js in this tutorial, but there are also flavors and tutorials for [Python](/docs/stack/get-started/tutorials/stack-python), [.NET](/docs/stack/get-started/tutorials/stack-dotnet/), and [Spring](docs/stack/get-started/tutorials/stack-spring).
-
-This tutorial will get you started with Redis OM for Node.js, covering the basics. But if you want to dive deep into *all* of Redis OM's capabilities, check out [the README](https://github.com/redis/redis-om-node) over on GitHub.
 
 
 ## Prerequisites
@@ -644,14 +636,14 @@ Note the use of the `.matches()` function. This is the only one that works with 
 ]
 {{< / highlight >}}
 
-Notice how the word "walk" is matched for Rupert Holmes' personal statement that contains "walks" *and* matched for Chris Stapleton's that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are *grammatically* related so it matched them. This is called stemming and it's a pretty cool feature of RediSearch that Redis OM exploits.
+Notice how the word "walk" is matched for Rupert Holmes' personal statement that contains "walks" *and* matched for Chris Stapleton's that contains "walk". Now search "walk raining". You'll see that this returns Rupert's entry only even though the exact text of neither of these words is found in his personal statement. But they are *grammatically* related so it matched them. This is called stemming and it's a pretty cool feature of Redis Stack that Redis OM exploits.
 
-And if you search for "a rain walk" you'll *still* match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of RediSearch that Redis OM just gets for free.
+And if you search for "a rain walk" you'll *still* match Rupert's entry even though the word "a" is not in the text. Why? Because it's a common word that's not very helpful with searching. These common words are called stop words and this is another cool feature of Redis Stack that Redis OM just gets for free.
 
 
 ### Searching the globe
 
-RediSearch, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe, a radius, and the units for that radius and it'll gleefully return all the entities therein. Let's add a route to do just that:
+Redis Stack, and therefore Redis OM, both support searching by geographic location. You specify a point in the globe, a radius, and the units for that radius and it'll gleefully return all the entities therein. Let's add a route to do just that:
 
 {{< highlight javascript >}}
 router.get('/near/:lng,:lat/radius/:radius', async (req, res) => {
@@ -846,6 +838,6 @@ And just like that, we're tracking Joan Jett.
 
 ## Wrap-up
 
-So, now you know how to use Express + Redis OM to build an API backed by Redis Stack. And, you've got yourself some pretty decent started code in the process. Good deal! If you want to learn more, you can check out the [documentation](https://github.com/redis/redis-om-node) for Redis OM. It covers the full breadth of Redis OM's capabilities.
+So, now you know how to use Express + Redis OM to build an API backed by Redis Stack. And, you've got yourself some pretty decent started code in the process. Good deal! If you want to learn more, you can check out the [documentation](https://github.com/redis/redis-om-node) for Redis OM. It covers the full breadth of Redis OM's features.
 
 And thanks for taking the time to work through this. I sincerely hope you found it useful. If you have any questions, the [Redis Discord server](https://discord.gg/redis) is by far the best place to get them answered. Join the server and ask away!

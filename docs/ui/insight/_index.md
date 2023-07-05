@@ -2,6 +2,7 @@
 title: RedisInsight
 linkTitle: RedisInsight
 description: Visualize and optimize Redis data
+stack: true
 weight: 3
 aliases:
     - /docs/stack/insight
@@ -31,7 +32,7 @@ RedisInsight is a powerful tool for visualizing and optimizing data in Redis or 
 
 Browse, filter and visualize your key-value Redis data structures.
 * [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) support for lists, hashes, strings, sets, sorted sets, and streams 
-* CRUD support for [RedisJSON](/docs/stack/json)
+* CRUD support for [JSON](/docs/stack/json)
 * Group keys according to their namespaces
 
   <img src="images/Browser.png">
@@ -57,14 +58,10 @@ The CLI is accessible at any time within the application.
 ### Workbench
 
 Advanced command line interface with intelligent command auto-complete and complex data visualizations.
-* Built-in guides: you can conveniently discover Redis and Redis Stack capabilities using the built-in guides.
-* Command auto-complete support for all capabilities in Redis and Redis Stack.
-* Visualizations of your [RediSearch](https://oss.redis.com/redisearch/) index, queries, and aggregations.
-* Visualizations of your [RedisGraph](https://oss.redis.com/redisgraph/).
-
-  <img src="images/Workbench_Graph.png">
-
-* Visualizations of your [RedisTimeSeries](https://oss.redis.com/redistimeseries/) data.
+* Built-in guides: you can conveniently discover Redis and Redis Stack features using the built-in guides.
+* Command auto-complete support for all features in Redis and Redis Stack.
+* Visualizations of your indexes, queries, and aggregations.
+* Visualizations of your [time series](https://redis.io/docs/stack/timeseries/) data.
 
   <img src="images/Workbench_TimeSeries.png">
 
@@ -84,9 +81,9 @@ View and manage the list of consumer groups. See existing consumers in a given c
 
 <img src="images/streams.png">
 
-### Search capabilities
+### Search features
 
-If you're using Redis Stack's indexing, querying, or full-text search capabilities, RedisInsight provides UI controls to quickly and conveniently run search queries against a preselected index. You can also create a secondary index of your data in a dedicated pane.
+If you're using Redis Stack's indexing, querying, or full-text search features, RedisInsight provides UI controls to quickly and conveniently run search queries against a preselected index. You can also create a secondary index of your data in a dedicated pane.
 
 <img src="images/search.png">
 

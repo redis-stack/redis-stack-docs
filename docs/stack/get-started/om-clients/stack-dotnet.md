@@ -1,8 +1,11 @@
 ---
 title: "Redis OM .NET"
-linkTitle: .NET
+linkTitle: OM for .NET
 description: Learn how to build with Redis Stack and .NET
-weight: 1
+weight: 10
+stack: true
+aliases:
+    - /docs/stack/get-started/tutorials/stack-dotnet/
 ---
 
 [Redis OM .NET](https://github.com/redis/redis-om-dotnet) is a purpose-built library for handling documents in Redis Stack. In this tutorial, we'll build a simple ASP.NET Core Web-API app for performing CRUD operations on a simple Person & Address model, and we'll accomplish all of this with Redis OM .NET.

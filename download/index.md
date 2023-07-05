@@ -27,7 +27,7 @@ Download the latest Redis Stack Server binaries here, or install with [Docker](/
 
 ### Stable (6.2.6)
 
-Redis Stack Server extends Redis with modern data models such as document, graph, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v7), or download the latest 6.2.6 binaries:
+Redis Stack Server extends Redis with modern data models such as document, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v7), or download the latest 6.2.6 binaries:
 
 * [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.catalina.x86_64.zip)
 * [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-6.2.6-v7.focal.x86_64.tar.gz)

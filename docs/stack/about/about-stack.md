@@ -1,11 +1,14 @@
 ---
 title: About Redis Stack
-linkTitle: About
+linkTitle: About Redis Stack
 description: Learn more about Redis Stack
-weight: 1
+weight: 7
+stack: true
+aliases:
+    - /docs/stack/about
 ---
 
-Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy-to-use package. Redis Stack extends the core capabilities of Redis OSS and provides a complete developer experience for debugging and more.
+Redis Stack is the best starting point for working with Redis. We've bundled together the best of the technology that we have to offer into an easy-to-use package. Redis Stack extends the core features of Redis OSS and provides a complete developer experience for debugging and more.
 
 In addition to all of the features of Redis OSS, Redis Stack supports:
 
@@ -13,7 +16,6 @@ In addition to all of the features of Redis OSS, Redis Stack supports:
 * Queryable JSON documents
 * Querying across hashes and JSON documents 
 * Time series data support (ingestion & querying), including full-text search
-* Graph data models with the Cypher query language
 
 ## Why Redis Stack?
 
@@ -22,11 +24,10 @@ milliseconds or less. Redis Stack does this by taking the original Redis OSS as 
 and continuing to fight complexity at every turn. Ultimately, the goal of Redis Stack is to build a real-time data platform that continues to fulfill the
 philosophy of Redis OSS: simplicity, performance, and reliability. 
 
-Redis Stack unifies and simplifies the developer experience of Redis by offering all the cutting-edge capabilities provided by the leading Redis modules. Redis Stack bundles the following capabilities into Redis: [RedisJSON](/docs/stack/json), [RediSearch](/docs/stack/search), [RedisGraph](/docs/stack/graph), 
-[RedisTimeSeries](/docs/stack/timeseries), and [RedisBloom](/docs/stack/bloom).
+Redis Stack unifies and simplifies the developer experience of Redis by offering all the cutting-edge features provided by the leading Redis features. Redis Stack bundles the following features into Redis: [JSON](/docs/stack/json), [Search and Query](/docs/stack/search), [Time Series](/docs/stack/timeseries), and [Probabilistic](/docs/stack/bloom).
 
-The overarching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the capabilities of 
-Redis beyond caching, Redis Stack is the place to start. Redis Stack delivers the core capabilities developers love about Redis and goes beyond 
+The overarching vision is to provide developers with a powerful platform for all real-time data use cases. As we continue to advance the features of 
+Redis beyond caching, Redis Stack is the place to start. Redis Stack delivers the core features developers love about Redis and goes beyond 
 to help you build modern applications where performance is paramount. 
 
 ## RedisInsight
@@ -73,13 +74,13 @@ mapping libraries also support Redis Stack: [Redis OM .NET](/docs/stack/get-star
 
 Redis Stack is made up of several components, licensed as follows:
 
-* Redis Stack Server, which combines open source Redis with RediSearch, RedisJSON, RedisGraph, RedisTimeSeries, and RedisBloom, is dual-licensed under the Redis Source Available License ([RSALv2]((/docs/stack/license/)) and the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL). A breakdown of licensing by Stack component versions is shown in the table below. For more information about Redis licensing, see [Licenses](https://redis.com/legal/licenses/).
+* Redis Stack Server, which combines open source Redis with Search and Query, JSON, Time Series, and Probabilistic features is dual-licensed under the Redis Source Available License ([RSALv2]((/docs/stack/license/)) and the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL). A breakdown of licensing by Stack component versions is shown in the table below. For more information about Redis licensing, see [Licenses](https://redis.com/legal/licenses/).
 
 * RedisInsight is licensed under the SSPL.
 
 ### Versions and licenses
 
-Since November 15, 2022, our default binary distributions of Redis Stack and our Redis modules are dual-licensed under RSALv2 and SSPL. When using the source code, you can apply either RSALv2 or SSPLv1. 
+As of November 15, 2022, our default binary distributions of Redis Stack and the Redis modules that it includes are dual-licensed under RSALv2 and SSPL. When using the source code, you can apply either RSALv2 or SSPLv1. 
 
 <table>
   <tr>
@@ -104,11 +105,6 @@ Since November 15, 2022, our default binary distributions of Redis Stack and our
     <td>>= 2.4</td>
   </tr>
   <tr>
-    <td>RedisGraph</td>
-    <td><=2.8</td>
-    <td>>=2.10</td>
-  </tr>
-    <tr>
     <td>RedisTimeSeries</td>
     <td><=1.6</td>
     <td>>= 1.8</td>
