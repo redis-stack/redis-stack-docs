@@ -69,7 +69,7 @@ Modules as described here are generic, and we list only the representative use c
 ## Clients
 
 Several Redis client libraries support Redis Stack. These include [redis-py](https://redis-py.readthedocs.io/en/stable/), [node_redis](https://github.com/redis/node-redis), [NRedisStack](https://github.com/redis/NRedisStack), and [Jedis](https://github.com/redis/jedis). In addition, four higher-level object 
-mapping libraries also support Redis Stack: [Redis OM .NET](/docs/stack/get-started/tutorials/stack-dotnet/), [Redis OM Node](/docs/stack/get-started/tutorials/stack-node/), [Redis OM Python](/docs/stack/get-started/tutorials/stack-python/), [Redis OM Spring](/docs/stack/get-started/tutorials/stack-spring/).
+mapping libraries also support Redis Stack: [Redis OM .NET](/docs/stack/get-started/tutorials/stack-dotnet/), [Redis OM Node](/docs/stack/get-started/tutorials/stack-node/), [Redis OM Python](/docs/stack/get-started/tutorials/stack-python/), [Redis OM Spring](/docs/clients/om-clients/stack-spring/).
 
 ## Redis Stack license
 
