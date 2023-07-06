@@ -6,6 +6,7 @@ weight: 30
 stack: true
 aliases:
     - /docs/stack/get-started/tutorials/stack-node/
+    - /docs/clients/stack-node/
 ---
 
 This tutorial will show you how to build an API using Node.js and Redis Stack.
