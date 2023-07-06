@@ -75,7 +75,7 @@ mapping libraries also support Redis Stack: [Redis OM .NET](/docs/stack/get-star
 
 Redis Stack is made up of several components, licensed as follows:
 
-* Redis Stack Server, which combines open source Redis with Search and Query, JSON, Time Series, and Probabilistic features is dual-licensed under the Redis Source Available License ([RSALv2]((/docs/stack/license/)) and the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL). A breakdown of licensing by Stack component versions is shown in the table below. For more information about Redis licensing, see [Licenses](https://redis.com/legal/licenses/).
+* Redis Stack Server, which combines open source Redis with Search and Query, JSON, Time Series, and Probabilistic features is dual-licensed under the Redis Source Available License ([RSALv2](/docs/about/license/#redis-source-available-license-rsal-20) and the [Server Side Public License](https://en.wikipedia.org/wiki/Server_Side_Public_License) (SSPL). A breakdown of licensing by Stack component versions is shown in the table below. For more information about Redis licensing, see [Licenses](https://redis.com/legal/licenses/).
 
 * RedisInsight is licensed under the SSPL.
 

@@ -78,6 +78,7 @@ K8s
 Kubernetes
 Kubernetes-based
 LICENSOR
+linux
 LINQ
 Licensor
 licensor
@@ -87,6 +88,7 @@ Lombok
 LTS
 M1
 MacOS
+mac-os
 MERCHANTABILITY
 multicloud
 Multicloud
