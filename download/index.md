@@ -23,7 +23,7 @@ Redis 7.0 includes several new user-facing features, significant performance opt
 
 ## Redis Stack
 
-Download the latest Redis Stack Server binaries here, or install with [Docker](/docs/stack/get-started/install/docker), [Homebrew](/docs/stack/get-started/install/mac-os), or [on Linux](/docs/stack/get-started/install/linux).
+Download the latest Redis Stack Server binaries here, or install with [Docker](/docs/getting-started/install-stack/docker/), [Homebrew](/docs/stack/get-started/install/mac-os), or [on Linux](/docs/stack/get-started/install/linux).
 
 ### Stable (6.2.6)
 
