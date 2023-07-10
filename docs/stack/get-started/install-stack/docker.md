@@ -3,7 +3,7 @@ title: Run Redis Stack on Docker
 linkTitle: Docker
 description: "How to install Redis Stack using Docker"
 weight: 2
-alias: 
+aliases: 
     - /docs/stack/get-started/install/docker/
 ---
 

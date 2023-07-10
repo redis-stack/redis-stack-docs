@@ -3,7 +3,7 @@ title: Install Redis Stack on Linux
 linkTitle: Linux
 description: "How to install Redis Stack on Linux"
 weight: 4
-alias: 
+aliases: 
     - /docs/stack/get-started/install/linux/
 ---
 
