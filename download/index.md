@@ -13,7 +13,7 @@ You can download the last Redis source files here. For additional options, see t
 
 Redis 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements. It also includes changes that potentially break backwards compatibility with older versions.
 
-* [Download 7.0.11](https://github.com/redis/redis/archive/7.0.11.tar.gz)
+* [Download 7.0.12](https://github.com/redis/redis/archive/7.0.12.tar.gz)
 * [7.0 Release Notes](https://raw.githubusercontent.com/redis/redis/7.0/00-RELEASENOTES)
 * [More installation options ->](#redis-downloads)
 
@@ -50,7 +50,7 @@ You can download and run Redis Docker images from DockerHub. Multiple versions a
 
 Redis 7.2 includes optimizations, several new commands, some improvements, bug fixes, and several new module APIs. It also includes changes that potentially break backwards compatibility with older versions.
 
-* [Download 7.2-rc2](https://github.com/redis/redis/archive/7.2-rc2.tar.gz)
+* [Download 7.2-rc3](https://github.com/redis/redis/archive/7.2-rc3.tar.gz)
 * [7.2 Release Notes](https://raw.githubusercontent.com/redis/redis/7.2/00-RELEASENOTES)
 
 ### Unstable
@@ -69,19 +69,14 @@ The latest stable release is always available at the fixed [https://download.red
 
 Redis 6.2 includes many new commands and improvements. Redis 6.2 improves on the completeness of Redis and addresses issues that have been requested by many users frequently or for a long time.
 
-See the [release notes](https://raw.githubusercontent.com/redis/redis/6.2/00-RELEASENOTES) or [download 6.2.12](https://download.redis.io/releases/redis-6.2.12.tar.gz).
+See the [release notes](https://raw.githubusercontent.com/redis/redis/6.2/00-RELEASENOTES) or [download 6.2.13](https://download.redis.io/releases/redis-6.2.13.tar.gz).
 
 #### Redis 6.0
 
 Redis 6.0 (GA October, 2021) introduced SSL, the new RESP3 protocol, ACLs, client side caching, diskless replicas, I/O threads, faster RDB loading, new modules APIs, and many more improvements.
 
-See the [release notes](https://raw.githubusercontent.com/redis/redis/6.0/00-RELEASENOTES) or [download 6.0.19](https://download.redis.io/releases/redis-6.0.19.tar.gz).
+See the [release notes](https://raw.githubusercontent.com/redis/redis/6.0/00-RELEASENOTES) or [download 6.0.20](https://download.redis.io/releases/redis-6.0.20.tar.gz).
 
-#### Redis 5.0
-
-Redis 5.0 (GA October 2018) introduced the new stream data type, sorted set blocking pop operations, LFU/LRU info in RDB, a cluster manager in redis-cli, active defragmentation V2, better HyperLogLogs, and many other improvements.
-
-See the [release notes](https://raw.githubusercontent.com/redis/redis/5.0/00-RELEASENOTES) or [download 5.0.14](https://download.redis.io/releases/redis-5.0.14.tar.gz).
 
 ### List of all releases and hash digests
 
