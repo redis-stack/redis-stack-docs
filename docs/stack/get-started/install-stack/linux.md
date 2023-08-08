@@ -22,7 +22,7 @@ sudo apt-get install redis-stack-server
 
 ## From the official RPM Feed
 
-You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, and RHEL8/Centos8. Add the repository to the repository index, and install the package. Note: amazonlinux2 should use the RHEL7/CentOS7 repository.
+You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, and RHEL8/Centos8. Add the repository to the repository index, and install the package.
 
 Create the file /etc/yum.repos.d/redis.repo with the following contents
 
