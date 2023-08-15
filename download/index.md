@@ -77,7 +77,7 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 
 ## Redis Stack downloads
 
-### Redis Stack 7.2-v0
+### Redis Stack 7.2.0-v0
 
 * macOS: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v0.catalina.x86_64.zip), [arm64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v0.monterey.arm64.zip)
 * AppImage: [x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v0-x86_64.AppImage)
