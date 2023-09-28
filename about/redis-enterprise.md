@@ -7,7 +7,7 @@ aliases:
 ---
 
 [Redis Enterprise](https://redis.com/redis-enterprise-software/overview/) is an enterprise-grade Redis, 
-available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/) (on AWS, Google Cloud, 
+available both [on-premises](https://redis.com/redis-enterprise-software/overview/) and [in the cloud](https://redis.com/try-free/?utm_source=redisio&utm_medium=referral&utm_campaign=2023-09-try_free&utm_content=cu-redis_cloud_users) (on AWS, Google Cloud, 
 or Azure). Redis Enterprise simplifies operations, scaling, and multi-tenancy, includes many integrations (for example, Kubernetes), and provides multiple 
 tiers of support.
 

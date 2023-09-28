@@ -11,7 +11,7 @@ Visit our [Community page](/community) for ways to get free support from the com
 
 ## Commercial support
 
-Redis, Inc. commercially supports [Redis Enterprise](https://redis.com/redis-enterprise/advantages/), which is available as an [on-premises software deployment](https://redis.com/redis-enterprise-software/overview/) and a [fully-managed cloud service](https://redis.com/redis-enterprise-cloud/overview/). Try Redis Cloud for [free](https://redis.com/try-free/).
+Redis, Inc. commercially supports [Redis Enterprise](https://redis.com/redis-enterprise/advantages/), which is available as an [on-premises software deployment](https://redis.com/redis-enterprise-software/overview/) and a [fully-managed cloud service](https://redis.com/redis-enterprise-cloud/overview/). Try Redis Cloud for [free](https://redis.com/try-free/?utm_source=redisio&utm_medium=referral&utm_campaign=2023-09-try_free&utm_content=cu-redis_cloud_users).
 
 Redis Enterprise simplifies the management of Redis at scale and includes [advanced security](https://docs.redis.com/latest/rs/security/), [active-active geo distribution](https://redis.com/redis-enterprise/technology/active-active-geo-distribution/), and [on-call customer support](https://redis.com/company/support/).
 
