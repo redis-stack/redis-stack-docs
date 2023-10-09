@@ -10,6 +10,12 @@ aliases:
 
 ## Start Redis Stack Server
 
+Install the openssl libraries for your platform. For example, on a Debian or Ubuntu instance run:
+
+{{< highlight bash >}}
+sudo apt install libssl-dev
+{{< / highlight >}}
+
 After untarring or unzipping your redis-stack-server download, you can start Redis Stack Server as follows:
 
 {{< highlight bash >}}
