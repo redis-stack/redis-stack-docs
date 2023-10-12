@@ -41,7 +41,7 @@ Then open the `Redis.OM.Skeleton.csproj` file in your IDE of choice.
 
 ## Configure the app
 
-Add a `"REDIS_CONNECTION_STRING" field to your `appsettings.json` file to configure the application. Set that connection string to be the URI of your Redis instance. If using the docker command mentioned earlier, your connection string will be `redis://localhost:6379`.
+Add a `REDIS_CONNECTION_STRING` field to your `appsettings.json` file to configure the application. Set that connection string to be the URI of your Redis instance. If using the docker command mentioned earlier, your connection string will be `redis://localhost:6379`.
 
 ## Create the model
 
