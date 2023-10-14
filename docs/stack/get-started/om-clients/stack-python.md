@@ -35,8 +35,8 @@ Our entity is a Person, with the following JSON representation:
   },
   "personal_statement": "A string, free text personal statement",
   "skills": [
-    "A string: a skill the person has",
-    "A string: another still that the person has"
+    "A string, a skill the person has",
+    "A string, another still that the person has"
   ]
 }
 ```
