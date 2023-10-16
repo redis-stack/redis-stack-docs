@@ -1,7 +1,7 @@
 ---
 title: Install Redis Stack
 linkTitle: Install Redis Stack
-description: "How to install Redis Stack"
+description: "Install Redis Stack on Linux, macOS, and Windows"
 weight: 2
 stack: true
 aliases:
