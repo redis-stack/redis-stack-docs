@@ -5,6 +5,7 @@ description: "How to install Redis Stack on Linux"
 weight: 4
 aliases: 
     - /docs/stack/get-started/install/linux/
+    - /docs/getting-started/install-stack/linux/
 ---
 
 Learn how to install Redis Stack on Linux from the official repository, RPM feed, with snap, or AppImage.

@@ -5,6 +5,7 @@ description: "How to install Redis Stack using Docker"
 weight: 2
 aliases: 
     - /docs/stack/get-started/install/docker/
+    - /docs/getting-started/install-stack/docker/
 ---
 
 To get started with Redis Stack using Docker, you first need to select a Docker image:

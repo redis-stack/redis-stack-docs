@@ -1,7 +1,7 @@
 ---
-title: Get started with Redis Stack
-linkTitle: Get started
-description: How to install and get started with Redis Stack
+title: Quick starts
+linkTitle: Quick starts
+description: Redis quick start guides
 weight: 2
 ---
 

@@ -5,6 +5,7 @@ description: "How to install Redis Stack on macOS"
 weight: 3
 aliases: 
     - /docs/stack/get-started/install/mac-os/
+    - /docs/getting-started/install-stack/mac-os/
 ---
 
 To install Redis Stack on macOS, use [Homebrew](https://brew.sh/). Make sure that you have [Homebrew installed](https://docs.brew.sh/Installation) before starting on the installation instructions below.
