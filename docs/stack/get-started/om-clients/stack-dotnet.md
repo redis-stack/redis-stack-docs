@@ -14,7 +14,8 @@ aliases:
 ## Prerequisites
 
 * [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
-* And IDE for writing .NET (Visual Studio, Rider, Visual Studio Code)
+* Any IDE for writing .NET (Visual Studio, Rider, Visual Studio Code).
+* RediSearch must be installed as part of your Redis Stack configuration.
 * Optional: Docker Desktop for running redis-stack in docker for local testing.
 
 ## Skip to the code
@@ -41,7 +42,11 @@ Then open the `Redis.OM.Skeleton.csproj` file in your IDE of choice.
 
 ## Configure the app
 
-Add a `"REDIS_CONNECTION_STRING" field to your `appsettings.json` file to configure the application. Set that connection string to be the URI of your Redis instance. If using the docker command mentioned earlier, your connection string will be `redis://localhost:6379`.
+Add a `REDIS_CONNECTION_STRING` field to your `appsettings.json` file to configure the application. Set that connection string to be the URI of your Redis instance. If using the docker command mentioned earlier, your connection string will be `redis://localhost:6379`.
+
+### Connection string specification
+
+The full `REDIS_CONNECTION_STRING` is formatted as follows: `redis://username:password@host:port/`. If your specific connection requires a password, but not a username, be sure to include the colon preceding the password. Otherwise, the library will throw an error. For example, `redis://:password@example.com:6379/`.
 
 ## Create the model
 
