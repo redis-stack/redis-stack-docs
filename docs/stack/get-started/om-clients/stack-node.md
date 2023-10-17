@@ -175,7 +175,7 @@ Now we have all the pieces that we need to create a **repository**. A `Repositor
 
 {{< highlight javascript >}}
 /* use the client to create a Repository just for Persons */
-export const personRepository = client.fetchRepository(personSchema)
+export const personRepository = new Repository(personSchema, client)
 {{< / highlight >}}
 
 We're almost done with setting up our repository. But we still need to create an index or we won't be able to search. We do that by calling `.createIndex()`. If an index already exists and it's identical, this function won't do anything. If it's different, it'll drop it and create a new one. Add a call to `.createIndex()` to `person.js`:
