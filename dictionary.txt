@@ -294,6 +294,8 @@ untap
 untarring
 uptime
 url
+URI
+URIs
 usr
 v1
 x86
