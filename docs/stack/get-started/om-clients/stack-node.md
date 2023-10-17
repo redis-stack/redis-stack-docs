@@ -95,29 +95,19 @@ First things first, let's set up a **client**. The `Client` class is the thing t
 Let's create our first file. In the `om` folder add a file called `client.js` and add the following code:
 
 {{< highlight javascript >}}
-import { Client } from 'redis-om'
-
-/* pulls the Redis URL from .env */
+import { createClient } from 'redis'
 const url = process.env.REDIS_URL
-
-/* create and open the Redis OM Client */
-const client = await new Client().open(url)
-
-export default client
+const client = createClient({
+  url: url
+})
+client.on('error', (err) => console.log('Redis Client Error', err));
+await client.connect();
+export default client;
 {{< / highlight >}}
 
 > Remember that _top-level await_ stuff we mentioned earlier? There it is!
 
 Note that we are getting our Redis URL from an environment variable. It was put there by Dotenv and read from our `.env` file. If we didn't have the `.env` file or have a `REDIS_URL` property in our `.env` file, this code would gladly read this value from the *actual* environment variables.
-
-Also note that the `.open()` method conveniently returns `this`. This `this` (can I say *this* again? I just did!) lets us chain the instantiation of the client with the opening of the client. If this isn't to your liking, you could always write it like this:
-
-{{< highlight javascript >}}
-/* create and open the Redis OM Client */
-const client = new Client()
-await client.open(url)
-{{< / highlight >}}
-
 
 ## Entity, Schema, and Repository
 
