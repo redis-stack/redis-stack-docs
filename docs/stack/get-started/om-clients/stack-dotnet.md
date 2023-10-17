@@ -46,7 +46,7 @@ Add a `REDIS_CONNECTION_STRING` field to your `appsettings.json` file to configu
 
 ### Connection string specification
 
-The full `REDIS_CONNECTION_STRING` is formatted as follows: `redis://username:password@host:port/`. If your specific connection requires a password, but not a username, be sure to include the colon preceding the password. Otherwise, the library will throw an error. For example, `redis://:password@example.com:6379/`.
+The specification for Redis URIs is located [here](https://www.iana.org/assignments/uri-schemes/prov/redis). You can use `:password@host:port` or `default:password@host:port` for connection strings that do not include `username`.
 
 ## Create the model
 
