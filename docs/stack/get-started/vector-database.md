@@ -222,7 +222,7 @@ Then, loop over the matched documents and create a list of results that can be c
 
 The query results show the individual queries' top three matches (our K parameter) along with the bike's id, brand, and model for each query. For example, for the query "Best Mountain bikes for kids", the highest similarity score (`0.54`) and therefore the closest match was the 'Nord' brand 'Chook air 5' bike model, described as:
 
-> "The Chook Air 5 gives kids aged six years and older a durable and uberlight mountain bike for their first experience on tracks and easy cruising through forests and fields. The lower top tube makes it easy to mount and dismount in any situation, giving your kids greater safety on the trails. The Chook Air 5 is the perfect intro to mountain biking."
+> The Chook Air 5 gives kids aged six years and older a durable and uberlight mountain bike for their first experience on tracks and easy cruising through forests and fields. The lower top tube makes it easy to mount and dismount in any situation, giving your kids greater safety on the trails. The Chook Air 5 is the perfect intro to mountain biking.
 
 From the description, this bike is an excellent match for younger children, and the used embeddings have captured the semantics of the description accurately.
 
