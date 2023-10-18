@@ -10,7 +10,7 @@ aliases:
   - /docs/interact/search-and-query/search/vectors/
 ---
 
-This quick start guide shows you how to:
+This quick start guide helps you to:
 
 1. Understand what a vector database is
 2. Set a vector database up
@@ -239,4 +239,4 @@ From the description, this bike is an excellent match for younger children, and 
 
 1. You can learn more about the query options, such as pre-filters and radius queries, by reading the [vector reference documentation](/docs/interact/search-and-query/advanced-concepts/vectors/).
 2. The complete [search and query documentation](https://redis.io/docs/interact/search-and-query/) might be interesting for you.
-3. Take a look at the full [Juypter notebook](https://github.com/RedisVentures/redis-vss-getting-started)
+3. If you want to follow the code examples more interactively, then you can use the [Jupyter notebook](https://github.com/RedisVentures/redis-vss-getting-started/blob/main/vector_similarity_with_redis.ipynb) that inspired this quick start guide.
