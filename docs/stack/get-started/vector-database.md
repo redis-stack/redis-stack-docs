@@ -159,12 +159,12 @@ FT.CREATE idx:bikes_vss ON JSON
 Here's a break down of the `VECTOR` schema field definition:
 
 * `$.description_embeddings AS vector`: The vector field's JSON path and its field alias `vector`.
-* `FLAT`: Specifies the indexing method.
+* `FLAT`: Specifies the indexing method, which is either a flat index or a hierarchical navigable small world graph (`HNSW`).
 * `TYPE FLOAT32`: Sets the type of a vector compontent, in this case a 32 Bit floating point number.
 * `DIM 768`: The length or dimension of the embeddings, which you determined previously to be `768`.
 * `DISTANCE_METRIC COSINE`: The distance function is in this case [cosine similarity](https://en.wikipedia.org/wiki/Cosine_similarity).  
 
-You can find further details in the [vector reference documentation](/docs/interact/search-and-query/advanced-concepts/vectors/).
+You can find further details about all these options in the [vector reference documentation](/docs/interact/search-and-query/advanced-concepts/vectors/).
 
 ### 2. Check the state of the index
 
@@ -175,7 +175,7 @@ FT_INFO idx:bikes_vss
 {{< /clients-example >}}
 
 ## Search and query
- 
+
 This quick start guide focuses on the vector similarity search aspect. Still, you can learn more about how to query based on vector metadata in the [document database quick start guide](/docs/get-started/document-database/).
 
 ### 1. Embed your prompts
