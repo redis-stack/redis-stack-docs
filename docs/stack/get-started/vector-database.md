@@ -61,12 +61,8 @@ Instantiate the Redis client. By default, Redis returns binary responses. To dec
 {{< clients-example search_vss connect />}}
 <br/>
 {{% alert title="Tip" color="warning" %}}
-Instead of using a local Redis Stack server, you can copy and paste the connection details from the Redis Cloud database configuration page. Here is an example connection string of a Cloud database that is hosted in the AWS region `us-east-1` and listens on port 16379: `redis-16379.c283.us-east-1-4.ec2.cloud.redislabs.com:16379`. The connection string has the format `host:port`. You must also copy and paste the username and password of your Cloud database. The code for connecting with the default user is then `client = redis.Redis(host="redis-16379.c283.us-east-1-4.ec2.cloud.redislabs.com", port=16379, password="your_password_here" decode_responses=True)`
+Instead of using a local Redis Stack server, you can copy and paste the connection details from the Redis Cloud database configuration page. Here is an example connection string of a Cloud database that is hosted in the AWS region `us-east-1` and listens on port 16379: `redis-16379.c283.us-east-1-4.ec2.cloud.redislabs.com:16379`. The connection string has the format `host:port`. You must also copy and paste the username and password of your Cloud database. The line of code for connecting with the default user changes then to `client = redis.Redis(host="redis-16379.c283.us-east-1-4.ec2.cloud.redislabs.com", port=16379, password="your_password_here" decode_responses=True)`.
 {{% /alert  %}}
-
-Let's use Redis' [PING](https://redis.io/commands/ping/) command to check that Redis is up and running:
-
-{{< clients-example search_vss connection_test />}}
 
 
 ## Create vector embeddings from the demo data
@@ -123,9 +119,7 @@ In the next step, you must collect all the bikes' Redis keys.
 
 {{< clients-example search_vss get_keys />}}
 
-Next, use the keys as a parameter to the [JSON.MGET](https://redis.io/commands/json.mget/) command, along with the JSONPath expression `$.description` to collect the descriptions in a list. 
-
-Then, pass the list to the `encode` method to get a list of vectorized embeddings:
+Use the keys as a parameter to the [JSON.MGET](https://redis.io/commands/json.mget/) command, along with the JSONPath expression `$.description` to collect the descriptions in a list. Then, pass the list to the `encode` method to get a list of vectorized embeddings:
 
 {{< clients-example search_vss generate_embeddings />}}
 
@@ -144,9 +138,9 @@ In the example above, the array was shortened considerably for the sake of reada
 {{% /alert  %}}
 
 
-## Index 
+## Create an index 
 
-### 1. Create an index
+### 1. Create an index with a vector field
 
 You need to create an index to query on vector meta data and perform vector similarity searches. Use the [FT.CREATE](https://redis.io/commands/ft.create/) command:
 
@@ -180,7 +174,8 @@ The indexing process runs in the background after the index was created. In a sh
 FT_INFO idx:bikes_vss
 {{< /clients-example >}}
 
-## Query 
+## Search and query
+ 
 This quick start guide focuses on the vector similarity search aspect. Still, you can learn more about how to query based on vector metadata in the [document database quick start guide](/docs/get-started/document-database/).
 
 ### 1. Embed your prompts
