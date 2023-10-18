@@ -95,7 +95,7 @@ The following code allows you to look at the structure of one of our bike JSON d
 
 {{< clients-example search_vss dump_data />}}
 
-### 2. Store the demo data in Redis
+### 2. Store the demo data in your database
 Then, you need to iterate over the `bikes`  array to store the data as [JSON](https://redis.io/docs/stack/json/) documents in the database by using the [JSON.SET](https://redis.io/commands/json.set/) command. You'll do this using a [pipeline](https://redis.io/docs/manual/pipelining/) to minimize the round-trip times:
 
 {{< clients-example search_vss load_data />}}
