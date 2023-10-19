@@ -1,8 +1,8 @@
 ---
 title: Install Redis Stack on macOS
-linkTitle: macOS
+linkTitle: MacOS
 description: "How to install Redis Stack on macOS"
-weight: 3
+weight: 2
 aliases: 
     - /docs/stack/get-started/install/mac-os/
     - /docs/getting-started/install-stack/mac-os/

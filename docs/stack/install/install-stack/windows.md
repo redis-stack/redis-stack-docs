@@ -2,7 +2,7 @@
 title: Install Redis Stack on Windows
 linkTitle: Windows
 description: "How to install Redis Stack on Windows"
-weight: 1
+weight: 3
 aliases: 
     - /docs/stack/get-started/install/windows/
     - /docs/getting-started/install-stack/windows/
