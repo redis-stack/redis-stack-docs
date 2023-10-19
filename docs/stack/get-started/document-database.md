@@ -102,7 +102,7 @@ OK
 
 ### Wildcard query
 
-Retrieve all indexed documents using the `FT.SEARCH` command. Note the use of the `LIMIT` clause below, which provides for search result pagination.
+Retrieve all indexed documents using the [FT.SEARCH](/commands/ft.search/) command. Note the use of the `LIMIT` clause below, which provides for search result pagination.
 
 {{< clients-example search_quickstart wildcard_query "" 10 >}}
 > FT.SEARCH "idx:bicycle" "*" LIMIT 0 10
