@@ -163,7 +163,7 @@ Use the following command to perform an exact match query, such as finding all b
    2) "{\"brand\":\"Noka Bikes\",\"model\":\"Kahuna\",\"price\":3200,\"description\":\"Whether you want to try your hand at XC racing or are looking for a lively trail bike that's just as inspiring on the climbs as it is over rougher ground, the Wilder is one heck of a bike built specifically for short women. Both the frames and components have been tweaked to include a women\xe2\x80\x99s saddle, different bars and unique colourway.\",\"condition\":\"used\"}"
 {{< / clients-example >}}
 
-To learn how to make more advanced queries, see [Query](/docs/interact/search-and-query/query/).
+To learn how to make more advanced queries, please see the [query documentation](/docs/interact/search-and-query/query/).
 
 ## Next steps
 
