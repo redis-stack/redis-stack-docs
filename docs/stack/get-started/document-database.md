@@ -53,15 +53,15 @@ The first step is to connect to your Redis Stack database. You can find further 
 
 <br/>
 {{% alert title="Tip" color="warning" %}}
-You can copy and paste the connection details from the Redis Cloud database configuration page. Here is an example connection string of a Cloud database that is hosted in the AWS region `us-east-1` and listens on port 16379: `redis-16379.c283.us-east-1-4.ec2.cloud.redislabs.com:16379`. The connection string has the format `host:port`. You must also copy and paste the username and password of your Cloud database and then either pass the credentials to your client or use the [AUTH command](/commands/auth/) after the connection is established.
+You can copy and paste the connection details from the Redis Cloud database configuration page. Here is an example connection string of a Cloud database that is hosted in the AWS region `us-east-1` and listens on port 16379: `redis-16379.c283.us-east-1-4.ec2.cloud.redislabs.com:16379`. The connection string has the format `host:port`. You must also copy and paste your Cloud database's username and password and then pass the credentials to your client or use the [AUTH command](/commands/auth/) after the connection is established.
 {{% /alert  %}}
 
 
 ## Create an index
 
-As explained in the [in-memory data store](/docs/get-started/data-store/) quick start guide, Redis allows you to access an item directly via its key. You also learned how to scan the keyspace. Whereby you can use other data structures (e.g. hashes and sorted sets) as secondary indexes, your application would need to maintain those indexes manually. Redis Stack turns Redis into a document database by allowing you to declare which fields are auto-indexed. Redis Stack currently supports secondary index creation on the [hashes](/docs/data-types/hashes) and [JSON](/docs/data-types/json) documents.
+As explained in the [in-memory data store](/docs/get-started/data-store/) quick start guide, Redis allows you to access an item directly via its key. You also learned how to scan the keyspace. Whereby you can use other data structures (e.g., hashes and sorted sets) as secondary indexes, your application would need to maintain those indexes manually. Redis Stack turns Redis into a document database by allowing you to declare which fields are auto-indexed. Redis Stack currently supports secondary index creation on the [hashes](/docs/data-types/hashes) and [JSON](/docs/data-types/json) documents.
 
-The following example shows an [FT.CREATE](/commands/ft.create/) command that creates an index with some text fields, a numeric field (price) and a tag field (condition). The text fields have the weight of 1.0, which means that they have the same relevancy in the context of full-text searches. The field names follow the [JSONPath](/docs/data-types/json/path/) notion. Each such index field maps to a property within the JSON document.
+The following example shows an [FT.CREATE](/commands/ft.create/) command that creates an index with some text fields, a numeric field (price), and a tag field (condition). The text fields have a weight of 1.0, meaning they have the same relevancy in the context of full-text searches. The field names follow the [JSONPath](/docs/data-types/json/path/) notion. Each such index field maps to a property within the JSON document.
 
 
 {{< clients-example search_quickstart create_index >}}
@@ -69,7 +69,7 @@ The following example shows an [FT.CREATE](/commands/ft.create/) command that cr
 OK
 {{< / clients-example >}}
 
-Any pre-existing JSON documents that have a key prefixed with `bicycle:` are automatically added to the index after it is created. Additionally, any JSON documents with the same prefix that are created or modified after index creation are also added or re-added to the index.
+Any pre-existing JSON documents with a key prefix `bicycle:` are automatically added to the index. Additionally, any JSON documents with that prefix created or modified after index creation are added or re-added to the index.
 
 ## Add JSON documents
 
@@ -102,7 +102,7 @@ OK
 
 ### Wildcard query
 
-Retrieve all indexed documents using the [FT.SEARCH](/commands/ft.search/) command. Note the use of the `LIMIT` clause below, which provides for search result pagination.
+You can retrieve all indexed documents using the [FT.SEARCH](/commands/ft.search/) command. Note the `LIMIT` clause below, which allows result pagination.
 
 {{< clients-example search_quickstart wildcard_query "" 10 >}}
 > FT.SEARCH "idx:bicycle" "*" LIMIT 0 10
@@ -141,7 +141,7 @@ Retrieve all indexed documents using the [FT.SEARCH](/commands/ft.search/) comma
 
 ### Single-term full-text query
 
-Use the following command to perform a simple single-term query, such as finding all bicycles with a specific model:
+The following command shows a simple single-term query for finding all bicycles with a specific model:
 
 {{< clients-example search_quickstart query_single_term >}}
 > FT.SEARCH "idx:bicycle" "@model:Jigger" LIMIT 0 10
@@ -153,7 +153,7 @@ Use the following command to perform a simple single-term query, such as finding
 
 ### Exact match query
 
-Use the following command to perform an exact match query, such as finding all bicycles with the brand name `Noka Bikes`. Note the use double quotes around the search term.
+Below is a command to perform an exact match query that finds all bicycles with the brand name `Noka Bikes`. You must use double quotes around the search term when constructing an exact match query on a  text field.
 
 {{< clients-example search_quickstart query_exact_matching >}}
 > FT.SEARCH "idx:bicycle" "@brand:\"Noka Bikes\"" LIMIT 0 10
@@ -163,7 +163,7 @@ Use the following command to perform an exact match query, such as finding all b
    2) "{\"brand\":\"Noka Bikes\",\"model\":\"Kahuna\",\"price\":3200,\"description\":\"Whether you want to try your hand at XC racing or are looking for a lively trail bike that's just as inspiring on the climbs as it is over rougher ground, the Wilder is one heck of a bike built specifically for short women. Both the frames and components have been tweaked to include a women\xe2\x80\x99s saddle, different bars and unique colourway.\",\"condition\":\"used\"}"
 {{< / clients-example >}}
 
-To learn how to make more advanced queries, please see the [query documentation](/docs/interact/search-and-query/query/).
+Please see the [query documentation](/docs/interact/search-and-query/query/query/) to learn how to make more advanced queries.
 
 ## Next steps
 
