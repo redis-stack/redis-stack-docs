@@ -7,6 +7,7 @@ stack: true
 aliases:
     - /docs/stack/get-started/tutorials/stack-spring/
     - /docs/clients/stack-spring/
+    - /docs/clients/om-clients/stack-spring/
 ---
 
 Redis Stack provides a seamless and straightforward way to use different data models and functionality from Redis, including a document store, a time series data database, probabilistic data structures, and a full-text search engine.

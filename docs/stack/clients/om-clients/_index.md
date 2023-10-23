@@ -10,7 +10,7 @@ Redis OM (pronounced *REDiss OHM*) is a library that provides object mapping for
 
 You can use Redis OM with the following four programming languages:
 
-* [Node.js](/docs/clients/om-clients/stack-node/)
-* [Python](/docs/clients/om-clients/stack-python/)
-* [C# | .NET](/docs/clients/om-clients/stack-dotnet/)
-* [Java | Spring](/docs/clients/om-clients/stack-spring/)
+* [Node.js](/docs/connect/clients/om-clients/stack-node/)
+* [Python](/docs/connect/clients/om-clients/stack-python/)
+* [C# | .NET](/docs/connect/clients/om-clients/stack-dotnet/)
+* [Java | Spring](/docs/connect/clients/om-clients/stack-spring/)
