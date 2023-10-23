@@ -14,3 +14,5 @@ You can use Redis OM with the following four programming languages:
 * [Python](/docs/connect/clients/om-clients/stack-python/)
 * [C# | .NET](/docs/connect/clients/om-clients/stack-dotnet/)
 * [Java | Spring](/docs/connect/clients/om-clients/stack-spring/)
+
+<hr/>
