@@ -7,6 +7,7 @@ stack: true
 aliases:
     - /docs/stack/get-started/tutorials/stack-python/
     - /docs/clients/stack-python/
+    - /docs/clients/om-clients/stack-python/
 ---
 
 [Redis OM Python](https://github.com/redis/redis-om-python) is a Redis client that provides high-level abstractions for managing document data in Redis. This tutorial shows you how to get up and running with Redis OM Python, Redis Stack, and the [Flask](https://flask.palletsprojects.com/) micro-framework.
