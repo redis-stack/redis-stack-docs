@@ -168,7 +168,7 @@ You can find further details about all these options in the [vector reference do
 
 ### 2. Check the state of the index
 
-As soon as you execute the [FT.CREATE(https://redis.io/commands/ft.create/) command, the indexing process runs in the background. In a short time, all JSON documents should be indexed and ready to be queried. To validate that, you can use the [FT.INFO](https://redis.io/commands/ft.info/) command, which provides details and statistics about the index. Of particular interest are the number of documents successfully indexed and the number of failures:  
+As soon as you execute the [FT.CREATE](https://redis.io/commands/ft.create/) command, the indexing process runs in the background. In a short time, all JSON documents should be indexed and ready to be queried. To validate that, you can use the [FT.INFO](https://redis.io/commands/ft.info/) command, which provides details and statistics about the index. Of particular interest are the number of documents successfully indexed and the number of failures:  
 
 {{< clients-example search_vss validate_index >}}
 FT_INFO idx:bikes_vss
