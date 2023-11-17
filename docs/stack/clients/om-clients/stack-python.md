@@ -52,7 +52,7 @@ To run this application you'll need:
 
 * [git](https://git-scm.com/download) - to clone the repo to your machine. 
 * [Python 3.9 or higher](https://www.python.org/downloads/).
-* A [Redis Stack](https://redis.io) database, or Redis with the [Search and Query](https://redis.io/docs/stack/search/) and [JSON](https://redis.io/docs/stack/json/) features installed. We've provided a `docker-compose.yml` for this. You can also [sign up for a free 30Mb database with Redis Enterprise Cloud](https://redis.com/try-free/?utm_source=redisio&utm_medium=referral&utm_campaign=2023-09-try_free&utm_content=cu-redis_cloud_users) - be sure to check the Redis Stack option when creating your cloud database.
+* A [Redis Stack](https://redis.io) database, or Redis with the [Search and Query](https://redis.io/docs/stack/search/) and [JSON](https://redis.io/docs/stack/json/) features installed. We've provided a `docker-compose.yml` for this. You can also [sign up for a free 30Mb database with Redis Cloud](https://redis.com/try-free/?utm_source=redisio&utm_medium=referral&utm_campaign=2023-09-try_free&utm_content=cu-redis_cloud_users) - be sure to check the Redis Stack option when creating your cloud database.
 * [curl](https://curl.se/), or [Postman](https://www.postman.com/) - to send HTTP requests to the application.  We'll provide examples using curl in this document.
 * Optional: [RedisInsight](https://redis.com/redis-enterprise/redis-insight/), a free data visualization and database management tool for Redis.  When downloading RedisInsight, be sure to select version 2.x or use the version that comes with Redis Stack.
 
@@ -65,7 +65,7 @@ $ git clone https://github.com/redis-developer/redis-om-python-flask-skeleton-ap
 $ cd redis-om-python-flask-skeleton-app
 ```
 
-### Start a Redis Stack Database, or Configure your Redis Enterprise Cloud Credentials
+### Start a Redis Stack Database, or Configure your Redis Cloud Credentials
 
 Next, we'll get a Redis Stack database up and running.  If you're using Docker:
 
@@ -75,7 +75,7 @@ Creating network "redis-om-python-flask-skeleton-app_default" with the default d
 Creating redis_om_python_flask_starter ... done 
 ```
 
-If you're using Redis Enterprise Cloud, you'll need the hostname, port number, and password for your database.  Use these to set the `REDIS_OM_URL` environment variable like this:
+If you're using Redis Cloud, you'll need the hostname, port number, and password for your database.  Use these to set the `REDIS_OM_URL` environment variable like this:
 
 ```bash
 $ export REDIS_OM_URL=redis://default:<password>@<host>:<port>
@@ -83,7 +83,7 @@ $ export REDIS_OM_URL=redis://default:<password>@<host>:<port>
 
 (This step is not required when working with Docker as the Docker container runs Redis on `localhost` port `6379` with no password, which is the default connection that Redis OM uses.)
 
-For example if your Redis Enterprise Cloud database is at port `9139` on host `enterprise.redis.com` and your password is `5uper53cret` then you'd set `REDIS_OM_URL` as follows:
+For example if your Redis Cloud database is at port `9139` on host `enterprise.redis.com` and your password is `5uper53cret` then you'd set `REDIS_OM_URL` as follows:
 
 ```bash
 $ export REDIS_OM_URL=redis://default:5uper53cret@enterprise.redis.com:9139
@@ -148,7 +148,7 @@ raise ConnectionError(self._error_message(e))
 redis.exceptions.ConnectionError: Error 61 connecting to localhost:6379. Connection refused.
 ```
 
-then you need to start the Redis Docker container if using Docker, or set the `REDIS_OM_URL` environment variable if using Redis Enterprise Cloud.
+then you need to start the Redis Docker container if using Docker, or set the `REDIS_OM_URL` environment variable if using Redis Cloud.
 
 If you've set the `REDIS_OM_URL` environment variable, and the code errors with something like this on startup:
 

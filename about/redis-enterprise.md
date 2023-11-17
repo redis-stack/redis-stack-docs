@@ -50,20 +50,20 @@ Redis Enterprise cluster. You can use the operator on premises or in a private o
 
 The [Google Cloud Marketplace](https://console.cloud.google.com/marketplace/product/redislabs-public/redis-enterprise) also offers Redis Enterprise as a Kubernetes app for easy deployment.
 
-### Redis Enterprise Cloud
+### Redis Cloud
 
-[Redis Enterprise Cloud](https://redis.com/redis-enterprise-cloud/overview/) is a Database-as-a-Service provided by Redis. The fully-managed cloud 
+[Redis Cloud](https://redis.com/redis-enterprise-cloud/overview/) is a Database-as-a-Service provided by Redis. The fully-managed cloud 
 service is based on Redis Enterprise and accessible via a self-service portal, which gives you access to the subscription/database control plane. 
 Redis, Inc. manages the Redis Enterprise clusters and the complexity of the underlying infrastructure.
 
-To get started, see the [Redis Enterprise Cloud quick start](https://docs.redis.com/latest/rc/rc-quickstart/).
+To get started, see the [Redis Cloud quick start](https://docs.redis.com/latest/rc/rc-quickstart/).
 
 Let [Support](https://redis.com/company/support/) know if you have any questions.
 
-You can also purchase and deploy Redis Enterprise Cloud directly through the cloud provider's marketplace:
+You can also purchase and deploy Redis Cloud directly through the cloud provider's marketplace:
 
-* [Redis Enterprise Cloud Flexible - Pay as You Go](https://aws.amazon.com/marketplace/pp/prodview-mwscixe4ujhkq) (AWS)
-* [Redis Enterprise Cloud Flexible - Pay as You Go](https://console.cloud.google.com/marketplace/product/redis-marketplace-isaas/redis-enterprise-cloud-flexible-plan) (Google Cloud)
+* [Redis Cloud Flexible - Pay as You Go](https://aws.amazon.com/marketplace/pp/prodview-mwscixe4ujhkq) (AWS)
+* [Redis Cloud Flexible - Pay as You Go](https://console.cloud.google.com/marketplace/product/redis-marketplace-isaas/redis-enterprise-cloud-flexible-plan) (Google Cloud)
 * [Azure Cache for Redis Enterprise pricing](https://azure.microsoft.com/en-us/pricing/details/cache/#pricing) (Azure)
 
 
