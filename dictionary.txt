@@ -31,6 +31,7 @@ Dotenv
 Downey
 ETL
 EntityStream
+FLOAT32
 FTS
 GCP
 GeoLocation
@@ -52,7 +53,9 @@ JSONPath
 Jedis
 Jett
 Johansson
+Jupyter
 K8s
+KNN
 Kenda
 Kubernetes
 Kubernetes-based
@@ -67,8 +70,10 @@ MERCHANTABILITY
 MVC
 MacOS
 Multicloud
+NOSTEM
 Noka
 Nord
+NumPy
 ORM
 OSS
 PeopleController
@@ -98,6 +103,7 @@ RedisGraph
 RedisInsight
 RedisJSON
 RedisTimeSeries
+SBERT
 SDK
 SKU
 SLOWLOG
@@ -107,6 +113,7 @@ SSPL
 SSPLv1
 SaaS
 Scarlett
+SentenceTransformers
 Shimano
 SkeletonApplication
 Slowlog
@@ -118,7 +125,9 @@ SwaggerUI
 Systemd
 TShark
 TTL
+Tektro
 Telecom
+ThrillCycle
 TimeSeries
 UI
 ULID
@@ -126,6 +135,8 @@ ULIDs
 URI
 URIs
 Unlink
+Vectorizing
+Velorim
 WSL
 WattBike
 Wireshark
@@ -184,6 +195,7 @@ dotenv
 dr
 drivetrain
 dually
+embeddings
 entityId
 entityStream
 epel-release
@@ -197,6 +209,7 @@ findBySkills
 firstName
 formatters
 fsSL
+generate_embeddings
 geo
 geo-distributed
 geo-distribution
@@ -213,6 +226,7 @@ hostname
 houseNumber
 http
 idx:bicycle
+idx:bikes_vss
 inferencing
 ingest:temphumidity
 instantiation
@@ -234,6 +248,7 @@ licensor's
 linkTitle
 linux
 loadTestData
+load_embeddings
 localhost
 localhost:5000
 localhost:6379
@@ -264,6 +279,9 @@ personalStatement
 piña
 postalCode
 pre-existing
+pre-filter
+pre-filters
+pre-trained
 predictively
 preselected
 product-lifecycle
@@ -281,18 +299,23 @@ redis-stack-redisinsight
 redis-stack-server
 redis-stack-server:latest
 redis-stack:latest
+redisearch
 redisinsight
 repo
 repo's
 req
 requirepass
 reserialize
+resultset
+run_knn_query
 runnable
 rupert-holmes.json
 schemaless
 searchByPersonalStatement
 searchRouter
 search_quickstart
+search_vss
+smokin
 snapshots-repo
 springfox-boot-starter
 springfox-swagger-ui
@@ -318,6 +341,7 @@ tmp
 typesafe
 u2013
 u2019
+u2019re
 u2019s
 u2019t
 uberlight
@@ -327,6 +351,16 @@ uptime
 url
 usr
 v1
+vectorize
+vectorized
+wouldn
+x80
 x86
+x93
+x99
+x99re
+x99s
+x99t
+xe2
 xml
 zshrc
