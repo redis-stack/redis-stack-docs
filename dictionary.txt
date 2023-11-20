@@ -31,6 +31,7 @@ Dotenv
 Downey
 ETL
 EntityStream
+FLOAT32
 FTS
 GCP
 GeoLocation
@@ -53,6 +54,7 @@ Jedis
 Jett
 Johansson
 K8s
+KNN
 Kenda
 Kubernetes
 Kubernetes-based
@@ -67,6 +69,7 @@ MERCHANTABILITY
 MVC
 MacOS
 Multicloud
+NOSTEM
 Noka
 Nord
 ORM
@@ -98,6 +101,7 @@ RedisGraph
 RedisInsight
 RedisJSON
 RedisTimeSeries
+SBERT
 SDK
 SKU
 SLOWLOG
@@ -107,6 +111,7 @@ SSPL
 SSPLv1
 SaaS
 Scarlett
+SentenceTransformers
 Shimano
 SkeletonApplication
 Slowlog
@@ -128,6 +133,7 @@ ULIDs
 URI
 URIs
 Unlink
+Vectorizing
 WSL
 WattBike
 Wireshark
@@ -186,6 +192,7 @@ dotenv
 dr
 drivetrain
 dually
+embeddings
 entityId
 entityStream
 epel-release
@@ -199,6 +206,7 @@ findBySkills
 firstName
 formatters
 fsSL
+generate_embeddings
 geo
 geo-distributed
 geo-distribution
@@ -215,6 +223,7 @@ hostname
 houseNumber
 http
 idx:bicycle
+idx:bikes_vss
 inferencing
 ingest:temphumidity
 instantiation
@@ -236,6 +245,7 @@ licensor's
 linkTitle
 linux
 loadTestData
+load_embeddings
 localhost
 localhost:5000
 localhost:6379
@@ -266,6 +276,8 @@ personalStatement
 piña
 postalCode
 pre-existing
+pre-filter
+pre-trained
 predictively
 preselected
 product-lifecycle
@@ -283,6 +295,7 @@ redis-stack-redisinsight
 redis-stack-server
 redis-stack-server:latest
 redis-stack:latest
+redisearch
 redisinsight
 repo
 repo's
@@ -295,6 +308,7 @@ schemaless
 searchByPersonalStatement
 searchRouter
 search_quickstart
+search_vss
 snapshots-repo
 springfox-boot-starter
 springfox-swagger-ui
@@ -330,6 +344,8 @@ uptime
 url
 usr
 v1
+vectorize
+vectorized
 wouldn
 x80
 x86
