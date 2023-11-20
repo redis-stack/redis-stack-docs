@@ -53,8 +53,6 @@ The specification for Redis URIs is located [here](https://www.iana.org/assignme
 
 Make sure to add the `Redis.OM` package to your project. This package makes it easy to create models and query your Redis domain objects.
 
-```csharp
-
 ```bash
 dotnet add package Redis.OM     
 ```
