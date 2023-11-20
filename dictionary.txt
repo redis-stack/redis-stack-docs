@@ -118,7 +118,9 @@ SwaggerUI
 Systemd
 TShark
 TTL
+Tektro
 Telecom
+ThrillCycle
 TimeSeries
 UI
 ULID
@@ -318,6 +320,7 @@ tmp
 typesafe
 u2013
 u2019
+u2019re
 u2019s
 u2019t
 uberlight
@@ -327,6 +330,14 @@ uptime
 url
 usr
 v1
+wouldn
+x80
 x86
+x93
+x99
+x99re
+x99s
+x99t
+xe2
 xml
 zshrc
