@@ -53,6 +53,7 @@ JSONPath
 Jedis
 Jett
 Johansson
+Jupyter
 K8s
 KNN
 Kenda
@@ -72,6 +73,7 @@ Multicloud
 NOSTEM
 Noka
 Nord
+NumPy
 ORM
 OSS
 PeopleController
@@ -134,6 +136,7 @@ URI
 URIs
 Unlink
 Vectorizing
+Velorim
 WSL
 WattBike
 Wireshark
@@ -277,6 +280,7 @@ piña
 postalCode
 pre-existing
 pre-filter
+pre-filters
 pre-trained
 predictively
 preselected
@@ -302,6 +306,8 @@ repo's
 req
 requirepass
 reserialize
+resultset
+run_knn_query
 runnable
 rupert-holmes.json
 schemaless
@@ -309,6 +315,7 @@ searchByPersonalStatement
 searchRouter
 search_quickstart
 search_vss
+smokin
 snapshots-repo
 springfox-boot-starter
 springfox-swagger-ui
