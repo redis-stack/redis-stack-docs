@@ -95,7 +95,7 @@ See the [release notes for 7.2.0-v6](https://github.com/redis-stack/redis-stack/
 
 Redis Stack 6.2.6 introduces many new features for Search and Query, including support for [wildcard queries](https://redis.io/docs/stack/search/reference/query_syntax/#wildcard-matching), multi-value indexing and querying, and more. This version also contains a new faster JSONPath, a new t-digest probabilistic data structure, new path-finding algorithms for Graph, support for gap filling for Time series, and other features and improvements.
 
-See the [release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v10).
+See the [release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v10) for more information and download links.
 
 
 ### RedisInsight
