@@ -15,7 +15,7 @@ This quick start guide helps you to:
 1. Understand what a vector database is
 2. Set a vector database up
 3. Create vector embeddings and store vectors
-4. Query data and perform a vector similarity search
+4. Query data and perform a vector search
 
 
 ## Understand vector databases
@@ -26,7 +26,7 @@ You can use Redis Stack as a vector database. It allows you to:
 
 * Store vectors and the associated metadata within hashes or [JSON](/docs/data-types/json) documents
 * Retrieve vectors
-* Perform vector similarity searches
+* Perform vector searches
 
 ## Set a vector database up
 
@@ -142,7 +142,7 @@ In the example above, the array was shortened considerably for the sake of reada
 
 ### 1. Create an index with a vector field
 
-You must create an index to query based on vector metadata or perform vector similarity searches. Use the [FT.CREATE](https://redis.io/commands/ft.create/) command:
+You must create an index to query based on vector metadata or perform vector searches. Use the [FT.CREATE](https://redis.io/commands/ft.create/) command:
 
 {{< clients-example search_vss create_index >}}
 FT.CREATE idx:bikes_vss ON JSON 
@@ -176,7 +176,7 @@ FT_INFO idx:bikes_vss
 
 ## Search and query
 
-This quick start guide focuses on the vector similarity search aspect. Still, you can learn more about how to query based on vector metadata in the [document database quick start guide](/docs/get-started/document-database/).
+This quick start guide focuses on the vector search aspect. Still, you can learn more about how to query based on vector metadata in the [document database quick start guide](/docs/get-started/document-database/).
 
 ### 1. Embed your prompts
 
@@ -207,7 +207,7 @@ query = (
 ```
 
 {{% alert title="Note" color="warning" %}}
-To utilize a vector similarity query with the `FT.SEARCH` command, you must specify DIALECT 2 or greater.
+To utilize a vector query with the `FT.SEARCH` command, you must specify DIALECT 2 or greater.
 {{% /alert  %}}
 
 You must pass the vectorized query as `$query_vector` as a byte array. The following code shows an example of creating a Python NumPy array from a vectorized query prompt (`encoded_query`) as a single precision floating point array and converting it into a compact, byte-level representation that can be passed as a parameter to the query:
