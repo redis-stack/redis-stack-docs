@@ -192,7 +192,7 @@ The `Person` class (`com.redis.om.skeleton.models.Person`) is annotated with `@D
 
 The fields `id`, `firstName`, `lastName`, `age`, `homeLoc`, `address`, and `skills` are all annotated
 with `@Indexed` (`com.redis.om.spring.annotations.Indexed`). On entities annotated with `@Document` Redis OM Spring will scan the fields and add an appropriate search index field to the schema for the entity. For example, for the `Person` class
-an index named `com.redis.om.skeleton.models.PersonIdx` will be created on application startup. In the index schema, a search field will be added for each `@Indexed` annotated property. RediSearch, the underlying search engine powering searches, supports Text (full-text searches), Tag (exact-match searches), Numeric (range queries), Geo (geographic range queries), and Vector (vector similarity queries) fields. For `@Indexed` fields, the appropriate search field (Tag, Numeric, or Geo) is selected based on the property's data type.
+an index named `com.redis.om.skeleton.models.PersonIdx` will be created on application startup. In the index schema, a search field will be added for each `@Indexed` annotated property. RediSearch, the underlying search engine powering searches, supports Text (full-text searches), Tag (exact-match searches), Numeric (range queries), Geo (geographic range queries), and Vector (vector queries) fields. For `@Indexed` fields, the appropriate search field (Tag, Numeric, or Geo) is selected based on the property's data type.
 
 Fields marked as `@Searchable` (`com.redis.om.spring.annotations.Searchable`) such as `personalStatement` in `Person` are reflected as Full-Text search fields in the search index schema.
 
