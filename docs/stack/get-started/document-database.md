@@ -73,7 +73,7 @@ Any pre-existing JSON documents with a key prefix `bicycle:` are automatically a
 
 ## Add JSON documents
 
-The example below shows you how to use the [JSON.SET](/commands/ft.set/) command to create new JSON documents:
+The example below shows you how to use the [JSON.SET](/commands/json.set/) command to create new JSON documents:
 
 {{< clients-example search_quickstart add_documents "" 2 >}}
 > JSON.SET "bicycle:0" "." "{\"brand\": \"Velorim\", \"model\": \"Jigger\", \"price\": 270, \"description\": \"Small and powerful, the Jigger is the best ride for the smallest of tikes! This is the tiniest kids\\u2019 pedal bike on the market available without a coaster brake, the Jigger is the vehicle of choice for the rare tenacious little rider raring to go.\", \"condition\": \"new\"}"
