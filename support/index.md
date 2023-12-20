@@ -19,4 +19,4 @@ Redis Enterprise simplifies the management of Redis at scale and includes [advan
 
 Redis, Inc. also develops [Redis Stack](/docs/stack), which extends Redis OSS with modern data models and processing engines to provide a complete 
 developer experience. Redis Enterprise supports all of these data models and processing engines. If you need support for applications which have 
-been built using Redis Stack, you'll want to consider purchasing either Redis Enterprise Software or our Redis Enterprise Cloud service offering.
+been built using Redis Stack, you'll want to consider purchasing either Redis Enterprise Software or our Redis Cloud service offering.
