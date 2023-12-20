@@ -42,7 +42,7 @@ sudo yum install epel-release
 sudo yum install redis-stack-server
 {{< / highlight >}}
 
-Please remember to replace rhel7 with either rhel8 or rhel9, based on your operating system.
+Be sure to replace _rhel7_ with either _rhel8_ or _rhel9_ as appropriate.
 
 ## With snap
 
