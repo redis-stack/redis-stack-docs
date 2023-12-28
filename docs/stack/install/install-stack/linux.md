@@ -23,7 +23,7 @@ sudo apt-get install redis-stack-server
 
 ## From the official RPM Feed
 
-You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, and RHEL8/Centos8. Add the repository to the repository index, and install the package.
+You can install recent stable versions of Redis Stack from the official packages.redis.io YUM repository. The repository currently supports RHEL7/CentOS7, RHEL8/Centos8, and RHEL9/Centos9. Add the repository to the repository index, and install the package.
 
 Create the file /etc/yum.repos.d/redis.repo with the following contents
 
@@ -41,6 +41,8 @@ sudo rpm --import /tmp/redis.key
 sudo yum install epel-release
 sudo yum install redis-stack-server
 {{< / highlight >}}
+
+Be sure to replace _rhel7_ with either _rhel8_ or _rhel9_ as appropriate.
 
 ## With snap
 
