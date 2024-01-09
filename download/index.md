@@ -13,7 +13,7 @@ You can download the last Redis source files here. For additional options, see t
 
 Redis 7.2 includes optimizations, several new commands, some improvements, bug fixes, and several new module APIs. It also includes changes that potentially break backwards compatibility with older versions.
 
-* [Download 7.2.3](https://github.com/redis/redis/archive/7.2.3.tar.gz)
+* [Download 7.2.4](https://github.com/redis/redis/archive/7.2.4.tar.gz)
 * [7.2 Release Notes](https://raw.githubusercontent.com/redis/redis/7.2/00-RELEASENOTES)
 * [More installation options ->](#redis-downloads)
 
@@ -62,7 +62,7 @@ The latest stable release is always available at the fixed [https://download.red
 
 Redis 7.0 includes several new user-facing features, significant performance optimizations, and many other improvements. It also includes changes that potentially break backwards compatibility with older versions.
 
-See the [release notes](https://raw.githubusercontent.com/redis/redis/7.0/00-RELEASENOTES) or [download 7.0.14](https://download.redis.io/releases/redis-7.0.14.tar.gz).
+See the [release notes](https://raw.githubusercontent.com/redis/redis/7.0/00-RELEASENOTES) or [download 7.0.15](https://download.redis.io/releases/redis-7.0.15.tar.gz).
 
 #### Redis 6.2
 
