@@ -27,7 +27,7 @@ Download the latest Redis Stack Server binaries here, or install with [Docker](/
 
 ### Stable (7.2)
 
-Redis Stack Server extends Redis with modern data models such as document, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v6), or download the latest 7.2 binaries:
+Redis Stack Server extends Redis with modern data models such as document, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/7.2.0-v6), or download the latest 7.2 binaries:
 
 * [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v6.catalina.x86_64.zip)
 * [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v6.focal.x86_64.tar.gz)
@@ -73,7 +73,7 @@ See the [release notes](https://raw.githubusercontent.com/redis/redis/6.2/00-REL
 
 ### List of all releases and hash digests
 
-You can find a [listing of all previous Redis releases](https://download.redis.io/releases/) on the [releases page](https://download.redis.io/releases/). SHA-256 digests for these downloads are available in the [redis-hashes git repository](https://github.com/redis/redis-hashes/).
+You can find a listing of all previous Redis releases on the [releases page](https://download.redis.io/releases/). SHA-256 digests for these downloads are available in the [redis-hashes git repository](https://github.com/redis/redis-hashes/).
 
 ## Redis Stack downloads
 
@@ -89,11 +89,11 @@ You can find a [listing of all previous Redis releases](https://download.redis.i
 * Redis Stack on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack)
 * Redis Stack server on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack-server)
 
-See the [release notes for 7.2.0-v6](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v6).
+See the [release notes for 7.2.0-v6](https://github.com/redis-stack/redis-stack/releases/tag/7.2.0-v6).
 
 ### Older Redis Stack Versions
 
-Redis Stack 6.2.6 introduces many new features for Search and Query, including support for [wildcard queries](https://redis.io/docs/stack/search/reference/query_syntax/#wildcard-matching), multi-value indexing and querying, and more. This version also contains a new faster JSONPath, a new t-digest probabilistic data structure, new path-finding algorithms for Graph, support for gap filling for Time series, and other features and improvements.
+Redis Stack 6.2.6 introduces many new features for Search and Query, including support for [wildcard queries](/docs/interact/search-and-query/advanced-concepts/query_syntax/#wildcard-queries), multi-value indexing and querying, and more. This version also contains a new faster JSONPath, a new t-digest probabilistic data structure, new path-finding algorithms for Graph, support for gap filling for Time series, and other features and improvements.
 
 See the [release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v10) for more information and download links.
 
