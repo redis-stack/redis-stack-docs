@@ -6,6 +6,7 @@ stack: true
 weight: 3
 aliases:
     - /docs/stack/insight
+    - /docs/ui/insight
 ---
 
 [![Discord](https://img.shields.io/discord/697882427875393627?style=flat-square)](https://discord.gg/QUkjSsk)
