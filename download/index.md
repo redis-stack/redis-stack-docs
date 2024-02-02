@@ -27,7 +27,7 @@ Download the latest Redis Stack Server binaries here, or install with [Docker](/
 
 ### Stable (7.2)
 
-Redis Stack Server extends Redis with modern data models such as document, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/7.2.0-v8), or download the latest 7.2 binaries:
+Redis Stack Server extends Redis with modern data models such as document, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v8), or download the latest 7.2 binaries:
 
 * [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v8.catalina.x86_64.zip)
 * [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v8.focal.x86_64.tar.gz)
@@ -89,7 +89,7 @@ You can find a listing of all previous Redis releases on the [releases page](htt
 * Redis Stack on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack)
 * Redis Stack server on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack-server)
 
-See the [release notes for 7.2.0-v8](https://github.com/redis-stack/redis-stack/releases/tag/7.2.0-v8).
+See the [release notes for 7.2.0-v8](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v8).
 
 ### Older Redis Stack Versions
 
