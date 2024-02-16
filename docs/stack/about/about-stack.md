@@ -14,9 +14,9 @@ Redis Stack is the best starting point for working with Redis. We've bundled tog
 In addition to all of the features of Redis OSS, Redis Stack supports:
 
 * Probabilistic data structures
-* Queryable JSON documents
+* JSON data support (storing, updating & fetching)
 * Querying across hashes and JSON documents 
-* Time series data support (ingestion & querying), including full-text search
+* Time series data support (ingestion & querying)
 
 ## Why Redis Stack?
 
