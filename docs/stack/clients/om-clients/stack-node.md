@@ -172,11 +172,11 @@ A `text` field is a lot like a `string`. If you're just reading and writing obje
 
 ### Repository
 
-Now we have all the pieces that we need to create a **repository**. A `Repository` is the main interface into Redis OM. It gives us the methods to read, write, and remove a specific `Entity`. Create a `Repository` in `person.js` and make sure it's exported as you'll need it when we start implementing out API:
+Now we have all the pieces that we need to create a **repository**. A `Repository` is the main interface into Redis OM. It gives us the methods to read, write, and remove a specific `Entity`. Fetch a `Repository` in `person.js` using `fetchRepository` and make sure it's exported as you'll need it when we start implementing out API:
 
 {{< highlight javascript >}}
 /* use the client to create a Repository just for Persons */
-export const personRepository = new Repository(personSchema, client)
+export const personRepository = client.fetchRepository(personSchema)
 {{< / highlight >}}
 
 We're almost done with setting up our repository. But we still need to create an index or we won't be able to search. We do that by calling `.createIndex()`. If an index already exists and it's identical, this function won't do anything. If it's different, it'll drop it and create a new one. Add a call to `.createIndex()` to `person.js`:
