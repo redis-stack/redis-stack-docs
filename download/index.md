@@ -27,7 +27,7 @@ Download the latest Redis Stack Server binaries here, or install with [Docker](/
 
 ### Stable (7.2)
 
-Redis Stack Server extends Redis with modern data models such as document, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v9), or download the latest 7.2 binaries:
+Redis Stack Server extends Redis with modern data models such as document, time series. Redis Stack also includes RedisInsight, a visualization tool for Redis. Read the [latest release notes](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v10), or download the latest 7.2 binaries:
 
 * [macOS x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v9.catalina.x86_64.zip)
 * [Ubuntu focal x86_64](https://packages.redis.io/redis-stack/redis-stack-server-7.2.0-v9.focal.x86_64.tar.gz)
@@ -89,13 +89,13 @@ You can find a listing of all previous Redis releases on the [releases page](htt
 * Redis Stack on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack)
 * Redis Stack server on [Dockerhub](https://hub.docker.com/u/redis): [x86_64 and arm64](https://hub.docker.com/r/redis/redis-stack-server)
 
-See the [release notes for 7.2.0-v9](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v9).
+See the [release notes for 7.2.0-v9](https://github.com/redis-stack/redis-stack/releases/tag/v7.2.0-v10).
 
 ### Older Redis Stack Versions
 
 Redis Stack 6.2.6 introduces many new features for Search and Query, including support for [wildcard queries](/docs/interact/search-and-query/advanced-concepts/query_syntax/#wildcard-queries), multi-value indexing and querying, and more. This version also contains a new faster JSONPath, a new t-digest probabilistic data structure, new path-finding algorithms for Graph, support for gap filling for Time series, and other features and improvements.
 
-See the [release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v13) for more information and download links.
+See the [release notes](https://github.com/redis-stack/redis-stack/releases/tag/v6.2.6-v14) for more information and download links.
 
 
 ### RedisInsight
